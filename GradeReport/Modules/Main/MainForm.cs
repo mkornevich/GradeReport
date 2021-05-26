@@ -1,4 +1,4 @@
-﻿using GradeReport.Group;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GradeReport
+namespace GradeReport.Modules.Main
 {
     public partial class MainForm : Form
     {
@@ -27,9 +27,9 @@ namespace GradeReport
 
         private void группыToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var groupForm = new GroupListForm();
-            groupForm.MdiParent = this;
-            groupForm.Show();
+            //var groupForm = new GroupListForm();
+            //groupForm.MdiParent = this;
+            //groupForm.Show();
         }
     }
 }

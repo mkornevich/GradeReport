@@ -46,24 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Group\GroupListForm.cs">
+    <Compile Include="Common\App.cs" />
+    <Compile Include="Common\AppContext.cs" />
+    <Compile Include="Modules\Main\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Group\GroupListForm.Designer.cs">
-      <DependentUpon>GroupListForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="Modules\Main\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modules\GroupSubjectRef\GroupSubjectRef.cs" />
+    <Compile Include="Modules\Group\Group.cs" />
+    <Compile Include="Modules\Group\GroupEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Group\GroupEditForm.Designer.cs">
+      <DependentUpon>GroupEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Group\GroupListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Group\GroupListForm.Designer.cs">
+      <DependentUpon>GroupListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Group\GroupRowType.cs" />
+    <Compile Include="Modules\Group\GroupType.cs" />
+    <Compile Include="Modules\Student\Student.cs" />
+    <Compile Include="Modules\Subject\Subject.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Group\GroupListForm.resx">
-      <DependentUpon>GroupListForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="Modules\Main\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -89,13 +100,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Core\Filtering\" />
+    <Folder Include="Core\Selecting\" />
+    <Folder Include="Core\SQLBuilder\" />
+    <Folder Include="Core\TypeList\" />
     <Folder Include="Core\Type\" />
     <Folder Include="Core\Validation\" />
-    <Folder Include="Course\" />
-    <Folder Include="Period\" />
-    <Folder Include="Semester\" />
-    <Folder Include="Student\" />
-    <Folder Include="Subject\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

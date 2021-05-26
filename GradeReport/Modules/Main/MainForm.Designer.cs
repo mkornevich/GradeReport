@@ -1,5 +1,5 @@
 ﻿
-namespace GradeReport
+namespace GradeReport.Modules.Main
 {
     partial class MainForm
     {
