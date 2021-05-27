@@ -8,5 +8,10 @@ namespace GradeReport.Modules.Group
 {
     public class Group
     {
+        public int Id { get; set; }
+
+        public int Name { get; set; }
+
+        public int Include { get; set; }
     }
 }

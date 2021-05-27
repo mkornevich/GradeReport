@@ -8,5 +8,12 @@ namespace GradeReport.Modules.Subject
 {
     public class Subject
     {
+        public int Id { get; set; }
+
+        public string Name { get; set; }
+
+        public string ShortName { get; set; }
+
+        public bool Include { get; set; }
     }
 }

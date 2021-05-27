@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GradeReport.Common;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,14 @@ namespace GradeReport.Modules.Group
         public GroupListForm()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //var context = new AppDbContext();
+            //context.Database.EnsureDeleted();
+            //context.Database.EnsureCreated();
+
         }
     }
 }

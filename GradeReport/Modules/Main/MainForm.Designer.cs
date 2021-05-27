@@ -32,8 +32,6 @@ namespace GradeReport.Modules.Main
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справочникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.отчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.группыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.курсыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.семестрыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,8 +40,10 @@ namespace GradeReport.Modules.Main
             this.специальностиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.студентыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.предметыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.отчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.успеваемостьЗаПериодToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.успеваемостьКРодительскомуСобраниюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.ведомостьОтметокПоКурсовомуПроектуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ведомостьОтметокЗаСеместрToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.анализРезультатовОКРКПиЯПToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,9 +53,9 @@ namespace GradeReport.Modules.Main
             this.мониторингУчебныхДостиженийГруппыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.своднаяВедомостьУспеваемостиУчащихсяГруппыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.своднаяВедомостьУспеваемостиСлужебнаяЗапискаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.своднаяВедомостьЗаПериодОбученияКрасныйДипломToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.своднаяВедомостьЗаПериодОбученияКрасныйДипломToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,7 +68,8 @@ namespace GradeReport.Modules.Main
             this.оПрограммеToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(1440, 24);
+            this.menuStrip.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.menuStrip.Size = new System.Drawing.Size(1382, 24);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "menuStrip1";
             // 
@@ -92,34 +93,6 @@ namespace GradeReport.Modules.Main
             this.справочникиToolStripMenuItem.Name = "справочникиToolStripMenuItem";
             this.справочникиToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
             this.справочникиToolStripMenuItem.Text = "Справочники";
-            // 
-            // отчетыToolStripMenuItem
-            // 
-            this.отчетыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.успеваемостьЗаПериодToolStripMenuItem,
-            this.успеваемостьКРодительскомуСобраниюToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.ведомостьОтметокПоКурсовомуПроектуToolStripMenuItem,
-            this.ведомостьОтметокЗаСеместрToolStripMenuItem,
-            this.анализРезультатовОКРКПиЯПToolStripMenuItem,
-            this.анализРезультатовДКРКПиЯПToolStripMenuItem,
-            this.экзаменационнаяВедомостьToolStripMenuItem,
-            this.отчетУспеваемостиToolStripMenuItem,
-            this.мониторингУчебныхДостиженийГруппыToolStripMenuItem,
-            this.своднаяВедомостьУспеваемостиУчащихсяГруппыToolStripMenuItem,
-            this.своднаяВедомостьУспеваемостиСлужебнаяЗапискаToolStripMenuItem,
-            this.toolStripSeparator2,
-            this.своднаяВедомостьЗаПериодОбученияКрасныйДипломToolStripMenuItem});
-            this.отчетыToolStripMenuItem.Name = "отчетыToolStripMenuItem";
-            this.отчетыToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.отчетыToolStripMenuItem.Text = "Отчеты";
-            // 
-            // оПрограммеToolStripMenuItem
-            // 
-            this.оПрограммеToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
-            this.оПрограммеToolStripMenuItem.Text = "О программе";
             // 
             // группыToolStripMenuItem
             // 
@@ -170,6 +143,27 @@ namespace GradeReport.Modules.Main
             this.предметыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.предметыToolStripMenuItem.Text = "Предметы";
             // 
+            // отчетыToolStripMenuItem
+            // 
+            this.отчетыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.успеваемостьЗаПериодToolStripMenuItem,
+            this.успеваемостьКРодительскомуСобраниюToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.ведомостьОтметокПоКурсовомуПроектуToolStripMenuItem,
+            this.ведомостьОтметокЗаСеместрToolStripMenuItem,
+            this.анализРезультатовОКРКПиЯПToolStripMenuItem,
+            this.анализРезультатовДКРКПиЯПToolStripMenuItem,
+            this.экзаменационнаяВедомостьToolStripMenuItem,
+            this.отчетУспеваемостиToolStripMenuItem,
+            this.мониторингУчебныхДостиженийГруппыToolStripMenuItem,
+            this.своднаяВедомостьУспеваемостиУчащихсяГруппыToolStripMenuItem,
+            this.своднаяВедомостьУспеваемостиСлужебнаяЗапискаToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.своднаяВедомостьЗаПериодОбученияКрасныйДипломToolStripMenuItem});
+            this.отчетыToolStripMenuItem.Name = "отчетыToolStripMenuItem";
+            this.отчетыToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.отчетыToolStripMenuItem.Text = "Отчеты";
+            // 
             // успеваемостьЗаПериодToolStripMenuItem
             // 
             this.успеваемостьЗаПериодToolStripMenuItem.Name = "успеваемостьЗаПериодToolStripMenuItem";
@@ -181,6 +175,11 @@ namespace GradeReport.Modules.Main
             this.успеваемостьКРодительскомуСобраниюToolStripMenuItem.Name = "успеваемостьКРодительскомуСобраниюToolStripMenuItem";
             this.успеваемостьКРодительскомуСобраниюToolStripMenuItem.Size = new System.Drawing.Size(418, 22);
             this.успеваемостьКРодительскомуСобраниюToolStripMenuItem.Text = "1.2 Успеваемость к родительскому собранию";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(415, 6);
             // 
             // ведомостьОтметокПоКурсовомуПроектуToolStripMenuItem
             // 
@@ -236,30 +235,33 @@ namespace GradeReport.Modules.Main
             this.своднаяВедомостьУспеваемостиСлужебнаяЗапискаToolStripMenuItem.Size = new System.Drawing.Size(418, 22);
             this.своднаяВедомостьУспеваемостиСлужебнаяЗапискаToolStripMenuItem.Text = "2.9 Сводная ведомость успеваемости (Служебная записка)";
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(415, 6);
+            // 
             // своднаяВедомостьЗаПериодОбученияКрасныйДипломToolStripMenuItem
             // 
             this.своднаяВедомостьЗаПериодОбученияКрасныйДипломToolStripMenuItem.Name = "своднаяВедомостьЗаПериодОбученияКрасныйДипломToolStripMenuItem";
             this.своднаяВедомостьЗаПериодОбученияКрасныйДипломToolStripMenuItem.Size = new System.Drawing.Size(418, 22);
             this.своднаяВедомостьЗаПериодОбученияКрасныйДипломToolStripMenuItem.Text = "4.1 Сводная ведомость за период обучения (Красный диплом)";
             // 
-            // toolStripSeparator1
+            // оПрограммеToolStripMenuItem
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(415, 6);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(415, 6);
+            this.оПрограммеToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.оПрограммеToolStripMenuItem.Text = "О программе";
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1440, 764);
+            this.ClientSize = new System.Drawing.Size(1382, 692);
             this.Controls.Add(this.menuStrip);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "MainForm";
             this.Text = "GradeReport";
             this.menuStrip.ResumeLayout(false);
