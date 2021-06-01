@@ -1,5 +1,4 @@
 ﻿
-using GradeReport.Modules.Group;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,16 +10,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GradeReport.Modules.Main
+namespace GradeReport.Core.Main
 {
     public partial class MainForm : Form
     {
+
         public MainForm()
         {
             InitializeComponent();
-            var groupForm = new GroupListForm();
-            groupForm.MdiParent = this;
-            groupForm.Show();
+
         }
 
         private void toolStripTextBox1_Click(object sender, EventArgs e)
@@ -30,9 +28,9 @@ namespace GradeReport.Modules.Main
 
         private void группыToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var groupForm = new GroupListForm();
-            groupForm.MdiParent = this;
-            groupForm.Show();
+
         }
+
+        
     }
 }

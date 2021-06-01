@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GradeReport.Common
+namespace GradeReport.Core.Project
 {
-    public class App
+    public class Project
     {
     }
 }

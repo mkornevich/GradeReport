@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GradeReport.Modules.Subject
+namespace GradeReport.EntityModules.Subject
 {
     public class Subject
     {

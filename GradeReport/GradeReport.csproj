@@ -8,45 +8,26 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Core\Filtration\" />
     <Folder Include="Core\Selection\" />
-    <Folder Include="Core\SQLBuilder\" />
-    <Folder Include="Core\TypeList\" />
-    <Folder Include="Core\Type\" />
     <Folder Include="Core\Validation\" />
+    <Folder Include="Core\Collection\" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.6" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.6">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Modules\Group\GroupEditForm.cs">
+    <Compile Update="Core\Main\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Modules\Group\GroupEditForm.Designer.cs">
-      <DependentUpon>GroupEditForm.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Modules\Group\GroupListForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Modules\Group\GroupListForm.Designer.cs">
-      <DependentUpon>GroupListForm.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Modules\Main\MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Modules\Main\MainForm.Designer.cs">
+    <Compile Update="Core\Main\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Modules\Main\MainForm.resx">
+    <EmbeddedResource Update="Core\Main\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>

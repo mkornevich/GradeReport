@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GradeReport.Modules.Group
+namespace GradeReport.Core.Project
 {
-    public class GroupType
+    class ProjectNode
     {
     }
 }

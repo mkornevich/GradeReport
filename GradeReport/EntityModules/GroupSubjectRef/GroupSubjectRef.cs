@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GradeReport.Modules.GroupSubjectRef
+namespace GradeReport.EntityModules.GroupSubjectRef
 {
     public class GroupSubjectRef
     {
