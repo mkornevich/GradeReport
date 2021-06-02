@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace GradeReport.Core.Projects
 {
-    public class Dao<TEntity> : List<TEntity> where TEntity : Entity
+    public interface IWithGuid
     {
+        public Guid Guid { get; set; }
     }
 }

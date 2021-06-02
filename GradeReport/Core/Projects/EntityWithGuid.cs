@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GradeReport.EntityModules.Group
+namespace GradeReport.Core.Projects
 {
-    public class GroupDao : List<Group>
+    public class EntityWithGuid : Entity
     {
-
+        public Guid Guid { get; set; } = Guid.NewGuid();
     }
 }

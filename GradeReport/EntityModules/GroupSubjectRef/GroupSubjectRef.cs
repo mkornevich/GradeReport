@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GradeReport.Core.Projects;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -7,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace GradeReport.EntityModules.GroupSubjectRef
 {
-    public class GroupSubjectRef
+    public class GroupSubjectRef : Entity
     {
-        public int GroupId { get; set; }
+        public Guid GroupGuid { get; set; }
 
-        public int SubjectId { get; set; }
+        public Guid SubjectGuid { get; set; }
 
         public bool HasCourse { get; set; }
     }

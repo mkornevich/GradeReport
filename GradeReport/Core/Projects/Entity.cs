@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GradeReport.Core.Projects
 {
-    class Entity
+    public class Entity
     {
     }
 }

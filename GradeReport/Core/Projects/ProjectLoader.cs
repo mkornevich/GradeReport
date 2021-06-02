@@ -18,7 +18,7 @@ namespace GradeReport.Core.Projects
 
         public void Store(string path, Project project)
         {
-            var jsonProject = JsonConvert.SerializeObject(project);
+            var jsonProject = JsonConvert.SerializeObject(project, Formatting.Indented);
             File.WriteAllText(path, jsonProject);
         }
     }

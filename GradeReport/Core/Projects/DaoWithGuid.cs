@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace GradeReport.Core.Projects
 {
-    public class Dao<TEntity> : List<TEntity> where TEntity : Entity
+    public class DaoWithGuid<TEntity> : Dao<TEntity> where TEntity : EntityWithGuid
     {
+        public TEntity GetByGuid(Guid guid) => Find(e => e.Guid == guid);
     }
 }

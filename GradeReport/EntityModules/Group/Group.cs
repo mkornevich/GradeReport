@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GradeReport.Core.Projects;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,12 +7,10 @@ using System.Threading.Tasks;
 
 namespace GradeReport.EntityModules.Group
 {
-    public class Group
+    public class Group : EntityWithGuid
     {
-        public int Id { get; set; }
+        public string Name { get; set; }
 
-        public int Name { get; set; }
-
-        public int Include { get; set; }
+        public bool Include { get; set; }
     }
 }
