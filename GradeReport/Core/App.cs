@@ -1,4 +1,4 @@
-﻿using GradeReport.Core.Project;
+﻿using GradeReport.Core.Projects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +11,9 @@ namespace GradeReport.Core
     {
         public static ProjectContainer ProjectContainer { get; private set; } = new ProjectContainer();
 
+        public static void Init()
+        {
 
+        }
     }
 }

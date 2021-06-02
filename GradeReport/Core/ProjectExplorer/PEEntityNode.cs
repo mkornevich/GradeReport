@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GradeReport.Core.Project
+namespace GradeReport.Core.ProjectExplorer
 {
-    public class Project
+    class PEEntityNode : PENode
     {
+
     }
 }

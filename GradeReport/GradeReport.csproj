@@ -10,7 +10,6 @@
   <ItemGroup>
     <Folder Include="Core\Selection\" />
     <Folder Include="Core\Validation\" />
-    <Folder Include="Core\Collection\" />
   </ItemGroup>
 
   <ItemGroup>

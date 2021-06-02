@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GradeReport.Core.Project
+namespace GradeReport.Core.Projects
 {
-    public class ProjectContainer
+    class Dao
     {
     }
 }

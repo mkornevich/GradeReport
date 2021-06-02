@@ -16,9 +16,6 @@ ProjectExplorerNode
 	
 	
 	
-	
-	
-	
 
 
 EditForm
@@ -26,3 +23,5 @@ EditForm
 
 EntitySelector
 	
+	
+Master form

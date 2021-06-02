@@ -1,5 +1,4 @@
-﻿using GradeReport.Core.Projects;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,11 +7,8 @@ using System.Windows.Forms;
 
 namespace GradeReport.Core.ProjectExplorer
 {
-    public class PETreeView : TreeView
+    public class PENode : TreeNode
     {
-        public void Fresh(Project project)
-        {
 
-        }
     }
 }
