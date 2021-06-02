@@ -12,7 +12,10 @@ namespace GradeReport.Core.ProjectExplorer
     {
         public void Fresh(Project project)
         {
-
+            var projectNode = new ProjectNode() { Project = project };
+            Nodes.Clear();
+            Nodes.Add(projectNode);
+            projectNode.Init();
         }
     }
 }

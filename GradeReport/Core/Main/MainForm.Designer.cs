@@ -116,7 +116,7 @@ namespace GradeReport.Core.Main
             this.своднаяВедомостьЗаПериодОбученияКрасныйДипломToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.treeView1 = new System.Windows.Forms.TreeView();
-            this.peTreeView1 = new GradeReport.Core.ProjectExplorer.PETreeView();
+            this.peTreeView = new GradeReport.Core.ProjectExplorer.PETreeView();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.menuStrip.SuspendLayout();
@@ -368,10 +368,10 @@ namespace GradeReport.Core.Main
             // 
             // peTreeView1
             // 
-            this.peTreeView1.Location = new System.Drawing.Point(436, 27);
-            this.peTreeView1.Name = "peTreeView1";
-            this.peTreeView1.Size = new System.Drawing.Size(452, 698);
-            this.peTreeView1.TabIndex = 4;
+            this.peTreeView.Location = new System.Drawing.Point(436, 27);
+            this.peTreeView.Name = "peTreeView1";
+            this.peTreeView.Size = new System.Drawing.Size(452, 698);
+            this.peTreeView.TabIndex = 4;
             // 
             // openFileDialog
             // 
@@ -382,7 +382,7 @@ namespace GradeReport.Core.Main
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 758);
-            this.Controls.Add(this.peTreeView1);
+            this.Controls.Add(this.peTreeView);
             this.Controls.Add(this.treeView1);
             this.Controls.Add(this.menuStrip);
             this.MainMenuStrip = this.menuStrip;
@@ -417,7 +417,7 @@ namespace GradeReport.Core.Main
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem своднаяВедомостьЗаПериодОбученияКрасныйДипломToolStripMenuItem;
         private System.Windows.Forms.TreeView treeView1;
-        private ProjectExplorer.PETreeView peTreeView1;
+        private ProjectExplorer.PETreeView peTreeView;
         private System.Windows.Forms.ToolStripMenuItem сохранитьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem новыйToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem открытьToolStripMenuItem;

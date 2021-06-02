@@ -28,6 +28,11 @@ namespace GradeReport.Core.Main
             _projectContainer.IsSavedChanged += AdjustFormName;
             _projectContainer.PathChanged += AdjustFormName;
 
+            _projectContainer.NewProjectLoaded += () =>
+            {
+                peTreeView.Fresh(_projectContainer.Project);
+            };
+
             CreateNewProject();
         }
 

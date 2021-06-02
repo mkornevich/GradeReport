@@ -9,6 +9,8 @@ namespace GradeReport.EntityModules.Student
 {
     public class Student : EntityWithGuid
     {
+        public Guid GroupGuid { get; set; }
+
         public string Name { get; set; }
 
         public int Number { get; set; }

@@ -17,18 +17,16 @@ namespace GradeReport.Core.Projects
         public Config Config { get; set; }
 
         public DaoWithGuid<Group> Groups { get; set; } = new DaoWithGuid<Group>();
+
         public Dao<GroupSubjectRef> GroupSubjectRefs { get; set; } = new Dao<GroupSubjectRef>();
+
         public DaoWithGuid<Student> Students { get; set; } = new DaoWithGuid<Student>();
+
         public DaoWithGuid<Subject> Subjects { get; set; } = new DaoWithGuid<Subject>();
 
         public static Project CreateEmpty()
         {
             var project = new Project();
-
-            project.Groups.Add(new Group() { Include = true, Name = "T91" });
-            project.Groups.Add(new Group() { Include = true, Name = "T92" });
-            project.Groups.Add(new Group() { Include = true, Name = "T93" });
-
             return project;
         }
     }
