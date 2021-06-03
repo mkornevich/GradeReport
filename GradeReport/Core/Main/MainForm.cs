@@ -1,5 +1,6 @@
 ﻿
 using GradeReport.Core.Projects;
+using GradeReport.EntityModules.Subject;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,6 +35,9 @@ namespace GradeReport.Core.Main
             };
 
             CreateNewProject();
+
+
+            
         }
 
         private void AdjustFormName()
