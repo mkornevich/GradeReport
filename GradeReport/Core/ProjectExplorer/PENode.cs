@@ -29,21 +29,43 @@ namespace GradeReport.Core.ProjectExplorer
             return (TEntity)Entity;
         }
 
-        protected virtual void LoadNodes(List<PENode> nodes)
+        protected virtual void CreateNodes(List<PENode> nodes)
         {
-
+            
         }
 
-        public virtual void Init()
+        private void LoadNodes()
         {
             var nodes = new List<PENode>();
-            LoadNodes(nodes);
+            CreateNodes(nodes);
             if (nodes.Count > 0)
             {
                 nodes.ForEach(n => n.Project = Project);
                 Nodes.AddRange(nodes.ToArray());
                 nodes.ForEach(n => n.Init());
             }
+        }
+
+        protected virtual void CreateMenuItems(List<ToolStripMenuItem> items)
+        {
+
+        }
+
+        private void LoadMenuItems()
+        {
+            var menuItems = new List<ToolStripMenuItem>();
+            CreateMenuItems(menuItems);
+            if (menuItems.Count > 0)
+            {
+                ContextMenuStrip = new ContextMenuStrip();
+                ContextMenuStrip.Items.AddRange(menuItems.ToArray());
+            }
+        }
+
+        public virtual void Init()
+        {
+            LoadMenuItems();
+            LoadNodes();
         }
     }
 }

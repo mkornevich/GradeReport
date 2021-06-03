@@ -17,7 +17,7 @@ namespace GradeReport.EntityModules.Group
             base.Init();
         }
 
-        protected override void LoadNodes(List<PENode> nodes)
+        protected override void CreateNodes(List<PENode> nodes)
         {
             nodes.Add(new StudentListNode());
         }

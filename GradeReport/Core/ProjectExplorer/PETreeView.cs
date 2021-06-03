@@ -16,6 +16,13 @@ namespace GradeReport.Core.ProjectExplorer
             Nodes.Clear();
             Nodes.Add(projectNode);
             projectNode.Init();
+
+
+            //ContextMenuStrip = new ContextMenuStrip();
+            //var menu = ContextMenuStrip;
+
+            //menu.Items.Add(new ToolStripMenuItem("Test"));
+
         }
     }
 }

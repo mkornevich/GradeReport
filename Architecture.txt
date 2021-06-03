@@ -2,17 +2,15 @@ ProjectExplorerTree
 
 
 ProjectExplorerNode
-	- MenuBuilder меню при клике ПКМ.
+	
 	- Обновить измененных детей или убрать удаленых
-	- Название
+	-+ Название
 	- Описание
 
-	ProjectExplorerCollectionNode
-	- Создавать ребенка путем выбора при помощи entity selector или создание при помощи EditForm
-	
-	ProjectExplorerEntityNode
-	- Редактировать
-	- Удалять себя
+	- MenuBuilder меню при клике ПКМ.
+		- Создавать ребенка путем выбора при помощи entity selector или создание при помощи EditForm
+		- Редактировать
+		- Удалять себя
 	
 	
 	

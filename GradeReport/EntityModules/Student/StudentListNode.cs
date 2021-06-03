@@ -17,7 +17,7 @@ namespace GradeReport.EntityModules.Student
             base.Init();
         }
 
-        protected override void LoadNodes(List<PENode> nodes)
+        protected override void CreateNodes(List<PENode> nodes)
         {
             var group = GetNodeEntity<Group.Group, GroupNode>();
             var students = Project.Students.FindAll(s => s.GroupGuid == group.Guid).ToList();

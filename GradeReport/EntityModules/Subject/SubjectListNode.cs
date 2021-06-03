@@ -16,7 +16,7 @@ namespace GradeReport.EntityModules.Subject
             base.Init();
         }
 
-        protected override void LoadNodes(List<PENode> nodes)
+        protected override void CreateNodes(List<PENode> nodes)
         {
             Project.Subjects.ForEach(s => nodes.Add(new SubjectNode() { Entity = s }));
         }
