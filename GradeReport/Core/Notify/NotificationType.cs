@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GradeReport.Core.Editing
+namespace GradeReport.Core.Notify
 {
-    public enum EditFormResult
+    public enum NotificationType
     {
-        Ok,
-        Cancel,
+        Error,
+        Warning,
+        Info,
     }
 }

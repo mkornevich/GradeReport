@@ -23,3 +23,32 @@ EntitySelector
 	
 	
 Master form
+
+
+
+
+
+NotifyForm
+	Показывать Тип
+	Изменять цвета
+	Title
+
+Notify
+	Type Enum
+	ShortText
+	Text
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+

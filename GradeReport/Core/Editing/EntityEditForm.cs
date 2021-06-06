@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GradeReport.Core.Actioning;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -12,16 +13,9 @@ namespace GradeReport.Core.Editing
     {
         public string EntityName { get; set; } = "Нет имени сущности";
 
-        private FlowLayoutPanel _actionPanel = new FlowLayoutPanel()
-        {
-            FlowDirection = FlowDirection.RightToLeft,
-            Dock = DockStyle.Bottom,
-            Padding = new Padding(5, 5, 2, 5),
-            Height = 40,
-            BackColor = Color.FromArgb(232, 232, 232),
-        };
+        protected ActionStrip ActionStrip { get; private set; } = new ActionStrip();
 
-        private EditFormResult _editFormResult = EditFormResult.Cancel;
+        private DialogResult _dialogResult = DialogResult.None;
 
         private object _entity;
 
@@ -33,41 +27,33 @@ namespace GradeReport.Core.Editing
             MinimizeBox = false;
             FormBorderStyle = FormBorderStyle.FixedDialog;
 
-            AddAction("Применить", OkAct);
-            AddAction("Отмена", CancelAct);
+            ActionStrip.OkAction.Click += OkAct;
+            ActionStrip.CancelAction.Click += CancelAct;
 
-            Controls.Add(_actionPanel);
-        }
-
-        protected ActionButton AddAction(string text, EventHandler onClick)
-        {
-            var btn = new ActionButton(text);
-            btn.Click += onClick;
-            _actionPanel.Controls.Add(btn);
-            return btn;
+            Controls.Add(ActionStrip);
         }
 
         private void CancelAct(object sender, EventArgs e)
         {
-            _editFormResult = EditFormResult.Cancel;
+            _dialogResult = DialogResult.Cancel;
             Close();
         }
 
         private void OkAct(object sender, EventArgs e)
         {
             FormToEntity(_entity, _changeMode);
-            _editFormResult = EditFormResult.Ok;
+            _dialogResult = DialogResult.OK;
             Close();
         }
 
-        public EditFormResult ShowEditForm(object entity, ChangeMode mode)
+        public DialogResult ShowEditForm(object entity, ChangeMode mode)
         {
             _entity = entity;
             _changeMode = mode;
             EntityToForm(entity, mode);
             AdjustFormText();
             ShowDialog();
-            return _editFormResult;
+            return _dialogResult;
         }
 
         private void AdjustFormText()

@@ -5,13 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GradeReport.Core.Editing
+namespace GradeReport.Core.Actioning
 {
     public class ActionButton : Button
     {
-        public ActionButton(string text)
+        public ActionButton()
         {
-            Text = text;
             Padding = new Padding(2);
             Margin = new Padding(5, 0, 0, 0);
             UseVisualStyleBackColor = true;

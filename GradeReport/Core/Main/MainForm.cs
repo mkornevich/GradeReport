@@ -1,4 +1,5 @@
 ﻿
+using GradeReport.Core.Notify;
 using GradeReport.Core.Projects;
 using GradeReport.EntityModules.Subject;
 using System;
@@ -33,11 +34,22 @@ namespace GradeReport.Core.Main
             {
                 peTreeView.Fresh(_projectContainer.Project);
             };
-
+            
             CreateNewProject();
 
-
+            Shown += MainForm_Shown;
             
+        }
+
+        private void MainForm_Shown(object sender, EventArgs e)
+        {
+            new NotificationFormBuilder()
+                .Error("Error", "descr")
+                .Error("Error", "descr")
+                .Warning("Error", "descr")
+                .Warning("Error", "descr")
+                .BuildForm()
+                .Show();
         }
 
         private void AdjustFormName()
@@ -91,6 +103,11 @@ namespace GradeReport.Core.Main
                 _projectContainer.Path = saveFileDialog.FileName;
                 _projectContainer.IsSaved = true;
             }
+        }
+
+        private void showTestFormAct(object sender, EventArgs e)
+        {
+            new TestForm().Show();
         }
     }
 }
