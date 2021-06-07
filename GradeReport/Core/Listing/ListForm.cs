@@ -25,14 +25,111 @@ namespace GradeReport.Core.Listing
             }
         }
 
+        public SelectMode SelectMode { get; set; } = SelectMode.Multiple;
+
+        private List<object> _entities;
+
+        public List<object> Entities
+        {
+            get => _entities;
+            set
+            {
+                _entities = value;
+                EntitiesToTable();
+                UpdateTableSelection();
+                UpdateSelectionInfo();
+            }
+        }
+
+        private List<object> _selectedEntities;
+
+        public List<object> SelectedEntities
+        {
+            get
+            {
+                return Entities.FindAll(entity =>
+                {
+                    bool isSelected = false;
+
+                    foreach (DataGridViewRow row in Table.Rows)
+                    {
+                        if (_adapter.IsRowBelongEntity(row, entity) && (bool)row.Cells[0].Value == true)
+                        {
+                            isSelected = true;
+                            break;
+                        }
+                    }
+
+                    return isSelected;
+                });
+            }
+            set
+            {
+                _selectedEntities = value;
+                UpdateTableSelection();
+                UpdateSelectionInfo();
+            }
+        }
+
+        public event Action SelectionChanged;
+
         public ListForm()
         {
             InitializeComponent();
         }
 
-        private void table_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void UpdateTableSelection()
         {
-            _adapter.CellContentClick(sender, e);
+            foreach (DataGridViewRow row in Table.Rows)
+            {
+                if (_selectedEntities == null)
+                {
+                    row.Cells[0].Value = false;
+                    continue;
+                }
+
+                row.Cells[0].Value = _selectedEntities.Exists(e => _adapter.IsRowBelongEntity(row, e));
+            }
         }
+
+        private void EntitiesToTable()
+        {
+            Table.Columns.Clear();
+            // selection column
+            Table.Columns.Add(new DataGridViewCheckBoxColumn() { Width = 20 });
+            _adapter.CreateColumns(Table.Columns);
+
+            Table.Rows.Clear();
+            foreach (var entity in _entities)
+            {
+                var cells = _adapter.EntityToRow(entity);
+                cells = new object[] { false }.Concat(cells).ToArray();
+                Table.Rows.Add(cells);
+            }
+        }
+
+        private void OnSelectionChanged() => SelectionChanged?.Invoke();
+
+        private void CellContentClickAct(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 0)
+            {
+                if (SelectMode == SelectMode.Multiple)
+                {
+                    foreach (DataGridViewRow row in Table.Rows)
+                    {
+                        if (row.Index != e.RowIndex)
+                            row.Cells[0].Value = false;
+                    }
+                }
+
+                Table.Rows[e.RowIndex].Cells[0].Value = !(bool)Table.Rows[e.RowIndex].Cells[0].Value;
+
+                UpdateSelectionInfo();
+                OnSelectionChanged();
+            }
+        }
+
+        private void UpdateSelectionInfo() => selectionInfoTB.Text = "Выделено " + SelectedEntities.Count + " из " + Entities.Count;
     }
 }

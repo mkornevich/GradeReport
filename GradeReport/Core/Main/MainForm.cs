@@ -56,19 +56,16 @@ namespace GradeReport.Core.Main
 
 
             var form = new ListForm();
-            var adapter = new SubjectListAdapter();
-            form.Adapter = adapter;
+            form.Adapter = new SubjectListAdapter();
 
-            adapter.Entities = subjects.Cast<object>().ToList();
-            adapter.SelectedEntities = subjects.FindAll(s => !s.Include).Cast<object>().ToList();
+            form.Entities = subjects.Cast<object>().ToList();
+            form.SelectedEntities = subjects.FindAll(s => !s.Include).Cast<object>().ToList();
 
-            adapter.SelectionChanged += () => MessageBox.Show(string.Join(", ", adapter.SelectedEntities.Select(e => ((Subject)e).Name)));
+            form.SelectMode = SelectMode.Single;
+
+            form.SelectionChanged += () => MessageBox.Show(string.Join(", ", form.SelectedEntities.Select(e => ((Subject)e).Name)));
 
             form.ShowDialog();
-
-            
-
-            
         }
 
         private void AdjustFormName()
