@@ -12,6 +12,8 @@ namespace GradeReport.Core.Listing
 {
     public partial class ListForm : Form
     {
+        private DialogResult _dialogResult = DialogResult.Cancel;
+
         private ListAdapter _adapter;
 
         public ListAdapter Adapter
@@ -76,6 +78,21 @@ namespace GradeReport.Core.Listing
         public ListForm()
         {
             InitializeComponent();
+
+            actionStrip.OkAction.Click += OkAct;
+            actionStrip.CancelAction.Click += CancelAct;
+        }
+
+        private void CancelAct(object sender, EventArgs e)
+        {
+            _dialogResult = DialogResult.Cancel;
+            Close();
+        }
+
+        private void OkAct(object sender, EventArgs e)
+        {
+            _dialogResult = DialogResult.OK;
+            Close();
         }
 
         private void UpdateTableSelection()
@@ -131,5 +148,13 @@ namespace GradeReport.Core.Listing
         }
 
         private void UpdateSelectionInfo() => selectionInfoTB.Text = "Выделено " + SelectedEntities.Count + " из " + Entities.Count;
+
+        public DialogResult ShowForResult()
+        {
+            actionStrip.Visible = true;
+            ShowDialog();
+            actionStrip.Visible = false;
+            return _dialogResult;
+        }
     }
 }

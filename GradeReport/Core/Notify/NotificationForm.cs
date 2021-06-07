@@ -88,6 +88,7 @@ namespace GradeReport.Core.Notify
         {
             actionStrip.Visible = true;
             ShowDialog();
+            actionStrip.Visible = false;
             return _dialogResult;
         }
     }

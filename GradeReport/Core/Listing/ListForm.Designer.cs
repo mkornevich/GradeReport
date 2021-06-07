@@ -29,7 +29,7 @@ namespace GradeReport.Core.Listing
         /// </summary>
         private void InitializeComponent()
         {
-            this.actionStrip1 = new GradeReport.Core.Actioning.ActionStrip();
+            this.actionStrip = new GradeReport.Core.Actioning.ActionStrip();
             this.Table = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.selectionInfoTB = new System.Windows.Forms.ToolStripTextBox();
@@ -37,16 +37,17 @@ namespace GradeReport.Core.Listing
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // actionStrip1
+            // actionStrip
             // 
-            this.actionStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.actionStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.actionStrip1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.actionStrip1.Location = new System.Drawing.Point(0, 518);
-            this.actionStrip1.Name = "actionStrip1";
-            this.actionStrip1.Padding = new System.Windows.Forms.Padding(5, 5, 2, 5);
-            this.actionStrip1.Size = new System.Drawing.Size(793, 40);
-            this.actionStrip1.TabIndex = 0;
+            this.actionStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.actionStrip.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.actionStrip.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.actionStrip.Location = new System.Drawing.Point(0, 518);
+            this.actionStrip.Name = "actionStrip";
+            this.actionStrip.Padding = new System.Windows.Forms.Padding(5, 5, 2, 5);
+            this.actionStrip.Size = new System.Drawing.Size(793, 40);
+            this.actionStrip.TabIndex = 0;
+            this.actionStrip.Visible = false;
             // 
             // Table
             // 
@@ -92,7 +93,7 @@ namespace GradeReport.Core.Listing
             this.ClientSize = new System.Drawing.Size(793, 558);
             this.Controls.Add(this.Table);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.actionStrip1);
+            this.Controls.Add(this.actionStrip);
             this.Name = "ListForm";
             this.Text = "ListForm";
             ((System.ComponentModel.ISupportInitialize)(this.Table)).EndInit();
@@ -105,7 +106,7 @@ namespace GradeReport.Core.Listing
 
         #endregion
 
-        private Actioning.ActionStrip actionStrip1;
+        private Actioning.ActionStrip actionStrip;
         private System.Windows.Forms.ToolStrip toolStrip1;
         public System.Windows.Forms.DataGridView Table;
         private System.Windows.Forms.ToolStripTextBox selectionInfoTB;

@@ -65,7 +65,7 @@ namespace GradeReport.Core.Main
 
             form.SelectionChanged += () => MessageBox.Show(string.Join(", ", form.SelectedEntities.Select(e => ((Subject)e).Name)));
 
-            form.ShowDialog();
+            MessageBox.Show(form.ShowForResult().ToString());
         }
 
         private void AdjustFormName()
