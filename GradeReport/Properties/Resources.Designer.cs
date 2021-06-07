@@ -63,6 +63,16 @@ namespace GradeReport.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap check_16 {
+            get {
+                object obj = ResourceManager.GetObject("check_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap error_16 {
             get {
                 object obj = ResourceManager.GetObject("error_16", resourceCulture);
@@ -96,6 +106,26 @@ namespace GradeReport.Properties {
         public static System.Drawing.Bitmap info_24 {
             get {
                 object obj = ResourceManager.GetObject("info_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap refresh_16 {
+            get {
+                object obj = ResourceManager.GetObject("refresh_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap uncheck_16 {
+            get {
+                object obj = ResourceManager.GetObject("uncheck_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

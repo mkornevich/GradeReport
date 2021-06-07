@@ -98,6 +98,12 @@ namespace GradeReport.Core.Main
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.actionStrip1 = new GradeReport.Core.Actioning.ActionStrip();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.chooser1 = new GradeReport.Core.Chooser();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // treeView1
@@ -190,12 +196,13 @@ namespace GradeReport.Core.Main
             this.actionStrip1.Location = new System.Drawing.Point(0, 587);
             this.actionStrip1.Name = "actionStrip1";
             this.actionStrip1.Padding = new System.Windows.Forms.Padding(5, 5, 2, 5);
-            this.actionStrip1.Size = new System.Drawing.Size(875, 40);
+            this.actionStrip1.Size = new System.Drawing.Size(877, 40);
             this.actionStrip1.TabIndex = 5;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(601, 197);
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button1.Location = new System.Drawing.Point(558, 104);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 6;
@@ -203,17 +210,73 @@ namespace GradeReport.Core.Main
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.Window;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Location = new System.Drawing.Point(495, 529);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 23);
+            this.panel1.TabIndex = 7;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Location = new System.Drawing.Point(2, 2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(169, 16);
+            this.textBox1.TabIndex = 1;
+            this.textBox1.Text = "Test";
+            // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button2.Location = new System.Drawing.Point(172, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(26, 21);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "...";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(607, 173);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 23);
+            this.textBox2.TabIndex = 9;
+            // 
+            // chooser1
+            // 
+            this.chooser1.BackColor = System.Drawing.SystemColors.Window;
+            this.chooser1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.chooser1.ChooseText = "";
+            this.chooser1.Location = new System.Drawing.Point(568, 342);
+            this.chooser1.Name = "chooser1";
+            this.chooser1.Size = new System.Drawing.Size(200, 23);
+            this.chooser1.TabIndex = 10;
+            this.chooser1.ChooseClick += new System.EventHandler(this.chooser1_ChooseClick);
+            // 
             // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(875, 627);
+            this.ClientSize = new System.Drawing.Size(877, 627);
+            this.Controls.Add(this.chooser1);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.actionStrip1);
             this.Controls.Add(this.treeView1);
             this.Name = "TestForm";
             this.Text = "TestForm";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -222,5 +285,11 @@ namespace GradeReport.Core.Main
         private System.Windows.Forms.TreeView treeView1;
         private ActionStrip actionStrip1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox1;
+        private Chooser entitySelector1;
+        private System.Windows.Forms.TextBox textBox2;
+        private Chooser chooser1;
     }
 }

@@ -20,25 +20,36 @@ namespace GradeReport.Core.Main
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new NotificationFormBuilder()
-                .Error("Error", "descr")
-                .Error("Error", "descr")
-                .Error("Error", "descr")
-                .Error("Error", "descr")
-                .Error("Error", "descr")
-                .Error("Error", "descr")
-                .Error("Error", "descr")
-                .Error("Error", "descr")
-                .Error("Error", "descr")
-                .Error("Error", "descr")
-                .Error("Error", "descr")
-                .Warning("Error", "descr")
-                .Warning("Error", "descr")
-                .Warning("Error", "descr")
-                .Warning("Error", "descr")
-                .Warning("Error", "descr")
-                .BuildForm()
-                .ShowDialog();
+            //new NotificationFormBuilder()
+            //    .Error("Error", "descr")
+            //    .Error("Error", "descr")
+            //    .Error("Error", "descr")
+            //    .Error("Error", "descr")
+            //    .Error("Error", "descr")
+            //    .Error("Error", "descr")
+            //    .Error("Error", "descr")
+            //    .Error("Error", "descr")
+            //    .Error("Error", "descr")
+            //    .Error("Error", "descr")
+            //    .Error("Error", "descr")
+            //    .Warning("Error", "descr")
+            //    .Warning("Error", "descr")
+            //    .Warning("Error", "descr")
+            //    .Warning("Error", "descr")
+            //    .Warning("Error", "descr")
+            //    .BuildForm()
+            //    .ShowDialog();
+chooser1.Enabled = !chooser1.Enabled;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void chooser1_ChooseClick(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hello");
         }
     }
 }
