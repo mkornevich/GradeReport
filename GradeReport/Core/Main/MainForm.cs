@@ -1,4 +1,5 @@
 ﻿
+using GradeReport.Core.Listing;
 using GradeReport.Core.Notify;
 using GradeReport.Core.Projects;
 using GradeReport.EntityModules.Subject;
@@ -34,29 +35,47 @@ namespace GradeReport.Core.Main
             {
                 peTreeView.Fresh(_projectContainer.Project);
             };
-            
+
             CreateNewProject();
 
             Shown += MainForm_Shown;
-            
+
         }
 
         private void MainForm_Shown(object sender, EventArgs e)
         {
-            new NotificationFormBuilder()
-                .Error("Error", "descr")
-                .Error("Error", "descr")
-                .Warning("Error", "descr")
-                .Warning("Error", "descr")
-                .BuildForm()
-                .Show();
+            var subjects = new List<Subject>()
+            {
+                new Subject() { Include = true, Name = "Математика", ShortName = "Матем" },
+                new Subject() { Include = false, Name = "Бел яз", ShortName = "Матем" },
+                new Subject() { Include = true, Name = "Бел лит", ShortName = "Матем" },
+                new Subject() { Include = true, Name = "Ин яз", ShortName = "Матем" },
+                new Subject() { Include = false, Name = "Биология", ShortName = "Матем" },
+                new Subject() { Include = true, Name = "График", ShortName = "Матем" },
+            };
+
+
+            var form = new ListForm();
+            var adapter = new SubjectListAdapter();
+            form.Adapter = adapter;
+
+            adapter.Entities = subjects.Cast<object>().ToList();
+            adapter.SelectedEntities = subjects.FindAll(s => !s.Include).Cast<object>().ToList();
+
+            adapter.SelectionChanged += () => MessageBox.Show(string.Join(", ", adapter.SelectedEntities.Select(e => ((Subject)e).Name)));
+
+            form.ShowDialog();
+
+            
+
+            
         }
 
         private void AdjustFormName()
         {
-            Text = "GradeReport - " 
-                + _projectContainer.Name 
-                + (_projectContainer.IsSaved ? "" : "*") 
+            Text = "GradeReport - "
+                + _projectContainer.Name
+                + (_projectContainer.IsSaved ? "" : "*")
                 + (_projectContainer.Path == null ? "" : " - " + _projectContainer.Path);
         }
 

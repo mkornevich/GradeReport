@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace GradeReport.EntityModules.Subject
 {
-    public partial class SubjectEditForm : EntityEditForm
+    public partial class SubjectEditForm : EditForm
     {
         public SubjectEditForm()
         {

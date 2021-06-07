@@ -195,7 +195,7 @@ namespace GradeReport.Core.Main
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(605, 295);
+            this.button1.Location = new System.Drawing.Point(601, 197);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 6;

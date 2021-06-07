@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace GradeReport.Core.Editing
 {
-    public class EntityEditForm : Form
+    public class EditForm : Form
     {
         public string EntityName { get; set; } = "Нет имени сущности";
 
@@ -21,7 +21,7 @@ namespace GradeReport.Core.Editing
 
         private ChangeMode _changeMode;
 
-        public EntityEditForm()
+        public EditForm()
         {
             MaximizeBox = false;
             MinimizeBox = false;

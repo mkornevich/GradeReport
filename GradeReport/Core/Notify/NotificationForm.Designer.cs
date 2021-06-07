@@ -90,11 +90,13 @@ namespace GradeReport.Core.Notify
             // 
             // descriptionTB
             // 
+            this.descriptionTB.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.descriptionTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.descriptionTB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.descriptionTB.Location = new System.Drawing.Point(0, 0);
             this.descriptionTB.Multiline = true;
             this.descriptionTB.Name = "descriptionTB";
+            this.descriptionTB.ReadOnly = true;
             this.descriptionTB.Size = new System.Drawing.Size(450, 157);
             this.descriptionTB.TabIndex = 1;
             // 
