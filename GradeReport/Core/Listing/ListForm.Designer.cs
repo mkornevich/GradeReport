@@ -56,7 +56,7 @@ namespace GradeReport.Core.Listing
             this.Table.RowHeadersVisible = false;
             this.Table.RowTemplate.Height = 25;
             this.Table.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Table.Size = new System.Drawing.Size(793, 493);
+            this.Table.Size = new System.Drawing.Size(566, 315);
             this.Table.TabIndex = 1;
             this.Table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CellContentClickAct);
             // 
@@ -70,7 +70,7 @@ namespace GradeReport.Core.Listing
             this.toolStripButton3});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(793, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(566, 25);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -113,10 +113,10 @@ namespace GradeReport.Core.Listing
             this.actionStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.actionStrip.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.actionStrip.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.actionStrip.Location = new System.Drawing.Point(0, 518);
+            this.actionStrip.Location = new System.Drawing.Point(0, 340);
             this.actionStrip.Name = "actionStrip";
             this.actionStrip.Padding = new System.Windows.Forms.Padding(5, 5, 2, 5);
-            this.actionStrip.Size = new System.Drawing.Size(793, 40);
+            this.actionStrip.Size = new System.Drawing.Size(566, 40);
             this.actionStrip.TabIndex = 4;
             this.actionStrip.Visible = false;
             // 
@@ -124,7 +124,7 @@ namespace GradeReport.Core.Listing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(793, 558);
+            this.ClientSize = new System.Drawing.Size(566, 380);
             this.Controls.Add(this.Table);
             this.Controls.Add(this.actionStrip);
             this.Controls.Add(this.toolStrip1);

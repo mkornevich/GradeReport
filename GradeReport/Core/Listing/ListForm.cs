@@ -138,12 +138,6 @@ namespace GradeReport.Core.Listing
         {
             foreach (DataGridViewRow row in Table.Rows)
             {
-                if (_selectedEntities == null)
-                {
-                    row.Cells[0].Value = false;
-                    continue;
-                }
-
                 row.Cells[0].Value = _selectedEntities.Exists(e => _adapter.IsRowBelongEntity(row, e));
             }
         }
