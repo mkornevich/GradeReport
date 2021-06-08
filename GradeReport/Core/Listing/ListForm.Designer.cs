@@ -29,28 +29,16 @@ namespace GradeReport.Core.Listing
         /// </summary>
         private void InitializeComponent()
         {
-            this.actionStrip = new GradeReport.Core.Actioning.ActionStrip();
             this.Table = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.selectionInfoTB = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.actionStrip = new GradeReport.Core.Actioning.ActionStrip();
             ((System.ComponentModel.ISupportInitialize)(this.Table)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // actionStrip
-            // 
-            this.actionStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.actionStrip.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.actionStrip.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.actionStrip.Location = new System.Drawing.Point(0, 518);
-            this.actionStrip.Name = "actionStrip";
-            this.actionStrip.Padding = new System.Windows.Forms.Padding(5, 5, 2, 5);
-            this.actionStrip.Size = new System.Drawing.Size(793, 40);
-            this.actionStrip.TabIndex = 0;
-            this.actionStrip.Visible = false;
             // 
             // Table
             // 
@@ -120,14 +108,26 @@ namespace GradeReport.Core.Listing
             this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton3.Text = "toolStripButton3";
             // 
+            // actionStrip
+            // 
+            this.actionStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.actionStrip.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.actionStrip.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.actionStrip.Location = new System.Drawing.Point(0, 518);
+            this.actionStrip.Name = "actionStrip";
+            this.actionStrip.Padding = new System.Windows.Forms.Padding(5, 5, 2, 5);
+            this.actionStrip.Size = new System.Drawing.Size(793, 40);
+            this.actionStrip.TabIndex = 4;
+            this.actionStrip.Visible = false;
+            // 
             // ListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(793, 558);
             this.Controls.Add(this.Table);
-            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.actionStrip);
+            this.Controls.Add(this.toolStrip1);
             this.Name = "ListForm";
             this.Text = "ListForm";
             ((System.ComponentModel.ISupportInitialize)(this.Table)).EndInit();
@@ -139,13 +139,12 @@ namespace GradeReport.Core.Listing
         }
 
         #endregion
-
-        private Actioning.ActionStrip actionStrip;
         private System.Windows.Forms.ToolStrip toolStrip1;
         public System.Windows.Forms.DataGridView Table;
         private System.Windows.Forms.ToolStripTextBox selectionInfoTB;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private Actioning.ActionStrip actionStrip;
     }
 }

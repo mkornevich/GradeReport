@@ -16,20 +16,11 @@ namespace GradeReport.Core.Listing
 
         private ListAdapter _adapter;
 
-        public ListAdapter Adapter
-        {
-            get => _adapter;
-            set
-            {
-                if (_adapter != null) _adapter.Form = null;
-                _adapter = value;
-                _adapter.Form = this;
-            }
-        }
+        public ListAdapter Adapter => _adapter;
 
         public SelectMode SelectMode { get; set; } = SelectMode.Multiple;
 
-        private List<object> _entities;
+        private List<object> _entities = new List<object>();
 
         public List<object> Entities
         {
@@ -37,13 +28,13 @@ namespace GradeReport.Core.Listing
             set
             {
                 _entities = value;
-                EntitiesToTable();
-                UpdateTableSelection();
-                UpdateSelectionInfo();
+                InstallEntitiesToTable();
+                InstallSelectionToTable();
+                UpdateSelectionTextInfo();
             }
         }
 
-        private List<object> _selectedEntities;
+        private List<object> _selectedEntities = new List<object>();
 
         public List<object> SelectedEntities
         {
@@ -68,19 +59,67 @@ namespace GradeReport.Core.Listing
             set
             {
                 _selectedEntities = value;
-                UpdateTableSelection();
-                UpdateSelectionInfo();
+                InstallSelectionToTable();
+                OnSelectionChangedExternally();
             }
         }
 
-        public event Action SelectionChanged;
+        private Chooser _chooser;
 
-        public ListForm()
+        public Chooser Chooser
+        {
+            get => _chooser;
+            set
+            {
+                if (_chooser != null)
+                {
+                    _chooser.ChooseClick -= ChooserClickAct;
+                }
+                _chooser = value;
+                _chooser.ChooseClick += ChooserClickAct;
+                _chooser.ChooseText = Adapter.GetChooserText();
+            }
+        }
+
+        public event Action SelectionChangedInternally;
+
+        public event Action SelectionChangedExternally;
+
+        public event Action SelectionChanged
+        {
+            add
+            {
+                SelectionChangedInternally += value;
+                SelectionChangedExternally += value;
+            }
+            remove
+            {
+                SelectionChangedInternally -= value;
+                SelectionChangedExternally -= value;
+            }
+        }
+
+        public ListForm(ListAdapter adapter)
         {
             InitializeComponent();
 
+            _adapter = adapter;
+            _adapter.Form = this;
+
             actionStrip.OkAction.Click += OkAct;
             actionStrip.CancelAction.Click += CancelAct;
+
+            SelectionChanged += () =>
+            {
+                UpdateSelectionTextInfo();
+                if (Chooser != null)
+                    Chooser.ChooseText = _adapter.GetChooserText();
+            };
+        }
+
+        private void ChooserClickAct(object sender, EventArgs e)
+        {
+            ShowDialog();
         }
 
         private void CancelAct(object sender, EventArgs e)
@@ -95,7 +134,7 @@ namespace GradeReport.Core.Listing
             Close();
         }
 
-        private void UpdateTableSelection()
+        private void InstallSelectionToTable()
         {
             foreach (DataGridViewRow row in Table.Rows)
             {
@@ -109,7 +148,7 @@ namespace GradeReport.Core.Listing
             }
         }
 
-        private void EntitiesToTable()
+        private void InstallEntitiesToTable()
         {
             Table.Columns.Clear();
             // selection column
@@ -125,7 +164,8 @@ namespace GradeReport.Core.Listing
             }
         }
 
-        private void OnSelectionChanged() => SelectionChanged?.Invoke();
+        private void OnSelectionChangedInternally() => SelectionChangedInternally?.Invoke();
+        private void OnSelectionChangedExternally() => SelectionChangedExternally?.Invoke();
 
         private void CellContentClickAct(object sender, DataGridViewCellEventArgs e)
         {
@@ -142,12 +182,11 @@ namespace GradeReport.Core.Listing
 
                 Table.Rows[e.RowIndex].Cells[0].Value = !(bool)Table.Rows[e.RowIndex].Cells[0].Value;
 
-                UpdateSelectionInfo();
-                OnSelectionChanged();
+                OnSelectionChangedInternally();
             }
         }
 
-        private void UpdateSelectionInfo() => selectionInfoTB.Text = "Выделено " + SelectedEntities.Count + " из " + Entities.Count;
+        private void UpdateSelectionTextInfo() => selectionInfoTB.Text = "Выделено " + SelectedEntities.Count + " из " + Entities.Count;
 
         public DialogResult ShowForResult()
         {

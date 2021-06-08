@@ -34,5 +34,10 @@ namespace GradeReport.EntityModules.Subject
             var subject = (Subject)entity;
             return (Guid)row.Cells[1].Value == subject.Guid;
         }
+
+        public override string EntityToString(object entity)
+        {
+            return ((Subject)entity).Name;
+        }
     }
 }

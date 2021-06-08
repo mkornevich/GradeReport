@@ -258,7 +258,6 @@ namespace GradeReport.Core.Main
             this.chooser1.Name = "chooser1";
             this.chooser1.Size = new System.Drawing.Size(200, 23);
             this.chooser1.TabIndex = 10;
-            this.chooser1.ChooseClick += new System.EventHandler(this.chooser1_ChooseClick);
             // 
             // TestForm
             // 

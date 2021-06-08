@@ -44,28 +44,7 @@ namespace GradeReport.Core.Main
 
         private void MainForm_Shown(object sender, EventArgs e)
         {
-            var subjects = new List<Subject>()
-            {
-                new Subject() { Include = true, Name = "Математика", ShortName = "Матем" },
-                new Subject() { Include = false, Name = "Бел яз", ShortName = "Матем" },
-                new Subject() { Include = true, Name = "Бел лит", ShortName = "Матем" },
-                new Subject() { Include = true, Name = "Ин яз", ShortName = "Матем" },
-                new Subject() { Include = false, Name = "Биология", ShortName = "Матем" },
-                new Subject() { Include = true, Name = "График", ShortName = "Матем" },
-            };
-
-
-            var form = new ListForm();
-            form.Adapter = new SubjectListAdapter();
-
-            form.Entities = subjects.Cast<object>().ToList();
-            form.SelectedEntities = subjects.FindAll(s => !s.Include).Cast<object>().ToList();
-
-            form.SelectMode = SelectMode.Single;
-
-            form.SelectionChanged += () => MessageBox.Show(string.Join(", ", form.SelectedEntities.Select(e => ((Subject)e).Name)));
-
-            MessageBox.Show(form.ShowForResult().ToString());
+            
         }
 
         private void AdjustFormName()
