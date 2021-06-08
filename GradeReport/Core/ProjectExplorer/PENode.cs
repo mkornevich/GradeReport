@@ -12,29 +12,26 @@ namespace GradeReport.Core.ProjectExplorer
     {
         public Project Project { get; set; }
 
-        public object Entity { get; set; }
+        public object Object { get; set; }
 
-        protected TEntity GetNodeEntity<TEntity, TNode>()
+        protected object GetNodeObject<TNode>()
         {
             if (typeof(TNode).FullName == GetType().FullName)
             {
-                return GetNodeEntity<TEntity>();
+                return Object;
             }
-            var PEParent = (PENode)Parent;
-            return PEParent.GetNodeEntity<TEntity, TNode>();
+            var parent = (PENode)Parent;
+            return parent.GetNodeObject<TNode>();
         }
 
-        protected TEntity GetNodeEntity<TEntity>()
+        public void Init()
         {
-            return (TEntity)Entity;
+            Visualize();
+            LoadMenuItems();
+            LoadNodes();
         }
 
-        protected virtual void CreateNodes(List<PENode> nodes)
-        {
-            
-        }
-
-        private void LoadNodes()
+        private void LoadNodes(bool initNodes = true)
         {
             var nodes = new List<PENode>();
             CreateNodes(nodes);
@@ -42,13 +39,8 @@ namespace GradeReport.Core.ProjectExplorer
             {
                 nodes.ForEach(n => n.Project = Project);
                 Nodes.AddRange(nodes.ToArray());
-                nodes.ForEach(n => n.Init());
+                if (initNodes) nodes.ForEach(n => n.Init());
             }
-        }
-
-        protected virtual void CreateMenuItems(List<ToolStripMenuItem> items)
-        {
-
         }
 
         private void LoadMenuItems()
@@ -62,10 +54,70 @@ namespace GradeReport.Core.ProjectExplorer
             }
         }
 
-        public virtual void Init()
+        public void Fresh(PENode selectedOldNode)
         {
-            LoadMenuItems();
-            LoadNodes();
+            Visualize();
+
+            var childOldNodes = Nodes.Cast<PENode>().ToList();
+
+            //// удаляем старые ноды
+            Nodes.Clear();
+
+            //// загружаем новые ноды
+            LoadNodes(false);
+
+            //// проходимся по новым нодам
+            foreach (PENode childNewNode in Nodes)
+            {
+
+                // находим для новой ноды эквивалентную старую ноду
+                var childOldNode = childOldNodes.Find(childOldNode => childOldNode.EqualsForFresh(childNewNode));
+                if (childOldNode != null)
+                {
+                    // если для новой ноды есть старая нода
+
+                    // для детей новой дочерней ноды загружаем детей старой дочерней ноды
+                    foreach (PENode childChildOldNode in childOldNode.Nodes)
+                    {
+                        childNewNode.Nodes.Add(childChildOldNode);
+                    }
+
+                    if (childOldNode.IsExpanded) childNewNode.Expand();
+
+                    if (childOldNode == selectedOldNode)
+                    {
+                        ((PETreeView)TreeView).SelectedNode = childNewNode;
+                    }
+
+                    childNewNode.LoadMenuItems();
+                    childNewNode.Fresh(selectedOldNode);
+                }
+                else
+                {
+                    // если для новой нету старой
+                    childNewNode.Init();
+                }
+            }
+        }
+
+        protected virtual void Visualize()
+        {
+
+        }
+
+        protected virtual void CreateNodes(List<PENode> nodes)
+        {
+
+        }
+
+        protected virtual void CreateMenuItems(List<ToolStripMenuItem> items)
+        {
+
+        }
+
+        protected virtual bool EqualsForFresh(PENode node)
+        {
+            return GetType().Equals(node.GetType());
         }
     }
 }

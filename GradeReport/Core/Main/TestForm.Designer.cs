@@ -196,13 +196,13 @@ namespace GradeReport.Core.Main
             this.actionStrip1.Location = new System.Drawing.Point(0, 587);
             this.actionStrip1.Name = "actionStrip1";
             this.actionStrip1.Padding = new System.Windows.Forms.Padding(5, 5, 2, 5);
-            this.actionStrip1.Size = new System.Drawing.Size(877, 40);
+            this.actionStrip1.Size = new System.Drawing.Size(891, 40);
             this.actionStrip1.TabIndex = 5;
             // 
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button1.Location = new System.Drawing.Point(558, 104);
+            this.button1.Location = new System.Drawing.Point(565, 104);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 6;
@@ -263,7 +263,7 @@ namespace GradeReport.Core.Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(877, 627);
+            this.ClientSize = new System.Drawing.Size(891, 627);
             this.Controls.Add(this.chooser1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.panel1);

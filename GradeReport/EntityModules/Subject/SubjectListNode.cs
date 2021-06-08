@@ -10,15 +10,14 @@ namespace GradeReport.EntityModules.Subject
 {
     public class SubjectListNode : PENode
     {
-        public override void Init()
+        protected override void Visualize()
         {
             Text = "Предметы";
-            base.Init();
         }
 
         protected override void CreateNodes(List<PENode> nodes)
         {
-            Project.Subjects.ForEach(s => nodes.Add(new SubjectNode() { Entity = s }));
+            Project.Subjects.ForEach(s => nodes.Add(new SubjectNode() { Object = s }));
         }
     }
 }

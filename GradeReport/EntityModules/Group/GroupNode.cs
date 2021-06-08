@@ -11,15 +11,19 @@ namespace GradeReport.EntityModules.Group
 {
     public class GroupNode : PENode
     {
-        public override void Init()
+        protected override void Visualize()
         {
-            Text = GetNodeEntity<Group>().Name;
-            base.Init();
+            Text = ((Group)Object).Name;
         }
 
         protected override void CreateNodes(List<PENode> nodes)
         {
             nodes.Add(new StudentListNode());
+        }
+
+        protected override bool EqualsForFresh(PENode node)
+        {
+            return base.EqualsForFresh(node) && ((Group)Object).Guid == ((Group)node.Object).Guid;
         }
     }
 }

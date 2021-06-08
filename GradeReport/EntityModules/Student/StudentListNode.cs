@@ -11,17 +11,16 @@ namespace GradeReport.EntityModules.Student
 {
     public class StudentListNode : PENode
     {
-        public override void Init()
+        protected override void Visualize()
         {
             Text = "Студенты";
-            base.Init();
         }
 
         protected override void CreateNodes(List<PENode> nodes)
         {
-            var group = GetNodeEntity<Group.Group, GroupNode>();
+            var group = (Group.Group)GetNodeObject<GroupNode>();
             var students = Project.Students.FindAll(s => s.GroupGuid == group.Guid).ToList();
-            students.ForEach(s => nodes.Add(new StudentNode() { Entity = s }));
+            students.ForEach(s => nodes.Add(new StudentNode() { Object = s }));
         }
     }
 }

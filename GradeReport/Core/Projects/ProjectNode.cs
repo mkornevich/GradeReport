@@ -14,10 +14,9 @@ namespace GradeReport.Core.Projects
 {
     public class ProjectNode : PENode
     {
-        public override void Init()
+        protected override void Visualize()
         {
             Text = "Проект";
-            base.Init();
         }
 
         protected override void CreateNodes(List<PENode> nodes)

@@ -10,10 +10,14 @@ namespace GradeReport.EntityModules.Student
 {
     public class StudentNode : PENode
     {
-        public override void Init()
+        protected override void Visualize()
         {
-            Text = GetNodeEntity<Student>().Name;
-            base.Init();
+            Text = ((Student)Object).Name;
+        }
+
+        protected override bool EqualsForFresh(PENode node)
+        {
+            return base.EqualsForFresh(node) && ((Student)Object).Guid == ((Student)node.Object).Guid;
         }
     }
 }

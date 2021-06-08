@@ -10,15 +10,14 @@ namespace GradeReport.EntityModules.Group
 {
     public class GroupListNode : PENode
     {
-        public override void Init()
+        protected override void Visualize()
         {
             Text = "Группы";
-            base.Init();
         }
 
         protected override void CreateNodes(List<PENode> nodes)
         {
-            Project.Groups.ForEach(g => nodes.Add(new GroupNode() { Entity = g }));
+            Project.Groups.ForEach(g => nodes.Add(new GroupNode() { Object = g }));
         }
     }
 }

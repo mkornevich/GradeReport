@@ -11,10 +11,9 @@ namespace GradeReport.EntityModules.Subject
 {
     public class SubjectNode : PENode
     {
-        public override void Init()
+        protected override void Visualize()
         {
-            Text = GetNodeEntity<Subject>().ShortName;
-            base.Init();
+            Text = ((Subject)Object).ShortName;
         }
 
         protected override void CreateMenuItems(List<ToolStripMenuItem> items)
@@ -24,9 +23,15 @@ namespace GradeReport.EntityModules.Subject
 
         private void EditAct(object sender, EventArgs e)
         {
-            var subject = GetNodeEntity<Subject>();
+            var subject = Object;
             var editForm = new SubjectEditForm();
             editForm.ShowEditForm(subject, ChangeMode.Edit);
+            ((PETreeView)TreeView).Fresh();
+        }
+
+        protected override bool EqualsForFresh(PENode node)
+        {
+            return base.EqualsForFresh(node) && ((Subject)Object).Guid == ((Subject)node.Object).Guid;
         }
     }
 }

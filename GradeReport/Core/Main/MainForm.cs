@@ -33,7 +33,7 @@ namespace GradeReport.Core.Main
 
             _projectContainer.NewProjectLoaded += () =>
             {
-                peTreeView.Fresh(_projectContainer.Project);
+                peTreeView.LoadProject(_projectContainer.Project);
             };
 
             CreateNewProject();
@@ -103,6 +103,11 @@ namespace GradeReport.Core.Main
         private void showTestFormAct(object sender, EventArgs e)
         {
             new TestForm().Show();
+        }
+
+        private void testToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            peTreeView.Fresh();
         }
     }
 }

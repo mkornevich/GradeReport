@@ -10,10 +10,9 @@ namespace GradeReport.EntityModules.Config
 {
     public class ConfigNode : PENode
     {
-        public override void Init()
+        protected override void Visualize()
         {
             Text = "Конфигурация";
-            base.Init();
         }
     }
 }

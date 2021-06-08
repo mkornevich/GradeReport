@@ -10,19 +10,23 @@ namespace GradeReport.Core.ProjectExplorer
 {
     public class PETreeView : TreeView
     {
-        public void Fresh(Project project)
+        private ProjectNode _projectNode;
+
+        public void LoadProject(Project project)
         {
-            var projectNode = new ProjectNode() { Project = project };
+            BeginUpdate();
+            _projectNode = new ProjectNode() { Project = project };
             Nodes.Clear();
-            Nodes.Add(projectNode);
-            projectNode.Init();
+            Nodes.Add(_projectNode);
+            _projectNode.Init();
+            EndUpdate();
+        }
 
-
-            //ContextMenuStrip = new ContextMenuStrip();
-            //var menu = ContextMenuStrip;
-
-            //menu.Items.Add(new ToolStripMenuItem("Test"));
-
+        public void Fresh()
+        {
+            BeginUpdate();
+            _projectNode.Fresh((PENode)SelectedNode);
+            EndUpdate();
         }
     }
 }
