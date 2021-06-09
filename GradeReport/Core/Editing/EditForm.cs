@@ -66,6 +66,7 @@ namespace GradeReport.Core.Editing
         {
             _entity = entity;
             _changeMode = mode;
+            InitForm(_changeMode);
             EntityToForm(entity, mode);
             AdjustFormText();
             ShowDialog();
