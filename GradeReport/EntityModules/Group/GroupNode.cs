@@ -16,8 +16,9 @@ namespace GradeReport.EntityModules.Group
             Text = ((Group)Object).Name;
         }
 
-        protected override void CreateNodes(List<PENode> nodes)
+        protected override void CreateChildNodes(List<PENode> nodes, out bool isChildNodesStatic)
         {
+            isChildNodesStatic = true;
             nodes.Add(new StudentListNode());
         }
 

@@ -70,11 +70,26 @@ ListForm
 			+Дополнительные поля из других источников для сущности
 			+Режим: Множественное одиночное
 		ActionStrip
-			- ShowForResult
+			+- ShowForResult
 
 
 
 
+ProjectChangeBus
+	
+	Dao Entity
+	
+	Изменяют
+		EditForm
+		Master
+		Nodes + ListForm
+		
+	Слушают
+		PENode Для сущности
+		PENode Которая представляет коллекцию однотипов
+		
+		!ReportBuilder
+	
 
 
 

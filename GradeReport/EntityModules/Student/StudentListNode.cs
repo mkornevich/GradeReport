@@ -16,8 +16,9 @@ namespace GradeReport.EntityModules.Student
             Text = "Студенты";
         }
 
-        protected override void CreateNodes(List<PENode> nodes)
+        protected override void CreateChildNodes(List<PENode> nodes, out bool isChildNodesStatic)
         {
+            isChildNodesStatic = false;
             var group = (Group.Group)GetNodeObject<GroupNode>();
             var students = Project.Students.FindAll(s => s.GroupGuid == group.Guid).ToList();
             students.ForEach(s => nodes.Add(new StudentNode() { Object = s }));

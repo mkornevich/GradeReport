@@ -15,8 +15,9 @@ namespace GradeReport.EntityModules.Subject
             Text = "Предметы";
         }
 
-        protected override void CreateNodes(List<PENode> nodes)
+        protected override void CreateChildNodes(List<PENode> nodes, out bool isChildNodesStatic)
         {
+            isChildNodesStatic = false;
             Project.Subjects.ForEach(s => nodes.Add(new SubjectNode() { Object = s }));
         }
     }

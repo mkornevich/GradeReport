@@ -19,8 +19,9 @@ namespace GradeReport.Core.Projects
             Text = "Проект";
         }
 
-        protected override void CreateNodes(List<PENode> nodes)
+        protected override void CreateChildNodes(List<PENode> nodes, out bool isChildNodesStatic)
         {
+            isChildNodesStatic = true;
             nodes.Add(new ConfigNode());
             nodes.Add(new SubjectListNode());
             nodes.Add(new GroupListNode());

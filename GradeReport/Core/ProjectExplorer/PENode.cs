@@ -12,6 +12,8 @@ namespace GradeReport.Core.ProjectExplorer
     {
         public Project Project { get; set; }
 
+        private bool _isChildNodesStatic;
+
         public object Object { get; set; }
 
         protected object GetNodeObject<TNode>()
@@ -28,13 +30,13 @@ namespace GradeReport.Core.ProjectExplorer
         {
             Visualize();
             LoadMenuItems();
-            LoadNodes();
+            LoadChildNodes();
         }
 
-        private void LoadNodes(bool initNodes = true)
+        private void LoadChildNodes(bool initNodes = true)
         {
             var nodes = new List<PENode>();
-            CreateNodes(nodes);
+            CreateChildNodes(nodes, out _isChildNodesStatic);
             if (nodes.Count > 0)
             {
                 nodes.ForEach(n => n.Project = Project);
@@ -58,24 +60,28 @@ namespace GradeReport.Core.ProjectExplorer
         {
             Visualize();
 
+            if(_isChildNodesStatic)
+            {
+                foreach (PENode childNode in Nodes)
+                {
+                    childNode.Fresh(selectedOldNode);
+                }
+                return;
+            }
+
             var childOldNodes = Nodes.Cast<PENode>().ToList();
 
-            //// удаляем старые ноды
+            // remove old nodes
             Nodes.Clear();
 
-            //// загружаем новые ноды
-            LoadNodes(false);
+            //// load new nodes
+            LoadChildNodes(false);
 
-            //// проходимся по новым нодам
             foreach (PENode childNewNode in Nodes)
             {
-
-                // находим для новой ноды эквивалентную старую ноду
                 var childOldNode = childOldNodes.Find(childOldNode => childOldNode.EqualsForFresh(childNewNode));
-                if (childOldNode != null)
+                if (childOldNode != null) // if for new node exists old node
                 {
-                    // если для новой ноды есть старая нода
-
                     // для детей новой дочерней ноды загружаем детей старой дочерней ноды
                     foreach (PENode childChildOldNode in childOldNode.Nodes)
                     {
@@ -92,9 +98,8 @@ namespace GradeReport.Core.ProjectExplorer
                     childNewNode.LoadMenuItems();
                     childNewNode.Fresh(selectedOldNode);
                 }
-                else
+                else // if for new node not exists old node
                 {
-                    // если для новой нету старой
                     childNewNode.Init();
                 }
             }
@@ -105,9 +110,9 @@ namespace GradeReport.Core.ProjectExplorer
 
         }
 
-        protected virtual void CreateNodes(List<PENode> nodes)
+        protected virtual void CreateChildNodes(List<PENode> nodes, out bool isChildNodesStatic)
         {
-
+            isChildNodesStatic = true;
         }
 
         protected virtual void CreateMenuItems(List<ToolStripMenuItem> items)

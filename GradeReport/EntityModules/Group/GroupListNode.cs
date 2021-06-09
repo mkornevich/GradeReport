@@ -15,8 +15,9 @@ namespace GradeReport.EntityModules.Group
             Text = "Группы";
         }
 
-        protected override void CreateNodes(List<PENode> nodes)
+        protected override void CreateChildNodes(List<PENode> nodes, out bool isChildNodesStatic)
         {
+            isChildNodesStatic = false;
             Project.Groups.ForEach(g => nodes.Add(new GroupNode() { Object = g }));
         }
     }
