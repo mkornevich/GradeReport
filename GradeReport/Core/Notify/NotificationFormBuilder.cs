@@ -12,6 +12,12 @@ namespace GradeReport.Core.Notify
 
         private string _text;
 
+        public int ErrorCount => _notifications.Count(n => n.Type == NotificationType.Error);
+
+        public int WarningCount => _notifications.Count(n => n.Type == NotificationType.Warning);
+
+        public int InfoCount => _notifications.Count(n => n.Type == NotificationType.Info);
+
         public NotificationFormBuilder Clear()
         {
             _notifications.Clear();
