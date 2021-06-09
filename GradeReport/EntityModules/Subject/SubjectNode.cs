@@ -24,9 +24,9 @@ namespace GradeReport.EntityModules.Subject
         private void EditAct(object sender, EventArgs e)
         {
             var subject = Object;
-            var editForm = new SubjectEditForm();
+            var editForm = new SubjectEditForm() { Project = Project };
             editForm.ShowEditForm(subject, ChangeMode.Edit);
-            ((PETreeView)TreeView).Fresh();
+            TreeViewFresh();
         }
 
         protected override bool EqualsForFresh(PENode node)

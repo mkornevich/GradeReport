@@ -18,6 +18,8 @@ namespace GradeReport.Core.Notify
 
         public int InfoCount => _notifications.Count(n => n.Type == NotificationType.Info);
 
+        public int MessageCount => _notifications.Count;
+
         public NotificationFormBuilder Clear()
         {
             _notifications.Clear();

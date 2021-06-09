@@ -1,5 +1,6 @@
 ﻿using GradeReport.Core;
 using GradeReport.Core.Editing;
+using GradeReport.Core.Notify;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,6 +35,19 @@ namespace GradeReport.EntityModules.Subject
             subject.Name = nameTB.Text;
             subject.ShortName = shortNameTB.Text;
             subject.Include = includeCB.Checked;
+        }
+
+        protected override bool Validate(NotificationFormBuilder builder, object entity)
+        {
+            var subject = (Subject)entity;
+
+
+            builder.ErrorIf(nameTB.Text == "", "Заполните полное название предмета.");
+
+            builder.ErrorIf(shortNameTB.Text == "", "Заполните короткое название предмета.");
+            builder.ErrorIf(Project.Subjects.Exists(s => s.Guid != subject.Guid && s.ShortName == shortNameTB.Text), "Такое короткое имя уже занято, попробуйте другое.");
+
+            return builder.ErrorCount == 0;
         }
     }
 }

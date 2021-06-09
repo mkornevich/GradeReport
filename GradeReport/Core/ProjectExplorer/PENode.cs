@@ -45,6 +45,11 @@ namespace GradeReport.Core.ProjectExplorer
             }
         }
 
+        protected void TreeViewFresh()
+        {
+            ((PETreeView)TreeView).Fresh();
+        }
+
         private void LoadMenuItems()
         {
             var menuItems = new List<ToolStripMenuItem>();
