@@ -1,5 +1,5 @@
 ﻿
-using GradeReport.Core.Actioning;
+using GradeReport.Core.ActionStripNS;
 
 namespace GradeReport.Core.Main
 {
@@ -96,7 +96,7 @@ namespace GradeReport.Core.Main
             treeNode32,
             treeNode33});
             this.treeView1 = new System.Windows.Forms.TreeView();
-            this.actionStrip1 = new GradeReport.Core.Actioning.ActionStrip();
+            this.actionStrip1 = new GradeReport.Core.ActionStripNS.ActionStrip();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();

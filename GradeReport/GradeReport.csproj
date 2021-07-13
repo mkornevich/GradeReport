@@ -35,4 +35,9 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Reports\Report1\" />
+    <Folder Include="Reports\Report2\" />
+  </ItemGroup>
+
 </Project>

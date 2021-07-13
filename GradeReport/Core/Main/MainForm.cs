@@ -1,8 +1,4 @@
-﻿
-using GradeReport.Core.Listing;
-using GradeReport.Core.Notify;
-using GradeReport.Core.Projects;
-using GradeReport.EntityModules.Subject;
+﻿using GradeReport.Core.ProjectNS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

@@ -1,6 +1,5 @@
-﻿using GradeReport.Core.Listing;
-using GradeReport.Core.Notify;
-using GradeReport.EntityModules.Subject;
+﻿using GradeReport.Core.List;
+using GradeReport.EntityModules.SubjectNS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

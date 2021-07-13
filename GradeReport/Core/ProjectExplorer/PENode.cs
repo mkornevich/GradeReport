@@ -1,4 +1,4 @@
-﻿using GradeReport.Core.Projects;
+﻿using GradeReport.Core.ProjectNS;
 using System;
 using System.Collections.Generic;
 using System.Linq;
