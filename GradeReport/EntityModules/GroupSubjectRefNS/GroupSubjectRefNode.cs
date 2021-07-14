@@ -1,0 +1,25 @@
+﻿using GradeReport.Core.ProjectExplorer;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace GradeReport.EntityModules.GroupSubjectRefNS
+{
+    public class GroupSubjectRefNode : PENode
+    {
+        protected override void Visualize()
+        {
+            var subject = Project.Subjects.Find(s => s.Guid == ((GroupSubjectRef)Object).SubjectGuid);
+            Text = subject.ShortName;
+        }
+
+        protected override bool EqualsForFresh(PENode node)
+        {
+            return base.EqualsForFresh(node) && 
+                ((GroupSubjectRef)Object).GroupGuid == ((GroupSubjectRef)node.Object).GroupGuid &&
+                ((GroupSubjectRef)Object).SubjectGuid == ((GroupSubjectRef)node.Object).SubjectGuid;
+        }
+    }
+}

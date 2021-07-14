@@ -12,10 +12,13 @@ namespace GradeReport.Core.ProjectExplorer
     {
         private ProjectNode _projectNode;
 
+        public Project Project { get; private set; }
+
         public void LoadProject(Project project)
         {
+            Project = project;
             BeginUpdate();
-            _projectNode = new ProjectNode() { Project = project };
+            _projectNode = new ProjectNode();
             Nodes.Clear();
             Nodes.Add(_projectNode);
             _projectNode.Init();

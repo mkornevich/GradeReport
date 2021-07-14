@@ -19,6 +19,13 @@ namespace GradeReport.EntityModules.SubjectNS
         protected override void CreateMenuItems(List<ToolStripMenuItem> items)
         {
             items.Add(new ToolStripMenuItem("Редактировать", null, EditAct));
+            items.Add(new ToolStripMenuItem("Удалить", null, RemoveAct));
+        }
+
+        private void RemoveAct(object sender, EventArgs e)
+        {
+            Project.Subjects.Remove((Subject)Object);
+            TreeViewFresh();
         }
 
         private void EditAct(object sender, EventArgs e)

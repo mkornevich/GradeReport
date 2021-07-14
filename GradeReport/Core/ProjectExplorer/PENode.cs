@@ -10,7 +10,7 @@ namespace GradeReport.Core.ProjectExplorer
 {
     public abstract class PENode : TreeNode
     {
-        public Project Project { get; set; }
+        public Project Project => ((PETreeView)TreeView).Project;
 
         private bool _isChildNodesStatic;
 
@@ -39,7 +39,6 @@ namespace GradeReport.Core.ProjectExplorer
             CreateChildNodes(nodes, out _isChildNodesStatic);
             if (nodes.Count > 0)
             {
-                nodes.ForEach(n => n.Project = Project);
                 Nodes.AddRange(nodes.ToArray());
                 if (initNodes) nodes.ForEach(n => n.Init());
             }

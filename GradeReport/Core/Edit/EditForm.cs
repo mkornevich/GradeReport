@@ -35,6 +35,8 @@ namespace GradeReport.Core.Edit
             ActionStrip.NegativeAction.Click += CancelAct;
 
             Controls.Add(ActionStrip);
+
+            StartPosition = FormStartPosition.CenterParent;
         }
 
         private void CancelAct(object sender, EventArgs e)
