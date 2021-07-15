@@ -1,0 +1,148 @@
+=== ProjectNS
+Проект - ProjectNode
+
+=== ConfigNS
+Конфигурация - ConfigNode
+	- Редактировать (Открывается форма для редактирования)
+
+ConfigEditForm
+
+=== SubjectNS
+Предметы - SubjectListNode
+
+Предмет - SubjectNode
+
+=== MyStudentInSubjectRefNS
+Мои студенты - MyStudentInSubjectRefListNode
+
+Студент - MyStudentInSubjectRefNode
+
+=== QualificationNS
+Квалификации - QualificationListNode
+
+Квалификация - QualificationNode
+
+=== SpecialtyNS
+Специальности - SpecialtyListNode
+
+Специальность - SpecialtyNode
+
+=== GroupNS
+Группы - GroupListNode
+
+Группа - GroupNode
+
+=== StudentNS
+Студетны - StudentListNode
+
+Студент - StudentNode
+
+=== GroupSubjectRefNS
+Предметы - GroupSubjectRefListNode
+
+Предмет - GroupSubjectRefNode
+
+=== CourseNS
+Курсы - CourseListNode
+
+Курс - CourseNode
+
+=== SemesterNS
+Семестры - SemesterListNode
+
+Семестр - SemesterNode
+
+=== SemesterStudentRefNS
+Студенты - SemesterStudentRefListNode
+
+Студент - SemesterStudentRefNode
+
+=== SemesterSubjectNS
+Предметы - SemesterSubjectRefListNode
+
+Предмет - SemesterSubjectRefNode
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
