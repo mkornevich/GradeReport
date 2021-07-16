@@ -9,6 +9,8 @@ namespace GradeReport.EntityModules.ConfigNS
 {
     public class ConfigNode : PENode
     {
+        public override string Description => "Данный узел представляет конфигурацию текущего проекта. Редактировать можно через ПКМ.";
+
         protected override void Visualize()
         {
             Text = "Конфигурация";

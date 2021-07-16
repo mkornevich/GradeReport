@@ -14,6 +14,8 @@ namespace GradeReport.Core.ProjectNS
 {
     public class ProjectNode : PENode
     {
+        public override string Description => "Данный узел представляет из себя весь проект который можно редактировать. На основании информации из данного проекта будут генерироваться отчеты. Просто заполните остальные узлы ниже нужными данными.";
+
         protected override void Visualize()
         {
             Text = "Проект";

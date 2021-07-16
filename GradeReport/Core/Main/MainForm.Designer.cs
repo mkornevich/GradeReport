@@ -54,22 +54,23 @@ namespace GradeReport.Core.Main
             this.оПрограммеToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.тестФормаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.peTreeView = new GradeReport.Core.ProjectExplorer.PETreeView();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.infoPanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.infoTB = new System.Windows.Forms.TextBox();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.infoPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -241,21 +242,28 @@ namespace GradeReport.Core.Main
             // оПрограммеToolStripMenuItem1
             // 
             this.оПрограммеToolStripMenuItem1.Name = "оПрограммеToolStripMenuItem1";
-            this.оПрограммеToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.оПрограммеToolStripMenuItem1.Size = new System.Drawing.Size(149, 22);
             this.оПрограммеToolStripMenuItem1.Text = "О программе";
             // 
             // настройкиToolStripMenuItem
             // 
             this.настройкиToolStripMenuItem.Name = "настройкиToolStripMenuItem";
-            this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.настройкиToolStripMenuItem.Text = "Настройки";
             // 
             // тестФормаToolStripMenuItem
             // 
             this.тестФормаToolStripMenuItem.Name = "тестФормаToolStripMenuItem";
-            this.тестФормаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.тестФормаToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.тестФормаToolStripMenuItem.Text = "Тест форма";
-            this.тестФормаToolStripMenuItem.Click += new System.EventHandler(this.showTestFormAct);
+            this.тестФормаToolStripMenuItem.Click += new System.EventHandler(this.ShowTestFormAct);
+            // 
+            // testToolStripMenuItem
+            // 
+            this.testToolStripMenuItem.Name = "testToolStripMenuItem";
+            this.testToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
+            this.testToolStripMenuItem.Text = "Test";
+            this.testToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click);
             // 
             // peTreeView
             // 
@@ -286,7 +294,7 @@ namespace GradeReport.Core.Main
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.panel2);
+            this.splitContainer1.Panel2.Controls.Add(this.infoPanel);
             this.splitContainer1.Size = new System.Drawing.Size(518, 748);
             this.splitContainer1.SplitterDistance = 553;
             this.splitContainer1.TabIndex = 5;
@@ -313,16 +321,17 @@ namespace GradeReport.Core.Main
             this.label1.TabIndex = 5;
             this.label1.Text = "Обозреватель проекта";
             // 
-            // panel2
+            // infoPanel
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(518, 191);
-            this.panel2.TabIndex = 0;
+            this.infoPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.infoPanel.Controls.Add(this.infoTB);
+            this.infoPanel.Controls.Add(this.label2);
+            this.infoPanel.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.infoPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.infoPanel.Location = new System.Drawing.Point(0, 0);
+            this.infoPanel.Name = "infoPanel";
+            this.infoPanel.Size = new System.Drawing.Size(518, 191);
+            this.infoPanel.TabIndex = 0;
             // 
             // label2
             // 
@@ -334,12 +343,17 @@ namespace GradeReport.Core.Main
             this.label2.TabIndex = 0;
             this.label2.Text = "Описание выделенного элемента";
             // 
-            // testToolStripMenuItem
+            // infoTB
             // 
-            this.testToolStripMenuItem.Name = "testToolStripMenuItem";
-            this.testToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
-            this.testToolStripMenuItem.Text = "Test";
-            this.testToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click);
+            this.infoTB.BackColor = System.Drawing.SystemColors.Window;
+            this.infoTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.infoTB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.infoTB.Location = new System.Drawing.Point(0, 15);
+            this.infoTB.Multiline = true;
+            this.infoTB.Name = "infoTB";
+            this.infoTB.ReadOnly = true;
+            this.infoTB.Size = new System.Drawing.Size(516, 174);
+            this.infoTB.TabIndex = 1;
             // 
             // MainForm
             // 
@@ -359,7 +373,8 @@ namespace GradeReport.Core.Main
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
+            this.infoPanel.ResumeLayout(false);
+            this.infoPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -395,12 +410,13 @@ namespace GradeReport.Core.Main
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel infoPanel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem настройкиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem тестФормаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
+        private System.Windows.Forms.TextBox infoTB;
     }
 }
 

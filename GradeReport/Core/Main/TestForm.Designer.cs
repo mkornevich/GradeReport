@@ -95,6 +95,7 @@ namespace GradeReport.Core.Main
             treeNode31,
             treeNode32,
             treeNode33});
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TestForm));
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.actionStrip1 = new GradeReport.Core.ActionStripNS.ActionStrip();
             this.button1 = new System.Windows.Forms.Button();
@@ -103,6 +104,10 @@ namespace GradeReport.Core.Main
             this.button2 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.chooser1 = new GradeReport.Core.Chooser();
+            this.label2 = new System.Windows.Forms.Label();
+            this.helpLabel1 = new GradeReport.Core.HelpLabel();
+            this.helpLabel2 = new GradeReport.Core.HelpLabel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -196,13 +201,13 @@ namespace GradeReport.Core.Main
             this.actionStrip1.Location = new System.Drawing.Point(0, 587);
             this.actionStrip1.Name = "actionStrip1";
             this.actionStrip1.Padding = new System.Windows.Forms.Padding(5, 5, 2, 5);
-            this.actionStrip1.Size = new System.Drawing.Size(891, 40);
+            this.actionStrip1.Size = new System.Drawing.Size(1246, 40);
             this.actionStrip1.TabIndex = 5;
             // 
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button1.Location = new System.Drawing.Point(565, 104);
+            this.button1.Location = new System.Drawing.Point(732, 266);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 6;
@@ -246,7 +251,7 @@ namespace GradeReport.Core.Main
             // 
             this.textBox2.Location = new System.Drawing.Point(607, 173);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 23);
+            this.textBox2.Size = new System.Drawing.Size(200, 23);
             this.textBox2.TabIndex = 9;
             // 
             // chooser1
@@ -254,16 +259,62 @@ namespace GradeReport.Core.Main
             this.chooser1.BackColor = System.Drawing.SystemColors.Window;
             this.chooser1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.chooser1.ChooseText = "";
-            this.chooser1.Location = new System.Drawing.Point(568, 342);
+            this.chooser1.Location = new System.Drawing.Point(607, 217);
             this.chooser1.Name = "chooser1";
             this.chooser1.Size = new System.Drawing.Size(200, 23);
             this.chooser1.TabIndex = 10;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(607, 155);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 15);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "label2";
+            // 
+            // helpLabel1
+            // 
+            this.helpLabel1.AutoScroll = true;
+            this.helpLabel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel1.BackgroundImage")));
+            this.helpLabel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.helpLabel1.HelpText = "Тут необходимо указать полное наименование предмета.\r\n\r\nДанная информация использ" +
+    "уется при генерации отчета.\r\n\r\nЖелательно чтоб это поле было уникальным по отнош" +
+    "ению к другим предметом.";
+            this.helpLabel1.Location = new System.Drawing.Point(791, 155);
+            this.helpLabel1.Name = "helpLabel1";
+            this.helpLabel1.Size = new System.Drawing.Size(16, 16);
+            this.helpLabel1.TabIndex = 13;
+            // 
+            // helpLabel2
+            // 
+            this.helpLabel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel2.BackgroundImage")));
+            this.helpLabel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.helpLabel2.HelpText = "Здесь необходимо выбрать тех пользователей которые пренадлежат определенной групп" +
+    "е.\r\n\r\nДанная информация используется при генерации отчетов.";
+            this.helpLabel2.Location = new System.Drawing.Point(791, 199);
+            this.helpLabel2.Name = "helpLabel2";
+            this.helpLabel2.Size = new System.Drawing.Size(16, 16);
+            this.helpLabel2.TabIndex = 14;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(607, 199);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 15);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "label1";
             // 
             // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(891, 627);
+            this.ClientSize = new System.Drawing.Size(1246, 627);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.helpLabel2);
+            this.Controls.Add(this.helpLabel1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.chooser1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.panel1);
@@ -290,5 +341,9 @@ namespace GradeReport.Core.Main
         private Chooser entitySelector1;
         private System.Windows.Forms.TextBox textBox2;
         private Chooser chooser1;
+        private System.Windows.Forms.Label label2;
+        private HelpLabel helpLabel1;
+        private HelpLabel helpLabel2;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -11,6 +11,8 @@ namespace GradeReport.EntityModules.StudentNS
 {
     public class StudentNode : PENode
     {
+        public override string Description => "Данный узел представляет одного студента который пренадлежит группе из узла выше.";
+
         protected override void Visualize()
         {
             Text = ((Student)Object).Name;

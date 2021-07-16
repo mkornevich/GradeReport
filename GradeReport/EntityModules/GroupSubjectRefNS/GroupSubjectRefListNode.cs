@@ -14,6 +14,8 @@ namespace GradeReport.EntityModules.GroupSubjectRefNS
 {
     public class GroupSubjectRefListNode : PENode
     {
+        public override string Description => "В данном узле содержатся предметы которые присутствуют в группе из узла выше.";
+
         protected override void Visualize()
         {
             Text = "Предметы";

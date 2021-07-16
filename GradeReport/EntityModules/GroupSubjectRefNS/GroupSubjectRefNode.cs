@@ -9,6 +9,8 @@ namespace GradeReport.EntityModules.GroupSubjectRefNS
 {
     public class GroupSubjectRefNode : PENode
     {
+        public override string Description => "Данный узел представляет предмет который привязан к группе из узла выше.";
+
         protected override void Visualize()
         {
             var subject = Project.Subjects.Find(s => s.Guid == ((GroupSubjectRef)Object).SubjectGuid);

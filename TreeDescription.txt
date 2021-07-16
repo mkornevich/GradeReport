@@ -3,63 +3,92 @@
 
 === ConfigNS
 Конфигурация - ConfigNode
-	- Редактировать (Открывается форма для редактирования)
-
-ConfigEditForm
-
+	- Редактировать ConfigEditForm
+	
 === SubjectNS
 Предметы - SubjectListNode
+	- Добавить SubjectEditForm
 
 Предмет - SubjectNode
+	- Редактировать SubjectEditForm
+	- Удалить 
+
+SubjectListAdapter
 
 === MyStudentInSubjectRefNS
 Мои студенты - MyStudentInSubjectRefListNode
+	- Изменить - StudentListAdapter
 
 Студент - MyStudentInSubjectRefNode
 
 === QualificationNS
 Квалификации - QualificationListNode
+	- Добавить QualificationEditForm
 
 Квалификация - QualificationNode
+	- Редактировать QualificationEditForm
+	- Удалить
 
 === SpecialtyNS
 Специальности - SpecialtyListNode
+	- Добавить - SpecialtyEditForm
 
 Специальность - SpecialtyNode
+	- Редактировать - SpecialtyEditForm
+	- Удалить
+	
 
 === GroupNS
 Группы - GroupListNode
+	- Добавить
 
 Группа - GroupNode
+	- Редактировать
+	- Удалить
 
 === StudentNS
 Студетны - StudentListNode
+	- Добавить
 
 Студент - StudentNode
+	- Редактировать
+	- Удалить
+
+StudentListAdapter
 
 === GroupSubjectRefNS
 Предметы - GroupSubjectRefListNode
+	- Изменить
 
 Предмет - GroupSubjectRefNode
 
 === CourseNS
 Курсы - CourseListNode
+	- Добавить
 
 Курс - CourseNode
+	- Редактировать
+	- Удалить
 
 === SemesterNS
 Семестры - SemesterListNode
+	- Добавить
 
 Семестр - SemesterNode
+	- Редактировать оценки
+	- Редактировать
+	- Удалить
 
 === SemesterStudentRefNS
 Студенты - SemesterStudentRefListNode
+	- Изменить StudentListAdapter
 
 Студент - SemesterStudentRefNode
 
 === SemesterSubjectNS
 Предметы - SemesterSubjectRefListNode
-
+	- Изменить SubjectListAdapter
+	
 Предмет - SemesterSubjectRefNode
 
 

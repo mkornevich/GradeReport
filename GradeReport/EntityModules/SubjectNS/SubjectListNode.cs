@@ -11,6 +11,8 @@ namespace GradeReport.EntityModules.SubjectNS
 {
     public class SubjectListNode : PENode
     {
+        public override string Description => "Данный узел содержит список всех возможных предметов для данного проекта.";
+
         protected override void Visualize()
         {
             Text = "Предметы";

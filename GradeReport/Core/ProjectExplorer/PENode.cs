@@ -10,11 +10,22 @@ namespace GradeReport.Core.ProjectExplorer
 {
     public abstract class PENode : TreeNode
     {
-        public Project Project => ((PETreeView)TreeView).Project;
+        public abstract string Description { get; }
+
+        public PETreeView PETreeView => (PETreeView)TreeView;
+
+        public Project Project => PETreeView.Project;
 
         private bool _isChildNodesStatic;
 
         public object Object { get; set; }
+
+        public void Init()
+        {
+            Visualize();
+            LoadMenuItems();
+            LoadChildNodes();
+        }
 
         protected object GetNodeObject<TNode>()
         {
@@ -26,12 +37,7 @@ namespace GradeReport.Core.ProjectExplorer
             return parent.GetNodeObject<TNode>();
         }
 
-        public void Init()
-        {
-            Visualize();
-            LoadMenuItems();
-            LoadChildNodes();
-        }
+        
 
         private void LoadChildNodes(bool initNodes = true)
         {
@@ -46,7 +52,7 @@ namespace GradeReport.Core.ProjectExplorer
 
         protected void TreeViewFresh()
         {
-            ((PETreeView)TreeView).Fresh();
+            PETreeView.Fresh();
         }
 
         private void LoadMenuItems()
@@ -64,7 +70,7 @@ namespace GradeReport.Core.ProjectExplorer
         {
             Visualize();
 
-            if(_isChildNodesStatic)
+            if (_isChildNodesStatic)
             {
                 foreach (PENode childNode in Nodes)
                 {
@@ -96,7 +102,7 @@ namespace GradeReport.Core.ProjectExplorer
 
                     if (childOldNode == selectedOldNode)
                     {
-                        ((PETreeView)TreeView).SelectedNode = childNewNode;
+                        PETreeView.SelectedNode = childNewNode;
                     }
 
                     childNewNode.LoadMenuItems();
@@ -107,6 +113,11 @@ namespace GradeReport.Core.ProjectExplorer
                     childNewNode.Init();
                 }
             }
+        }
+
+        public virtual string GetEntityParams()
+        {
+            return "Параметры для данного узла не указаны.";
         }
 
         protected virtual void Visualize()

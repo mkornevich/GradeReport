@@ -14,6 +14,19 @@ namespace GradeReport.Core.ProjectExplorer
 
         public Project Project { get; private set; }
 
+        public event InfoChangedEventHandler InfoChanged;
+
+        public PETreeView()
+        {
+            AfterSelect += AfterSelectAct;
+        }
+
+        private void AfterSelectAct(object sender, TreeViewEventArgs e)
+        {
+            var peNode = (PENode)e.Node;
+            InfoChanged?.Invoke($"Параметры:\n{peNode.GetEntityParams()}\n\nОписание:\n{peNode.Description}");
+        }
+
         public void LoadProject(Project project)
         {
             Project = project;
@@ -31,5 +44,6 @@ namespace GradeReport.Core.ProjectExplorer
             _projectNode.Fresh((PENode)SelectedNode);
             EndUpdate();
         }
+
     }
 }

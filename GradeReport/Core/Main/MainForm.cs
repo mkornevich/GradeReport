@@ -1,4 +1,5 @@
-﻿using GradeReport.Core.ProjectNS;
+﻿using CefSharp.WinForms;
+using GradeReport.Core.ProjectNS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,9 +22,10 @@ namespace GradeReport.Core.Main
         public MainForm()
         {
             InitializeComponent();
+
             _projectContainer = App.ProjectContainer;
 
-            _projectContainer.NewProjectLoaded += AdjustFormName;
+            _projectContainer.NewProjectLoaded += AdjustFormName; 
             _projectContainer.IsSavedChanged += AdjustFormName;
             _projectContainer.PathChanged += AdjustFormName;
 
@@ -32,15 +34,14 @@ namespace GradeReport.Core.Main
                 peTreeView.LoadProject(_projectContainer.Project);
             };
 
-            CreateNewProject();
+            CreateNewAct(null, null);
 
-            Shown += MainForm_Shown;
-
+            peTreeView.InfoChanged += PEInfoChangedAct;
         }
 
-        private void MainForm_Shown(object sender, EventArgs e)
+        private void PEInfoChangedAct(string info)
         {
-            
+            infoTB.Text = info.Replace("\n", "\r\n");
         }
 
         private void AdjustFormName()
@@ -52,11 +53,6 @@ namespace GradeReport.Core.Main
         }
 
         private void CreateNewAct(object sender, EventArgs e)
-        {
-            CreateNewProject();
-        }
-
-        private void CreateNewProject()
         {
             _projectContainer.Project = Project.CreateEmpty();
             _projectContainer.Path = null;
@@ -96,7 +92,7 @@ namespace GradeReport.Core.Main
             }
         }
 
-        private void showTestFormAct(object sender, EventArgs e)
+        private void ShowTestFormAct(object sender, EventArgs e)
         {
             new TestForm().Show();
         }

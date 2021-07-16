@@ -11,9 +11,19 @@ namespace GradeReport.EntityModules.SubjectNS
 {
     public class SubjectNode : PENode
     {
+        public override string Description => "Данный узел представляет конкретный предмет.";
+
         protected override void Visualize()
         {
             Text = ((Subject)Object).ShortName;
+        }
+
+        public override string GetEntityParams()
+        {
+            var subject = (Subject)Object;
+            return 
+                $"Название: {subject.Name}\n" +
+                $"Короткое название: {subject.ShortName}";
         }
 
         protected override void CreateMenuItems(List<ToolStripMenuItem> items)

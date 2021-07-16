@@ -11,6 +11,8 @@ namespace GradeReport.EntityModules.GroupNS
 {
     public class GroupListNode : PENode
     {
+        public override string Description => "Данный узел содержит в себе список учебных групп.";
+
         protected override void Visualize()
         {
             Text = "Группы";

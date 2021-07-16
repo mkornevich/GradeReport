@@ -14,6 +14,8 @@ namespace GradeReport.EntityModules.GroupNS
 {
     public class GroupNode : PENode
     {
+        public override string Description => "Данный узел представляет из себя одну конкретную учебную группу.";
+
         protected override void Visualize()
         {
             Text = ((Group)Object).Name;

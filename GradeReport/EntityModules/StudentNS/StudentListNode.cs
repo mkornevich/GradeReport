@@ -12,6 +12,8 @@ namespace GradeReport.EntityModules.StudentNS
 {
     public class StudentListNode : PENode
     {
+        public override string Description => "Данный узел содержет в себе список студентов которые пренадлежат круппе из узла выше.";
+
         protected override void Visualize()
         {
             Text = "Студенты";
