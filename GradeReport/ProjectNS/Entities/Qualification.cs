@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GradeReport.ProjectNS.Entities
 {
-    public class Group : EntityWithGuid
+    public class Qualification : EntityWithGuid
     {
         public string Name { get; set; }
     }

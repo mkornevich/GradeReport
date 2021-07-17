@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace GradeReport.ProjectNS.Entities
 {
-    public class GroupSubjectRef : Entity
+    public class SemesterStudentRef : Entity
     {
-        public Guid GroupGuid { get; set; }
+        public Guid SemesterGuid { get; set; }
 
-        public Guid SubjectGuid { get; set; }
+        public Guid StudentGuid { get; set; }
     }
 }

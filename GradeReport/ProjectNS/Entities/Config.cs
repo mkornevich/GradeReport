@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace GradeReport.ProjectNS.Entities
 {
-    public class Config
+    public class Config : Entity
     {
+        public string CuratorName { get; set; }
+
+        public string TeacherName { get; set; }
+
+        public Guid CuratorGroupGuid { get; set; }
     }
 }
