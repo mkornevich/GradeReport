@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using GradeReport.ProjectNS.Daos;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,18 +12,30 @@ namespace GradeReport.ProjectNS.Entities
     {
         public Config Config { get; set; }
 
-        public DaoWithGuid<Group> Groups { get; set; } = new DaoWithGuid<Group>();
+        public GroupDao Groups { get; } = new GroupDao();
 
-        public Dao<GroupSubjectRef> GroupSubjectRefs { get; set; } = new Dao<GroupSubjectRef>();
+        public GroupSubjectRefDao GroupSubjectRefs { get; } = new GroupSubjectRefDao();
 
-        public DaoWithGuid<Student> Students { get; set; } = new DaoWithGuid<Student>();
+        public CourseDao Courses { get; } = new CourseDao();
 
-        public DaoWithGuid<Subject> Subjects { get; set; } = new DaoWithGuid<Subject>();
+        public SpecialtyDao Specialties { get; } = new SpecialtyDao();
 
-        public static Project CreateEmpty()
-        {
-            var project = new Project();
-            return project;
-        }
+        public QualificationDao Qualifications { get; } = new QualificationDao();
+
+        public StudentDao Students { get; } = new StudentDao();
+
+        public SemesterStudentRefDao SemesterStudentRefs { get; } = new SemesterStudentRefDao();
+
+        public SemesterDao Semesters { get; } = new SemesterDao();
+
+        public SemesterSubjectRefDao SemesterSubjectRefs { get; } = new SemesterSubjectRefDao();
+
+        public PeriodDao Periods { get; } = new PeriodDao();
+
+        public SubjectDao Subjects { get; } = new SubjectDao();
+
+        public GradeDao Grades { get; } = new GradeDao();
+
+        public MyStudentInSubjectRefDao MyStudentInSubjectRefs { get; } = new MyStudentInSubjectRefDao();
     }
 }

@@ -54,7 +54,7 @@ namespace GradeReport.Main
 
         private void CreateNewAct(object sender, EventArgs e)
         {
-            _projectContainer.Project = Project.CreateEmpty();
+            _projectContainer.Project = new Project();
             _projectContainer.Path = null;
         }
 
