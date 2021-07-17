@@ -14,10 +14,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Core\Main\MainForm.cs">
+    <Compile Update="Main\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Core\Main\MainForm.Designer.cs">
+    <Compile Update="Main\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
@@ -28,7 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Core\Main\MainForm.resx">
+    <EmbeddedResource Update="Main\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Update="Properties\Resources.resx">
@@ -38,8 +38,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Reports\Report1\" />
-    <Folder Include="Reports\Report2\" />
+    <Folder Include="ProjectNS\Daos\" />
+    <Folder Include="ReportNS\Reports\" />
+    <Folder Include="ReportNS\Reports\Report1\" />
+    <Folder Include="ReportNS\Reports\Report2\" />
   </ItemGroup>
 
 </Project>

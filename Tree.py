@@ -2,8 +2,6 @@
 	Конфигурация - ConfigNode
 	Предметы - SubjectListNode
 		Предмет - SubjectNode
-			Мои студенты - MyStudentInSubjectRefListNode
-				Студент - MyStudentInSubjectRefNode
 	Квалификации - QualificationListNode
 		Квалификация - QualificationNode
 			Специальности - SpecialtyListNode
@@ -14,6 +12,8 @@
 				Студент - StudentNode
 			Предметы - GroupSubjectRefListNode
 				Предмет - GroupSubjectRefNode
+					Мои студенты - MyStudentInSubjectRefListNode
+						Студент - MyStudentInSubjectRefNode
 			Курсы - CourseListNode
 				Курс - CourseNode
 					Семестры - SemesterListNode
@@ -24,14 +24,16 @@
 								Предмет - SemesterSubjectRefNode
 
 
+Информация
+
+Описание
+
+Кнопка подробнее
 
 
 
 
-
-
-
-
+Способ оповещения об обновлении проекта
 
 
 

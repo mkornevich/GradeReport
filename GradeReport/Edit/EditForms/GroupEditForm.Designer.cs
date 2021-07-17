@@ -1,7 +1,7 @@
 ﻿
-namespace GradeReport.GradeEditor
+namespace GradeReport.Edit.EditForms
 {
-    partial class GradeEditorForm
+    partial class GroupEditForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,45 +29,37 @@ namespace GradeReport.GradeEditor
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.nameTB = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
-            // textBox1
+            // nameTB
             // 
-            this.textBox1.Location = new System.Drawing.Point(504, 333);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 0;
+            this.nameTB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.nameTB.Location = new System.Drawing.Point(12, 27);
+            this.nameTB.Name = "nameTB";
+            this.nameTB.Size = new System.Drawing.Size(380, 23);
+            this.nameTB.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 15);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Периоды";
+            this.label1.Size = new System.Drawing.Size(59, 15);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Название";
             // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(12, 27);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(225, 634);
-            this.checkedListBox1.TabIndex = 2;
-            // 
-            // GradeEditorForm
+            // GroupEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1232, 667);
-            this.Controls.Add(this.checkedListBox1);
+            this.ClientSize = new System.Drawing.Size(404, 106);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Name = "GradeEditorForm";
-            this.Text = "GradeEditorForm";
+            this.Controls.Add(this.nameTB);
+            this.Name = "GroupEditForm";
+            this.Text = "GroupEditForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -75,8 +67,7 @@ namespace GradeReport.GradeEditor
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox nameTB;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
     }
 }

@@ -1,5 +1,4 @@
-using GradeReport.Core;
-using GradeReport.Core.Main;
+using GradeReport.Main;
 using System;
 using System.Windows.Forms;
 

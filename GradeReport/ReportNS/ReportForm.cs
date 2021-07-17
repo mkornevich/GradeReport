@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GradeReport.GradeEditor
+namespace GradeReport.ReportNS
 {
-    public partial class GradeEditorForm : Form
+    public partial class ReportForm : Form
     {
-        public GradeEditorForm()
+        public ReportForm()
         {
             InitializeComponent();
         }
