@@ -38,6 +38,13 @@ namespace GradeReport.ProjectNS.Entities
 
         public MyStudentInSubjectRefDao MyStudentInSubjectRefs { get; } = new MyStudentInSubjectRefDao();
 
+        public event Action Changed;
+
+        public void OnChanged() 
+        {
+            Changed?.Invoke();
+        }
+
         public Project()
         {
             new List<IProjectProperty> {

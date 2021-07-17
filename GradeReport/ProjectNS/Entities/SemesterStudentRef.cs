@@ -1,4 +1,5 @@
 ﻿using System;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,20 @@ namespace GradeReport.ProjectNS.Entities
     {
         public Guid SemesterGuid { get; set; }
 
+        [JsonIgnore]
+        public Semester Semester
+        {
+            get => Project.Semesters.Find(s => s.Guid == SemesterGuid);
+            set => SemesterGuid = value.Guid;
+        }
+
         public Guid StudentGuid { get; set; }
+
+        [JsonIgnore]
+        public Student Student
+        {
+            get => Project.Students.Find(s => s.Guid == StudentGuid);
+            set => StudentGuid = value.Guid;
+        }
     }
 }

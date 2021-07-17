@@ -26,25 +26,20 @@ namespace GradeReport.Main
 
             _projectContainer = App.ProjectContainer;
 
-            _projectContainer.ProjectChanged += () => AdjustFormName(false);
-            _projectContainer.PathChanged += () => AdjustFormName(false);
+            _projectContainer.PathChanged += () => UpdateFormText(false);
+            _projectContainer.NewProjectLoaded += () => peTreeView.LoadProject(_projectContainer.Project);
 
-            _projectContainer.NewProjectLoaded += () =>
-            {
-                peTreeView.LoadProject(_projectContainer.Project);
+            _projectContainer.ProjectChanged += () => {
+                UpdateFormText(false);
+                peTreeView.Fresh();
             };
 
+            peTreeView.InfoChanged += (info) => infoTB.Text = info.Replace("\n", "\r\n");
+
             CreateNewAct(null, null);
-
-            peTreeView.InfoChanged += PEInfoChangedAct;
         }
 
-        private void PEInfoChangedAct(string info)
-        {
-            infoTB.Text = info.Replace("\n", "\r\n");
-        }
-
-        private void AdjustFormName(bool isSaved)
+        private void UpdateFormText(bool isSaved)
         {
             Text = "GradeReport - "
                 + _projectContainer.Name
@@ -64,7 +59,7 @@ namespace GradeReport.Main
             {
                 _projectContainer.Project = _projectLoader.Load(openFileDialog.FileName);
                 _projectContainer.Path = openFileDialog.FileName;
-                AdjustFormName(true);
+                UpdateFormText(true);
             }
         }
 
@@ -77,7 +72,7 @@ namespace GradeReport.Main
             else
             {
                 _projectLoader.Store(App.ProjectContainer.Path, App.ProjectContainer.Project);
-                AdjustFormName(true);
+                UpdateFormText(true);
             }
         }
 
@@ -87,7 +82,7 @@ namespace GradeReport.Main
             {
                 _projectLoader.Store(saveFileDialog.FileName, _projectContainer.Project);
                 _projectContainer.Path = saveFileDialog.FileName;
-                AdjustFormName(true);
+                UpdateFormText(true);
             }
         }
 

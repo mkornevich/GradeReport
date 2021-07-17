@@ -26,12 +26,12 @@ namespace GradeReport.ProjectExplorer.Nodes
 
         private void NewAct(object sender, EventArgs e)
         {
-            var newGroup = new Group();
+            var newGroup = Project.Groups.Create();
             var editForm = new GroupEditForm() { Project = Project };
             if (editForm.ShowEditForm(newGroup, ChangeMode.Create) == DialogResult.OK)
             {
                 Project.Groups.Add(newGroup);
-                TreeViewFresh();
+                Project.OnChanged();
             }
         }
 

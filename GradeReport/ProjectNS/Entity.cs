@@ -1,4 +1,5 @@
 ﻿using GradeReport.ProjectNS.Entities;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,7 @@ namespace GradeReport.ProjectNS
 {
     public class Entity : IProjectProperty
     {
+        [JsonIgnore]
         public Project Project { get; set; }
     }
 }

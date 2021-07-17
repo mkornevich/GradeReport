@@ -33,7 +33,9 @@ namespace GradeReport.ProjectNS
             get => _project;
             set
             {
+                if (_project != null) _project.Changed -= OnProjectChanged;
                 _project = value;
+                _project.Changed += OnProjectChanged;
                 OnNewProjectLoaded();
             }
         }
