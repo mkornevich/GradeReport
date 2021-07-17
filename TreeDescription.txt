@@ -15,12 +15,6 @@
 
 SubjectListAdapter
 
-=== MyStudentInSubjectRefNS
-Мои студенты - MyStudentInSubjectRefListNode
-	- Изменить - StudentListAdapter
-
-Студент - MyStudentInSubjectRefNode
-
 === QualificationNS
 Квалификации - QualificationListNode
 	- Добавить QualificationEditForm
@@ -37,7 +31,6 @@ SubjectListAdapter
 	- Редактировать - SpecialtyEditForm
 	- Удалить
 	
-
 === GroupNS
 Группы - GroupListNode
 	- Добавить
@@ -58,9 +51,15 @@ StudentListAdapter
 
 === GroupSubjectRefNS
 Предметы - GroupSubjectRefListNode
-	- Изменить
+	- Изменить SubjectListAdapter
 
 Предмет - GroupSubjectRefNode
+
+=== MyStudentInSubjectRefNS
+Мои студенты - MyStudentInSubjectRefListNode
+	- Изменить - StudentListAdapter
+
+Студент - MyStudentInSubjectRefNode
 
 === CourseNS
 Курсы - CourseListNode

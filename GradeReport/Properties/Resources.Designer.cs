@@ -73,9 +73,9 @@ namespace GradeReport.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap error_16 {
+        public static System.Drawing.Bitmap edit_16 {
             get {
-                object obj = ResourceManager.GetObject("error_16", resourceCulture);
+                object obj = ResourceManager.GetObject("edit_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace GradeReport.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap error_24 {
+        public static System.Drawing.Bitmap error_16 {
             get {
-                object obj = ResourceManager.GetObject("error_24", resourceCulture);
+                object obj = ResourceManager.GetObject("error_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,29 @@ namespace GradeReport.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap info_24 {
+        public static System.Drawing.Bitmap list_16 {
             get {
-                object obj = ResourceManager.GetObject("info_24", resourceCulture);
+                object obj = ResourceManager.GetObject("list_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap new_16 {
+            get {
+                object obj = ResourceManager.GetObject("new_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap open_16 {
+            get {
+                object obj = ResourceManager.GetObject("open_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,6 +153,36 @@ namespace GradeReport.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap remove_16 {
+            get {
+                object obj = ResourceManager.GetObject("remove_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap save_16 {
+            get {
+                object obj = ResourceManager.GetObject("save_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap save_as_16 {
+            get {
+                object obj = ResourceManager.GetObject("save_as_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap uncheck_16 {
             get {
                 object obj = ResourceManager.GetObject("uncheck_16", resourceCulture);
@@ -146,16 +196,6 @@ namespace GradeReport.Properties {
         public static System.Drawing.Bitmap warning_16 {
             get {
                 object obj = ResourceManager.GetObject("warning_16", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap warning_24 {
-            get {
-                object obj = ResourceManager.GetObject("warning_24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

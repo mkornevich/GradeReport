@@ -98,6 +98,7 @@ namespace GradeReport.Main
             // 
             // новыйToolStripMenuItem
             // 
+            this.новыйToolStripMenuItem.Image = global::GradeReport.Properties.Resources.new_16;
             this.новыйToolStripMenuItem.Name = "новыйToolStripMenuItem";
             this.новыйToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.новыйToolStripMenuItem.Text = "Новый";
@@ -105,6 +106,7 @@ namespace GradeReport.Main
             // 
             // открытьToolStripMenuItem
             // 
+            this.открытьToolStripMenuItem.Image = global::GradeReport.Properties.Resources.open_16;
             this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
             this.открытьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.открытьToolStripMenuItem.Text = "Открыть";
@@ -112,6 +114,7 @@ namespace GradeReport.Main
             // 
             // сохранитьToolStripMenuItem
             // 
+            this.сохранитьToolStripMenuItem.Image = global::GradeReport.Properties.Resources.save_16;
             this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
             this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.сохранитьToolStripMenuItem.Text = "Сохранить";
@@ -119,6 +122,7 @@ namespace GradeReport.Main
             // 
             // сохранитьКакToolStripMenuItem
             // 
+            this.сохранитьКакToolStripMenuItem.Image = global::GradeReport.Properties.Resources.save_as_16;
             this.сохранитьКакToolStripMenuItem.Name = "сохранитьКакToolStripMenuItem";
             this.сохранитьКакToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.сохранитьКакToolStripMenuItem.Text = "Сохранить как";
@@ -240,19 +244,19 @@ namespace GradeReport.Main
             // оПрограммеToolStripMenuItem1
             // 
             this.оПрограммеToolStripMenuItem1.Name = "оПрограммеToolStripMenuItem1";
-            this.оПрограммеToolStripMenuItem1.Size = new System.Drawing.Size(149, 22);
+            this.оПрограммеToolStripMenuItem1.Size = new System.Drawing.Size(163, 22);
             this.оПрограммеToolStripMenuItem1.Text = "О программе";
             // 
             // настройкиToolStripMenuItem
             // 
             this.настройкиToolStripMenuItem.Name = "настройкиToolStripMenuItem";
-            this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.настройкиToolStripMenuItem.Text = "Настройки";
             // 
             // тестФормаToolStripMenuItem
             // 
             this.тестФормаToolStripMenuItem.Name = "тестФормаToolStripMenuItem";
-            this.тестФормаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.тестФормаToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.тестФормаToolStripMenuItem.Text = "Тестовая форма";
             this.тестФормаToolStripMenuItem.Click += new System.EventHandler(this.ShowTestFormAct);
             // 
@@ -263,7 +267,7 @@ namespace GradeReport.Main
             this.peTreeView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.peTreeView.Location = new System.Drawing.Point(0, 15);
             this.peTreeView.Name = "peTreeView";
-            this.peTreeView.Size = new System.Drawing.Size(516, 536);
+            this.peTreeView.Size = new System.Drawing.Size(516, 524);
             this.peTreeView.TabIndex = 4;
             // 
             // openFileDialog
@@ -286,8 +290,8 @@ namespace GradeReport.Main
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.infoPanel);
-            this.splitContainer1.Size = new System.Drawing.Size(518, 748);
-            this.splitContainer1.SplitterDistance = 553;
+            this.splitContainer1.Size = new System.Drawing.Size(518, 769);
+            this.splitContainer1.SplitterDistance = 541;
             this.splitContainer1.TabIndex = 5;
             // 
             // panel1
@@ -298,7 +302,7 @@ namespace GradeReport.Main
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(518, 553);
+            this.panel1.Size = new System.Drawing.Size(518, 541);
             this.panel1.TabIndex = 6;
             // 
             // label1
@@ -321,7 +325,7 @@ namespace GradeReport.Main
             this.infoPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.infoPanel.Location = new System.Drawing.Point(0, 0);
             this.infoPanel.Name = "infoPanel";
-            this.infoPanel.Size = new System.Drawing.Size(518, 191);
+            this.infoPanel.Size = new System.Drawing.Size(518, 224);
             this.infoPanel.TabIndex = 0;
             // 
             // infoTB
@@ -333,7 +337,7 @@ namespace GradeReport.Main
             this.infoTB.Multiline = true;
             this.infoTB.Name = "infoTB";
             this.infoTB.ReadOnly = true;
-            this.infoTB.Size = new System.Drawing.Size(516, 174);
+            this.infoTB.Size = new System.Drawing.Size(516, 207);
             this.infoTB.TabIndex = 1;
             // 
             // label2
@@ -350,7 +354,7 @@ namespace GradeReport.Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(518, 772);
+            this.ClientSize = new System.Drawing.Size(518, 793);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.menuStrip);
             this.MainMenuStrip = this.menuStrip;

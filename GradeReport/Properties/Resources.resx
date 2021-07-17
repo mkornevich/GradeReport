@@ -121,17 +121,23 @@
   <data name="check_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\check_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="edit_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="error_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\error_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="error_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\error_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="info_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\info_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="info_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\info_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="list_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\list_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="open_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\open_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="question_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\question_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,13 +145,19 @@
   <data name="refresh_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\refresh_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="remove_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\remove_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="save_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\save_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="save_as_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\save_as_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="uncheck_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\uncheck_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="warning_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\warning_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="warning_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\warning_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
