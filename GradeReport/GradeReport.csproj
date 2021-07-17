@@ -38,7 +38,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ProjectNS\Daos\" />
     <Folder Include="ReportNS\Reports\" />
     <Folder Include="ReportNS\Reports\Report1\" />
     <Folder Include="ReportNS\Reports\Report2\" />
