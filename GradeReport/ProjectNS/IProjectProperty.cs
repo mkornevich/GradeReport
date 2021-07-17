@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace GradeReport.ProjectNS
 {
-    public class Entity : IProjectProperty
+    public interface IProjectProperty
     {
-        public Project Project { get; set; }
+        Project Project { get; set; }
     }
 }

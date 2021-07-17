@@ -10,7 +10,7 @@ namespace GradeReport.ProjectNS.Entities
 {
     public class Project
     {
-        public Config Config { get; set; }
+        public Config Config { get; } = new Config();
 
         public GroupDao Groups { get; } = new GroupDao();
 
@@ -37,5 +37,14 @@ namespace GradeReport.ProjectNS.Entities
         public GradeDao Grades { get; } = new GradeDao();
 
         public MyStudentInSubjectRefDao MyStudentInSubjectRefs { get; } = new MyStudentInSubjectRefDao();
+
+        public Project()
+        {
+            new List<IProjectProperty> {
+                Config, Groups, GroupSubjectRefs, Courses, Specialties, Qualifications,
+                Students, SemesterStudentRefs, Semesters, SemesterSubjectRefs,
+                Periods, Subjects, Grades, MyStudentInSubjectRefs
+            }.ForEach(e => e.Project = this);
+        }
     }
 }
