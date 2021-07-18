@@ -34,7 +34,6 @@ namespace GradeReport.Common.NotificationNS
             this.Message = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionTB = new System.Windows.Forms.TextBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.actionStrip = new GradeReport.Common.ActionStripNS.ActionStrip();
             ((System.ComponentModel.ISupportInitialize)(this.notificationDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -65,7 +64,7 @@ namespace GradeReport.Common.NotificationNS
             this.notificationDGV.RowTemplate.Height = 25;
             this.notificationDGV.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.notificationDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.notificationDGV.Size = new System.Drawing.Size(450, 314);
+            this.notificationDGV.Size = new System.Drawing.Size(450, 348);
             this.notificationDGV.TabIndex = 0;
             this.notificationDGV.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.notificationDGV_CellFormatting);
             this.notificationDGV.SelectionChanged += new System.EventHandler(this.notificationDGV_SelectionChanged);
@@ -97,7 +96,7 @@ namespace GradeReport.Common.NotificationNS
             this.descriptionTB.Multiline = true;
             this.descriptionTB.Name = "descriptionTB";
             this.descriptionTB.ReadOnly = true;
-            this.descriptionTB.Size = new System.Drawing.Size(450, 157);
+            this.descriptionTB.Size = new System.Drawing.Size(450, 123);
             this.descriptionTB.TabIndex = 1;
             // 
             // splitContainer1
@@ -117,20 +116,8 @@ namespace GradeReport.Common.NotificationNS
             // 
             this.splitContainer1.Panel2.Controls.Add(this.descriptionTB);
             this.splitContainer1.Size = new System.Drawing.Size(450, 475);
-            this.splitContainer1.SplitterDistance = 314;
+            this.splitContainer1.SplitterDistance = 348;
             this.splitContainer1.TabIndex = 2;
-            // 
-            // actionStrip
-            // 
-            this.actionStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.actionStrip.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.actionStrip.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.actionStrip.Location = new System.Drawing.Point(0, 475);
-            this.actionStrip.Name = "actionStrip";
-            this.actionStrip.Padding = new System.Windows.Forms.Padding(5, 5, 2, 5);
-            this.actionStrip.Size = new System.Drawing.Size(450, 40);
-            this.actionStrip.TabIndex = 3;
-            this.actionStrip.Visible = false;
             // 
             // NotificationForm
             // 
@@ -138,12 +125,8 @@ namespace GradeReport.Common.NotificationNS
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(450, 515);
             this.Controls.Add(this.splitContainer1);
-            this.Controls.Add(this.actionStrip);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "NotificationForm";
             this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Менеджер сообщений";
             ((System.ComponentModel.ISupportInitialize)(this.notificationDGV)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -162,6 +145,5 @@ namespace GradeReport.Common.NotificationNS
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.DataGridViewImageColumn Type;
         private System.Windows.Forms.DataGridViewTextBoxColumn Message;
-        private ActionStripNS.ActionStrip actionStrip;
     }
 }

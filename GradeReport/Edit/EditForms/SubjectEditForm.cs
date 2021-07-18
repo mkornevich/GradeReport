@@ -36,17 +36,5 @@ namespace GradeReport.Edit.EditForms
             subject.Include = includeCB.Checked;
         }
 
-        protected override bool Validate(NotificationFormBuilder builder, object entity)
-        {
-            var subject = (Subject)entity;
-
-
-            builder.ErrorIf(nameTB.Text == "", "Заполните полное название предмета.");
-
-            builder.ErrorIf(shortNameTB.Text == "", "Заполните короткое название предмета.");
-            builder.ErrorIf(Project.Subjects.Exists(s => s.Guid != subject.Guid && s.ShortName == shortNameTB.Text), "Такое короткое имя уже занято, попробуйте другое.");
-
-            return builder.ErrorCount == 0;
-        }
     }
 }

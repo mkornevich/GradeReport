@@ -16,12 +16,5 @@ namespace GradeReport.ProjectExplorer.Nodes
             var subject = Project.Subjects.Find(s => s.Guid == ((GroupSubjectRef)Object).SubjectGuid);
             Text = subject.ShortName;
         }
-
-        protected override bool EqualsForFresh(PENode node)
-        {
-            return base.EqualsForFresh(node) && 
-                ((GroupSubjectRef)Object).GroupGuid == ((GroupSubjectRef)node.Object).GroupGuid &&
-                ((GroupSubjectRef)Object).SubjectGuid == ((GroupSubjectRef)node.Object).SubjectGuid;
-        }
     }
 }

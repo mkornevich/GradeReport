@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace GradeReport.ProjectNS
 {
@@ -12,5 +13,10 @@ namespace GradeReport.ProjectNS
     {
         [JsonIgnore]
         public Project Project { get; set; }
+
+        public void CopyTo(Entity toEntity)
+        {
+            EntityUtils.Copy(this, toEntity);
+        }
     }
 }

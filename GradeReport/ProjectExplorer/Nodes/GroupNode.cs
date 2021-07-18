@@ -35,7 +35,7 @@ namespace GradeReport.ProjectExplorer.Nodes
         private void EditAct(object sender, EventArgs e)
         {
             var editForm = new GroupEditForm() { Project = Project };
-            if (editForm.ShowEditForm((Group)Object, ChangeMode.Create) == DialogResult.OK)
+            if (editForm.ShowForResult((Group)Object, ChangeMode.Create) == DialogResult.OK)
             {
                 TreeViewFresh();
             }
@@ -46,11 +46,6 @@ namespace GradeReport.ProjectExplorer.Nodes
             isChildNodesStatic = true;
             nodes.Add(new GroupSubjectRefListNode());
             nodes.Add(new StudentListNode());
-        }
-
-        protected override bool EqualsForFresh(PENode node)
-        {
-            return base.EqualsForFresh(node) && ((Group)Object).Guid == ((Group)node.Object).Guid;
         }
     }
 }

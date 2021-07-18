@@ -1,11 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <StartupObject>GradeReport.Program</StartupObject>
     <Platforms>AnyCPU;x64</Platforms>
+    <ApplicationIcon />
   </PropertyGroup>
 
   <ItemGroup>

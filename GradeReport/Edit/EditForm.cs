@@ -1,4 +1,4 @@
-﻿using GradeReport.Common.ActionStripNS;
+﻿using GradeReport.Common.ActionNS;
 using GradeReport.Common.NotificationNS;
 using GradeReport.ProjectNS.Entities;
 using System;
@@ -11,15 +11,11 @@ using System.Windows.Forms;
 
 namespace GradeReport.Edit
 {
-    public class EditForm : Form
+    public class EditForm : ActionForm
     {
         public string EntityName { get; set; } = "Имя сущности не указано";
 
         public Project Project { get; set; }
-
-        protected ActionStrip ActionStrip { get; private set; } = new ActionStrip();
-
-        private DialogResult _dialogResult = DialogResult.None;
 
         private object _entity;
 
@@ -27,52 +23,24 @@ namespace GradeReport.Edit
 
         public EditForm()
         {
-            MaximizeBox = false;
-            MinimizeBox = false;
-            FormBorderStyle = FormBorderStyle.FixedDialog;
-
-            ActionStrip.PositiveAction.Click += OkAct;
-            ActionStrip.NegativeAction.Click += CancelAct;
-
-            Controls.Add(ActionStrip);
-
-            StartPosition = FormStartPosition.CenterParent;
+            SimplifyFrom(true);
         }
 
-        private void CancelAct(object sender, EventArgs e)
+        protected override void ReturnOk()
         {
-            _dialogResult = DialogResult.Cancel;
-            Close();
+            FormToEntity(_entity, _changeMode);
+            base.ReturnOk();
         }
 
-        private void OkAct(object sender, EventArgs e)
-        {
-            var builder = new NotificationFormBuilder();
-
-            if (Validate(builder, _entity))
-            {
-                if (builder.MessageCount == 0 || (builder.MessageCount > 0 && builder.BuildForm().ShowForResult() == DialogResult.OK))
-                {
-                    FormToEntity(_entity, _changeMode);
-                    _dialogResult = DialogResult.OK;
-                    Close();
-                }
-            }
-            else
-            {
-                builder.BuildForm().Show();
-            }
-        }
-
-        public DialogResult ShowEditForm(object entity, ChangeMode mode)
+        public DialogResult ShowForResult(object entity, ChangeMode mode)
         {
             _entity = entity;
             _changeMode = mode;
             InitForm(_changeMode);
             EntityToForm(entity, mode);
             AdjustFormText();
-            ShowDialog();
-            return _dialogResult;
+
+            return ShowForResult();
         }
 
         private void AdjustFormText()
@@ -100,5 +68,6 @@ namespace GradeReport.Edit
 
             return builder.ErrorCount == 0;
         }
+
     }
 }

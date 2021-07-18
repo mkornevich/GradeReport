@@ -8,6 +8,7 @@ namespace GradeReport.ProjectNS
 {
     public class EntityWithGuid : Entity
     {
+        [EntityField(Compare = true)]
         public Guid Guid { get; set; } = Guid.NewGuid();
     }
 }

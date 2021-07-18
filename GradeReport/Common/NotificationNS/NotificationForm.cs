@@ -1,4 +1,5 @@
-﻿using GradeReport.Properties;
+﻿using GradeReport.Common.ActionNS;
+using GradeReport.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,11 +12,9 @@ using System.Windows.Forms;
 
 namespace GradeReport.Common.NotificationNS
 {
-    public partial class NotificationForm : Form
+    public partial class NotificationForm : ActionForm
     {
         private Notification[] _notifications;
-
-        private DialogResult _dialogResult = DialogResult.None;
 
         public List<Notification> Notifications { 
             set
@@ -28,23 +27,7 @@ namespace GradeReport.Common.NotificationNS
         public NotificationForm()
         {
             InitializeComponent();
-
-            actionStrip.PositiveAction.Click += OkAct;
-            actionStrip.PositiveAction.Text = "Продолжить";
-
-            actionStrip.NegativeAction.Click += CancelAct;
-        }
-
-        private void CancelAct(object sender, EventArgs e)
-        {
-            _dialogResult = DialogResult.Cancel;
-            Close();
-        }
-
-        private void OkAct(object sender, EventArgs e)
-        {
-            _dialogResult = DialogResult.OK;
-            Close();
+            ActionStrip.PositiveAction.Text = "Продолжить";
         }
 
         private void notificationDGV_SelectionChanged(object sender, EventArgs e)
@@ -82,14 +65,6 @@ namespace GradeReport.Common.NotificationNS
                         break;
                 }
             }
-        }
-
-        public DialogResult ShowForResult()
-        {
-            actionStrip.Visible = true;
-            ShowDialog();
-            actionStrip.Visible = false;
-            return _dialogResult;
         }
     }
 }

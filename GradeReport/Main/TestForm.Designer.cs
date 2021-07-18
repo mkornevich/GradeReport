@@ -1,6 +1,6 @@
 ﻿
 using GradeReport.Common;
-using GradeReport.Common.ActionStripNS;
+using GradeReport.Common.ActionNS;
 
 namespace GradeReport.Main
 {
@@ -98,7 +98,7 @@ namespace GradeReport.Main
             treeNode33});
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TestForm));
             this.treeView1 = new System.Windows.Forms.TreeView();
-            this.actionStrip1 = new GradeReport.Common.ActionStripNS.ActionStrip();
+            this.actionStrip1 = new GradeReport.Common.ActionNS.ActionStrip();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();

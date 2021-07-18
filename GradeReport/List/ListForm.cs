@@ -1,4 +1,5 @@
 ﻿using GradeReport.Common;
+using GradeReport.Common.ActionNS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,10 +12,8 @@ using System.Windows.Forms;
 
 namespace GradeReport.List
 {
-    public partial class ListForm : Form
+    public partial class ListForm : ActionForm
     {
-        private DialogResult _dialogResult = DialogResult.Cancel;
-
         private ListAdapter _adapter;
 
         public ListAdapter Adapter => _adapter;
@@ -107,9 +106,6 @@ namespace GradeReport.List
             _adapter = adapter;
             _adapter.Form = this;
 
-            actionStrip.PositiveAction.Click += OkAct;
-            actionStrip.NegativeAction.Click += CancelAct;
-
             SelectionChanged += () =>
             {
                 UpdateSelectionTextInfo();
@@ -121,18 +117,6 @@ namespace GradeReport.List
         private void ChooserClickAct(object sender, EventArgs e)
         {
             ShowDialog();
-        }
-
-        private void CancelAct(object sender, EventArgs e)
-        {
-            _dialogResult = DialogResult.Cancel;
-            Close();
-        }
-
-        private void OkAct(object sender, EventArgs e)
-        {
-            _dialogResult = DialogResult.OK;
-            Close();
         }
 
         private void InstallSelectionToTable()
@@ -183,12 +167,5 @@ namespace GradeReport.List
 
         private void UpdateSelectionTextInfo() => selectionInfoTB.Text = "Выделено " + SelectedEntities.Count + " из " + Entities.Count;
 
-        public DialogResult ShowForResult()
-        {
-            actionStrip.Visible = true;
-            ShowDialog();
-            actionStrip.Visible = false;
-            return _dialogResult;
-        }
     }
 }

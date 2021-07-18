@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GradeReport.Common.ActionStripNS
+namespace GradeReport.Common.ActionNS
 {
     public class ActionStrip : FlowLayoutPanel
     {

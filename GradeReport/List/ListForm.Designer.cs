@@ -1,5 +1,5 @@
 ﻿
-using GradeReport.Common.ActionStripNS;
+using GradeReport.Common.ActionNS;
 
 namespace GradeReport.List
 {
@@ -37,7 +37,6 @@ namespace GradeReport.List
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.actionStrip = new GradeReport.Common.ActionStripNS.ActionStrip();
             ((System.ComponentModel.ISupportInitialize)(this.Table)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -110,25 +109,12 @@ namespace GradeReport.List
             this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton3.Text = "toolStripButton3";
             // 
-            // actionStrip
-            // 
-            this.actionStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.actionStrip.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.actionStrip.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.actionStrip.Location = new System.Drawing.Point(0, 340);
-            this.actionStrip.Name = "actionStrip";
-            this.actionStrip.Padding = new System.Windows.Forms.Padding(5, 5, 2, 5);
-            this.actionStrip.Size = new System.Drawing.Size(566, 40);
-            this.actionStrip.TabIndex = 4;
-            this.actionStrip.Visible = false;
-            // 
             // ListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(566, 380);
             this.Controls.Add(this.Table);
-            this.Controls.Add(this.actionStrip);
             this.Controls.Add(this.toolStrip1);
             this.Name = "ListForm";
             this.Text = "ListForm";
@@ -147,6 +133,5 @@ namespace GradeReport.List
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private ActionStrip actionStrip;
     }
 }

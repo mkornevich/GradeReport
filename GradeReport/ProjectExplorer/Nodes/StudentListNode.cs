@@ -29,7 +29,7 @@ namespace GradeReport.ProjectExplorer.Nodes
             var newStudent = new Student();
             newStudent.GroupGuid = ((Group)GetNodeObject<GroupNode>()).Guid;
             var editForm = new StudentEditForm() { Project = Project };
-            if (editForm.ShowEditForm(newStudent, ChangeMode.Create) == DialogResult.OK)
+            if (editForm.ShowForResult(newStudent, ChangeMode.Create) == DialogResult.OK)
             {
                 Project.Students.Add(newStudent);
                 TreeViewFresh();

@@ -34,15 +34,10 @@ namespace GradeReport.ProjectExplorer.Nodes
         private void EditAct(object sender, EventArgs e)
         {
             var editForm = new StudentEditForm() { Project = Project };
-            if (editForm.ShowEditForm((Student)Object, ChangeMode.Create) == DialogResult.OK)
+            if (editForm.ShowForResult((Student)Object, ChangeMode.Create) == DialogResult.OK)
             {
                 TreeViewFresh();
             }
-        }
-
-        protected override bool EqualsForFresh(PENode node)
-        {
-            return base.EqualsForFresh(node) && ((Student)Object).Guid == ((Student)node.Object).Guid;
         }
     }
 }

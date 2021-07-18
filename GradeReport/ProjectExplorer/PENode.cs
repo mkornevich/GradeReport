@@ -1,4 +1,5 @@
-﻿using GradeReport.ProjectNS.Entities;
+﻿using GradeReport.ProjectNS;
+using GradeReport.ProjectNS.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -70,6 +71,7 @@ namespace GradeReport.ProjectExplorer
         {
             Visualize();
 
+            // если дети статические то просто у них вызываем обновления и выходим
             if (_isChildNodesStatic)
             {
                 foreach (PENode childNode in Nodes)
@@ -79,18 +81,19 @@ namespace GradeReport.ProjectExplorer
                 return;
             }
 
+            // сохраняем старые дочерние ноды
             var childOldNodes = Nodes.Cast<PENode>().ToList();
 
-            // remove old nodes
+            // удаляем старые дочерние ноды
             Nodes.Clear();
 
-            //// load new nodes
+            // загружаем новые дочерние ноды
             LoadChildNodes(false);
 
             foreach (PENode childNewNode in Nodes)
             {
-                var childOldNode = childOldNodes.Find(childOldNode => childOldNode.EqualsForFresh(childNewNode));
-                if (childOldNode != null) // if for new node exists old node
+                var childOldNode = childOldNodes.Find(childOldNode => CompareNodesByInnerEntity(childOldNode, childNewNode));
+                if (childOldNode != null) // если для новой ноды есть старая нода
                 {
                     // для детей новой дочерней ноды загружаем детей старой дочерней ноды
                     foreach (PENode childChildOldNode in childOldNode.Nodes)
@@ -115,6 +118,8 @@ namespace GradeReport.ProjectExplorer
             }
         }
 
+        private bool CompareNodesByInnerEntity(PENode nodeA, PENode nodeB) => EntityUtils.Compare((Entity)nodeA.Object, (Entity)nodeB.Object);
+
         public virtual string GetEntityParams()
         {
             return "Параметры для данного узла не указаны.";
@@ -133,11 +138,6 @@ namespace GradeReport.ProjectExplorer
         protected virtual void CreateMenuItems(List<ToolStripMenuItem> items)
         {
 
-        }
-
-        protected virtual bool EqualsForFresh(PENode node)
-        {
-            return GetType().Equals(node.GetType());
         }
     }
 }

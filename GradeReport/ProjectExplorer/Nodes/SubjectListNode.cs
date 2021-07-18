@@ -28,7 +28,7 @@ namespace GradeReport.ProjectExplorer.Nodes
         {
             var newSubject = new Subject();
             var editForm = new SubjectEditForm() { Project = Project };
-            if (editForm.ShowEditForm(newSubject, ChangeMode.Create) == DialogResult.OK)
+            if (editForm.ShowForResult(newSubject, ChangeMode.Create) == DialogResult.OK)
             {
                 Project.Subjects.Add(newSubject);
                 TreeViewFresh();

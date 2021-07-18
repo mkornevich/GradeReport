@@ -34,14 +34,5 @@ namespace GradeReport.Edit.EditForms
             group.Number = (int)numberNUD.Value;
         }
 
-        protected override bool Validate(NotificationFormBuilder builder, object entity)
-        {
-            var group = (Student)entity;
-
-            builder.ErrorIf(nameTB.Text == "", "Заполните название студента.");
-            builder.ErrorIf(Project.Students.Exists(s => s.Guid != group.Guid && s.Number == (int)numberNUD.Value), "Указанный номер уже занят, попробуйте другой.");
-
-            return builder.ErrorCount == 0;
-        }
     }
 }

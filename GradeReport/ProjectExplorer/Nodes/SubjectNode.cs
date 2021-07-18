@@ -43,13 +43,8 @@ namespace GradeReport.ProjectExplorer.Nodes
         {
             var subject = Object;
             var editForm = new SubjectEditForm() { Project = Project };
-            editForm.ShowEditForm(subject, ChangeMode.Edit);
+            editForm.ShowForResult(subject, ChangeMode.Edit);
             TreeViewFresh();
-        }
-
-        protected override bool EqualsForFresh(PENode node)
-        {
-            return base.EqualsForFresh(node) && ((Subject)Object).Guid == ((Subject)node.Object).Guid;
         }
     }
 }

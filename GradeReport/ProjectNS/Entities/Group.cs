@@ -8,6 +8,7 @@ namespace GradeReport.ProjectNS.Entities
 {
     public class Group : EntityWithGuid
     {
+        [EntityField]
         public string Name { get; set; }
     }
 }

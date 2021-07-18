@@ -8,10 +8,13 @@ namespace GradeReport.ProjectNS.Entities
 {
     public class Subject : EntityWithGuid
     {
+        [EntityField]
         public string Name { get; set; }
 
+        [EntityField]
         public string ShortName { get; set; }
 
+        [EntityField]
         public bool Include { get; set; }
     }
 }

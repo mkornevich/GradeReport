@@ -10,6 +10,7 @@ namespace GradeReport.ProjectNS.Entities
 {
     public class GroupSubjectRef : Entity
     {
+        [EntityField(Compare = true)]
         public Guid GroupGuid { get; set; }
 
         [JsonIgnore]
@@ -19,6 +20,7 @@ namespace GradeReport.ProjectNS.Entities
             set => GroupGuid = value.Guid;
         }
 
+        [EntityField(Compare = true)]
         public Guid SubjectGuid { get; set; }
 
         [JsonIgnore]

@@ -28,7 +28,7 @@ namespace GradeReport.ProjectExplorer.Nodes
         {
             var newGroup = Project.Groups.Create();
             var editForm = new GroupEditForm() { Project = Project };
-            if (editForm.ShowEditForm(newGroup, ChangeMode.Create) == DialogResult.OK)
+            if (editForm.ShowForResult(newGroup, ChangeMode.Create) == DialogResult.OK)
             {
                 Project.Groups.Add(newGroup);
                 Project.OnChanged();

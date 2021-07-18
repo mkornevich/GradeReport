@@ -1,4 +1,6 @@
 using GradeReport.Main;
+using GradeReport.ProjectNS;
+using GradeReport.ProjectNS.Entities;
 using System;
 using System.Windows.Forms;
 
