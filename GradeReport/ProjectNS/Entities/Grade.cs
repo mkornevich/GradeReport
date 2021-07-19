@@ -9,6 +9,7 @@ namespace GradeReport.ProjectNS.Entities
 {
     public class Grade : Entity
     {
+        [EntityField(Compare = true)]
         public Guid PeriodGuid { get; set; }
 
         [JsonIgnore]
@@ -18,6 +19,7 @@ namespace GradeReport.ProjectNS.Entities
             set => PeriodGuid = value.Guid;
         }
 
+        [EntityField(Compare = true)]
         public Guid StudentGuid { get; set; }
 
         [JsonIgnore]
@@ -27,6 +29,7 @@ namespace GradeReport.ProjectNS.Entities
             set => StudentGuid = value.Guid;
         }
 
+        [EntityField(Compare = true)]
         public Guid SubjectGuid { get; set; }
 
         [JsonIgnore]
@@ -36,10 +39,13 @@ namespace GradeReport.ProjectNS.Entities
             set => SubjectGuid = value.Guid;
         }
 
+        [EntityField(Compare = true)]
         public string GradeType { get; set; }
 
+        [EntityField(Compare = true)]
         public int Number { get; set; }
 
+        [EntityField]
         public int Value { get; set; }
     }
 }

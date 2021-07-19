@@ -9,6 +9,7 @@ namespace GradeReport.ProjectNS.Entities
 {
     public class Semester : EntityWithGuid
     {
+        [EntityField]
         public Guid CourseGuid { get; set; }
 
         [JsonIgnore]
@@ -18,6 +19,7 @@ namespace GradeReport.ProjectNS.Entities
             set => CourseGuid = value.Guid;
         }
 
+        [EntityField]
         public int CourseHalf { get; set; }
     }
 }

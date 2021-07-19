@@ -9,10 +9,13 @@ namespace GradeReport.ProjectNS.Entities
 {
     public class Config : Entity
     {
+        [EntityField]
         public string CuratorName { get; set; }
 
+        [EntityField]
         public string TeacherName { get; set; }
 
+        [EntityField]
         public Guid CuratorGroupGuid { get; set; }
 
         [JsonIgnore]
