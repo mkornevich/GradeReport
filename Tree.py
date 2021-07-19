@@ -71,6 +71,13 @@ Validator
 
 
 
+Group
+Subject
+Student
+Specialty (Specialty Qualification)
+Semester
+Course
+Period
 
 
 

@@ -90,4 +90,43 @@
         rkJggg==
 </value>
   </data>
+  <data name="helpLabel3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAk9JREFUOE+F
+        U1tIVFEUXabTcyL8C+lBGPRRUWmN/fQzSBD1YRE4jfYlNZUQCmHWSFjja+iJL3qAPwV9RUUmaVnRO1+l
+        lTPOpH5EjZmiiDOUPVb7nHuZRsNasDibvc9a9+x9z8E0sAjThJkmVaxy/4UVCbNKsSFjCK5aouQuUXqP
+        2H+esO0YklqZ3jMNlmPR2h4cbSJqe4nqIHHWR5x+R5x6K2s3UdhILFkX0HunIBGLU/rgfU3UvCeqRKwM
+        VKzWc36ioos40UYcey4mqX1aE4Vlbg3c9w1BZUDT2Rji1cAYL/vHmN0UYlyV5E++IYpeEAdvUWtMzIfN
+        EdZi88h5Dwao0BqKsH0gouPiZ4NGO6WviMOPiZSdYdHqeaQjR4akjlneqdnyKcz+0W+M93YyQTgc+c6u
+        wUi0rg22V1C0dmWQhYKbhNfsUTjD08Y4oYpTL3Vz4scv3vCPROs48pTIuqgMnMrAqQ087dKfDCiG9rpu
+        hid+suPjOJO8MfWCR4RDTm0a2LHnAnG81SjEsN43zA8jXzmn6MnkWl4zsdUTbcGKTbvDKOkg8uVP5EvR
+        5PozLUIxjslpHrhDrM4YF+08ZQDMtlajUG6ccs+Vy2LyZf8oez6PT8ppcfYV9RsrDbGBRCSn9cItw1Gn
+        2HtbWM/yhiArm/t1rOlqIHKuE0lrgqJZYEj/IBlL5ZrmXiMOPTS+5jKM9LpPxLvqiIUrfbJ3mSH5G/KY
+        ZpZh1ZZhbCsWgUw6Ux7VZjexIv0L4i0e2WP2/W+op7tR6BCq52wzc1MA/AbhNomJdcYXmwAAAABJRU5E
+        rkJggg==
+</value>
+  </data>
+  <data name="helpLabel4.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAk9JREFUOE+F
+        U1tIVFEUXabTcyL8C+lBGPRRUWmN/fQzSBD1YRE4jfYlNZUQCmHWSFjja+iJL3qAPwV9RUUmaVnRO1+l
+        lTPOpH5EjZmiiDOUPVb7nHuZRsNasDibvc9a9+x9z8E0sAjThJkmVaxy/4UVCbNKsSFjCK5aouQuUXqP
+        2H+esO0YklqZ3jMNlmPR2h4cbSJqe4nqIHHWR5x+R5x6K2s3UdhILFkX0HunIBGLU/rgfU3UvCeqRKwM
+        VKzWc36ioos40UYcey4mqX1aE4Vlbg3c9w1BZUDT2Rji1cAYL/vHmN0UYlyV5E++IYpeEAdvUWtMzIfN
+        EdZi88h5Dwao0BqKsH0gouPiZ4NGO6WviMOPiZSdYdHqeaQjR4akjlneqdnyKcz+0W+M93YyQTgc+c6u
+        wUi0rg22V1C0dmWQhYKbhNfsUTjD08Y4oYpTL3Vz4scv3vCPROs48pTIuqgMnMrAqQ087dKfDCiG9rpu
+        hid+suPjOJO8MfWCR4RDTm0a2LHnAnG81SjEsN43zA8jXzmn6MnkWl4zsdUTbcGKTbvDKOkg8uVP5EvR
+        5PozLUIxjslpHrhDrM4YF+08ZQDMtlajUG6ccs+Vy2LyZf8oez6PT8ppcfYV9RsrDbGBRCSn9cItw1Gn
+        2HtbWM/yhiArm/t1rOlqIHKuE0lrgqJZYEj/IBlL5ZrmXiMOPTS+5jKM9LpPxLvqiIUrfbJ3mSH5G/KY
+        ZpZh1ZZhbCsWgUw6Ux7VZjexIv0L4i0e2WP2/W+op7tR6BCq52wzc1MA/AbhNomJdcYXmwAAAABJRU5E
+        rkJggg==
+</value>
+  </data>
+  <data name="helpLabel4.HelpText" xml:space="preserve">
+    <value>В данном поле необходимо указать то как будет называться группа в пределах данного курса.
+
+Например: Если общее название группы Т91 то в пределах курса название будет Т291. Где 2 указывает на порядковый номер курса.
+
+В разных учебных заведениях это может быть по разному.</value>
+  </data>
 </root>

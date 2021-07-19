@@ -29,10 +29,13 @@ namespace GradeReport.Edit.EditForms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentEditForm));
             this.label1 = new System.Windows.Forms.Label();
             this.nameTB = new System.Windows.Forms.TextBox();
             this.numberNUD = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
+            this.helpLabel1 = new GradeReport.Common.HelpLabel();
+            this.helpLabel2 = new GradeReport.Common.HelpLabel();
             ((System.ComponentModel.ISupportInitialize)(this.numberNUD)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,11 +78,32 @@ namespace GradeReport.Edit.EditForms
             this.label2.TabIndex = 4;
             this.label2.Text = "Номер";
             // 
+            // helpLabel1
+            // 
+            this.helpLabel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel1.BackgroundImage")));
+            this.helpLabel1.HelpText = "В данном поле необходимо указать порядковый номер студента. \r\n\r\nДолжен быть уника" +
+    "льным для студентов одной группы.";
+            this.helpLabel1.Location = new System.Drawing.Point(78, 9);
+            this.helpLabel1.Name = "helpLabel1";
+            this.helpLabel1.Size = new System.Drawing.Size(16, 16);
+            this.helpLabel1.TabIndex = 5;
+            // 
+            // helpLabel2
+            // 
+            this.helpLabel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel2.BackgroundImage")));
+            this.helpLabel2.HelpText = "В данном поле необходимо указать полное ФИО студента.";
+            this.helpLabel2.Location = new System.Drawing.Point(363, 9);
+            this.helpLabel2.Name = "helpLabel2";
+            this.helpLabel2.Size = new System.Drawing.Size(16, 16);
+            this.helpLabel2.TabIndex = 6;
+            // 
             // StudentEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(391, 111);
+            this.Controls.Add(this.helpLabel2);
+            this.Controls.Add(this.helpLabel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.numberNUD);
             this.Controls.Add(this.nameTB);
@@ -98,5 +122,7 @@ namespace GradeReport.Edit.EditForms
         private System.Windows.Forms.TextBox nameTB;
         private System.Windows.Forms.NumericUpDown numberNUD;
         private System.Windows.Forms.Label label2;
+        private Common.HelpLabel helpLabel1;
+        private Common.HelpLabel helpLabel2;
     }
 }

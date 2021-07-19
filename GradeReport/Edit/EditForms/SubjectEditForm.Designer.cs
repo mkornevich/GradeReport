@@ -29,11 +29,13 @@ namespace GradeReport.Edit.EditForms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SubjectEditForm));
             this.label1 = new System.Windows.Forms.Label();
             this.nameTB = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.shortNameTB = new System.Windows.Forms.TextBox();
-            this.includeCB = new System.Windows.Forms.CheckBox();
+            this.helpLabel1 = new GradeReport.Common.HelpLabel();
+            this.helpLabel2 = new GradeReport.Common.HelpLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -41,9 +43,9 @@ namespace GradeReport.Edit.EditForms
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 15);
+            this.label1.Size = new System.Drawing.Size(59, 15);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Полное название";
+            this.label1.Text = "Название";
             // 
             // nameTB
             // 
@@ -68,33 +70,38 @@ namespace GradeReport.Edit.EditForms
             this.shortNameTB.Size = new System.Drawing.Size(400, 23);
             this.shortNameTB.TabIndex = 4;
             // 
-            // includeCB
+            // helpLabel1
             // 
-            this.includeCB.AutoSize = true;
-            this.includeCB.Location = new System.Drawing.Point(12, 100);
-            this.includeCB.Name = "includeCB";
-            this.includeCB.Size = new System.Drawing.Size(84, 19);
-            this.includeCB.TabIndex = 5;
-            this.includeCB.Text = "Учитывать";
-            this.includeCB.UseVisualStyleBackColor = true;
+            this.helpLabel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel1.BackgroundImage")));
+            this.helpLabel1.HelpText = "В данном поле необходимо указать полное наименование предмета.";
+            this.helpLabel1.Location = new System.Drawing.Point(396, 9);
+            this.helpLabel1.Name = "helpLabel1";
+            this.helpLabel1.Size = new System.Drawing.Size(16, 16);
+            this.helpLabel1.TabIndex = 5;
+            // 
+            // helpLabel2
+            // 
+            this.helpLabel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel2.BackgroundImage")));
+            this.helpLabel2.HelpText = "В данном поле необходимо указать сокращенное наименование предмета. Используется " +
+    "для отображения.\r\n\r\nДанное поле должно быть уникальным.\r\n";
+            this.helpLabel2.Location = new System.Drawing.Point(396, 53);
+            this.helpLabel2.Name = "helpLabel2";
+            this.helpLabel2.Size = new System.Drawing.Size(16, 16);
+            this.helpLabel2.TabIndex = 6;
             // 
             // SubjectEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(424, 165);
-            this.Controls.Add(this.includeCB);
+            this.ClientSize = new System.Drawing.Size(424, 146);
+            this.Controls.Add(this.helpLabel2);
+            this.Controls.Add(this.helpLabel1);
             this.Controls.Add(this.shortNameTB);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.nameTB);
             this.Controls.Add(this.label1);
             this.Name = "SubjectEditForm";
             this.Text = "SubjectEditForm";
-            this.Controls.SetChildIndex(this.label1, 0);
-            this.Controls.SetChildIndex(this.nameTB, 0);
-            this.Controls.SetChildIndex(this.label2, 0);
-            this.Controls.SetChildIndex(this.shortNameTB, 0);
-            this.Controls.SetChildIndex(this.includeCB, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,6 +113,7 @@ namespace GradeReport.Edit.EditForms
         private System.Windows.Forms.TextBox nameTB;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox shortNameTB;
-        private System.Windows.Forms.CheckBox includeCB;
+        private Common.HelpLabel helpLabel1;
+        private Common.HelpLabel helpLabel2;
     }
 }

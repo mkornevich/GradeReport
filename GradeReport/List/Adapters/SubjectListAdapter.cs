@@ -17,7 +17,6 @@ namespace GradeReport.List.Adapters
                 subject.Guid,
                 subject.Name,
                 subject.ShortName,
-                subject.Include ? "Да" : "Нет",
             };
         }
 
@@ -26,7 +25,6 @@ namespace GradeReport.List.Adapters
             AddCol(columns, "Идентификатор", false);
             AddCol(columns, "Название");
             AddCol(columns, "Короткое название");
-            AddCol(columns, "Учитывать");
         }
 
         public override bool IsRowBelongEntity(DataGridViewRow row, object entity)

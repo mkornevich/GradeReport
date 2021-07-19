@@ -25,7 +25,6 @@ namespace GradeReport.Edit.EditForms
             var subject = (Subject)entity;
             nameTB.Text = subject.Name;
             shortNameTB.Text = subject.ShortName;
-            includeCB.Checked = subject.Include;
         }
 
         protected override void FormToEntity(object entity, ChangeMode mode)
@@ -33,8 +32,6 @@ namespace GradeReport.Edit.EditForms
             var subject = (Subject)entity;
             subject.Name = nameTB.Text;
             subject.ShortName = shortNameTB.Text;
-            subject.Include = includeCB.Checked;
         }
-
     }
 }

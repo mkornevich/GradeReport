@@ -17,12 +17,12 @@ namespace GradeReport.Main
     {
         private List<Subject> _subjects = new List<Subject>()
             {
-                new Subject() { Include = true, Name = "Математика", ShortName = "Матем" },
-                new Subject() { Include = false, Name = "Бел яз", ShortName = "Матем" },
-                new Subject() { Include = true, Name = "Бел лит", ShortName = "Матем" },
-                new Subject() { Include = true, Name = "Ин яз", ShortName = "Матем" },
-                new Subject() { Include = false, Name = "Биология", ShortName = "Матем" },
-                new Subject() { Include = true, Name = "График", ShortName = "Матем" },
+                new Subject() { Name = "Математика", ShortName = "Матем" },
+                new Subject() { Name = "Бел яз", ShortName = "Матем" },
+                new Subject() { Name = "Бел лит", ShortName = "Матем" },
+                new Subject() { Name = "Ин яз", ShortName = "Матем" },
+                new Subject() { Name = "Биология", ShortName = "Матем" },
+                new Subject() { Name = "График", ShortName = "Матем" },
             };
 
         private ListForm _subjectsForm = new ListForm(new SubjectListAdapter()) {
@@ -34,7 +34,7 @@ namespace GradeReport.Main
             InitializeComponent();
 
             _subjectsForm.Entities = _subjects.Cast<object>().ToList();
-            _subjectsForm.SelectedEntities = _subjects.FindAll(s => !s.Include).Cast<object>().ToList();
+            _subjectsForm.SelectedEntities = _subjects.Cast<object>().ToList();
             _subjectsForm.Chooser = chooser1;
 
             //_subjectsForm.SelectionChanged += () => MessageBox.Show(string.Join(", ", _subjectsForm.SelectedEntities.Select(e => ((Subject)e).Name)));

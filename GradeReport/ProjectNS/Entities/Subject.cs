@@ -13,8 +13,5 @@ namespace GradeReport.ProjectNS.Entities
 
         [EntityField]
         public string ShortName { get; set; }
-
-        [EntityField]
-        public bool Include { get; set; }
     }
 }

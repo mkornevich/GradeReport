@@ -1,7 +1,7 @@
 ﻿
 namespace GradeReport.Edit.EditForms
 {
-    partial class GroupEditForm
+    partial class QualificationEditForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,20 +29,11 @@ namespace GradeReport.Edit.EditForms
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GroupEditForm));
-            this.nameTB = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QualificationEditForm));
             this.label1 = new System.Windows.Forms.Label();
             this.helpLabel1 = new GradeReport.Common.HelpLabel();
+            this.nameTB = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // nameTB
-            // 
-            this.nameTB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.nameTB.Location = new System.Drawing.Point(12, 27);
-            this.nameTB.Name = "nameTB";
-            this.nameTB.Size = new System.Drawing.Size(380, 23);
-            this.nameTB.TabIndex = 1;
             // 
             // label1
             // 
@@ -50,28 +41,38 @@ namespace GradeReport.Edit.EditForms
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 15);
-            this.label1.TabIndex = 2;
+            this.label1.TabIndex = 1;
             this.label1.Text = "Название";
             // 
             // helpLabel1
             // 
+            this.helpLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.helpLabel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel1.BackgroundImage")));
-            this.helpLabel1.HelpText = "В данном поле необходимо указать название группы.\r\n\r\nДолжно быть уникальным.";
-            this.helpLabel1.Location = new System.Drawing.Point(376, 9);
+            this.helpLabel1.HelpText = null;
+            this.helpLabel1.Location = new System.Drawing.Point(388, 9);
             this.helpLabel1.Name = "helpLabel1";
             this.helpLabel1.Size = new System.Drawing.Size(16, 16);
-            this.helpLabel1.TabIndex = 3;
+            this.helpLabel1.TabIndex = 2;
             // 
-            // GroupEditForm
+            // nameTB
+            // 
+            this.nameTB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.nameTB.Location = new System.Drawing.Point(12, 27);
+            this.nameTB.Name = "nameTB";
+            this.nameTB.Size = new System.Drawing.Size(392, 23);
+            this.nameTB.TabIndex = 3;
+            // 
+            // QualificationEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(404, 106);
+            this.ClientSize = new System.Drawing.Size(416, 105);
+            this.Controls.Add(this.nameTB);
             this.Controls.Add(this.helpLabel1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.nameTB);
-            this.Name = "GroupEditForm";
-            this.Text = "GroupEditForm";
+            this.Name = "QualificationEditForm";
+            this.Text = "QualificationEditForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -79,8 +80,8 @@ namespace GradeReport.Edit.EditForms
 
         #endregion
 
-        private System.Windows.Forms.TextBox nameTB;
         private System.Windows.Forms.Label label1;
         private Common.HelpLabel helpLabel1;
+        private System.Windows.Forms.TextBox nameTB;
     }
 }

@@ -28,6 +28,7 @@ namespace GradeReport.Edit
         public EditForm()
         {
             SimplifyFrom(true);
+            ActionStrip.Visible = true;
         }
 
         protected override void ReturnOk()
