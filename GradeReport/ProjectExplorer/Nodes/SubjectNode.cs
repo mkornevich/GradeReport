@@ -1,6 +1,8 @@
 ﻿using GradeReport.Edit;
 using GradeReport.Edit.EditForms;
+using GradeReport.ProjectNS;
 using GradeReport.ProjectNS.Entities;
+using GradeReport.Validation.Validators;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,35 +18,23 @@ namespace GradeReport.ProjectExplorer.Nodes
 
         protected override void Visualize()
         {
-            Text = ((Subject)Object).ShortName;
+            Text = ((Subject)Entity).ShortName;
         }
 
         public override string GetEntityParams()
         {
-            var subject = (Subject)Object;
-            return 
+            var subject = (Subject)Entity;
+            return
                 $"Название: {subject.Name}\n" +
                 $"Короткое название: {subject.ShortName}";
         }
 
         protected override void CreateMenuItems(List<ToolStripMenuItem> items)
         {
-            items.Add(new ToolStripMenuItem("Редактировать", null, EditAct));
-            items.Add(new ToolStripMenuItem("Удалить", null, RemoveAct));
-        }
+            items.Add(new ToolStripMenuItem("Редактировать", null,
+                PENodeActBuilder.BuildEditAct(this, Project.Subjects.Create(), new SubjectEditForm(), new SubjectValidator())));
 
-        private void RemoveAct(object sender, EventArgs e)
-        {
-            Project.Subjects.Remove((Subject)Object);
-            TreeViewFresh();
-        }
-
-        private void EditAct(object sender, EventArgs e)
-        {
-            var subject = Object;
-            var editForm = new SubjectEditForm() { Project = Project };
-            editForm.ShowForResult(subject, ChangeMode.Edit);
-            TreeViewFresh();
+            items.Add(new ToolStripMenuItem("Удалить", null, PENodeActBuilder.BuildRemoveAct(this, Project.Subjects, new SubjectValidator())));
         }
     }
 }

@@ -26,19 +26,19 @@ namespace GradeReport.ProjectExplorer.Nodes
 
         private void NewAct(object sender, EventArgs e)
         {
-            var newGroup = Project.Groups.Create();
-            var editForm = new GroupEditForm() { Project = Project };
-            if (editForm.ShowForResult(newGroup, ChangeMode.Create) == DialogResult.OK)
-            {
-                Project.Groups.Add(newGroup);
-                Project.OnChanged();
-            }
+            //var newGroup = Project.Groups.Create();
+            //var editForm = new GroupEditForm() { Project = Project };
+            //if (editForm.ShowForResult(newGroup, ChangeMode.Create) == DialogResult.OK)
+            //{
+            //    Project.Groups.Add(newGroup);
+            //    Project.OnChanged();
+            //}
         }
 
         protected override void CreateChildNodes(List<PENode> nodes, out bool isChildNodesStatic)
         {
             isChildNodesStatic = false;
-            Project.Groups.ForEach(g => nodes.Add(new GroupNode() { Object = g }));
+            Project.Groups.ForEach(g => nodes.Add(new GroupNode() { Entity = g }));
         }
     }
 }

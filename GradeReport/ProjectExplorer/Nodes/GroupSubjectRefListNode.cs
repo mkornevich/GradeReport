@@ -30,10 +30,10 @@ namespace GradeReport.ProjectExplorer.Nodes
         protected override void CreateChildNodes(List<PENode> nodes, out bool isChildNodesStatic)
         {
             isChildNodesStatic = false;
-            Guid parentGuid = ((Group)GetNodeObject<GroupNode>()).Guid;
+            Guid parentGuid = ((Group)GetNodeEntity<GroupNode>()).Guid;
             Project.GroupSubjectRefs
                 .FindAll(gsr => gsr.GroupGuid == parentGuid)
-                .ForEach(gsr => nodes.Add(new GroupSubjectRefNode() { Object = gsr}));
+                .ForEach(gsr => nodes.Add(new GroupSubjectRefNode() { Entity = gsr}));
         }
     }
 }

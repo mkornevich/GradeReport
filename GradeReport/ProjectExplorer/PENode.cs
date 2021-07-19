@@ -19,7 +19,7 @@ namespace GradeReport.ProjectExplorer
 
         private bool _isChildNodesStatic;
 
-        public object Object { get; set; }
+        public Entity Entity { get; set; }
 
         public void Init()
         {
@@ -28,14 +28,14 @@ namespace GradeReport.ProjectExplorer
             LoadChildNodes();
         }
 
-        protected object GetNodeObject<TNode>()
+        protected object GetNodeEntity<TNode>()
         {
             if (typeof(TNode).FullName == GetType().FullName)
             {
-                return Object;
+                return Entity;
             }
             var parent = (PENode)Parent;
-            return parent.GetNodeObject<TNode>();
+            return parent.GetNodeEntity<TNode>();
         }
 
         
@@ -118,7 +118,7 @@ namespace GradeReport.ProjectExplorer
             }
         }
 
-        private bool CompareNodesByInnerEntity(PENode nodeA, PENode nodeB) => EntityUtils.Compare((Entity)nodeA.Object, (Entity)nodeB.Object);
+        private bool CompareNodesByInnerEntity(PENode nodeA, PENode nodeB) => EntityUtils.Compare(nodeA.Entity, nodeB.Entity);
 
         public virtual string GetEntityParams()
         {

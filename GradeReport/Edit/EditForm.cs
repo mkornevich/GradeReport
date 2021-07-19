@@ -1,6 +1,8 @@
 ﻿using GradeReport.Common.ActionNS;
 using GradeReport.Common.NotificationNS;
+using GradeReport.ProjectNS;
 using GradeReport.ProjectNS.Entities;
+using GradeReport.Validation;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -17,7 +19,9 @@ namespace GradeReport.Edit
 
         public Project Project { get; set; }
 
-        private object _entity;
+        private Entity _entity;
+
+        private Validator _validator;
 
         private ChangeMode _changeMode;
 
@@ -29,12 +33,14 @@ namespace GradeReport.Edit
         protected override void ReturnOk()
         {
             FormToEntity(_entity, _changeMode);
-            base.ReturnOk();
+            if (_validator.Validate(Project, _entity))
+                base.ReturnOk();
         }
 
-        public DialogResult ShowForResult(object entity, ChangeMode mode)
+        public DialogResult ShowForResult(Entity entity, Validator validator, ChangeMode mode)
         {
             _entity = entity;
+            _validator = validator;
             _changeMode = mode;
             InitForm(_changeMode);
             EntityToForm(entity, mode);
@@ -47,6 +53,8 @@ namespace GradeReport.Edit
         {
             Text = EntityName + " - " + (_changeMode == ChangeMode.Create ? "Создание" : "Редактирование");
         }
+
+
 
         protected virtual void InitForm(ChangeMode mode)
         {

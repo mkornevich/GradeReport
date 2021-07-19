@@ -1,6 +1,7 @@
 ﻿using GradeReport.Edit;
 using GradeReport.Edit.EditForms;
 using GradeReport.ProjectNS.Entities;
+using GradeReport.Validation.Validators;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,24 +22,14 @@ namespace GradeReport.ProjectExplorer.Nodes
 
         protected override void CreateMenuItems(List<ToolStripMenuItem> items)
         {
-            items.Add(new ToolStripMenuItem("Добавить", null, NewAct));
-        }
-
-        private void NewAct(object sender, EventArgs e)
-        {
-            var newSubject = new Subject();
-            var editForm = new SubjectEditForm() { Project = Project };
-            if (editForm.ShowForResult(newSubject, ChangeMode.Create) == DialogResult.OK)
-            {
-                Project.Subjects.Add(newSubject);
-                TreeViewFresh();
-            }
+            items.Add(new ToolStripMenuItem("Добавить", null, 
+                PENodeActBuilder.BuildCreateAct(this, Project.Subjects, new SubjectEditForm(), new SubjectValidator())));
         }
 
         protected override void CreateChildNodes(List<PENode> nodes, out bool isChildNodesStatic)
         {
             isChildNodesStatic = false;
-            Project.Subjects.ForEach(s => nodes.Add(new SubjectNode() { Object = s }));
+            Project.Subjects.ForEach(s => nodes.Add(new SubjectNode() { Entity = s }));
         }
     }
 }

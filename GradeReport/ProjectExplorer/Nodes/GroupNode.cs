@@ -17,7 +17,7 @@ namespace GradeReport.ProjectExplorer.Nodes
 
         protected override void Visualize()
         {
-            Text = ((Group)Object).Name;
+            Text = ((Group)Entity).Name;
         }
 
         protected override void CreateMenuItems(List<ToolStripMenuItem> items)
@@ -28,17 +28,17 @@ namespace GradeReport.ProjectExplorer.Nodes
 
         private void RemoveAct(object sender, EventArgs e)
         {
-            Project.Groups.Remove((Group)Object);
+            Project.Groups.Remove((Group)Entity);
             TreeViewFresh();
         }
 
         private void EditAct(object sender, EventArgs e)
         {
-            var editForm = new GroupEditForm() { Project = Project };
-            if (editForm.ShowForResult((Group)Object, ChangeMode.Create) == DialogResult.OK)
-            {
-                TreeViewFresh();
-            }
+            //var editForm = new GroupEditForm() { Project = Project };
+            //if (editForm.ShowForResult((Group)Object, ChangeMode.Create) == DialogResult.OK)
+            //{
+            //    TreeViewFresh();
+            //}
         }
 
         protected override void CreateChildNodes(List<PENode> nodes, out bool isChildNodesStatic)

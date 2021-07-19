@@ -26,22 +26,22 @@ namespace GradeReport.ProjectExplorer.Nodes
 
         private void NewAct(object sender, EventArgs e)
         {
-            var newStudent = new Student();
-            newStudent.GroupGuid = ((Group)GetNodeObject<GroupNode>()).Guid;
-            var editForm = new StudentEditForm() { Project = Project };
-            if (editForm.ShowForResult(newStudent, ChangeMode.Create) == DialogResult.OK)
-            {
-                Project.Students.Add(newStudent);
-                TreeViewFresh();
-            }
+            //var newStudent = new Student();
+            //newStudent.GroupGuid = ((Group)GetNodeObject<GroupNode>()).Guid;
+            //var editForm = new StudentEditForm() { Project = Project };
+            //if (editForm.ShowForResult(newStudent, ChangeMode.Create) == DialogResult.OK)
+            //{
+            //    Project.Students.Add(newStudent);
+            //    TreeViewFresh();
+            //}
         }
 
         protected override void CreateChildNodes(List<PENode> nodes, out bool isChildNodesStatic)
         {
             isChildNodesStatic = false;
-            var group = (Group)GetNodeObject<GroupNode>();
+            var group = (Group)GetNodeEntity<GroupNode>();
             var students = Project.Students.FindAll(s => s.GroupGuid == group.Guid).ToList();
-            students.ForEach(s => nodes.Add(new StudentNode() { Object = s }));
+            students.ForEach(s => nodes.Add(new StudentNode() { Entity = s }));
         }
     }
 }
