@@ -7,6 +7,10 @@
     <StartupObject>GradeReport.Program</StartupObject>
     <Platforms>AnyCPU;x64</Platforms>
     <ApplicationIcon />
+    <Authors>Корневич Максим</Authors>
+    <Company />
+    <Copyright>Корневич Максим</Copyright>
+    <RepositoryType>git@github.com:mkornevich/GradeReport.git</RepositoryType>
   </PropertyGroup>
 
   <ItemGroup>

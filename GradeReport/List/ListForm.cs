@@ -150,7 +150,7 @@ namespace GradeReport.List
         {
             if (e.ColumnIndex == 0)
             {
-                if (SelectMode == SelectMode.Multiple)
+                if (SelectMode == SelectMode.Single)
                 {
                     foreach (DataGridViewRow row in Table.Rows)
                     {

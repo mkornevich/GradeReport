@@ -5,14 +5,14 @@
 	+Квалификации - QualificationListNode
 		+Квалификация - QualificationNode
 				+Специальность - SpecialtyNode
-	Группы - GroupListNode
-		Группа - GroupNode
-			Студетны - StudentListNode
-				Студент - StudentNode
-			Предметы - GroupSubjectRefListNode
-				Предмет - GroupSubjectRefNode
-					Мои студенты - MyStudentInSubjectRefListNode
-						Студент - MyStudentInSubjectRefNode
+	+Группы - GroupListNode
+		+Группа - GroupNode
+			+Студетны - StudentListNode
+				+Студент - StudentNode
+			+Предметы - GroupSubjectRefListNode
+				+Предмет - GroupSubjectRefNode
+					+Мои студенты - MyStudentInSubjectRefListNode
+						+Студент - MyStudentInSubjectRefNode
 			Курсы - CourseListNode
 				Курс - CourseNode
 					Семестры - SemesterListNode
