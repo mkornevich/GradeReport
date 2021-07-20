@@ -31,15 +31,5 @@ namespace GradeReport.Edit.EditForms
             var group = (Group)entity;
             group.Name = nameTB.Text;;
         }
-
-        protected override bool Validate(NotificationFormBuilder builder, object entity)
-        {
-            var group = (Group)entity;
-
-            builder.ErrorIf(nameTB.Text == "", "Заполните полное название предмета.");
-            builder.ErrorIf(Project.Groups.Exists(g => g.Guid != group.Guid && g.Name == nameTB.Text), "Такое имя уже занято, попробуйте другое.");
-
-            return builder.ErrorCount == 0;
-        }
     }
 }

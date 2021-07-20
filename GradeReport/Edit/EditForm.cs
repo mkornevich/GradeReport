@@ -43,7 +43,7 @@ namespace GradeReport.Edit
             _entity = entity;
             _validator = validator;
             _changeMode = mode;
-            InitForm(_changeMode);
+            InitForm(entity, _changeMode);
             EntityToForm(entity, mode);
             AdjustFormText();
 
@@ -57,7 +57,7 @@ namespace GradeReport.Edit
 
 
 
-        protected virtual void InitForm(ChangeMode mode)
+        protected virtual void InitForm(Entity entity, ChangeMode mode)
         {
 
         }
@@ -71,12 +71,5 @@ namespace GradeReport.Edit
         {
 
         }
-
-        protected virtual bool Validate(NotificationFormBuilder builder, object entity)
-        {
-
-            return builder.ErrorCount == 0;
-        }
-
     }
 }

@@ -34,7 +34,8 @@ namespace GradeReport.ProjectExplorer.Nodes
             items.Add(new ToolStripMenuItem("Редактировать", null,
                 PENodeActBuilder.BuildEditAct(this, Project.Subjects.Create(), new SubjectEditForm(), new SubjectValidator())));
 
-            items.Add(new ToolStripMenuItem("Удалить", null, PENodeActBuilder.BuildRemoveAct(this, Project.Subjects, new SubjectValidator())));
+            items.Add(new ToolStripMenuItem("Удалить", null, 
+                PENodeActBuilder.BuildRemoveAct(this, Project.Subjects, new SubjectValidator())));
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GradeReport.ProjectNS.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,20 @@ namespace GradeReport.Edit.EditForms
         {
             InitializeComponent();
             EntityName = "Специальность";
+        }
+
+        protected override void EntityToForm(object entity, ChangeMode mode)
+        {
+            var specialty = (Specialty)entity;
+            nameTB.Text = specialty.Name;
+            codeTB.Text = specialty.Code;
+        }
+
+        protected override void FormToEntity(object entity, ChangeMode mode)
+        {
+            var specialty = (Specialty)entity;
+            specialty.Name = nameTB.Text;
+            specialty.Code = codeTB.Text;
         }
     }
 }

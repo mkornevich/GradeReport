@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GradeReport.ProjectNS.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,18 @@ namespace GradeReport.Edit.EditForms
         {
             InitializeComponent();
             EntityName = "Квалификация";
+        }
+
+        protected override void EntityToForm(object entity, ChangeMode mode)
+        {
+            var qualification = (Qualification)entity;
+            nameTB.Text = qualification.Name;
+        }
+
+        protected override void FormToEntity(object entity, ChangeMode mode)
+        {
+            var qualification = (Qualification)entity;
+            qualification.Name = nameTB.Text;
         }
     }
 }

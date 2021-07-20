@@ -22,7 +22,7 @@ namespace GradeReport.ProjectNS
         protected override void CreateChildNodes(List<PENode> nodes, out bool isChildNodesStatic)
         {
             isChildNodesStatic = true;
-            nodes.Add(new ConfigNode());
+            nodes.Add(new ConfigNode() { Entity = Project.Config });
             nodes.Add(new SubjectListNode());
             nodes.Add(new GroupListNode());
         }

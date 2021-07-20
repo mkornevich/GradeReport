@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GradeReport.ProjectNS.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,22 +12,28 @@ namespace GradeReport.List.Adapters
     {
         public override void CreateColumns(DataGridViewColumnCollection columns)
         {
-            throw new NotImplementedException();
+            AddCol(columns, "Идентификатор", false);
+            AddCol(columns, "Название");
         }
 
         public override object[] EntityToRow(object entity)
         {
-            throw new NotImplementedException();
+            var group = (Group)entity;
+            return new object[] {
+                group.Guid,
+                group.Name,
+            };
         }
 
         public override string EntityToString(object entity)
         {
-            throw new NotImplementedException();
+            return ((Group)entity).Name;
         }
 
         public override bool IsRowBelongEntity(DataGridViewRow row, object entity)
         {
-            throw new NotImplementedException();
+            var group = (Group)entity;
+            return (Guid)row.Cells[1].Value == group.Guid;
         }
     }
 }

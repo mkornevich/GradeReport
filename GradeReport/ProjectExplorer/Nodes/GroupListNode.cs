@@ -1,6 +1,7 @@
 ﻿using GradeReport.Edit;
 using GradeReport.Edit.EditForms;
 using GradeReport.ProjectNS.Entities;
+using GradeReport.Validation.Validators;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,18 +22,8 @@ namespace GradeReport.ProjectExplorer.Nodes
 
         protected override void CreateMenuItems(List<ToolStripMenuItem> items)
         {
-            items.Add(new ToolStripMenuItem("Добавить", null, NewAct));
-        }
-
-        private void NewAct(object sender, EventArgs e)
-        {
-            //var newGroup = Project.Groups.Create();
-            //var editForm = new GroupEditForm() { Project = Project };
-            //if (editForm.ShowForResult(newGroup, ChangeMode.Create) == DialogResult.OK)
-            //{
-            //    Project.Groups.Add(newGroup);
-            //    Project.OnChanged();
-            //}
+            items.Add(new ToolStripMenuItem("Добавить", null,
+                PENodeActBuilder.BuildCreateAct(this, Project.Groups, new GroupEditForm(), new GroupValidator())));
         }
 
         protected override void CreateChildNodes(List<PENode> nodes, out bool isChildNodesStatic)

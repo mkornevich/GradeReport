@@ -8,5 +8,6 @@ namespace GradeReport.Validation.Validators
 {
     public class ConfigValidator : Validator
     {
+
     }
 }
