@@ -1,5 +1,6 @@
 ﻿using GradeReport.Edit.EditForms;
 using GradeReport.ProjectNS.Entities;
+using GradeReport.Properties;
 using GradeReport.Validation.Validators;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,8 @@ namespace GradeReport.ProjectExplorer.Nodes
     {
         public override string Description => "Данный узел представляет конфигурацию текущего проекта. Редактировать можно через ПКМ.";
 
+        public override bool IsChildNodesStatic => true;
+
         protected override void Visualize()
         {
             Text = "Конфигурация";
@@ -21,7 +24,7 @@ namespace GradeReport.ProjectExplorer.Nodes
 
         protected override void CreateMenuItems(List<ToolStripMenuItem> items)
         {
-            items.Add(new ToolStripMenuItem("Редактировать", null,
+            items.Add(new ToolStripMenuItem("Редактировать", Resources.edit_16,
                 PENodeActBuilder.BuildEditAct(this, new Config(), new ConfigEditForm(), new ConfigValidator())));
         }
 

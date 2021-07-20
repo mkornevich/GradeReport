@@ -16,6 +16,8 @@ namespace GradeReport.ProjectExplorer.Nodes
     {
         public override string Description => "Данный узел представляет из себя одну конкретную учебную группу.";
 
+        public override bool IsChildNodesStatic => true;
+
         protected override void Visualize()
         {
             Text = ((Group)Entity).Name;
@@ -23,18 +25,15 @@ namespace GradeReport.ProjectExplorer.Nodes
 
         protected override void CreateMenuItems(List<ToolStripMenuItem> items)
         {
-            items.Add(new ToolStripMenuItem("Редактировать", null,
+            items.Add(new ToolStripMenuItem("Редактировать", Resources.edit_16,
                 PENodeActBuilder.BuildEditAct(this, Project.Groups.Create(), new GroupEditForm(), new GroupValidator())));
 
-            items.Add(new ToolStripMenuItem("Удалить", null, 
+            items.Add(new ToolStripMenuItem("Удалить", Resources.remove_16, 
                 PENodeActBuilder.BuildRemoveAct(this, Project.Groups, new GroupValidator())));
         }
 
-
-
-        protected override void CreateChildNodes(List<PENode> nodes, out bool isChildNodesStatic)
+        protected override void CreateChildNodes(List<PENode> nodes)
         {
-            isChildNodesStatic = true;
             nodes.Add(new GroupSubjectRefListNode());
             nodes.Add(new StudentListNode());
         }

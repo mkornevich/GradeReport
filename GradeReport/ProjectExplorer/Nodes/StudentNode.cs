@@ -1,6 +1,8 @@
 ﻿using GradeReport.Edit;
 using GradeReport.Edit.EditForms;
 using GradeReport.ProjectNS.Entities;
+using GradeReport.Properties;
+using GradeReport.Validation.Validators;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +16,8 @@ namespace GradeReport.ProjectExplorer.Nodes
     {
         public override string Description => "Данный узел представляет одного студента который пренадлежит группе из узла выше.";
 
+        public override bool IsChildNodesStatic => true;
+
         protected override void Visualize()
         {
             Text = ((Student)Entity).Name;
@@ -21,23 +25,11 @@ namespace GradeReport.ProjectExplorer.Nodes
 
         protected override void CreateMenuItems(List<ToolStripMenuItem> items)
         {
-            items.Add(new ToolStripMenuItem("Редактировать", null, EditAct));
-            items.Add(new ToolStripMenuItem("Удалить", null, RemoveAct));
-        }
+            items.Add(new ToolStripMenuItem("Редактировать", Resources.edit_16,
+                PENodeActBuilder.BuildEditAct(this, Project.Students.Create(), new StudentEditForm(), new StudentValidator())));
 
-        private void RemoveAct(object sender, EventArgs e)
-        {
-            Project.Students.Remove((Student)Entity);
-            TreeViewFresh();
-        }
-
-        private void EditAct(object sender, EventArgs e)
-        {
-            //var editForm = new StudentEditForm() { Project = Project };
-            //if (editForm.ShowForResult((Student)Object, ChangeMode.Create) == DialogResult.OK)
-            //{
-            //    TreeViewFresh();
-            //}
+            items.Add(new ToolStripMenuItem("Удалить", Resources.remove_16,
+                PENodeActBuilder.BuildRemoveAct(this, Project.Students, new StudentValidator())));
         }
     }
 }

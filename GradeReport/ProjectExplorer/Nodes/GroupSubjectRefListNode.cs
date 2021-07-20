@@ -12,6 +12,8 @@ namespace GradeReport.ProjectExplorer.Nodes
     {
         public override string Description => "В данном узле содержатся предметы которые присутствуют в группе из узла выше.";
 
+        public override bool IsChildNodesStatic => false;
+
         protected override void Visualize()
         {
             Text = "Предметы";
@@ -27,9 +29,8 @@ namespace GradeReport.ProjectExplorer.Nodes
             
         }
 
-        protected override void CreateChildNodes(List<PENode> nodes, out bool isChildNodesStatic)
+        protected override void CreateChildNodes(List<PENode> nodes)
         {
-            isChildNodesStatic = false;
             Guid parentGuid = ((Group)GetNodeEntity<GroupNode>()).Guid;
             Project.GroupSubjectRefs
                 .FindAll(gsr => gsr.GroupGuid == parentGuid)

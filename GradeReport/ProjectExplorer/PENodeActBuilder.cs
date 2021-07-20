@@ -31,23 +31,28 @@ namespace GradeReport.ProjectExplorer
 
         public static EventHandler BuildCreateAct<TEntity>(PENode node, Dao<TEntity> entityDao, EditForm editForm, Validator validator) where TEntity : Entity
         {
+            return BuildCreateAct(node, () => entityDao.Create(), (e) => entityDao.Add((TEntity)e), editForm, validator);
+        }
+
+        public static EventHandler BuildCreateAct(PENode node, Func<Entity> createEntityFunc, Action<Entity> addEntityAction, EditForm editForm, Validator validator)
+        {
             return (s, e) =>
             {
                 if (validator.CanCreate(node.Project))
                 {
                     editForm.Project = node.Project;
 
-                    var entity = entityDao.Create();
+                    var entity = createEntityFunc();
 
                     if (editForm.ShowForResult(entity, validator, ChangeMode.Create) == DialogResult.OK)
                     {
-                        entityDao.Add(entity);
+                        addEntityAction(entity);
                         node.Project.OnChanged();
                     }
                 }
             };
         }
-        
+
         public static EventHandler BuildRemoveAct<TEntity>(PENode node, Dao<TEntity> dao, Validator validator) where TEntity : Entity
         {
             return (s, e) =>

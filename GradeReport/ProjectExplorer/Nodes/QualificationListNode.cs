@@ -1,6 +1,4 @@
-﻿using GradeReport.Edit;
-using GradeReport.Edit.EditForms;
-using GradeReport.ProjectNS.Entities;
+﻿using GradeReport.Edit.EditForms;
 using GradeReport.Properties;
 using GradeReport.Validation.Validators;
 using System;
@@ -12,26 +10,26 @@ using System.Windows.Forms;
 
 namespace GradeReport.ProjectExplorer.Nodes
 {
-    public class GroupListNode : PENode
+    public class QualificationListNode : PENode
     {
-        public override string Description => "Данный узел содержит в себе список учебных групп.";
+        public override string Description => "Данный узел представляет из себя список всех квалификаций.";
 
         public override bool IsChildNodesStatic => false;
 
         protected override void Visualize()
         {
-            Text = "Группы";
+            Text = "Квалификации";
         }
 
         protected override void CreateMenuItems(List<ToolStripMenuItem> items)
         {
             items.Add(new ToolStripMenuItem("Добавить", Resources.add_16,
-                PENodeActBuilder.BuildCreateAct(this, Project.Groups, new GroupEditForm(), new GroupValidator())));
+                PENodeActBuilder.BuildCreateAct(this, Project.Qualifications, new QualificationEditForm(), new QualificationValidator())));
         }
 
         protected override void CreateChildNodes(List<PENode> nodes)
         {
-            Project.Groups.ForEach(g => nodes.Add(new GroupNode() { Entity = g }));
+            Project.Qualifications.ForEach(q => nodes.Add(new QualificationNode() { Entity = q }));
         }
     }
 }

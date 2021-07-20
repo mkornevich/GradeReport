@@ -1,6 +1,7 @@
 ﻿using GradeReport.Edit;
 using GradeReport.Edit.EditForms;
 using GradeReport.ProjectNS.Entities;
+using GradeReport.Properties;
 using GradeReport.Validation.Validators;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,8 @@ namespace GradeReport.ProjectExplorer.Nodes
     {
         public override string Description => "Данный узел содержит список всех возможных предметов для данного проекта.";
 
+        public override bool IsChildNodesStatic => false;
+
         protected override void Visualize()
         {
             Text = "Предметы";
@@ -22,13 +25,12 @@ namespace GradeReport.ProjectExplorer.Nodes
 
         protected override void CreateMenuItems(List<ToolStripMenuItem> items)
         {
-            items.Add(new ToolStripMenuItem("Добавить", null, 
+            items.Add(new ToolStripMenuItem("Добавить", Resources.add_16, 
                 PENodeActBuilder.BuildCreateAct(this, Project.Subjects, new SubjectEditForm(), new SubjectValidator())));
         }
 
-        protected override void CreateChildNodes(List<PENode> nodes, out bool isChildNodesStatic)
+        protected override void CreateChildNodes(List<PENode> nodes)
         {
-            isChildNodesStatic = false;
             Project.Subjects.ForEach(s => nodes.Add(new SubjectNode() { Entity = s }));
         }
     }

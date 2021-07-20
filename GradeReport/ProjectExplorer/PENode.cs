@@ -13,11 +13,11 @@ namespace GradeReport.ProjectExplorer
     {
         public abstract string Description { get; }
 
+        public abstract bool IsChildNodesStatic { get; }
+
         public PETreeView PETreeView => (PETreeView)TreeView;
 
         public Project Project => PETreeView.Project;
-
-        private bool _isChildNodesStatic;
 
         public Entity Entity { get; set; }
 
@@ -38,12 +38,12 @@ namespace GradeReport.ProjectExplorer
             return parent.GetNodeEntity<TNode>();
         }
 
-        
+
 
         private void LoadChildNodes(bool initNodes = true)
         {
             var nodes = new List<PENode>();
-            CreateChildNodes(nodes, out _isChildNodesStatic);
+            CreateChildNodes(nodes);
             if (nodes.Count > 0)
             {
                 Nodes.AddRange(nodes.ToArray());
@@ -71,12 +71,15 @@ namespace GradeReport.ProjectExplorer
         {
             Visualize();
 
-            // если дети статические то просто у них вызываем обновления и выходим
-            if (_isChildNodesStatic)
+            // если набор детей зафиксирован и не изменен то просто у каждого ребенка вызываем обновления и выходим
+            if (IsChildNodesStatic)
             {
                 foreach (PENode childNode in Nodes)
                 {
                     childNode.Fresh(selectedOldNode);
+
+                    if (childNode == selectedOldNode) 
+                        PETreeView.SelectedNode = childNode;
                 }
                 return;
             }
@@ -93,7 +96,7 @@ namespace GradeReport.ProjectExplorer
             foreach (PENode childNewNode in Nodes)
             {
                 var childOldNode = childOldNodes.Find(childOldNode => CompareNodesByInnerEntity(childOldNode, childNewNode));
-                if (childOldNode != null) // если для новой ноды есть старая нода
+                if (childOldNode != null) // если для новой дочерней ноды была старая дочерняя нода
                 {
                     // для детей новой дочерней ноды загружаем детей старой дочерней ноды
                     foreach (PENode childChildOldNode in childOldNode.Nodes)
@@ -104,21 +107,25 @@ namespace GradeReport.ProjectExplorer
                     if (childOldNode.IsExpanded) childNewNode.Expand();
 
                     if (childOldNode == selectedOldNode)
-                    {
                         PETreeView.SelectedNode = childNewNode;
-                    }
 
                     childNewNode.LoadMenuItems();
                     childNewNode.Fresh(selectedOldNode);
                 }
-                else // if for new node not exists old node
+                else // если для новой ноды нету старой ноды
                 {
                     childNewNode.Init();
                 }
             }
         }
 
-        private bool CompareNodesByInnerEntity(PENode nodeA, PENode nodeB) => EntityUtils.Compare(nodeA.Entity, nodeB.Entity);
+        private bool CompareNodesByInnerEntity(PENode nodeA, PENode nodeB)
+        {
+            if (nodeA.Entity == null || nodeB.Entity == null)
+                throw new NullReferenceException("Incorrect set property: PENode.IsChildNodesStatic.");
+
+            return EntityUtils.Compare(nodeA.Entity, nodeB.Entity);
+        }
 
         public virtual string GetEntityParams()
         {
@@ -130,9 +137,9 @@ namespace GradeReport.ProjectExplorer
 
         }
 
-        protected virtual void CreateChildNodes(List<PENode> nodes, out bool isChildNodesStatic)
+        protected virtual void CreateChildNodes(List<PENode> nodes)
         {
-            isChildNodesStatic = true;
+
         }
 
         protected virtual void CreateMenuItems(List<ToolStripMenuItem> items)

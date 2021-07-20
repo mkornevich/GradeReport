@@ -1,6 +1,9 @@
 ﻿using GradeReport.Edit;
 using GradeReport.Edit.EditForms;
+using GradeReport.ProjectNS;
 using GradeReport.ProjectNS.Entities;
+using GradeReport.Properties;
+using GradeReport.Validation.Validators;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +17,8 @@ namespace GradeReport.ProjectExplorer.Nodes
     {
         public override string Description => "Данный узел содержет в себе список студентов которые пренадлежат круппе из узла выше.";
 
+        public override bool IsChildNodesStatic => false;
+
         protected override void Visualize()
         {
             Text = "Студенты";
@@ -21,24 +26,19 @@ namespace GradeReport.ProjectExplorer.Nodes
 
         protected override void CreateMenuItems(List<ToolStripMenuItem> items)
         {
-            items.Add(new ToolStripMenuItem("Добавить", null, NewAct));
+            items.Add(new ToolStripMenuItem("Добавить", Resources.add_16,
+                PENodeActBuilder.BuildCreateAct(this, CreateStudent, (s) => Project.Students.Add((Student)s), new StudentEditForm(), new StudentValidator())));
         }
 
-        private void NewAct(object sender, EventArgs e)
+        private Entity CreateStudent()
         {
-            //var newStudent = new Student();
-            //newStudent.GroupGuid = ((Group)GetNodeObject<GroupNode>()).Guid;
-            //var editForm = new StudentEditForm() { Project = Project };
-            //if (editForm.ShowForResult(newStudent, ChangeMode.Create) == DialogResult.OK)
-            //{
-            //    Project.Students.Add(newStudent);
-            //    TreeViewFresh();
-            //}
+            var student = Project.Students.Create();
+            student.Group = (Group)GetNodeEntity<GroupNode>();
+            return student;
         }
 
-        protected override void CreateChildNodes(List<PENode> nodes, out bool isChildNodesStatic)
+        protected override void CreateChildNodes(List<PENode> nodes)
         {
-            isChildNodesStatic = false;
             var group = (Group)GetNodeEntity<GroupNode>();
             var students = Project.Students.FindAll(s => s.GroupGuid == group.Guid).ToList();
             students.ForEach(s => nodes.Add(new StudentNode() { Entity = s }));

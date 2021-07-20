@@ -1,11 +1,10 @@
 Проект - ProjectNode
-	Конфигурация - ConfigNode
-	Предметы - SubjectListNode
-		Предмет - SubjectNode
-	Квалификации - QualificationListNode
-		Квалификация - QualificationNode
-			Специальности - SpecialtyListNode
-				Специальность - SpecialtyNode
+	+Конфигурация - ConfigNode
+	+Предметы - SubjectListNode
+		+Предмет - SubjectNode
+	+Квалификации - QualificationListNode
+		+Квалификация - QualificationNode
+				+Специальность - SpecialtyNode
 	Группы - GroupListNode
 		Группа - GroupNode
 			Студетны - StudentListNode
