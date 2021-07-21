@@ -18,7 +18,7 @@ namespace GradeReport.Common.ActionNS
         {
             FlowDirection = FlowDirection.RightToLeft;
             Dock = DockStyle.Bottom;
-            Padding = new Padding(5, 5, 2, 5);
+            Padding = new Padding(5, 5, 5, 5);
             Height = 40;
             BackColor = Color.FromArgb(232, 232, 232);
 
