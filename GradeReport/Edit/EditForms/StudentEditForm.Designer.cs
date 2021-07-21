@@ -54,7 +54,7 @@ namespace GradeReport.Edit.EditForms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.nameTB.Location = new System.Drawing.Point(100, 27);
             this.nameTB.Name = "nameTB";
-            this.nameTB.Size = new System.Drawing.Size(279, 23);
+            this.nameTB.Size = new System.Drawing.Size(324, 23);
             this.nameTB.TabIndex = 2;
             // 
             // numberNUD
@@ -90,9 +90,10 @@ namespace GradeReport.Edit.EditForms
             // 
             // helpLabel2
             // 
+            this.helpLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.helpLabel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel2.BackgroundImage")));
             this.helpLabel2.HelpText = "В данном поле необходимо указать полное ФИО студента.";
-            this.helpLabel2.Location = new System.Drawing.Point(363, 9);
+            this.helpLabel2.Location = new System.Drawing.Point(408, 9);
             this.helpLabel2.Name = "helpLabel2";
             this.helpLabel2.Size = new System.Drawing.Size(16, 16);
             this.helpLabel2.TabIndex = 6;
@@ -101,7 +102,7 @@ namespace GradeReport.Edit.EditForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(391, 111);
+            this.ClientSize = new System.Drawing.Size(436, 111);
             this.Controls.Add(this.helpLabel2);
             this.Controls.Add(this.helpLabel1);
             this.Controls.Add(this.label2);

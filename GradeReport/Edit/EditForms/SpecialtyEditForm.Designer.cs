@@ -52,7 +52,7 @@ namespace GradeReport.Edit.EditForms
             this.helpLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.helpLabel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel1.BackgroundImage")));
             this.helpLabel1.HelpText = "В данном поле необходимо указать полное название специальности.\r\n";
-            this.helpLabel1.Location = new System.Drawing.Point(374, 9);
+            this.helpLabel1.Location = new System.Drawing.Point(388, 9);
             this.helpLabel1.Name = "helpLabel1";
             this.helpLabel1.Size = new System.Drawing.Size(16, 16);
             this.helpLabel1.TabIndex = 2;
@@ -63,7 +63,7 @@ namespace GradeReport.Edit.EditForms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.nameTB.Location = new System.Drawing.Point(12, 27);
             this.nameTB.Name = "nameTB";
-            this.nameTB.Size = new System.Drawing.Size(378, 23);
+            this.nameTB.Size = new System.Drawing.Size(392, 23);
             this.nameTB.TabIndex = 3;
             // 
             // codeTB
@@ -72,7 +72,7 @@ namespace GradeReport.Edit.EditForms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.codeTB.Location = new System.Drawing.Point(12, 71);
             this.codeTB.Name = "codeTB";
-            this.codeTB.Size = new System.Drawing.Size(378, 23);
+            this.codeTB.Size = new System.Drawing.Size(392, 23);
             this.codeTB.TabIndex = 6;
             // 
             // helpLabel2
@@ -80,7 +80,7 @@ namespace GradeReport.Edit.EditForms
             this.helpLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.helpLabel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel2.BackgroundImage")));
             this.helpLabel2.HelpText = "В данном поле необходимо указать шифр специальности.";
-            this.helpLabel2.Location = new System.Drawing.Point(374, 53);
+            this.helpLabel2.Location = new System.Drawing.Point(388, 53);
             this.helpLabel2.Name = "helpLabel2";
             this.helpLabel2.Size = new System.Drawing.Size(16, 16);
             this.helpLabel2.TabIndex = 5;
@@ -98,7 +98,7 @@ namespace GradeReport.Edit.EditForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(402, 150);
+            this.ClientSize = new System.Drawing.Size(416, 150);
             this.Controls.Add(this.codeTB);
             this.Controls.Add(this.helpLabel2);
             this.Controls.Add(this.label2);

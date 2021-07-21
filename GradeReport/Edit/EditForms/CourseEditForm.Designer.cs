@@ -59,9 +59,9 @@ namespace GradeReport.Edit.EditForms
             // 
             this.groupNameForCourseTB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupNameForCourseTB.Location = new System.Drawing.Point(12, 115);
+            this.groupNameForCourseTB.Location = new System.Drawing.Point(209, 27);
             this.groupNameForCourseTB.Name = "groupNameForCourseTB";
-            this.groupNameForCourseTB.Size = new System.Drawing.Size(315, 23);
+            this.groupNameForCourseTB.Size = new System.Drawing.Size(296, 23);
             this.groupNameForCourseTB.TabIndex = 2;
             // 
             // numberNUD
@@ -78,7 +78,7 @@ namespace GradeReport.Edit.EditForms
             0,
             0});
             this.numberNUD.Name = "numberNUD";
-            this.numberNUD.Size = new System.Drawing.Size(159, 23);
+            this.numberNUD.Size = new System.Drawing.Size(92, 23);
             this.numberNUD.TabIndex = 3;
             this.numberNUD.Value = new decimal(new int[] {
             1,
@@ -90,29 +90,27 @@ namespace GradeReport.Edit.EditForms
             // 
             this.helpLabel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel1.BackgroundImage")));
             this.helpLabel1.HelpText = "В данном поле необходимо указать порядковый номер учебного курса.";
-            this.helpLabel1.Location = new System.Drawing.Point(155, 9);
+            this.helpLabel1.Location = new System.Drawing.Point(88, 9);
             this.helpLabel1.Name = "helpLabel1";
             this.helpLabel1.Size = new System.Drawing.Size(16, 16);
             this.helpLabel1.TabIndex = 4;
             // 
             // startYearNUD
             // 
-            this.startYearNUD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.startYearNUD.Location = new System.Drawing.Point(177, 27);
+            this.startYearNUD.Location = new System.Drawing.Point(110, 27);
             this.startYearNUD.Maximum = new decimal(new int[] {
             99999,
             0,
             0,
             0});
             this.startYearNUD.Name = "startYearNUD";
-            this.startYearNUD.Size = new System.Drawing.Size(150, 23);
+            this.startYearNUD.Size = new System.Drawing.Size(93, 23);
             this.startYearNUD.TabIndex = 5;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(177, 9);
+            this.label2.Location = new System.Drawing.Point(110, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 15);
             this.label2.TabIndex = 6;
@@ -120,10 +118,9 @@ namespace GradeReport.Edit.EditForms
             // 
             // helpLabel2
             // 
-            this.helpLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.helpLabel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel2.BackgroundImage")));
             this.helpLabel2.HelpText = "В данном поле необходимо указать год начала данного учебного курса.";
-            this.helpLabel2.Location = new System.Drawing.Point(311, 9);
+            this.helpLabel2.Location = new System.Drawing.Point(187, 9);
             this.helpLabel2.Name = "helpLabel2";
             this.helpLabel2.Size = new System.Drawing.Size(16, 16);
             this.helpLabel2.TabIndex = 5;
@@ -146,13 +143,13 @@ namespace GradeReport.Edit.EditForms
             this.specialtyCH.ChooseText = "";
             this.specialtyCH.Location = new System.Drawing.Point(12, 71);
             this.specialtyCH.Name = "specialtyCH";
-            this.specialtyCH.Size = new System.Drawing.Size(315, 23);
+            this.specialtyCH.Size = new System.Drawing.Size(493, 23);
             this.specialtyCH.TabIndex = 8;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 97);
+            this.label4.Location = new System.Drawing.Point(209, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(191, 15);
             this.label4.TabIndex = 9;
@@ -164,7 +161,7 @@ namespace GradeReport.Edit.EditForms
             this.helpLabel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel3.BackgroundImage")));
             this.helpLabel3.HelpText = "В данном поле необходимо указать специальность по которой обучаются на данном кур" +
     "се.";
-            this.helpLabel3.Location = new System.Drawing.Point(311, 53);
+            this.helpLabel3.Location = new System.Drawing.Point(489, 53);
             this.helpLabel3.Name = "helpLabel3";
             this.helpLabel3.Size = new System.Drawing.Size(16, 16);
             this.helpLabel3.TabIndex = 5;
@@ -174,7 +171,7 @@ namespace GradeReport.Edit.EditForms
             this.helpLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.helpLabel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel4.BackgroundImage")));
             this.helpLabel4.HelpText = resources.GetString("helpLabel4.HelpText");
-            this.helpLabel4.Location = new System.Drawing.Point(311, 97);
+            this.helpLabel4.Location = new System.Drawing.Point(489, 9);
             this.helpLabel4.Name = "helpLabel4";
             this.helpLabel4.Size = new System.Drawing.Size(16, 16);
             this.helpLabel4.TabIndex = 6;
@@ -183,7 +180,7 @@ namespace GradeReport.Edit.EditForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(339, 192);
+            this.ClientSize = new System.Drawing.Size(517, 146);
             this.Controls.Add(this.helpLabel4);
             this.Controls.Add(this.helpLabel3);
             this.Controls.Add(this.label4);
