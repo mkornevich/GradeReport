@@ -36,6 +36,7 @@ namespace GradeReport.ProjectExplorer.Nodes
         {
             nodes.Add(new GroupSubjectRefListNode());
             nodes.Add(new StudentListNode());
+            nodes.Add(new CourseListNode());
         }
     }
 }

@@ -15,7 +15,7 @@ namespace GradeReport.ProjectExplorer.Nodes
 
         protected override void Visualize()
         {
-            var subject = Project.Subjects.Find(s => s.Guid == ((GroupSubjectRef)Entity).SubjectGuid);
+            var subject = ((GroupSubjectRef)Entity).Subject;
             Text = subject.ShortName;
         }
 
