@@ -57,7 +57,7 @@ namespace GradeReport.List
             this.Table.RowHeadersVisible = false;
             this.Table.RowTemplate.Height = 25;
             this.Table.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Table.Size = new System.Drawing.Size(566, 315);
+            this.Table.Size = new System.Drawing.Size(566, 355);
             this.Table.TabIndex = 1;
             this.Table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CellContentClickAct);
             // 
@@ -117,7 +117,7 @@ namespace GradeReport.List
             this.Controls.Add(this.Table);
             this.Controls.Add(this.toolStrip1);
             this.Name = "ListForm";
-            this.Text = "ListForm";
+            this.Text = "Список";
             ((System.ComponentModel.ISupportInitialize)(this.Table)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

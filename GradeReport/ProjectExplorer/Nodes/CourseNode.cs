@@ -23,7 +23,7 @@ namespace GradeReport.ProjectExplorer.Nodes
         protected override void Visualize()
         {
             var course = (Course)Entity;
-            Text = course.Number.ToString() + " курс";
+            Text = $"{course.Number} курс ({course.GroupNameForCourse})";
         }
 
         protected override void CreateMenuItems(List<ToolStripMenuItem> items)
@@ -39,9 +39,10 @@ namespace GradeReport.ProjectExplorer.Nodes
 
         private void CreateSemesterAct(object sender, EventArgs e)
         {
+            var course = (Course)Entity;
             var newSemester = Project.Semesters.Create();
-            newSemester.Course = (Course)Entity;
-            newSemester.CourseHalf = 1;
+            newSemester.Course = course;
+            newSemester.CourseHalf = Project.Semesters.Exists(s => s.CourseGuid == course.Guid && s.CourseHalf == 1) ? 2 : 1;
 
             var validator = new SemesterValidator();
             if (validator.CanCreate(Project))
@@ -54,7 +55,10 @@ namespace GradeReport.ProjectExplorer.Nodes
         protected override void CreateChildNodes(List<PENode> nodes)
         {
             var course = (Course)Entity;
-            Project.Semesters.FindAll(s => s.CourseGuid == course.Guid).ForEach(s => nodes.Add(new SemesterNode() { Entity = s }));
+            Project.Semesters
+                .FindAll(s => s.CourseGuid == course.Guid)
+                .OrderBy(s => s.CourseHalf)
+                .ToList().ForEach(s => nodes.Add(new SemesterNode() { Entity = s }));
         }
     }
 }

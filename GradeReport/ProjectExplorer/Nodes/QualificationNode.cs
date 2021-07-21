@@ -34,7 +34,7 @@ namespace GradeReport.ProjectExplorer.Nodes
             items.Add(new ToolStripMenuItem("Редактировать", Resources.edit_16,
                 PENodeActBuilder.BuildEditAct(this, Project.Qualifications.Create(), new QualificationEditForm(), new QualificationValidator())));
 
-            items.Add(new ToolStripMenuItem("Добавить специальность", Resources.edit_16,
+            items.Add(new ToolStripMenuItem("Добавить специальность", Resources.add_16,
                 PENodeActBuilder.BuildCreateAct(this, CreateSpecialty, (e) => Project.Specialties.Add((Specialty)e), 
                 new SpecialtyEditForm(), new SpecialtyValidator())));
 

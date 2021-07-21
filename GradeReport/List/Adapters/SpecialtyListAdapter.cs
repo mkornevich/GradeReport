@@ -37,7 +37,8 @@ namespace GradeReport.List.Adapters
 
         public override string EntityToString(object entity)
         {
-            return ((Specialty)entity).Name;
+            var specialty = (Specialty)entity;
+            return $"{specialty.Qualification.Name} > {specialty.Name}, {specialty.Code}";
         }
     }
 }

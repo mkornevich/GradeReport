@@ -41,7 +41,8 @@ namespace GradeReport.ProjectExplorer.Nodes
         protected override void CreateChildNodes(List<PENode> nodes)
         {
             var group = (Group)GetNodeEntity<GroupNode>();
-            Project.Courses.FindAll(c => c.GroupGuid == group.Guid).ForEach(c => nodes.Add(new CourseNode() { Entity = c }));
+            Project.Courses.FindAll(c => c.GroupGuid == group.Guid)
+                .OrderBy(c => c.Number).ToList().ForEach(c => nodes.Add(new CourseNode() { Entity = c }));
         }
     }
 }

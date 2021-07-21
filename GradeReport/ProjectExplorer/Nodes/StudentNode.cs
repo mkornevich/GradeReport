@@ -20,7 +20,8 @@ namespace GradeReport.ProjectExplorer.Nodes
 
         protected override void Visualize()
         {
-            Text = ((Student)Entity).Name;
+            var student = (Student)Entity;
+            Text = $"{student.Number}) {student.Name}";
         }
 
         protected override void CreateMenuItems(List<ToolStripMenuItem> items)
