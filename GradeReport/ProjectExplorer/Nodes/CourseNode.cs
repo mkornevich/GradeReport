@@ -60,5 +60,16 @@ namespace GradeReport.ProjectExplorer.Nodes
                 .OrderBy(s => s.CourseHalf)
                 .ToList().ForEach(s => nodes.Add(new SemesterNode() { Entity = s }));
         }
+
+        public override string GetEntityParams()
+        {
+            var course = (Course)Entity;
+            var specialty = course.Specialty;
+            return
+                $"Номер: {course.Number}\n" +
+                $"Специальность: {specialty.Qualification.Name} > {specialty.Name}, {specialty.Code}\n" +
+                $"Название группы в курсе: {course.GroupNameForCourse}\n" +
+                $"Год начала: {course.StartYear}";
+        }
     }
 }

@@ -32,12 +32,15 @@ namespace GradeReport.Main
             _projectContainer.ProjectChanged += () => {
                 UpdateFormText(false);
                 peTreeView.Fresh();
+                UpdateInfoPanel();
             };
 
-            peTreeView.InfoChanged += (info) => infoTB.Text = info.Replace("\n", "\r\n");
+            peTreeView.AfterSelect += (s, e) => UpdateInfoPanel();
 
             CreateNewAct(null, null);
         }
+
+        private void UpdateInfoPanel() => infoTB.Text = peTreeView.Info;
 
         private void UpdateFormText(bool isSaved)
         {

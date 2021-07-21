@@ -38,5 +38,12 @@ namespace GradeReport.ProjectExplorer.Nodes
             nodes.Add(new StudentListNode());
             nodes.Add(new CourseListNode());
         }
+
+        public override string GetEntityParams()
+        {
+            var group = (Group)Entity;
+            return
+                $"Название: {group.Name}";
+        }
     }
 }

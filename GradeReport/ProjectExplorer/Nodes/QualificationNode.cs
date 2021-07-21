@@ -23,12 +23,6 @@ namespace GradeReport.ProjectExplorer.Nodes
             Text = ((Qualification)Entity).Name;
         }
 
-        public override string GetEntityParams()
-        {
-            var qualification = (Qualification)Entity;
-            return $"Название: {qualification.Name}\n";
-        }
-
         protected override void CreateMenuItems(List<ToolStripMenuItem> items)
         {
             items.Add(new ToolStripMenuItem("Редактировать", Resources.edit_16,
@@ -53,6 +47,12 @@ namespace GradeReport.ProjectExplorer.Nodes
         {
             var qualification = (Qualification)Entity;
             Project.Specialties.FindAll(s => s.QualificationGuid == qualification.Guid).ForEach(s => nodes.Add(new SpecialtyNode() { Entity = s }));
+        }
+
+        public override string GetEntityParams()
+        {
+            var qualification = (Qualification)Entity;
+            return $"Название: {qualification.Name}";
         }
     }
 }

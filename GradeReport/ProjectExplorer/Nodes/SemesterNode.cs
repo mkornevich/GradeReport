@@ -26,5 +26,12 @@ namespace GradeReport.ProjectExplorer.Nodes
             nodes.Add(new SemesterStudentRefListNode());
             nodes.Add(new SemesterSubjectRefListNode());
         }
+
+        public override string GetEntityParams()
+        {
+            var semester = (Semester)Entity;
+            return
+                $"Половина курса: " + (semester.CourseHalf == 1 ? "первая" : "вторая");
+        }
     }
 }

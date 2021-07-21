@@ -129,7 +129,7 @@ namespace GradeReport.ProjectExplorer
 
         public virtual string GetEntityParams()
         {
-            return "Параметры для данного узла не указаны.";
+            return null;
         }
 
         protected virtual void Visualize()

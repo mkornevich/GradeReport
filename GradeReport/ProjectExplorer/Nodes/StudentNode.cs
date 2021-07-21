@@ -32,5 +32,13 @@ namespace GradeReport.ProjectExplorer.Nodes
             items.Add(new ToolStripMenuItem("Удалить", Resources.remove_16,
                 PENodeActBuilder.BuildRemoveAct(this, Project.Students, new StudentValidator())));
         }
+
+        public override string GetEntityParams()
+        {
+            var student = (Student)Entity;
+            return
+                $"Номер: {student.Number}\n" +
+                $"ФИО: {student.Name}";
+        }
     }
 }

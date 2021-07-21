@@ -22,13 +22,7 @@ namespace GradeReport.ProjectExplorer.Nodes
             Text = ((Specialty)Entity).Name;
         }
 
-        public override string GetEntityParams()
-        {
-            var specialty = (Specialty)Entity;
-            return
-                $"Название: {specialty.Name}\n" +
-                $"Шифр: {specialty.Code}";
-        }
+        
 
         protected override void CreateMenuItems(List<ToolStripMenuItem> items)
         {
@@ -37,6 +31,14 @@ namespace GradeReport.ProjectExplorer.Nodes
 
             items.Add(new ToolStripMenuItem("Удалить", Resources.remove_16,
                 PENodeActBuilder.BuildRemoveAct(this, Project.Specialties, new SpecialtyValidator())));
+        }
+
+        public override string GetEntityParams()
+        {
+            var specialty = (Specialty)Entity;
+            return
+                $"Название: {specialty.Name}\n" +
+                $"Шифр: {specialty.Code}";
         }
     }
 }

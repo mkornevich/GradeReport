@@ -24,13 +24,7 @@ namespace GradeReport.ProjectExplorer.Nodes
             Text = ((Subject)Entity).ShortName;
         }
 
-        public override string GetEntityParams()
-        {
-            var subject = (Subject)Entity;
-            return
-                $"Название: {subject.Name}\n" +
-                $"Короткое название: {subject.ShortName}";
-        }
+        
 
         protected override void CreateMenuItems(List<ToolStripMenuItem> items)
         {
@@ -39,6 +33,14 @@ namespace GradeReport.ProjectExplorer.Nodes
 
             items.Add(new ToolStripMenuItem("Удалить", Resources.remove_16, 
                 PENodeActBuilder.BuildRemoveAct(this, Project.Subjects, new SubjectValidator())));
+        }
+        
+        public override string GetEntityParams()
+        {
+            var subject = (Subject)Entity;
+            return
+                $"Название: {subject.Name}\n" +
+                $"Короткое название: {subject.ShortName}";
         }
     }
 }

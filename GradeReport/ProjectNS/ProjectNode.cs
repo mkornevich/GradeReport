@@ -28,15 +28,5 @@ namespace GradeReport.ProjectNS
             nodes.Add(new QualificationListNode());
             nodes.Add(new GroupListNode());
         }
-
-        protected override void CreateMenuItems(List<ToolStripMenuItem> items)
-        {
-            items.Add(new ToolStripMenuItem("hello", Resources.error_16, HelloAct));
-        }
-
-        private void HelloAct(object sender, EventArgs e)
-        {
-            MessageBox.Show("Кликнул");
-        }
     }
 }

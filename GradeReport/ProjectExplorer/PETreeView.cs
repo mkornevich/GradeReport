@@ -15,17 +15,18 @@ namespace GradeReport.ProjectExplorer
 
         public Project Project { get; private set; }
 
-        public event InfoChangedEventHandler InfoChanged;
-
-        public PETreeView()
+        public string Info 
         {
-            AfterSelect += AfterSelectAct;
-        }
-
-        private void AfterSelectAct(object sender, TreeViewEventArgs e)
-        {
-            var peNode = (PENode)e.Node;
-            InfoChanged?.Invoke($"Параметры:\n{peNode.GetEntityParams()}\n\nОписание:\n{peNode.Description}");
+            get
+            {
+                var selectedNode = (PENode)SelectedNode;
+                if (selectedNode == null) return "";
+                var entityParams = selectedNode.GetEntityParams();
+                string info = "";
+                if (entityParams != null) info += $"Параметры:\n{entityParams}\n\n";
+                info += $"Описание:\n{selectedNode.Description}";
+                return info.Replace("\n", "\r\n");
+            }
         }
 
         public void LoadProject(Project project)
