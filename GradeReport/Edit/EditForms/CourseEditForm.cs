@@ -22,6 +22,7 @@ namespace GradeReport.Edit.EditForms
             InitializeComponent();
             EntityName = "Курс";
             specialtyLF.Chooser = specialtyCH;
+            specialtyLF.SelectMode = SelectMode.Single;
         }
 
         protected override void EntityToForm(object entity, ChangeMode mode)
