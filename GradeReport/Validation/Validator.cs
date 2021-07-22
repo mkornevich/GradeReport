@@ -25,50 +25,50 @@ namespace GradeReport.Validation
             return builder.BuildForm().ShowForResult() == DialogResult.OK;
         }
 
-        public bool CanCreate(Project project)
+        public bool CanCreate(Project project, params object[] args)
         {
             var builder = new NotificationFormBuilder();
-            CanCreateHandler(project, builder);
+            CanCreateHandler(project, builder, args);
             return DoValidationResult(builder);
         }
 
-        public bool CanRemove(Project project, Entity entity)
+        public bool CanRemove(Project project, Entity entity, params object[] args)
         {
             var builder = new NotificationFormBuilder();
-            CanRemoveHandler(project, entity, builder);
+            CanRemoveHandler(project, entity, builder, args);
             return DoValidationResult(builder);
         }
 
-        public bool CanChangeRefs(Project project, List<Entity> refs)
+        public bool CanChangeRefs(Project project, List<Entity> refs, params object[] args)
         {
             var builder = new NotificationFormBuilder();
-            CanChangeRefsHandler(project, refs, builder);
+            CanChangeRefsHandler(project, refs, builder, args);
             return DoValidationResult(builder);
         }
 
-        public bool Validate(Project project, Entity entity)
+        public bool Validate(Project project, Entity entity, params object[] args)
         {
             var builder = new NotificationFormBuilder();
-            ValidateHandler(project, entity, builder);
+            ValidateHandler(project, entity, builder, args);
             return DoValidationResult(builder);
         }
 
-        protected virtual void CanCreateHandler(Project project, NotificationFormBuilder builder)
+        protected virtual void CanCreateHandler(Project project, NotificationFormBuilder builder, object[] args)
         {
 
         }
 
-        protected virtual void CanRemoveHandler(Project project, Entity entity, NotificationFormBuilder builder)
+        protected virtual void CanRemoveHandler(Project project, Entity entity, NotificationFormBuilder builder, object[] args)
         {
 
         }
 
-        protected virtual void CanChangeRefsHandler(Project project, List<Entity> refs, NotificationFormBuilder builder)
+        protected virtual void CanChangeRefsHandler(Project project, List<Entity> refs, NotificationFormBuilder builder, object[] args)
         {
 
         }
 
-        protected virtual void ValidateHandler(Project project, Entity entity, NotificationFormBuilder builder)
+        protected virtual void ValidateHandler(Project project, Entity entity, NotificationFormBuilder builder, object[] args)
         {
 
         }

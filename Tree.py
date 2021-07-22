@@ -1,28 +1,27 @@
 Проект - ProjectNode
 	Конфигурация - ConfigNode
 	Предметы - SubjectListNode
-		Предмет - SubjectNode
+		+*Предмет - SubjectNode
 	Квалификации - QualificationListNode
-		Квалификация - QualificationNode
-				Специальность - SpecialtyNode
+		+*Квалификация - QualificationNode
+				+*Специальность - SpecialtyNode
 	Группы - GroupListNode
-		Группа - GroupNode
+		+*Группа - GroupNode
 			Студетны - StudentListNode
-				Студент - StudentNode
+				+*Студент - StudentNode
 			Предметы - GroupSubjectRefListNode
-				Предмет - GroupSubjectRefNode
-					Мои студенты - MyStudentInSubjectRefListNode
-						Студент - MyStudentInSubjectRefNode
+				*Предмет - GroupSubjectRefNode
 			Курсы - CourseListNode
-				Курс - CourseNode
-					!Семестр - SemesterNode
+				+*Курс - CourseNode
+					*Семестр - SemesterNode
 						Студенты - SemesterStudentRefListNode
-							Студент - SemesterStudentRefNode
+							*Студент - SemesterStudentRefNode
 						Предметы - SemesterSubjectRefListNode
-							Предмет - SemesterSubjectRefNode
+							*Предмет - SemesterSubjectRefNode
+								Мои студенты - MyStudentRefListNode
+									*Студент - MyStudentRefNode
 
-
-
+, params object[] args
 
 Типы валидаций
 	Создание одного объекта (можно ли создать)

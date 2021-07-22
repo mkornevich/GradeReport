@@ -24,5 +24,8 @@ namespace GradeReport.ProjectNS.Entities
 
         [EntityField]
         public string Name { get; set; }
+
+        [JsonIgnore]
+        public string FullName => $"{Qualification.Name} > {Name}, {Code}";
     }
 }

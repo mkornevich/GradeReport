@@ -21,5 +21,8 @@ namespace GradeReport.ProjectNS.Entities
 
         [EntityField]
         public int CourseHalf { get; set; }
+
+        [JsonIgnore]
+        public string FullName => $"группа {Course.Group.Name} > курс {Course.Number} > семестр {CourseHalf}";
     }
 }

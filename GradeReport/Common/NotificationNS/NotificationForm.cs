@@ -45,7 +45,7 @@ namespace GradeReport.Common.NotificationNS
             if (notification.Type == NotificationType.Warning) type = "Предупреждение";
             if (notification.Type == NotificationType.Info) type = "Информация";
 
-            return type + ": " + notification.Message + "\r\n\r\n" + notification.Description;
+            return (type + ": " + notification.Message + "\n\n" + notification.Description).Replace("\n", "\r\n");
         }
 
         private void notificationDGV_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)

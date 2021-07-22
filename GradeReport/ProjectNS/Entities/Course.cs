@@ -37,5 +37,8 @@ namespace GradeReport.ProjectNS.Entities
 
         [EntityField]
         public int StartYear { get; set; }
+
+        [JsonIgnore]
+        public string FullName => $"группа {Group.Name} > курс {Number}";
     }
 }
