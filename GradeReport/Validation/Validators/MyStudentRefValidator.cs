@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GradeReport.Validation.Validators
 {
-    public class MyStudentInSubjectRefValidator : Validator
+    public class MyStudentRefValidator : Validator
     {
     }
 }

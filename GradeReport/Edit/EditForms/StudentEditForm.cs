@@ -24,14 +24,12 @@ namespace GradeReport.Edit.EditForms
         {
             var student = (Student)entity;
             nameTB.Text = student.Name;
-            numberNUD.Value = student.Number;
         }
 
         protected override void FormToEntity(object entity, ChangeMode mode)
         {
             var group = (Student)entity;
             group.Name = nameTB.Text;
-            group.Number = (int)numberNUD.Value;
         }
 
     }

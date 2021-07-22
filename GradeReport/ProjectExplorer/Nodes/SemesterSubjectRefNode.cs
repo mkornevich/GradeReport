@@ -18,5 +18,10 @@ namespace GradeReport.ProjectExplorer.Nodes
             var semesterSubjectRef = (SemesterSubjectRef)Entity;
             Text = semesterSubjectRef.Subject.ShortName;
         }
+
+        protected override void CreateChildNodes(List<PENode> nodes)
+        {
+            nodes.Add(new MyStudentRefListNode());
+        }
     }
 }

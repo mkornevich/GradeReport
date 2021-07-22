@@ -21,7 +21,7 @@ namespace GradeReport.ProjectExplorer.Nodes
         protected override void Visualize()
         {
             var student = (Student)Entity;
-            Text = $"{student.Number}) {student.Name}";
+            Text = student.Name;
         }
 
         protected override void CreateMenuItems(List<ToolStripMenuItem> items)
@@ -36,9 +36,7 @@ namespace GradeReport.ProjectExplorer.Nodes
         public override string GetEntityParams()
         {
             var student = (Student)Entity;
-            return
-                $"Номер: {student.Number}\n" +
-                $"ФИО: {student.Name}";
+            return $"ФИО: {student.Name}";
         }
     }
 }

@@ -7,7 +7,7 @@
 	
 === SubjectNS
 Предметы - SubjectListNode
-	- Добавить SubjectEditForm
+	- Создать SubjectEditForm
 
 Предмет - SubjectNode
 	- Редактировать SubjectEditForm
@@ -17,23 +17,20 @@ SubjectListAdapter
 
 === QualificationNS
 Квалификации - QualificationListNode
-	- Добавить QualificationEditForm
+	- Создать QualificationEditForm
 
 Квалификация - QualificationNode
 	- Редактировать QualificationEditForm
 	- Удалить
 
 === SpecialtyNS
-Специальности - SpecialtyListNode
-	- Добавить - SpecialtyEditForm
-
 Специальность - SpecialtyNode
 	- Редактировать - SpecialtyEditForm
 	- Удалить
 	
 === GroupNS
 Группы - GroupListNode
-	- Добавить
+	- Создать
 
 Группа - GroupNode
 	- Редактировать
@@ -41,7 +38,7 @@ SubjectListAdapter
 
 === StudentNS
 Студетны - StudentListNode
-	- Добавить
+	- Создать
 
 Студент - StudentNode
 	- Редактировать
@@ -55,23 +52,15 @@ StudentListAdapter
 
 Предмет - GroupSubjectRefNode
 
-=== MyStudentInSubjectRefNS
-Мои студенты - MyStudentInSubjectRefListNode
-	- Изменить - StudentListAdapter
-
-Студент - MyStudentInSubjectRefNode
-
 === CourseNS
 Курсы - CourseListNode
-	- Добавить
+	- Создать
 
 Курс - CourseNode
 	- Редактировать
 	- Удалить
 
 === SemesterNS
-Семестры - SemesterListNode
-	- Добавить
 
 Семестр - SemesterNode
 	- Редактировать оценки
@@ -90,7 +79,11 @@ StudentListAdapter
 	
 Предмет - SemesterSubjectRefNode
 
+=== MyStudentRefNS
+Мои студенты - MyStudentRefListNode
+	- Изменить - StudentListAdapter
 
+Студент - MyStudentRefNode
 
 
 

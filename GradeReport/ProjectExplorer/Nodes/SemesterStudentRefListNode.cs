@@ -60,7 +60,10 @@ namespace GradeReport.ProjectExplorer.Nodes
         protected override void CreateChildNodes(List<PENode> nodes)
         {
             var semester = (Semester)GetNodeEntity<SemesterNode>();
-            Project.SemesterStudentRefs.FindAll(ssr => ssr.SemesterGuid == semester.Guid).ForEach(ssr => nodes.Add(new SemesterStudentRefNode() { Entity = ssr }));
+            Project.SemesterStudentRefs
+                .FindAll(ssr => ssr.SemesterGuid == semester.Guid)
+                .OrderBy(ssr => ssr.Student.Name).ToList()
+                .ForEach(ssr => nodes.Add(new SemesterStudentRefNode() { Entity = ssr }));
         }
     }
 }

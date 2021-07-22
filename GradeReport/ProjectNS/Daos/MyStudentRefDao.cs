@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GradeReport.ProjectNS.Daos
 {
-    public class MyStudentInSubjectRefDao : Dao<MyStudentInSubjectRef>
+    public class MyStudentRefDao : Dao<MyStudentRef>
     {
     }
 }

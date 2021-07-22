@@ -36,7 +36,7 @@ namespace GradeReport.ProjectNS.Entities
 
         public GradeDao Grades { get; } = new GradeDao();
 
-        public MyStudentInSubjectRefDao MyStudentInSubjectRefs { get; } = new MyStudentInSubjectRefDao();
+        public MyStudentRefDao MyStudentRefs { get; } = new MyStudentRefDao();
 
         public event Action Changed;
 
@@ -50,7 +50,7 @@ namespace GradeReport.ProjectNS.Entities
             new List<IProjectProperty> {
                 Config, Groups, GroupSubjectRefs, Courses, Specialties, Qualifications,
                 Students, SemesterStudentRefs, Semesters, SemesterSubjectRefs,
-                Periods, Subjects, Grades, MyStudentInSubjectRefs
+                Periods, Subjects, Grades, MyStudentRefs
             }.ForEach(e => e.Project = this);
         }
     }

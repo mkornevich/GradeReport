@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GradeReport.ProjectNS.Entities
 {
-    public class MyStudentInSubjectRef : Entity
+    public class MyStudentRef : Entity
     {
         [EntityField(Compare = true)]
         public Guid StudentGuid { get; set; }
@@ -27,6 +27,16 @@ namespace GradeReport.ProjectNS.Entities
         {
             get => Project.Subjects.Find(s => s.Guid == SubjectGuid);
             set => SubjectGuid = value.Guid;
+        }
+
+        [EntityField(Compare = true)]
+        public Guid SemesterGuid { get; set; }
+
+        [JsonIgnore]
+        public Semester Semester
+        {
+            get => Project.Semesters.Find(s => s.Guid == SemesterGuid);
+            set => SemesterGuid = value.Guid;
         }
     }
 }

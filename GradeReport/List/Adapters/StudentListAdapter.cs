@@ -15,7 +15,6 @@ namespace GradeReport.List.Adapters
             var student = (Student)entity;
             return new object[] {
                 student.Guid,
-                student.Number,
                 student.Name,
             };
         }
@@ -23,7 +22,6 @@ namespace GradeReport.List.Adapters
         public override void CreateColumns(DataGridViewColumnCollection columns)
         {
             AddCol(columns, "Идентификатор", false);
-            AddCol(columns, "Номер");
             AddCol(columns, "ФИО");
         }
 

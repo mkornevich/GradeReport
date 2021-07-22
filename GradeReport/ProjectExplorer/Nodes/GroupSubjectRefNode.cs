@@ -18,10 +18,5 @@ namespace GradeReport.ProjectExplorer.Nodes
             var subject = ((GroupSubjectRef)Entity).Subject;
             Text = subject.ShortName;
         }
-
-        protected override void CreateChildNodes(List<PENode> nodes)
-        {
-            nodes.Add(new MyStudentInSubjectRefListNode());
-        }
     }
 }

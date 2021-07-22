@@ -21,8 +21,5 @@ namespace GradeReport.ProjectNS.Entities
 
         [EntityField]
         public string Name { get; set; }
-
-        [EntityField]
-        public int Number { get; set; }
     }
 }
