@@ -45,7 +45,7 @@ namespace GradeReport.ProjectExplorer.Nodes
             newSemester.CourseHalf = Project.Semesters.Exists(s => s.CourseGuid == course.Guid && s.CourseHalf == 1) ? 2 : 1;
 
             var validator = new SemesterValidator();
-            if (validator.CanCreate(Project))
+            if (validator.CanCreate(Project, course))
             {
                 Project.Semesters.Add(newSemester);
                 Project.OnChanged();

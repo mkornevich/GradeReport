@@ -42,7 +42,7 @@ namespace GradeReport.ProjectExplorer.Nodes
             if (listForm.ShowForResult() == DialogResult.OK)
             {
                 var validator = new SemesterSubjectRefValidator();
-                if (validator.CanChangeRefs(Project, listForm.SelectedEntities.Cast<Entity>().ToList()))
+                if (validator.CanChangeRefs(Project, listForm.SelectedEntities.Cast<Entity>().ToList(), semester))
                 {
                     Project.SemesterSubjectRefs.RemoveAll(ssr => ssr.SemesterGuid == semester.Guid);
                     Project.SemesterSubjectRefs.AddRange(listForm.SelectedEntities.Cast<Subject>().Select(s =>

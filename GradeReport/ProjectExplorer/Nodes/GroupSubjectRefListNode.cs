@@ -41,7 +41,7 @@ namespace GradeReport.ProjectExplorer.Nodes
             if (listForm.ShowForResult() == DialogResult.OK)
             {
                 var validator = new GroupSubjectRefValidator();
-                if (validator.CanChangeRefs(Project, listForm.SelectedEntities.Cast<Entity>().ToList()))
+                if (validator.CanChangeRefs(Project, listForm.SelectedEntities.Cast<Entity>().ToList(), group))
                 {
                     Project.GroupSubjectRefs.RemoveAll(gsr => gsr.GroupGuid == group.Guid);
                     Project.GroupSubjectRefs.AddRange(listForm.SelectedEntities.Cast<Subject>().Select(s =>

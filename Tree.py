@@ -13,7 +13,7 @@
 				*Предмет - GroupSubjectRefNode
 			Курсы - CourseListNode
 				+*Курс - CourseNode
-					*Семестр - SemesterNode
+					+*Семестр - SemesterNode
 						Студенты - SemesterStudentRefListNode
 							*Студент - SemesterStudentRefNode
 						Предметы - SemesterSubjectRefListNode
