@@ -10,16 +10,16 @@
 			Студетны - StudentListNode
 				+*Студент - StudentNode
 			Предметы - GroupSubjectRefListNode
-				*Предмет - GroupSubjectRefNode
+				+*Предмет - GroupSubjectRefNode
 			Курсы - CourseListNode
 				+*Курс - CourseNode
 					+*Семестр - SemesterNode
 						Студенты - SemesterStudentRefListNode
-							*Студент - SemesterStudentRefNode
+							+*Студент - SemesterStudentRefNode
 						Предметы - SemesterSubjectRefListNode
 							*Предмет - SemesterSubjectRefNode
 								Мои студенты - MyStudentRefListNode
-									*Студент - MyStudentRefNode
+									+*Студент - MyStudentRefNode
 
 , params object[] args
 
