@@ -16,5 +16,20 @@ namespace GradeReport.GradeEditor
         {
             InitializeComponent();
         }
+
+        private void GradeEditorForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
