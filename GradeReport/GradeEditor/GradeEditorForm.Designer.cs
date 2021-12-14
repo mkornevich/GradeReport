@@ -78,7 +78,7 @@ namespace GradeReport.GradeEditor
             this.listBox1.ItemHeight = 15;
             this.listBox1.Location = new System.Drawing.Point(6, 97);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(258, 529);
+            this.listBox1.Size = new System.Drawing.Size(258, 559);
             this.listBox1.TabIndex = 3;
             // 
             // label1
@@ -170,7 +170,7 @@ namespace GradeReport.GradeEditor
             "1. Корневич Максим Александрович"});
             this.listBox2.Location = new System.Drawing.Point(6, 22);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(264, 604);
+            this.listBox2.Size = new System.Drawing.Size(264, 634);
             this.listBox2.TabIndex = 12;
             // 
             // textBox2
@@ -262,7 +262,7 @@ namespace GradeReport.GradeEditor
             this.dataGridView1.Location = new System.Drawing.Point(3, 19);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(629, 204);
+            this.dataGridView1.Size = new System.Drawing.Size(669, 204);
             this.dataGridView1.TabIndex = 23;
             // 
             // groupBox1
@@ -273,7 +273,7 @@ namespace GradeReport.GradeEditor
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Location = new System.Drawing.Point(289, 235);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(635, 61);
+            this.groupBox1.Size = new System.Drawing.Size(675, 61);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Параметры выделенной оценки";
@@ -303,7 +303,7 @@ namespace GradeReport.GradeEditor
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Location = new System.Drawing.Point(289, 302);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(635, 91);
+            this.groupBox2.Size = new System.Drawing.Size(675, 91);
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Информация";
@@ -315,7 +315,7 @@ namespace GradeReport.GradeEditor
             this.groupBox3.Controls.Add(this.dataGridView1);
             this.groupBox3.Location = new System.Drawing.Point(289, 3);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(635, 226);
+            this.groupBox3.Size = new System.Drawing.Size(675, 226);
             this.groupBox3.TabIndex = 26;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Редактор оценок";
@@ -357,7 +357,7 @@ namespace GradeReport.GradeEditor
             this.groupBox5.Controls.Add(this.button4);
             this.groupBox5.Location = new System.Drawing.Point(12, 122);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(271, 643);
+            this.groupBox5.Size = new System.Drawing.Size(271, 669);
             this.groupBox5.TabIndex = 28;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Периоды";
@@ -369,7 +369,7 @@ namespace GradeReport.GradeEditor
             this.groupBox6.Controls.Add(this.comboBox3);
             this.groupBox6.Controls.Add(this.label5);
             this.groupBox6.Controls.Add(this.comboBox2);
-            this.groupBox6.Location = new System.Drawing.Point(930, 3);
+            this.groupBox6.Location = new System.Drawing.Point(970, 3);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(276, 113);
             this.groupBox6.TabIndex = 29;
@@ -381,9 +381,9 @@ namespace GradeReport.GradeEditor
             this.groupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox7.Controls.Add(this.listBox2);
-            this.groupBox7.Location = new System.Drawing.Point(930, 122);
+            this.groupBox7.Location = new System.Drawing.Point(970, 122);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(276, 643);
+            this.groupBox7.Size = new System.Drawing.Size(276, 669);
             this.groupBox7.TabIndex = 30;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Студенты";
@@ -392,7 +392,7 @@ namespace GradeReport.GradeEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1218, 777);
+            this.ClientSize = new System.Drawing.Size(1258, 803);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);

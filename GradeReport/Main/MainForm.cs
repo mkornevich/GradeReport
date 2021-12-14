@@ -1,10 +1,10 @@
-﻿using CefSharp.WinForms;
-using GradeReport.ProjectNS;
+﻿using GradeReport.ProjectNS;
 using GradeReport.ProjectNS.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Reflection;
@@ -92,6 +92,11 @@ namespace GradeReport.Main
         private void ShowTestFormAct(object sender, EventArgs e)
         {
             new TestForm().Show();
+        }
+
+        private void анализРезультатовОКРКПиЯПToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new ReportNS.ControlWorksAnalyzer.MainForm().Show();
         }
     }
 }

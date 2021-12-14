@@ -1,0 +1,93 @@
+{
+  "Config": {
+    "CuratorName": "",
+    "TeacherName": "",
+    "CuratorGroupGuid": "928c7eb3-c3a6-4afa-8422-40434def84c1"
+  },
+  "Groups": [
+    {
+      "Name": "755",
+      "Guid": "928c7eb3-c3a6-4afa-8422-40434def84c1"
+    }
+  ],
+  "GroupSubjectRefs": [],
+  "Courses": [
+    {
+      "GroupGuid": "928c7eb3-c3a6-4afa-8422-40434def84c1",
+      "SpecialtyGuid": "b28a12db-6953-4bee-bbd3-701cfa3a07da",
+      "GroupNameForCourse": "fdj",
+      "Number": 1,
+      "StartYear": 1,
+      "Guid": "125fc3f8-a5ca-4aa7-b9dc-e9b9931716de"
+    }
+  ],
+  "Specialties": [
+    {
+      "QualificationGuid": "a015cf02-6c41-4af4-bbd1-2d65c4bc5ba7",
+      "Code": "453453453",
+      "Name": "453453",
+      "Guid": "b28a12db-6953-4bee-bbd3-701cfa3a07da"
+    }
+  ],
+  "Qualifications": [
+    {
+      "Name": "Техник программист",
+      "Guid": "a015cf02-6c41-4af4-bbd1-2d65c4bc5ba7"
+    }
+  ],
+  "Students": [
+    {
+      "GroupGuid": "928c7eb3-c3a6-4afa-8422-40434def84c1",
+      "Name": "gjfgjfd",
+      "Guid": "52bac094-dd86-409f-9520-86560cc27393"
+    },
+    {
+      "GroupGuid": "928c7eb3-c3a6-4afa-8422-40434def84c1",
+      "Name": "fdgjdfgj",
+      "Guid": "5c0b0d02-9ec6-4a9f-a41e-243e9727e5e4"
+    },
+    {
+      "GroupGuid": "928c7eb3-c3a6-4afa-8422-40434def84c1",
+      "Name": "gjdfgjdfj",
+      "Guid": "1c95c082-e2c3-4c28-8f23-7fc5621c81c7"
+    }
+  ],
+  "SemesterStudentRefs": [],
+  "Semesters": [],
+  "SemesterSubjectRefs": [],
+  "Periods": [],
+  "Subjects": [
+    {
+      "Name": "Курсовое проектирования и языки программирования",
+      "ShortName": "КПиЯП",
+      "Guid": "bd5745a4-9586-45dc-8a42-a69e2a35b2f4"
+    },
+    {
+      "Name": "Математика",
+      "ShortName": "Матем",
+      "Guid": "9021591a-07d5-4ca6-bca3-bef339bc27c6"
+    },
+    {
+      "Name": "Инструментальное программное обеспечение",
+      "ShortName": "ИПО",
+      "Guid": "9223fde8-0c3e-431d-832e-d60dd01af591"
+    },
+    {
+      "Name": "Основы алгоритмизации и программирования",
+      "ShortName": "ОАП",
+      "Guid": "933175e3-4b4a-4f0d-a43d-30ad94663ef7"
+    },
+    {
+      "Name": "Базы данных и системы управления базами данных",
+      "ShortName": "БДиСУБД",
+      "Guid": "1bbe9d94-1786-4ae7-9867-652e9155e491"
+    },
+    {
+      "Name": "Тестирование программного обеспечения",
+      "ShortName": "ТестПО",
+      "Guid": "f5fa27d8-6498-40a0-ad70-115961462d3d"
+    }
+  ],
+  "Grades": [],
+  "MyStudentRefs": []
+}

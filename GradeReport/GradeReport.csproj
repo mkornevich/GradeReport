@@ -14,8 +14,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CefSharp.WinForms" Version="91.1.211" />
+    <Compile Remove="Utils\**" />
+    <EmbeddedResource Remove="Utils\**" />
+    <None Remove="Utils\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="NPOI" Version="2.5.5" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,6 +36,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Update="ReportNS\ControlWorksAnalyzer\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ReportNS\ControlWorksAnalyzer\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -40,13 +52,19 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Update="ReportNS\ControlWorksAnalyzer\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="ReportNS\Reports\" />
     <Folder Include="ReportNS\Reports\Report1\" />
     <Folder Include="ReportNS\Reports\Report2\" />
-    <Folder Include="Utils\" />
   </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="rmdir $(TargetDir)\AppData /s /q&#xD;&#xA;xcopy $(SolutionDir)\AppData\ $(TargetDir)\AppData\ /H /Y /C /R /S /E" />
+  </Target>
 
 </Project>

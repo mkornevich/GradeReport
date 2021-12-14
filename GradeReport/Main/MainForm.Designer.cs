@@ -42,7 +42,6 @@ namespace GradeReport.Main
             this.ведомостьОтметокПоКурсовомуПроектуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ведомостьОтметокЗаСеместрToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.анализРезультатовОКРКПиЯПToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.анализРезультатовДКРКПиЯПToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.экзаменационнаяВедомостьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.отчетУспеваемостиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.мониторингУчебныхДостиженийГруппыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -137,7 +136,6 @@ namespace GradeReport.Main
             this.ведомостьОтметокПоКурсовомуПроектуToolStripMenuItem,
             this.ведомостьОтметокЗаСеместрToolStripMenuItem,
             this.анализРезультатовОКРКПиЯПToolStripMenuItem,
-            this.анализРезультатовДКРКПиЯПToolStripMenuItem,
             this.экзаменационнаяВедомостьToolStripMenuItem,
             this.отчетУспеваемостиToolStripMenuItem,
             this.мониторингУчебныхДостиженийГруппыToolStripMenuItem,
@@ -182,13 +180,8 @@ namespace GradeReport.Main
             // 
             this.анализРезультатовОКРКПиЯПToolStripMenuItem.Name = "анализРезультатовОКРКПиЯПToolStripMenuItem";
             this.анализРезультатовОКРКПиЯПToolStripMenuItem.Size = new System.Drawing.Size(418, 22);
-            this.анализРезультатовОКРКПиЯПToolStripMenuItem.Text = "2.3 Анализ результатов ОКР (КПиЯП)";
-            // 
-            // анализРезультатовДКРКПиЯПToolStripMenuItem
-            // 
-            this.анализРезультатовДКРКПиЯПToolStripMenuItem.Name = "анализРезультатовДКРКПиЯПToolStripMenuItem";
-            this.анализРезультатовДКРКПиЯПToolStripMenuItem.Size = new System.Drawing.Size(418, 22);
-            this.анализРезультатовДКРКПиЯПToolStripMenuItem.Text = "2.3.5 Анализ результатов ДКР (КПиЯП)";
+            this.анализРезультатовОКРКПиЯПToolStripMenuItem.Text = "2.3 Анализ результатов ОКР / ДКР";
+            this.анализРезультатовОКРКПиЯПToolStripMenuItem.Click += new System.EventHandler(this.анализРезультатовОКРКПиЯПToolStripMenuItem_Click);
             // 
             // экзаменационнаяВедомостьToolStripMenuItem
             // 
@@ -389,7 +382,6 @@ namespace GradeReport.Main
         private System.Windows.Forms.ToolStripMenuItem ведомостьОтметокПоКурсовомуПроектуToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ведомостьОтметокЗаСеместрToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem анализРезультатовОКРКПиЯПToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem анализРезультатовДКРКПиЯПToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem экзаменационнаяВедомостьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem отчетУспеваемостиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem мониторингУчебныхДостиженийГруппыToolStripMenuItem;

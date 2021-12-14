@@ -1,0 +1,46 @@
+{
+  "Config": {
+    "CuratorName": null,
+    "TeacherName": null,
+    "CuratorGroupGuid": "00000000-0000-0000-0000-000000000000"
+  },
+  "Groups": [
+    {
+      "Name": "1",
+      "Guid": "3885a9d2-07bc-4a26-8b56-515cc694d59e"
+    }
+  ],
+  "GroupSubjectRefs": [],
+  "Courses": [
+    {
+      "GroupGuid": "3885a9d2-07bc-4a26-8b56-515cc694d59e",
+      "SpecialtyGuid": "eecc3b66-a5c5-464f-bbe4-3b8708b6ab99",
+      "GroupNameForCourse": "11",
+      "Number": 1,
+      "StartYear": 1,
+      "Guid": "a7223934-fe5a-48c1-9098-11030c080dc6"
+    }
+  ],
+  "Specialties": [
+    {
+      "QualificationGuid": "8c48ec86-19a1-40d4-a2f2-547110169f1b",
+      "Code": "2",
+      "Name": "2",
+      "Guid": "eecc3b66-a5c5-464f-bbe4-3b8708b6ab99"
+    }
+  ],
+  "Qualifications": [
+    {
+      "Name": "1",
+      "Guid": "8c48ec86-19a1-40d4-a2f2-547110169f1b"
+    }
+  ],
+  "Students": [],
+  "SemesterStudentRefs": [],
+  "Semesters": [],
+  "SemesterSubjectRefs": [],
+  "Periods": [],
+  "Subjects": [],
+  "Grades": [],
+  "MyStudentRefs": []
+}
