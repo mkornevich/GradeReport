@@ -35,20 +35,7 @@ namespace GradeReport.Main
             this.открытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сохранитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сохранитьКакToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.отчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.успеваемостьЗаПериодToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.успеваемостьКРодительскомуСобраниюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.ведомостьОтметокПоКурсовомуПроектуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ведомостьОтметокЗаСеместрToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.анализРезультатовОКРКПиЯПToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.экзаменационнаяВедомостьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.отчетУспеваемостиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.мониторингУчебныхДостиженийГруппыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.своднаяВедомостьУспеваемостиУчащихсяГруппыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.своднаяВедомостьУспеваемостиСлужебнаяЗапискаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.своднаяВедомостьЗаПериодОбученияКрасныйДипломToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reports = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,7 +62,7 @@ namespace GradeReport.Main
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.файлToolStripMenuItem,
-            this.отчетыToolStripMenuItem,
+            this.reports,
             this.оПрограммеToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
@@ -127,102 +114,11 @@ namespace GradeReport.Main
             this.сохранитьКакToolStripMenuItem.Text = "Сохранить как";
             this.сохранитьКакToolStripMenuItem.Click += new System.EventHandler(this.SaveAsAct);
             // 
-            // отчетыToolStripMenuItem
+            // reports
             // 
-            this.отчетыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.успеваемостьЗаПериодToolStripMenuItem,
-            this.успеваемостьКРодительскомуСобраниюToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.ведомостьОтметокПоКурсовомуПроектуToolStripMenuItem,
-            this.ведомостьОтметокЗаСеместрToolStripMenuItem,
-            this.анализРезультатовОКРКПиЯПToolStripMenuItem,
-            this.экзаменационнаяВедомостьToolStripMenuItem,
-            this.отчетУспеваемостиToolStripMenuItem,
-            this.мониторингУчебныхДостиженийГруппыToolStripMenuItem,
-            this.своднаяВедомостьУспеваемостиУчащихсяГруппыToolStripMenuItem,
-            this.своднаяВедомостьУспеваемостиСлужебнаяЗапискаToolStripMenuItem,
-            this.toolStripSeparator2,
-            this.своднаяВедомостьЗаПериодОбученияКрасныйДипломToolStripMenuItem});
-            this.отчетыToolStripMenuItem.Name = "отчетыToolStripMenuItem";
-            this.отчетыToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.отчетыToolStripMenuItem.Text = "Отчеты";
-            // 
-            // успеваемостьЗаПериодToolStripMenuItem
-            // 
-            this.успеваемостьЗаПериодToolStripMenuItem.Name = "успеваемостьЗаПериодToolStripMenuItem";
-            this.успеваемостьЗаПериодToolStripMenuItem.Size = new System.Drawing.Size(418, 22);
-            this.успеваемостьЗаПериодToolStripMenuItem.Text = "1.1 Успеваемость за период";
-            // 
-            // успеваемостьКРодительскомуСобраниюToolStripMenuItem
-            // 
-            this.успеваемостьКРодительскомуСобраниюToolStripMenuItem.Name = "успеваемостьКРодительскомуСобраниюToolStripMenuItem";
-            this.успеваемостьКРодительскомуСобраниюToolStripMenuItem.Size = new System.Drawing.Size(418, 22);
-            this.успеваемостьКРодительскомуСобраниюToolStripMenuItem.Text = "1.2 Успеваемость к родительскому собранию";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(415, 6);
-            // 
-            // ведомостьОтметокПоКурсовомуПроектуToolStripMenuItem
-            // 
-            this.ведомостьОтметокПоКурсовомуПроектуToolStripMenuItem.Name = "ведомостьОтметокПоКурсовомуПроектуToolStripMenuItem";
-            this.ведомостьОтметокПоКурсовомуПроектуToolStripMenuItem.Size = new System.Drawing.Size(418, 22);
-            this.ведомостьОтметокПоКурсовомуПроектуToolStripMenuItem.Text = "2.1 Ведомость отметок по курсовому проекту";
-            // 
-            // ведомостьОтметокЗаСеместрToolStripMenuItem
-            // 
-            this.ведомостьОтметокЗаСеместрToolStripMenuItem.Name = "ведомостьОтметокЗаСеместрToolStripMenuItem";
-            this.ведомостьОтметокЗаСеместрToolStripMenuItem.Size = new System.Drawing.Size(418, 22);
-            this.ведомостьОтметокЗаСеместрToolStripMenuItem.Text = "2.2 Ведомость отметок за семестр";
-            // 
-            // анализРезультатовОКРКПиЯПToolStripMenuItem
-            // 
-            this.анализРезультатовОКРКПиЯПToolStripMenuItem.Name = "анализРезультатовОКРКПиЯПToolStripMenuItem";
-            this.анализРезультатовОКРКПиЯПToolStripMenuItem.Size = new System.Drawing.Size(418, 22);
-            this.анализРезультатовОКРКПиЯПToolStripMenuItem.Text = "2.3 Анализ результатов ОКР / ДКР";
-            this.анализРезультатовОКРКПиЯПToolStripMenuItem.Click += new System.EventHandler(this.анализРезультатовОКРКПиЯПToolStripMenuItem_Click);
-            // 
-            // экзаменационнаяВедомостьToolStripMenuItem
-            // 
-            this.экзаменационнаяВедомостьToolStripMenuItem.Name = "экзаменационнаяВедомостьToolStripMenuItem";
-            this.экзаменационнаяВедомостьToolStripMenuItem.Size = new System.Drawing.Size(418, 22);
-            this.экзаменационнаяВедомостьToolStripMenuItem.Text = "2.4 Экзаменационная ведомость";
-            // 
-            // отчетУспеваемостиToolStripMenuItem
-            // 
-            this.отчетУспеваемостиToolStripMenuItem.Name = "отчетУспеваемостиToolStripMenuItem";
-            this.отчетУспеваемостиToolStripMenuItem.Size = new System.Drawing.Size(418, 22);
-            this.отчетУспеваемостиToolStripMenuItem.Text = "2.5 Отчет успеваемости";
-            // 
-            // мониторингУчебныхДостиженийГруппыToolStripMenuItem
-            // 
-            this.мониторингУчебныхДостиженийГруппыToolStripMenuItem.Name = "мониторингУчебныхДостиженийГруппыToolStripMenuItem";
-            this.мониторингУчебныхДостиженийГруппыToolStripMenuItem.Size = new System.Drawing.Size(418, 22);
-            this.мониторингУчебныхДостиженийГруппыToolStripMenuItem.Text = "2.7 Мониторинг учебных достижений группы";
-            // 
-            // своднаяВедомостьУспеваемостиУчащихсяГруппыToolStripMenuItem
-            // 
-            this.своднаяВедомостьУспеваемостиУчащихсяГруппыToolStripMenuItem.Name = "своднаяВедомостьУспеваемостиУчащихсяГруппыToolStripMenuItem";
-            this.своднаяВедомостьУспеваемостиУчащихсяГруппыToolStripMenuItem.Size = new System.Drawing.Size(418, 22);
-            this.своднаяВедомостьУспеваемостиУчащихсяГруппыToolStripMenuItem.Text = "2.8 Сводная ведомость успеваемости учащихся группы";
-            // 
-            // своднаяВедомостьУспеваемостиСлужебнаяЗапискаToolStripMenuItem
-            // 
-            this.своднаяВедомостьУспеваемостиСлужебнаяЗапискаToolStripMenuItem.Name = "своднаяВедомостьУспеваемостиСлужебнаяЗапискаToolStripMenuItem";
-            this.своднаяВедомостьУспеваемостиСлужебнаяЗапискаToolStripMenuItem.Size = new System.Drawing.Size(418, 22);
-            this.своднаяВедомостьУспеваемостиСлужебнаяЗапискаToolStripMenuItem.Text = "2.9 Сводная ведомость успеваемости (Служебная записка)";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(415, 6);
-            // 
-            // своднаяВедомостьЗаПериодОбученияКрасныйДипломToolStripMenuItem
-            // 
-            this.своднаяВедомостьЗаПериодОбученияКрасныйДипломToolStripMenuItem.Name = "своднаяВедомостьЗаПериодОбученияКрасныйДипломToolStripMenuItem";
-            this.своднаяВедомостьЗаПериодОбученияКрасныйДипломToolStripMenuItem.Size = new System.Drawing.Size(418, 22);
-            this.своднаяВедомостьЗаПериодОбученияКрасныйДипломToolStripMenuItem.Text = "4.1 Сводная ведомость за период обучения (Красный диплом)";
+            this.reports.Name = "reports";
+            this.reports.Size = new System.Drawing.Size(60, 20);
+            this.reports.Text = "Отчеты";
             // 
             // оПрограммеToolStripMenuItem
             // 
@@ -374,21 +270,8 @@ namespace GradeReport.Main
 
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem файлToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem отчетыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reports;
         private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem успеваемостьЗаПериодToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem успеваемостьКРодительскомуСобраниюToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem ведомостьОтметокПоКурсовомуПроектуToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ведомостьОтметокЗаСеместрToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem анализРезультатовОКРКПиЯПToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem экзаменационнаяВедомостьToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem отчетУспеваемостиToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem мониторингУчебныхДостиженийГруппыToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem своднаяВедомостьУспеваемостиУчащихсяГруппыToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem своднаяВедомостьУспеваемостиСлужебнаяЗапискаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem своднаяВедомостьЗаПериодОбученияКрасныйДипломToolStripMenuItem;
         private ProjectExplorer.PETreeView peTreeView;
         private System.Windows.Forms.ToolStripMenuItem сохранитьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem новыйToolStripMenuItem;

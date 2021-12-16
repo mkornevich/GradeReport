@@ -30,8 +30,6 @@ namespace GradeReport.ProjectNS.Entities
 
         public SemesterSubjectRefDao SemesterSubjectRefs { get; } = new SemesterSubjectRefDao();
 
-        public PeriodDao Periods { get; } = new PeriodDao();
-
         public SubjectDao Subjects { get; } = new SubjectDao();
 
         public GradeDao Grades { get; } = new GradeDao();
@@ -50,7 +48,7 @@ namespace GradeReport.ProjectNS.Entities
             new List<IProjectProperty> {
                 Config, Groups, GroupSubjectRefs, Courses, Specialties, Qualifications,
                 Students, SemesterStudentRefs, Semesters, SemesterSubjectRefs,
-                Periods, Subjects, Grades, MyStudentRefs
+                Subjects, Grades, MyStudentRefs
             }.ForEach(e => e.Project = this);
         }
     }

@@ -1,7 +1,7 @@
 ﻿
 namespace GradeReport.ReportNS.ControlWorksAnalyzer
 {
-    partial class MainForm
+    partial class ReportForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.

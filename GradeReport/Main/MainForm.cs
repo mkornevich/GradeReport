@@ -1,5 +1,6 @@
 ﻿using GradeReport.ProjectNS;
 using GradeReport.ProjectNS.Entities;
+using GradeReport.ReportNS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,6 +39,8 @@ namespace GradeReport.Main
             peTreeView.AfterSelect += (s, e) => UpdateInfoPanel();
 
             CreateNewAct(null, null);
+
+            new ReportsLoader().LoadToMenuItem(reports);
         }
 
         private void UpdateInfoPanel() => infoTB.Text = peTreeView.Info;
@@ -92,11 +95,6 @@ namespace GradeReport.Main
         private void ShowTestFormAct(object sender, EventArgs e)
         {
             new TestForm().Show();
-        }
-
-        private void анализРезультатовОКРКПиЯПToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            new ReportNS.ControlWorksAnalyzer.MainForm().Show();
         }
     }
 }

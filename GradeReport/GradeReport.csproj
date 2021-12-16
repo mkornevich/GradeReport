@@ -36,11 +36,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Update="ReportNS\ControlWorksAnalyzer\MainForm.cs">
+    <Compile Update="ReportNS\ControlWorksAnalyzer\ReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ReportNS\ControlWorksAnalyzer\MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Update="ReportNS\ControlWorksAnalyzer\ReportForm.Designer.cs">
+      <DependentUpon>ReportForm.cs</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -52,15 +52,9 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="ReportNS\ControlWorksAnalyzer\MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <EmbeddedResource Update="ReportNS\ControlWorksAnalyzer\ReportForm.resx">
+      <DependentUpon>ReportForm.cs</DependentUpon>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="ReportNS\Reports\" />
-    <Folder Include="ReportNS\Reports\Report1\" />
-    <Folder Include="ReportNS\Reports\Report2\" />
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">

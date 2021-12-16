@@ -30,7 +30,6 @@ namespace GradeReport.ProjectNS
             project.SemesterStudentRefs.ForEach(e => e.Project = project);
             project.Semesters.ForEach(e => e.Project = project);
             project.SemesterSubjectRefs.ForEach(e => e.Project = project);
-            project.Periods.ForEach(e => e.Project = project);
             project.Subjects.ForEach(e => e.Project = project);
             project.Grades.ForEach(e => e.Project = project);
             project.MyStudentRefs.ForEach(e => e.Project = project);

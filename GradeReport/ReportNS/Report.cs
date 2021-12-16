@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace GradeReport.ReportNS
 {
-    public class Report
+    public abstract class Report
     {
+        public abstract string CodeName { get; }
+
+        public abstract string Name { get; }
+
+        public abstract void Run();
     }
 }

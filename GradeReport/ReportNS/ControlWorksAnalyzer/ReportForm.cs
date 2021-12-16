@@ -13,13 +13,13 @@ using System.Windows.Forms;
 
 namespace GradeReport.ReportNS.ControlWorksAnalyzer
 {
-    public partial class MainForm : Form
+    public partial class ReportForm : Form
     {
         private ISheet _sheet;
 
         private IWorkbook _workbook;
 
-        public MainForm()
+        public ReportForm()
         {
             InitializeComponent();
             var template = App.AppDataPath + "\\Reports\\ControlWorksAnalyzer\\Template.xlsx";
