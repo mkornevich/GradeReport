@@ -16,14 +16,13 @@ namespace GradeReport.Validation.Validators
             var students = refs.Cast<Student>().ToList();
 
             var semester = (Semester)args[0];
-            var periods = project.Periods.FindAll(p => p.SemesterGuid == semester.Guid);
 
             bool isMyStudentRefsValid = project.MyStudentRefs
                 .FindAll(msr => msr.SemesterGuid == semester.Guid)
                 .All(msr => students.Exists(st => msr.StudentGuid == st.Guid));
 
             bool isGradesValid = project.Grades
-                .FindAll(g => periods.Exists(p => g.PeriodGuid == p.Guid))
+                .FindAll(g => g.SemesterGuid == semester.Guid)
                 .All(g => students.Exists(st => g.StudentGuid == st.Guid));
 
             builder.ErrorIf(!isMyStudentRefsValid || !isGradesValid,

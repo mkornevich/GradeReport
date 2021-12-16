@@ -23,13 +23,13 @@ namespace GradeReport.Validation.Validators
             var semester = (Semester)entity;
             builder.ErrorIf(
                 project.SemesterSubjectRefs.Exists(e => e.SemesterGuid == semester.Guid) ||
-                project.Periods.Exists(e => e.SemesterGuid == semester.Guid) ||
+                project.Grades.Exists(g => g.SemesterGuid == semester.Guid) ||
                 project.MyStudentRefs.Exists(e => e.SemesterGuid == semester.Guid) ||
                 project.SemesterStudentRefs.Exists(e => e.SemesterGuid == semester.Guid),
                 "Невозможно удалить семестр так как на него ссылаются другие объекты.",
                 "Причины возникновения:\n" +
                 "1) Для семестра не все предметы удалены.\n" +
-                "2) Для семестра не все периоды удалены.\n" +
+                "2) Для семестра не все оценки удалены.\n" +
                 "3) Для семестра не все студенты удалены.\n" +
                 "4) По пути: семестр > предметы > предмет x > мои студенты - не все удалено.");
         }

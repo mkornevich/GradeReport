@@ -14,16 +14,15 @@ namespace GradeReport.Validation.Validators
         protected override void CanChangeRefsHandler(Project project, List<Entity> refs, NotificationFormBuilder builder, object[] args)
         {
             var subjects = refs.Cast<Subject>().ToList();
-            var semester = (Semester)args[0];
 
-            var periods = project.Periods.FindAll(p => p.SemesterGuid == semester.Guid);
+            var semester = (Semester)args[0];
 
             bool isMyStudentRefsValid = project.MyStudentRefs
                 .FindAll(msr => msr.SemesterGuid == semester.Guid)
                 .All(msr => subjects.Exists(s => msr.SubjectGuid == s.Guid));
 
             bool isGradesValid = project.Grades
-                .FindAll(g => periods.Exists(p => g.PeriodGuid == p.Guid))
+                .FindAll(g => g.SemesterGuid == semester.Guid)
                 .All(g => subjects.Exists(s => g.SubjectGuid == s.Guid));
 
             builder.ErrorIf(!isMyStudentRefsValid || !isGradesValid,
