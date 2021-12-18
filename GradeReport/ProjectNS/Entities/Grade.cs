@@ -9,6 +9,12 @@ namespace GradeReport.ProjectNS.Entities
 {
     public class Grade : Entity
     {
+        // зачтено
+        public const int Passed = -1;
+
+        // освобожден
+        public const int Released = -2;
+
         [EntityField(Compare = true)]
         public Guid SemesterGuid { get; set; }
 
@@ -41,6 +47,13 @@ namespace GradeReport.ProjectNS.Entities
 
         [EntityField(Compare = true)]
         public string GradeTypeName { get; set; }
+
+        [JsonIgnore]
+        public GradeType GradeType
+        {
+            get => GradeType.GetByName(GradeTypeName);
+            set => GradeTypeName = value.Name;
+        }
 
         [EntityField(Compare = true)]
         public int Number { get; set; }
