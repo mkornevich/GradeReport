@@ -1,4 +1,5 @@
-﻿using GradeReport.ProjectNS.Entities;
+﻿using GradeReport.GradeEditor;
+using GradeReport.ProjectNS.Entities;
 using GradeReport.Properties;
 using GradeReport.Validation.Validators;
 using System;
@@ -26,6 +27,12 @@ namespace GradeReport.ProjectExplorer.Nodes
         {
             items.Add(new ToolStripMenuItem("Удалить", Resources.remove_16,
                 PENodeActBuilder.BuildRemoveAct(this, Project.Semesters, new SemesterValidator())));
+            items.Add(new ToolStripMenuItem("Редактировать оценки", Resources.edit_16, GradesEditAct));
+        }
+
+        private void GradesEditAct(object sender, EventArgs e)
+        {
+            new GradeEditorForm((Semester)Entity).Show();
         }
 
         protected override void CreateChildNodes(List<PENode> nodes)

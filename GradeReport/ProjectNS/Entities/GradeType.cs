@@ -14,7 +14,7 @@ namespace GradeReport.ProjectNS.Entities
 
         public const string Exam = "Exam";
 
-        private static GradeType[] _gradeTypes = {
+        public static readonly GradeType[] gradeTypes = {
             new GradeType(Course, "Курсовая", false),
             new GradeType(Semester, "Семестровая", true),
             new GradeType(Exam, "Экзаменационная", false),
@@ -35,7 +35,7 @@ namespace GradeReport.ProjectNS.Entities
 
         public static GradeType GetByName(string name)
         {
-            foreach (var type in _gradeTypes)
+            foreach (var type in gradeTypes)
             {
                 if (type.Name == name)
                 {
