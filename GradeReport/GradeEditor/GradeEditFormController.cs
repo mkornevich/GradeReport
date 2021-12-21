@@ -71,7 +71,7 @@ namespace GradeReport.GradeEditor
             for (int num = Number + 1; num <= count; num++)
             {
                 GradeRows
-                    .FindAll(gr => gr.GradeNumber == num)
+                    .FindAll(gr => gr.GradeNumber == num && gr.Grade.GradeType.Name == GradeType.Name && gr.Grade.SubjectGuid == Subject.Guid)
                     .ForEach(gr => gr.GradeNumber -= 1);
             }
             if (Number > count - 1)

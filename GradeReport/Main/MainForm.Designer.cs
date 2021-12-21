@@ -86,7 +86,7 @@ namespace GradeReport.Main
             // 
             this.новыйToolStripMenuItem.Image = global::GradeReport.Properties.Resources.new_16;
             this.новыйToolStripMenuItem.Name = "новыйToolStripMenuItem";
-            this.новыйToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.новыйToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
             this.новыйToolStripMenuItem.Text = "Новый";
             this.новыйToolStripMenuItem.Click += new System.EventHandler(this.CreateNewAct);
             // 
@@ -94,7 +94,7 @@ namespace GradeReport.Main
             // 
             this.открытьToolStripMenuItem.Image = global::GradeReport.Properties.Resources.open_16;
             this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
-            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
             this.открытьToolStripMenuItem.Text = "Открыть";
             this.открытьToolStripMenuItem.Click += new System.EventHandler(this.OpenAct);
             // 
@@ -102,7 +102,8 @@ namespace GradeReport.Main
             // 
             this.сохранитьToolStripMenuItem.Image = global::GradeReport.Properties.Resources.save_16;
             this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
-            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.сохранитьToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
             this.сохранитьToolStripMenuItem.Text = "Сохранить";
             this.сохранитьToolStripMenuItem.Click += new System.EventHandler(this.SaveAct);
             // 
@@ -110,7 +111,9 @@ namespace GradeReport.Main
             // 
             this.сохранитьКакToolStripMenuItem.Image = global::GradeReport.Properties.Resources.save_as_16;
             this.сохранитьКакToolStripMenuItem.Name = "сохранитьКакToolStripMenuItem";
-            this.сохранитьКакToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.сохранитьКакToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.S)));
+            this.сохранитьКакToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
             this.сохранитьКакToolStripMenuItem.Text = "Сохранить как";
             this.сохранитьКакToolStripMenuItem.Click += new System.EventHandler(this.SaveAsAct);
             // 

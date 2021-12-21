@@ -1,0 +1,596 @@
+{
+  "Config": {
+    "CuratorName": "Надежда Викторовна Аргер",
+    "TeacherName": "Надежда Викторовна Аргер",
+    "CuratorGroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4"
+  },
+  "Groups": [
+    {
+      "Name": "Т91-19",
+      "Guid": "ea05d68e-6b32-4a51-b9fe-1103492293a4"
+    }
+  ],
+  "GroupSubjectRefs": [
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "SubjectGuid": "04df3704-42be-43ad-88cd-5c21203f7292"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "SubjectGuid": "7d660db1-46c6-40e9-806c-80651dce5116"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "SubjectGuid": "f0c5e76d-5d72-4bc9-be8c-25bc2c8e9b77"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "SubjectGuid": "598ecdaa-0ab3-4022-875f-2d44425a9c03"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "SubjectGuid": "2832849b-578b-4134-92bb-991d91e3dbec"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "SubjectGuid": "c700dafb-b2a7-4073-98bd-04ed0f9dcdd9"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "SubjectGuid": "50b88c48-2c00-4e7d-97ff-a2c650ecf04a"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "SubjectGuid": "836f1acf-e7ee-482d-8fbc-f903b12ec840"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "SubjectGuid": "c54c1712-c5d6-40bb-8c40-c8616c04ddd8"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "SubjectGuid": "bf284a22-3e91-4113-a20c-1e5551d292dd"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "SubjectGuid": "9abddc72-e9a4-43a6-8a60-7ee163b1a43e"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "SubjectGuid": "a714b7a4-2d51-4c19-af13-3837fe4b04ff"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "SubjectGuid": "9a1246fb-c4be-47b1-aeba-1f0b298ffbe0"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "SubjectGuid": "07c8fd22-8d84-4b16-9ad8-c58aabdf4c7d"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "SubjectGuid": "35e08ed4-17c7-4f1d-a5ca-a5ec4317feda"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "SubjectGuid": "60803419-e3db-4a85-a598-c3325cd86b0a"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "SubjectGuid": "0f15fcfa-d756-40ca-96fa-3bc2b3f10d3a"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "SubjectGuid": "2db66d2e-103b-438d-aa8f-4c8f7b0c3912"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "SubjectGuid": "3db0083b-1dce-4b9b-8f98-9ff07bfab60c"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "SubjectGuid": "f21e1016-62fc-4e25-852d-9f3f68ecabc6"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "SubjectGuid": "30e76770-85fd-4fee-a388-d05497272168"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "SubjectGuid": "52b0c091-1843-4612-998f-301e830bd214"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "SubjectGuid": "e18d46b8-c365-46d0-a0c9-d049fb1a7c44"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "SubjectGuid": "bcc3bab0-f6ba-4ad1-aafe-86b29f6d4343"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "SubjectGuid": "802e83ba-6992-421c-ba7a-2f0fa6f93eb8"
+    }
+  ],
+  "Courses": [
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "SpecialtyGuid": "0210c7e1-9c5f-4ff8-ae9c-c5eef1c14692",
+      "GroupNameForCourse": "Т191-19",
+      "Number": 1,
+      "StartYear": 2019,
+      "Guid": "3f4389e6-b61f-452b-853b-098b80f8374c"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "SpecialtyGuid": "0210c7e1-9c5f-4ff8-ae9c-c5eef1c14692",
+      "GroupNameForCourse": "Т291-19",
+      "Number": 2,
+      "StartYear": 2020,
+      "Guid": "ded74f14-9695-432c-bc66-ed582e9c336d"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "SpecialtyGuid": "0210c7e1-9c5f-4ff8-ae9c-c5eef1c14692",
+      "GroupNameForCourse": "Т391-19",
+      "Number": 3,
+      "StartYear": 2021,
+      "Guid": "d2737578-2fe2-4f6a-bfc2-304ac0fd3af5"
+    }
+  ],
+  "Specialties": [
+    {
+      "QualificationGuid": "260c3360-4f61-4ea0-8133-2656f6a59541",
+      "Code": "2-40 01 01",
+      "Name": "Программное обеспечение информационных технологий",
+      "Guid": "0210c7e1-9c5f-4ff8-ae9c-c5eef1c14692"
+    },
+    {
+      "QualificationGuid": "ee7e83ee-2abe-4136-9b28-da61f945bee9",
+      "Code": "4-25 85 97",
+      "Name": "Оператор электронно вычислительных машин 6 разряда",
+      "Guid": "8bdc25d0-f809-4b60-803b-9b76daeae502"
+    }
+  ],
+  "Qualifications": [
+    {
+      "Name": "Техник-программист",
+      "Guid": "260c3360-4f61-4ea0-8133-2656f6a59541"
+    },
+    {
+      "Name": "Оператор ЭВМ",
+      "Guid": "ee7e83ee-2abe-4136-9b28-da61f945bee9"
+    }
+  ],
+  "Students": [
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "Name": "Корневич Максим Александрович",
+      "Guid": "e814f486-f745-4df2-8b23-830f1320ff5e"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "Name": "Бондарук Эдуард Анатольевич",
+      "Guid": "d52a13a5-3082-4ecc-9808-acd81d28662d"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "Name": "Голёта Алексей Александрович",
+      "Guid": "36e10deb-4c9e-4c1a-a8ee-17ca916c8e07"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "Name": "Грищук Семен Михайлович",
+      "Guid": "fa4ba78f-e442-4ce1-a86e-68f2f2f8e32e"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "Name": "Данченко Кирилл Игоревич",
+      "Guid": "f3e79418-0d08-4c64-b131-f2800e75dfe4"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "Name": "Долмат Дмитрий Викторович",
+      "Guid": "37889815-5fa1-4e80-bf53-3d356569e1fd"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "Name": "Домащук Анастасия Сергеевна",
+      "Guid": "91676205-03df-43b9-aa4d-bfdff75add66"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "Name": "Заец Юрий Александрович",
+      "Guid": "5d4b1b2c-9ccc-4250-a412-56fd01252ffb"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "Name": "Козик Денис Васильевич",
+      "Guid": "3292b7de-54ab-4981-880f-641cc45b7212"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "Name": "Концевич Владислав Вячеславович",
+      "Guid": "97d7d706-ffd4-4d2f-8802-0423bff3f9b9"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "Name": "Кушнерук Евгений Михайлович",
+      "Guid": "39560243-aebb-42be-b89e-a679c0cd7625"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "Name": "Логинов Дмитрий Александрович",
+      "Guid": "921e9030-5386-48d1-9023-0178d05862d4"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "Name": "Матюхов Дмитрий Иванович",
+      "Guid": "16df25c4-68cd-4b59-a752-3f33af4a7c8c"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "Name": "Невдах Владислав Эдуардович",
+      "Guid": "8c06397d-d986-49b9-9997-d893fc1a1d36"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "Name": "Пупчик Николай Александрович",
+      "Guid": "0c17c443-4c55-4c82-82d8-cbc5b4a35e78"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "Name": "Рудаков Николай Александрович",
+      "Guid": "90519f31-d806-480c-acbe-6bb262ac5bac"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "Name": "Сачковская Наталья Владимировна",
+      "Guid": "3d9567f1-ec9c-4b10-8cbc-5283a8ddf17d"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "Name": "Слаута Андрей Евгеньевич",
+      "Guid": "f0d00174-7f21-469f-a6cb-3325b24fd40a"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "Name": "Федчук Данила Павлович",
+      "Guid": "30266317-049a-4f2b-b3b1-9135653a493e"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "Name": "Филиппов Илья Александрович",
+      "Guid": "eaaa6f32-238a-487f-b4bc-e94987231737"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "Name": "Фицнер Алекс Валентинович",
+      "Guid": "0ebe0876-120f-4b80-bf3f-fb623fac4797"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "Name": "Хаванский Сергей Михайлович",
+      "Guid": "04286f5a-55a8-4abd-a736-629a399dffd4"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "Name": "Чечун Марк Владимирович",
+      "Guid": "206a303d-9f38-4f89-8908-d3fecf12e57d"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "Name": "Шостак Артём Иванович",
+      "Guid": "9ba0e641-57b7-4be5-aba2-ec4e031b426e"
+    },
+    {
+      "GroupGuid": "ea05d68e-6b32-4a51-b9fe-1103492293a4",
+      "Name": "Шпак Максим Геннадьевич",
+      "Guid": "5f5c8e06-f861-4208-bed8-09100b2adc94"
+    }
+  ],
+  "SemesterStudentRefs": [
+    {
+      "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
+      "StudentGuid": "e814f486-f745-4df2-8b23-830f1320ff5e"
+    },
+    {
+      "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
+      "StudentGuid": "d52a13a5-3082-4ecc-9808-acd81d28662d"
+    },
+    {
+      "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
+      "StudentGuid": "36e10deb-4c9e-4c1a-a8ee-17ca916c8e07"
+    },
+    {
+      "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
+      "StudentGuid": "fa4ba78f-e442-4ce1-a86e-68f2f2f8e32e"
+    },
+    {
+      "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
+      "StudentGuid": "f3e79418-0d08-4c64-b131-f2800e75dfe4"
+    },
+    {
+      "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
+      "StudentGuid": "37889815-5fa1-4e80-bf53-3d356569e1fd"
+    },
+    {
+      "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
+      "StudentGuid": "91676205-03df-43b9-aa4d-bfdff75add66"
+    },
+    {
+      "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
+      "StudentGuid": "5d4b1b2c-9ccc-4250-a412-56fd01252ffb"
+    },
+    {
+      "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
+      "StudentGuid": "3292b7de-54ab-4981-880f-641cc45b7212"
+    },
+    {
+      "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
+      "StudentGuid": "97d7d706-ffd4-4d2f-8802-0423bff3f9b9"
+    },
+    {
+      "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
+      "StudentGuid": "39560243-aebb-42be-b89e-a679c0cd7625"
+    },
+    {
+      "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
+      "StudentGuid": "921e9030-5386-48d1-9023-0178d05862d4"
+    },
+    {
+      "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
+      "StudentGuid": "16df25c4-68cd-4b59-a752-3f33af4a7c8c"
+    },
+    {
+      "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
+      "StudentGuid": "8c06397d-d986-49b9-9997-d893fc1a1d36"
+    },
+    {
+      "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
+      "StudentGuid": "0c17c443-4c55-4c82-82d8-cbc5b4a35e78"
+    },
+    {
+      "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
+      "StudentGuid": "90519f31-d806-480c-acbe-6bb262ac5bac"
+    },
+    {
+      "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
+      "StudentGuid": "3d9567f1-ec9c-4b10-8cbc-5283a8ddf17d"
+    },
+    {
+      "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
+      "StudentGuid": "f0d00174-7f21-469f-a6cb-3325b24fd40a"
+    },
+    {
+      "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
+      "StudentGuid": "30266317-049a-4f2b-b3b1-9135653a493e"
+    },
+    {
+      "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
+      "StudentGuid": "eaaa6f32-238a-487f-b4bc-e94987231737"
+    },
+    {
+      "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
+      "StudentGuid": "0ebe0876-120f-4b80-bf3f-fb623fac4797"
+    },
+    {
+      "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
+      "StudentGuid": "04286f5a-55a8-4abd-a736-629a399dffd4"
+    },
+    {
+      "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
+      "StudentGuid": "206a303d-9f38-4f89-8908-d3fecf12e57d"
+    },
+    {
+      "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
+      "StudentGuid": "9ba0e641-57b7-4be5-aba2-ec4e031b426e"
+    },
+    {
+      "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
+      "StudentGuid": "5f5c8e06-f861-4208-bed8-09100b2adc94"
+    }
+  ],
+  "Semesters": [
+    {
+      "CourseGuid": "3f4389e6-b61f-452b-853b-098b80f8374c",
+      "CourseHalf": 1,
+      "Guid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5"
+    },
+    {
+      "CourseGuid": "3f4389e6-b61f-452b-853b-098b80f8374c",
+      "CourseHalf": 2,
+      "Guid": "0469db7d-e99d-407b-b415-ef19fe80bb04"
+    },
+    {
+      "CourseGuid": "ded74f14-9695-432c-bc66-ed582e9c336d",
+      "CourseHalf": 1,
+      "Guid": "2c85f41f-c3e2-4f5f-b8db-b490d7c5feee"
+    },
+    {
+      "CourseGuid": "ded74f14-9695-432c-bc66-ed582e9c336d",
+      "CourseHalf": 2,
+      "Guid": "62b978c0-f008-422c-ab76-6f18ce114215"
+    },
+    {
+      "CourseGuid": "d2737578-2fe2-4f6a-bfc2-304ac0fd3af5",
+      "CourseHalf": 1,
+      "Guid": "e415f183-749e-40d8-88e5-02bc45a620af"
+    }
+  ],
+  "SemesterSubjectRefs": [
+    {
+      "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
+      "SubjectGuid": "f0c5e76d-5d72-4bc9-be8c-25bc2c8e9b77"
+    },
+    {
+      "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
+      "SubjectGuid": "50b88c48-2c00-4e7d-97ff-a2c650ecf04a"
+    },
+    {
+      "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
+      "SubjectGuid": "0f15fcfa-d756-40ca-96fa-3bc2b3f10d3a"
+    },
+    {
+      "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
+      "SubjectGuid": "2db66d2e-103b-438d-aa8f-4c8f7b0c3912"
+    },
+    {
+      "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
+      "SubjectGuid": "3db0083b-1dce-4b9b-8f98-9ff07bfab60c"
+    },
+    {
+      "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
+      "SubjectGuid": "f21e1016-62fc-4e25-852d-9f3f68ecabc6"
+    },
+    {
+      "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
+      "SubjectGuid": "30e76770-85fd-4fee-a388-d05497272168"
+    },
+    {
+      "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
+      "SubjectGuid": "52b0c091-1843-4612-998f-301e830bd214"
+    },
+    {
+      "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
+      "SubjectGuid": "e18d46b8-c365-46d0-a0c9-d049fb1a7c44"
+    },
+    {
+      "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
+      "SubjectGuid": "bcc3bab0-f6ba-4ad1-aafe-86b29f6d4343"
+    },
+    {
+      "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
+      "SubjectGuid": "802e83ba-6992-421c-ba7a-2f0fa6f93eb8"
+    }
+  ],
+  "Subjects": [
+    {
+      "Name": "Компьютерное проектирование и языки программирования",
+      "ShortName": "КПиЯП",
+      "Guid": "04df3704-42be-43ad-88cd-5c21203f7292"
+    },
+    {
+      "Name": "Базы данных и системы управления базами данных",
+      "ShortName": "БДиСУБД",
+      "Guid": "7d660db1-46c6-40e9-806c-80651dce5116"
+    },
+    {
+      "Name": "Математика",
+      "ShortName": "Матем",
+      "Guid": "f0c5e76d-5d72-4bc9-be8c-25bc2c8e9b77"
+    },
+    {
+      "Name": "Тестирование программного обеспечения",
+      "ShortName": "ТестПО",
+      "Guid": "598ecdaa-0ab3-4022-875f-2d44425a9c03"
+    },
+    {
+      "Name": "Программное обеспечение обработки графической информации",
+      "ShortName": "ПООГИ",
+      "Guid": "2832849b-578b-4134-92bb-991d91e3dbec"
+    },
+    {
+      "Name": "Бухгалтерский учет",
+      "ShortName": "БухУчет",
+      "Guid": "c700dafb-b2a7-4073-98bd-04ed0f9dcdd9"
+    },
+    {
+      "Name": "Физическая культура и здоровье",
+      "ShortName": "ФКиЗД",
+      "Guid": "50b88c48-2c00-4e7d-97ff-a2c650ecf04a"
+    },
+    {
+      "Name": "Автоматизация управленческой деятельности организации",
+      "ShortName": "АУДО",
+      "Guid": "836f1acf-e7ee-482d-8fbc-f903b12ec840"
+    },
+    {
+      "Name": "Программное средства создания интернет приложений",
+      "ShortName": "ПССИП",
+      "Guid": "c54c1712-c5d6-40bb-8c40-c8616c04ddd8"
+    },
+    {
+      "Name": "Основы предпринимальской деятельности и управления проектами",
+      "ShortName": "ОПДиУП",
+      "Guid": "bf284a22-3e91-4113-a20c-1e5551d292dd"
+    },
+    {
+      "Name": "Программирование мобильных приложений",
+      "ShortName": "ПМП",
+      "Guid": "9abddc72-e9a4-43a6-8a60-7ee163b1a43e"
+    },
+    {
+      "Name": "Учебная практика по разработке и сопровождению ПО",
+      "ShortName": "УчПрРСПО",
+      "Guid": "a714b7a4-2d51-4c19-af13-3837fe4b04ff"
+    },
+    {
+      "Name": "Учебная практика по веб программированию",
+      "ShortName": "УчПрВебПр",
+      "Guid": "9a1246fb-c4be-47b1-aeba-1f0b298ffbe0"
+    },
+    {
+      "Name": "Технологическая практика",
+      "ShortName": "ТехПр",
+      "Guid": "07c8fd22-8d84-4b16-9ad8-c58aabdf4c7d"
+    },
+    {
+      "Name": "Преддипломная практика",
+      "ShortName": "ПредПр",
+      "Guid": "35e08ed4-17c7-4f1d-a5ca-a5ec4317feda"
+    },
+    {
+      "Name": "Диплом",
+      "ShortName": "Диплом",
+      "Guid": "60803419-e3db-4a85-a598-c3325cd86b0a"
+    },
+    {
+      "Name": "Охрана труда",
+      "ShortName": "ОТ",
+      "Guid": "0f15fcfa-d756-40ca-96fa-3bc2b3f10d3a"
+    },
+    {
+      "Name": "Основы социально гуманитарных наук",
+      "ShortName": "ОСГН",
+      "Guid": "2db66d2e-103b-438d-aa8f-4c8f7b0c3912"
+    },
+    {
+      "Name": "Основы алгаритмизации и программирования",
+      "ShortName": "ОАП",
+      "Guid": "3db0083b-1dce-4b9b-8f98-9ff07bfab60c"
+    },
+    {
+      "Name": "Теория вероятностей и математическая статистика",
+      "ShortName": "ТВиМС",
+      "Guid": "f21e1016-62fc-4e25-852d-9f3f68ecabc6"
+    },
+    {
+      "Name": "Арифметико-логические основы вычислительной техники",
+      "ShortName": "АЛОВТ",
+      "Guid": "30e76770-85fd-4fee-a388-d05497272168"
+    },
+    {
+      "Name": "Инструментальное программное обеспечение",
+      "ShortName": "ИПО",
+      "Guid": "52b0c091-1843-4612-998f-301e830bd214"
+    },
+    {
+      "Name": "Техника коммуникаций и основы командообразования",
+      "ShortName": "ТКиОК",
+      "Guid": "e18d46b8-c365-46d0-a0c9-d049fb1a7c44"
+    },
+    {
+      "Name": "Иностранный язык (профессион лексика)",
+      "ShortName": "ИнЯзПЛ",
+      "Guid": "bcc3bab0-f6ba-4ad1-aafe-86b29f6d4343"
+    },
+    {
+      "Name": "Компьютерные сети",
+      "ShortName": "КС",
+      "Guid": "802e83ba-6992-421c-ba7a-2f0fa6f93eb8"
+    }
+  ],
+  "Grades": [],
+  "MyStudentRefs": []
+}

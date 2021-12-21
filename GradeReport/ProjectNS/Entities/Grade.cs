@@ -9,12 +9,6 @@ namespace GradeReport.ProjectNS.Entities
 {
     public class Grade : Entity
     {
-        // зачтено
-        public const int Passed = -1;
-
-        // освобожден
-        public const int Released = -2;
-
         [EntityField(Compare = true)]
         public Guid SemesterGuid { get; set; }
 

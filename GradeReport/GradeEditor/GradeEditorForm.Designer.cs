@@ -72,7 +72,7 @@ namespace GradeReport.GradeEditor
             "ЛР"});
             this.subjectsLB.Location = new System.Drawing.Point(3, 19);
             this.subjectsLB.Name = "subjectsLB";
-            this.subjectsLB.Size = new System.Drawing.Size(265, 386);
+            this.subjectsLB.Size = new System.Drawing.Size(265, 668);
             this.subjectsLB.TabIndex = 3;
             // 
             // label1
@@ -128,11 +128,17 @@ namespace GradeReport.GradeEditor
             this.editorDGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.editorDGV.GridColor = System.Drawing.SystemColors.ActiveBorder;
             this.editorDGV.Location = new System.Drawing.Point(3, 19);
+            this.editorDGV.MultiSelect = false;
             this.editorDGV.Name = "editorDGV";
+            this.editorDGV.ReadOnly = true;
             this.editorDGV.RowHeadersVisible = false;
             this.editorDGV.RowTemplate.Height = 25;
-            this.editorDGV.Size = new System.Drawing.Size(596, 341);
+            this.editorDGV.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.editorDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.editorDGV.Size = new System.Drawing.Size(414, 668);
             this.editorDGV.TabIndex = 23;
+            this.editorDGV.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.editorDGV_CellFormatting);
+            this.editorDGV.KeyUp += new System.Windows.Forms.KeyEventHandler(this.editorDGV_KeyUp);
             // 
             // StudentIndexColumn
             // 
@@ -144,17 +150,18 @@ namespace GradeReport.GradeEditor
             // 
             // StudentNameColumn
             // 
+            this.StudentNameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.StudentNameColumn.DataPropertyName = "StudentName";
             this.StudentNameColumn.HeaderText = "ФИО";
             this.StudentNameColumn.Name = "StudentNameColumn";
             this.StudentNameColumn.ReadOnly = true;
-            this.StudentNameColumn.Width = 300;
             // 
             // GradeValueColumn
             // 
             this.GradeValueColumn.DataPropertyName = "GradeValue";
             this.GradeValueColumn.HeaderText = "Оценка";
             this.GradeValueColumn.Name = "GradeValueColumn";
+            this.GradeValueColumn.ReadOnly = true;
             this.GradeValueColumn.Width = 55;
             // 
             // groupBox2
@@ -162,9 +169,9 @@ namespace GradeReport.GradeEditor
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.infoLbl);
-            this.groupBox2.Location = new System.Drawing.Point(289, 372);
+            this.groupBox2.Location = new System.Drawing.Point(289, 699);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(602, 270);
+            this.groupBox2.Size = new System.Drawing.Size(420, 225);
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Информация";
@@ -177,7 +184,7 @@ namespace GradeReport.GradeEditor
             this.groupBox3.Controls.Add(this.editorDGV);
             this.groupBox3.Location = new System.Drawing.Point(289, 3);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(602, 363);
+            this.groupBox3.Size = new System.Drawing.Size(420, 690);
             this.groupBox3.TabIndex = 26;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Редактор оценок";
@@ -208,8 +215,9 @@ namespace GradeReport.GradeEditor
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(259, 23);
             this.saveBtn.TabIndex = 14;
-            this.saveBtn.Text = "Проверить и сохранить";
+            this.saveBtn.Text = "Проверить и применить изменения";
             this.saveBtn.UseVisualStyleBackColor = true;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
             // numberLeftBtn
             // 
@@ -293,7 +301,7 @@ namespace GradeReport.GradeEditor
             this.groupBox5.Controls.Add(this.subjectsLB);
             this.groupBox5.Location = new System.Drawing.Point(12, 234);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(271, 408);
+            this.groupBox5.Size = new System.Drawing.Size(271, 690);
             this.groupBox5.TabIndex = 28;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Предметы";
@@ -302,7 +310,7 @@ namespace GradeReport.GradeEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(903, 654);
+            this.ClientSize = new System.Drawing.Size(721, 936);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);

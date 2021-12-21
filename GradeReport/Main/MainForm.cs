@@ -1,4 +1,5 @@
-﻿using GradeReport.ProjectNS;
+﻿using GradeReport.GradeEditor;
+using GradeReport.ProjectNS;
 using GradeReport.ProjectNS.Entities;
 using GradeReport.ReportNS;
 using System;
@@ -41,6 +42,13 @@ namespace GradeReport.Main
             CreateNewAct(null, null);
 
             new ReportsLoader().LoadToMenuItem(reports);
+
+            // auto load project for debug
+            _projectContainer.Project = _projectLoader.Load(App.AppDataPath + "\\test.gr");
+            _projectContainer.Path = App.AppDataPath + "\\test.gr";
+
+            var semester = App.ProjectContainer.Project.Semesters.Find(s => s.Guid.ToString() == "539bbaaf-b99b-4771-b81b-83036fc6b5e5");
+            new GradeEditorForm(semester).Show();
         }
 
         private void UpdateInfoPanel() => infoTB.Text = peTreeView.Info;
