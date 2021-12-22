@@ -104,5 +104,10 @@ namespace GradeReport.Main
         {
             new TestForm().Show();
         }
+
+        private void aboutMI_Click(object sender, EventArgs e)
+        {
+            new AboutForm().ShowDialog();
+        }
     }
 }

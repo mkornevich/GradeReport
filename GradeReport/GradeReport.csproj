@@ -7,10 +7,14 @@
     <StartupObject>GradeReport.Program</StartupObject>
     <Platforms>AnyCPU;x64</Platforms>
     <ApplicationIcon />
-    <Authors>Корневич Максим</Authors>
-    <Company />
-    <Copyright>Корневич Максим</Copyright>
+    <Authors>Корневич М. А.</Authors>
+    <Company>Корневич М. А.</Company>
+    <Copyright>Корневич М. А.</Copyright>
     <RepositoryType>git@github.com:mkornevich/GradeReport.git</RepositoryType>
+    <Description>Данная программа позволяет выполнять построение 
+различных отчетов по заданным оценкам.</Description>
+    <PackageProjectUrl>https://github.com/mkornevich/GradeReport</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/mkornevich/GradeReport</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>

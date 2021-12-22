@@ -37,9 +37,8 @@ namespace GradeReport.Main
             this.сохранитьКакToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reports = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.оПрограммеToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.тестФормаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.debugMI = new System.Windows.Forms.ToolStripMenuItem();
             this.peTreeView = new GradeReport.ProjectExplorer.PETreeView();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
@@ -126,31 +125,25 @@ namespace GradeReport.Main
             // оПрограммеToolStripMenuItem
             // 
             this.оПрограммеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.оПрограммеToolStripMenuItem1,
-            this.настройкиToolStripMenuItem,
-            this.тестФормаToolStripMenuItem});
+            this.aboutMI,
+            this.debugMI});
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
             this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
             this.оПрограммеToolStripMenuItem.Text = "Программа";
             // 
-            // оПрограммеToolStripMenuItem1
+            // aboutMI
             // 
-            this.оПрограммеToolStripMenuItem1.Name = "оПрограммеToolStripMenuItem1";
-            this.оПрограммеToolStripMenuItem1.Size = new System.Drawing.Size(163, 22);
-            this.оПрограммеToolStripMenuItem1.Text = "О программе";
+            this.aboutMI.Name = "aboutMI";
+            this.aboutMI.Size = new System.Drawing.Size(180, 22);
+            this.aboutMI.Text = "О программе";
+            this.aboutMI.Click += new System.EventHandler(this.aboutMI_Click);
             // 
-            // настройкиToolStripMenuItem
+            // debugMI
             // 
-            this.настройкиToolStripMenuItem.Name = "настройкиToolStripMenuItem";
-            this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
-            this.настройкиToolStripMenuItem.Text = "Настройки";
-            // 
-            // тестФормаToolStripMenuItem
-            // 
-            this.тестФормаToolStripMenuItem.Name = "тестФормаToolStripMenuItem";
-            this.тестФормаToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
-            this.тестФормаToolStripMenuItem.Text = "Тестовая форма";
-            this.тестФормаToolStripMenuItem.Click += new System.EventHandler(this.ShowTestFormAct);
+            this.debugMI.Name = "debugMI";
+            this.debugMI.Size = new System.Drawing.Size(180, 22);
+            this.debugMI.Text = "Отладка";
+            this.debugMI.Click += new System.EventHandler(this.ShowTestFormAct);
             // 
             // peTreeView
             // 
@@ -287,9 +280,8 @@ namespace GradeReport.Main
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel infoPanel;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem настройкиToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem тестФормаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutMI;
+        private System.Windows.Forms.ToolStripMenuItem debugMI;
         private System.Windows.Forms.TextBox infoTB;
     }
 }
