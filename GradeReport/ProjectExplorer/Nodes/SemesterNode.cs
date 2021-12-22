@@ -32,7 +32,7 @@ namespace GradeReport.ProjectExplorer.Nodes
 
         private void GradesEditAct(object sender, EventArgs e)
         {
-            new GradeEditorForm((Semester)Entity).Show();
+            new GradeEditorForm((Semester)Entity).ShowDialog();
         }
 
         protected override void CreateChildNodes(List<PENode> nodes)

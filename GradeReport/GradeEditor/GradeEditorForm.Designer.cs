@@ -318,6 +318,7 @@ namespace GradeReport.GradeEditor
             this.Name = "GradeEditorForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Редактирование оценок";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GradeEditorForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.editorDGV)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

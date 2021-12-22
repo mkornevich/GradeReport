@@ -21,6 +21,18 @@ namespace GradeReport.GradeEditor
 
         private bool _isSyncGuiEvent = false;
 
+        private bool _isChanged = false;
+
+        private bool IsChanged
+        {
+            get => _isChanged;
+            set
+            {
+                _isChanged = value;
+                Text = "Редактирование оценок " + (_isChanged ? "*" : "");
+            }
+        }
+
         public GradeEditorForm(Semester semester)
         {
             InitializeComponent();
@@ -81,14 +93,17 @@ namespace GradeReport.GradeEditor
             gradeTypesLB.DataSource = GradeType.gradeTypes;
             gradeTypesLB.SelectedIndex = selected;
 
-
             _isSyncGuiEvent = false;
         }
 
         private void numberAddBtn_Click(object sender, EventArgs e)
         {
-            _controller.AddNumber();
-            SyncGUI();
+            if (_controller.CanAddNumber())
+            {
+                IsChanged = true;
+                _controller.AddNumber();
+                SyncGUI();
+            }
         }
 
         private void numberLeftBtn_Click(object sender, EventArgs e)
@@ -112,6 +127,7 @@ namespace GradeReport.GradeEditor
 
         private void numberDeleteBtn_Click(object sender, EventArgs e)
         {
+            IsChanged = true;
             _controller.DeleteNumber();
             SyncGUI();
         }
@@ -124,6 +140,8 @@ namespace GradeReport.GradeEditor
 
         private void editorDGV_KeyUp(object sender, KeyEventArgs e)
         {
+            IsChanged = true;
+
             var gradeValue = GradeValue.GetByKeyCode(e.KeyCode);
 
             if (gradeValue == null || editorDGV.SelectedRows.Count <= 0) return;
@@ -151,14 +169,24 @@ namespace GradeReport.GradeEditor
 
         private void saveBtn_Click(object sender, EventArgs e)
         {
-            _project.Grades.RemoveAll(g => g.Semester.Guid == _semester.Guid);
-            _controller.GradeRows.ForEach(gr =>
+            if (_controller.TrySaveChanges())
             {
-                gr.ToGrade();
-                _project.Grades.Add(gr.Grade);
-            });
-            App.ProjectContainer.OnProjectChanged();
-            MessageBox.Show("Изменения успешно проверены и применены!");
+                MessageBox.Show("Изменения успешно применены!");
+                IsChanged = false;
+            }
+        }
+
+        private void GradeEditorForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!IsChanged) return;
+
+            var result = MessageBox.Show("Имеются непримененные изменения. Хотите их применить?", "Сохранение", MessageBoxButtons.YesNoCancel);
+
+            if (result == DialogResult.Cancel ||
+                (result == DialogResult.Yes && !_controller.TrySaveChanges()))
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

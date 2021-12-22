@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace GradeReport.GradeEditor
 {
@@ -96,6 +97,46 @@ namespace GradeReport.GradeEditor
                 .Select(gr => gr.GradeNumber)
                 .Distinct()
                 .Count();
-        } 
+        }
+
+        public bool TrySaveChanges()
+        {
+            var validator = new SemesterGradesValidator();
+            if (validator.Validate(Semester, GradeRows))
+            {
+                Project.Grades.RemoveAll(g => g.Semester.Guid == Semester.Guid);
+                GradeRows.ForEach(gr =>
+                {
+                    gr.ToGrade();
+                    Project.Grades.Add(gr.Grade);
+                });
+                App.ProjectContainer.OnProjectChanged();
+                return true;
+            }
+            return false;
+        }
+
+        public bool CanAddNumber()
+        {
+            var studentsCount = Project.SemesterStudentRefs
+                .Count(ssr => ssr.SemesterGuid == Semester.Guid);
+
+            if (studentsCount == 0)
+            {
+                MessageBox.Show("Для данного семестра необходимо назначить как минимум одного студента.");
+                return false;
+            }
+
+            var subjectsCount = Project.SemesterSubjectRefs
+                .Count(ssr => ssr.SemesterGuid == Semester.Guid);
+
+            if (subjectsCount == 0)
+            {
+                MessageBox.Show("Для данного семестра необходимо назначить как минимум один предмет.");
+                return false;
+            }
+
+            return true;
+        }
     }
 }
