@@ -83,20 +83,66 @@ namespace GradeReport.GradeEditor
 
         public List<GradeRow> GetGradeRowsForEditor()
         {
-            return GradeRows
-                    .FindAll(gr => gr.Grade.SubjectGuid == Subject.Guid
-                    && gr.Grade.GradeTypeName == GradeType.Name
-                    && gr.GradeNumber == Number)
-                    .ToList();
+            var rowsForEditor = new List<GradeRow>();
+
+            if (Number < 1)
+            {
+                return rowsForEditor;
+            }
+
+            var students = Project.SemesterStudentRefs
+                .FindAll(ssr => ssr.SemesterGuid == Semester.Guid)
+                .Select(ssr => ssr.Student)
+                .OrderBy(s => s.Name)
+                .ToList();
+
+            int studentIndex = 1;
+
+            foreach (var student in students)
+            {
+                var sudentGradeRow = GradeRows.Find(gr =>
+                gr.Grade.StudentGuid == student.Guid &&
+                gr.Grade.SubjectGuid == Subject.Guid &&
+                gr.Grade.GradeTypeName == GradeType.Name &&
+                gr.GradeNumber == Number);
+
+                if (sudentGradeRow == null)
+                {
+                    var grade = new Grade()
+                    {
+                        Project = Project,
+                        SemesterGuid = Semester.Guid,
+                        StudentGuid = student.Guid,
+                        SubjectGuid = Subject.Guid,
+                        GradeType = GradeType,
+                        Number = Number,
+                        Value = -1,
+                    };
+
+                    sudentGradeRow = new GradeRow(grade);
+                    GradeRows.Add(sudentGradeRow);
+                }
+
+                sudentGradeRow.StudentIndex = studentIndex++;
+
+                rowsForEditor.Add(sudentGradeRow);
+            }
+
+            return rowsForEditor;
         }
 
-        public int GetNumbersCountByGradeType(GradeType gradeType)
+        public int GetMaxNumberByGradeType(GradeType gradeType)
         {
-            return GradeRows
+            var numbers = GradeRows
                 .FindAll(gr => gr.Grade.GradeTypeName == gradeType.Name && gr.Grade.SubjectGuid == Subject.Guid)
-                .Select(gr => gr.GradeNumber)
-                .Distinct()
-                .Count();
+                .Select(gr => gr.GradeNumber);
+
+            if (numbers.Count() > 0)
+            {
+                return numbers.Max();
+            }
+
+            return 0;
         }
 
         public bool TrySaveChanges()
@@ -105,7 +151,7 @@ namespace GradeReport.GradeEditor
             if (validator.Validate(Semester, GradeRows))
             {
                 Project.Grades.RemoveAll(g => g.Semester.Guid == Semester.Guid);
-                GradeRows.ForEach(gr =>
+                GradeRows.FindAll(gr => gr.GradeValue != GradeValue.Empty).ForEach(gr =>
                 {
                     gr.ToGrade();
                     Project.Grades.Add(gr.Grade);

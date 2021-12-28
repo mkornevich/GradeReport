@@ -10,7 +10,7 @@ namespace GradeReport.GradeEditor
 {
     public class GradeRow
     {
-        public int StudentIndex = 0;
+        public int StudentIndex { get; set; } = 0;
 
         public string StudentName => Grade.Student.Name;
 

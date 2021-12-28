@@ -134,7 +134,7 @@ namespace GradeReport.GradeEditor
 
         private void gradeTypesLB_Format(object sender, ListControlConvertEventArgs e)
         {
-            int count = _controller.GetNumbersCountByGradeType((GradeType)e.ListItem);
+            int count = _controller.GetMaxNumberByGradeType((GradeType)e.ListItem);
             e.Value = ((GradeType)e.ListItem).Description + " (" + count.ToString() + ")";
         }
 
