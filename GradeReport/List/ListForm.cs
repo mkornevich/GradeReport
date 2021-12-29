@@ -167,5 +167,34 @@ namespace GradeReport.List
 
         private void UpdateSelectionTextInfo() => selectionInfoTB.Text = "Выделено " + SelectedEntities.Count + " из " + Entities.Count;
 
+        private void SelectAllAct(object sender, EventArgs e)
+        {
+            if (SelectMode == SelectMode.Multiple)
+            {
+                ChangeSelectedAll(curr => true);
+            }
+        }
+
+        private void UnselectAllAct(object sender, EventArgs e)
+        {
+            ChangeSelectedAll(curr => false);
+        }
+
+        private void InverseAllAct(object sender, EventArgs e)
+        {
+            if (SelectMode == SelectMode.Multiple)
+            {
+                ChangeSelectedAll(curr => !curr);
+            }
+        }
+
+        private void ChangeSelectedAll(Func<bool, bool> getSelectedFunc)
+        {
+            foreach (DataGridViewRow row in Table.Rows)
+            {
+                row.Cells[0].Value = getSelectedFunc((bool)row.Cells[0].Value);
+            }
+            OnSelectionChangedInternally();
+        }
     }
 }
