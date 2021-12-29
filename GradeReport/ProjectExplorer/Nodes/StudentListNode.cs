@@ -1,5 +1,6 @@
 ﻿using GradeReport.Edit;
 using GradeReport.Edit.EditForms;
+using GradeReport.Master;
 using GradeReport.ProjectNS;
 using GradeReport.ProjectNS.Entities;
 using GradeReport.Properties;
@@ -28,6 +29,12 @@ namespace GradeReport.ProjectExplorer.Nodes
         {
             items.Add(new ToolStripMenuItem("Добавить", Resources.add_16,
                 PENodeActBuilder.BuildCreateAct(this, CreateStudent, (s) => Project.Students.Add((Student)s), new StudentEditForm(), new StudentValidator())));
+
+            items.Add(new ToolStripMenuItem("Мастер множественно ввода", Resources.new_16, (s, e) =>
+            {
+                var master = new AddStudentsMasterForm((Group)GetNodeEntity<GroupNode>());
+                master.ShowDialog();
+            }));
         }
 
         private Entity CreateStudent()
