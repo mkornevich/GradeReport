@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace GradeReport.ReportNS.ControlWorksAnalyzer
 {
-    public partial class ReportForm : Form
+    public partial class ReportForm : BaseReportForm
     {
         private ISheet _sheet;
 
@@ -27,7 +27,7 @@ namespace GradeReport.ReportNS.ControlWorksAnalyzer
             _sheet = _workbook.GetSheetAt(0);
         }
 
-        private void buildReportBtn_Click(object sender, EventArgs e)
+        protected override void BuildAct(object sender, EventArgs e)
         {
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -64,6 +64,11 @@ namespace GradeReport.ReportNS.ControlWorksAnalyzer
                     MessageBox.Show("При попытке записать отчет в фаил произошла следующая ошибка: " + ex.Message);
                 }
             }
+        }
+
+        protected override void ValidateAct(object sender, EventArgs e)
+        {
+            MessageBox.Show("Данная функция не поддерживается");
         }
     }
 }
