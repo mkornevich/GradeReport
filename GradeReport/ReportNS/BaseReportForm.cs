@@ -13,6 +13,14 @@ namespace GradeReport.ReportNS
         protected ToolStripButton buildReportBtn;
         protected ToolStripButton validateReportBtn;
 
+        protected BaseValidator Validator { get; set; }
+
+        protected BaseInputModel InputModel { get; set; }
+
+        protected BaseReportBuilder ReportBuilder { get; set; }
+
+        protected BaseReportIntegrator ReportIntegrator { get; set; }
+
         public BaseReportForm()
         {
             InitializeComponent();
@@ -20,12 +28,36 @@ namespace GradeReport.ReportNS
 
         protected virtual void ValidateAct(object sender, EventArgs e)
         {
-
+            if (TryBuildInputModel() && Validator.Validate(InputModel))
+            {
+                MessageBox.Show("Проверка успешно пройдена.");
+            }
+            else
+            {
+                MessageBox.Show("Проверка не пройдена. Исправте ошибки.");
+            }
         }
 
         protected virtual void BuildAct(object sender, EventArgs e)
         {
+            if (!TryBuildInputModel() || !Validator.Validate(InputModel))
+            {
+                return;
+            }
 
+            var outputModel = ReportBuilder.Build(InputModel);
+
+            var document = new Document();
+            document.Load(App.AppDataPath + "\\Reports\\" + Tag + "\\Template.xlsx");
+
+            ReportIntegrator.Integrate(outputModel, document);
+
+            document.StoreWithDialog(true);
+        }
+
+        protected virtual bool TryBuildInputModel()
+        {
+            return false;
         }
 
         private void InitializeComponent()

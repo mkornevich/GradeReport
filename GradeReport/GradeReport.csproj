@@ -40,9 +40,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Update="ReportNS\ControlWorksAnalyzer\ReportForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Update="ReportNS\ControlWorksAnalyzer\ReportForm.cs" />
     <Compile Update="ReportNS\ControlWorksAnalyzer\ReportForm.Designer.cs">
       <DependentUpon>ReportForm.cs</DependentUpon>
     </Compile>
