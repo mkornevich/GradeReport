@@ -14,10 +14,16 @@ namespace GradeReport.ProjectNS.Entities
 
         public const string Exam = "Exam";
 
+        public const string OKR = "OKR";
+
+        public const string DKR = "DKR";
+
         public static readonly GradeType[] gradeTypes = {
             new GradeType(Course, "Курсовая", false),
             new GradeType(Semester, "Семестровая", true),
             new GradeType(Exam, "Экзаменационная", false),
+            new GradeType(OKR, "ОКР", false),
+            new GradeType(DKR, "ДКР", false),
         };
 
         public string Name { get; private set; }
