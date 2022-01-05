@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GradeReport.ProjectNS.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,6 +22,8 @@ namespace GradeReport.ReportNS
 
         protected BaseReportIntegrator ReportIntegrator { get; set; }
 
+        protected Project Project { get; private set; }
+
         public BaseReportForm()
         {
             InitializeComponent();
@@ -36,6 +39,24 @@ namespace GradeReport.ReportNS
             {
                 MessageBox.Show("Проверка не пройдена. Исправте ошибки.");
             }
+        }
+
+        protected virtual void CreateComponents()
+        {
+
+        }
+
+        protected virtual void SetStartData()
+        {
+
+        }
+
+        public void ShowReportForm(Project project)
+        {
+            Project = project;
+            CreateComponents();
+            SetStartData();
+            ShowDialog();
         }
 
         protected virtual void BuildAct(object sender, EventArgs e)

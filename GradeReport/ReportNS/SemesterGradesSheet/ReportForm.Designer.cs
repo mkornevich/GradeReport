@@ -29,25 +29,25 @@ namespace GradeReport.ReportNS.SemesterGradesSheet
         /// </summary>
         private void InitializeComponent()
         {
-            this.chooser1 = new GradeReport.Common.Chooser();
+            this.groupC = new GradeReport.Common.Chooser();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.chooser2 = new GradeReport.Common.Chooser();
+            this.semesterC = new GradeReport.Common.Chooser();
             this.label3 = new System.Windows.Forms.Label();
-            this.chooser3 = new GradeReport.Common.Chooser();
+            this.subjectC = new GradeReport.Common.Chooser();
             this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateDTP = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
-            // chooser1
+            // groupC
             // 
-            this.chooser1.BackColor = System.Drawing.SystemColors.Window;
-            this.chooser1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.chooser1.ChooseText = "";
-            this.chooser1.Location = new System.Drawing.Point(12, 43);
-            this.chooser1.Name = "chooser1";
-            this.chooser1.Size = new System.Drawing.Size(400, 23);
-            this.chooser1.TabIndex = 1;
+            this.groupC.BackColor = System.Drawing.SystemColors.Window;
+            this.groupC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.groupC.ChooseText = "";
+            this.groupC.Location = new System.Drawing.Point(12, 43);
+            this.groupC.Name = "groupC";
+            this.groupC.Size = new System.Drawing.Size(400, 23);
+            this.groupC.TabIndex = 1;
             // 
             // label1
             // 
@@ -67,15 +67,15 @@ namespace GradeReport.ReportNS.SemesterGradesSheet
             this.label2.TabIndex = 3;
             this.label2.Text = "Семестр";
             // 
-            // chooser2
+            // semesterC
             // 
-            this.chooser2.BackColor = System.Drawing.SystemColors.Window;
-            this.chooser2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.chooser2.ChooseText = "";
-            this.chooser2.Location = new System.Drawing.Point(12, 87);
-            this.chooser2.Name = "chooser2";
-            this.chooser2.Size = new System.Drawing.Size(400, 23);
-            this.chooser2.TabIndex = 2;
+            this.semesterC.BackColor = System.Drawing.SystemColors.Window;
+            this.semesterC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.semesterC.ChooseText = "";
+            this.semesterC.Location = new System.Drawing.Point(12, 87);
+            this.semesterC.Name = "semesterC";
+            this.semesterC.Size = new System.Drawing.Size(400, 23);
+            this.semesterC.TabIndex = 2;
             // 
             // label3
             // 
@@ -86,15 +86,15 @@ namespace GradeReport.ReportNS.SemesterGradesSheet
             this.label3.TabIndex = 4;
             this.label3.Text = "Предмет";
             // 
-            // chooser3
+            // subjectC
             // 
-            this.chooser3.BackColor = System.Drawing.SystemColors.Window;
-            this.chooser3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.chooser3.ChooseText = "";
-            this.chooser3.Location = new System.Drawing.Point(12, 131);
-            this.chooser3.Name = "chooser3";
-            this.chooser3.Size = new System.Drawing.Size(400, 23);
-            this.chooser3.TabIndex = 3;
+            this.subjectC.BackColor = System.Drawing.SystemColors.Window;
+            this.subjectC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.subjectC.ChooseText = "";
+            this.subjectC.Location = new System.Drawing.Point(12, 131);
+            this.subjectC.Name = "subjectC";
+            this.subjectC.Size = new System.Drawing.Size(400, 23);
+            this.subjectC.TabIndex = 3;
             // 
             // label4
             // 
@@ -105,37 +105,37 @@ namespace GradeReport.ReportNS.SemesterGradesSheet
             this.label4.TabIndex = 5;
             this.label4.Text = "Дата";
             // 
-            // dateTimePicker1
+            // dateDTP
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(12, 175);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(400, 23);
-            this.dateTimePicker1.TabIndex = 6;
+            this.dateDTP.Location = new System.Drawing.Point(12, 175);
+            this.dateDTP.Name = "dateDTP";
+            this.dateDTP.Size = new System.Drawing.Size(400, 23);
+            this.dateDTP.TabIndex = 6;
             // 
             // ReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(424, 214);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateDTP);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.chooser3);
+            this.Controls.Add(this.subjectC);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.chooser2);
+            this.Controls.Add(this.semesterC);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.chooser1);
+            this.Controls.Add(this.groupC);
             this.Name = "ReportForm";
             this.Tag = "SemesterGradesSheet";
             this.Text = "Сводная ведомость за семестр";
-            this.Controls.SetChildIndex(this.chooser1, 0);
+            this.Controls.SetChildIndex(this.groupC, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
-            this.Controls.SetChildIndex(this.chooser2, 0);
+            this.Controls.SetChildIndex(this.semesterC, 0);
             this.Controls.SetChildIndex(this.label3, 0);
-            this.Controls.SetChildIndex(this.chooser3, 0);
+            this.Controls.SetChildIndex(this.subjectC, 0);
             this.Controls.SetChildIndex(this.label4, 0);
-            this.Controls.SetChildIndex(this.dateTimePicker1, 0);
+            this.Controls.SetChildIndex(this.dateDTP, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,13 +143,13 @@ namespace GradeReport.ReportNS.SemesterGradesSheet
 
         #endregion
 
-        private Common.Chooser chooser1;
+        private Common.Chooser groupC;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private Common.Chooser chooser2;
+        private Common.Chooser semesterC;
         private System.Windows.Forms.Label label3;
-        private Common.Chooser chooser3;
+        private Common.Chooser subjectC;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateDTP;
     }
 }

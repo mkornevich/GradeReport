@@ -10,7 +10,9 @@ namespace GradeReport.ReportNS
     {
         public void Integrate(BaseOutputModel model, Document document)
         {
-            
+            DoIntegrate(model, document);
         }
+
+        protected abstract void DoIntegrate(BaseOutputModel model, Document document);
     }
 }

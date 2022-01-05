@@ -16,6 +16,11 @@ namespace GradeReport.ReportNS
             Project = project;
         }
 
-        public abstract BaseOutputModel Build(BaseInputModel input);
+        public BaseOutputModel Build(BaseInputModel input)
+        {
+            return DoBuild(input);
+        }
+
+        protected abstract BaseOutputModel DoBuild(BaseInputModel input);
     }
 }

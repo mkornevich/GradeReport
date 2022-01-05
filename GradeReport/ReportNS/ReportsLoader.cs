@@ -27,7 +27,10 @@ namespace GradeReport.ReportNS
         {
             foreach (var report in _reports)
             {
-                var reportItem = new ToolStripMenuItem(report.Text, Resources.report_16, (s, e) => report.ShowDialog());
+                var reportItem = new ToolStripMenuItem(
+                    report.Text, 
+                    Resources.report_16, 
+                    (s, e) => report.ShowReportForm(App.ProjectContainer.Project));
                 item.DropDownItems.Add(reportItem);
             }
         }
