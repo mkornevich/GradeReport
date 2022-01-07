@@ -11,7 +11,6 @@ namespace GradeReport.ReportNS.SemesterGradesSheet
     {
         public ReportBuilder(Project project) : base(project)
         {
-
         }
 
         protected override BaseOutputModel DoBuild(BaseInputModel input)
