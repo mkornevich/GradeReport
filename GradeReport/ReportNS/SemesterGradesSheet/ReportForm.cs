@@ -71,8 +71,8 @@ namespace GradeReport.ReportNS.SemesterGradesSheet
 
         protected override void CreateComponents()
         {
-            Validator = new Validator(Project);
-            ReportBuilder = new ReportBuilder(Project);
+            Validator = new Validator();
+            ReportBuilder = new ReportBuilder();
             ReportIntegrator = new ReportIntegrator();
         }
 

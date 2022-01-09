@@ -31,7 +31,7 @@ namespace GradeReport.ReportNS
 
         protected virtual void ValidateAct(object sender, EventArgs e)
         {
-            if (TryBuildInputModel() && Validator.Validate(InputModel))
+            if (TryBuildInputModel() && Validator.Validate(Project, InputModel))
             {
                 MessageBox.Show("Проверка успешно пройдена.");
             }
@@ -61,12 +61,12 @@ namespace GradeReport.ReportNS
 
         protected virtual void BuildAct(object sender, EventArgs e)
         {
-            if (!TryBuildInputModel() || !Validator.Validate(InputModel))
+            if (!TryBuildInputModel() || !Validator.Validate(Project, InputModel))
             {
                 return;
             }
 
-            var outputModel = ReportBuilder.Build(InputModel);
+            var outputModel = ReportBuilder.Build(Project, InputModel);
 
             var document = new Document();
             document.Load(App.AppDataPath + "\\Reports\\" + Tag + "\\Template.xlsx");

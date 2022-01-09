@@ -15,13 +15,10 @@ namespace GradeReport.ReportNS
 
         protected Project Project { get; private set; }
 
-        public BaseValidator(Project project)
+        public bool Validate(Project project, BaseInputModel inputModel)
         {
             Project = project;
-        }
 
-        public bool Validate(BaseInputModel inputModel)
-        {
             Notes.Clear();
 
             DoValidate(inputModel);

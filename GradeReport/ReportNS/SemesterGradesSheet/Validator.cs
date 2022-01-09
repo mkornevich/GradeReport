@@ -9,10 +9,6 @@ namespace GradeReport.ReportNS.SemesterGradesSheet
 {
     public class Validator : BaseValidator
     {
-        public Validator(Project project) : base(project)
-        {
-        }
-
         public override void DoValidate(BaseInputModel inputModel)
         {
             var input = (InputModel)inputModel;

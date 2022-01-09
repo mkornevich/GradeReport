@@ -14,6 +14,8 @@ namespace GradeReport.ReportNS.TableModel
 
         public string GroupName { get; set; }
 
+        public string Name { get; set; }
+
         public Dictionary<string, object> Params { get; private set; } = new Dictionary<string, object>();
 
         public object Entity { get; set; }
