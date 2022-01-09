@@ -14,6 +14,10 @@ namespace GradeReport.ReportNS.TableModel
 
         public List<Cell> Cells { get; private set; } = new List<Cell>();
 
+        public Cell this[int rowIndex, int columnIndex] => this[Rows[rowIndex], Columns[columnIndex]];
+
+        public Cell this[Row row, Column column] => Cells.Find(c => c.Row == row && c.Column == column);
+
         public Column CreateColumn()
         {
             var col = new Column(this);

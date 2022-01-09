@@ -19,6 +19,8 @@ namespace GradeReport.ReportNS.TableModel
             }
         }
 
+        public override int Index => Table.Columns.IndexOf(this);
+
         internal Column(Table table) : base(table)
         {
         }

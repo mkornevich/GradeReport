@@ -10,6 +10,8 @@ namespace GradeReport.ReportNS.TableModel
     {
         public Table Table { get; private set; }
 
+        public abstract int Index { get; }
+
         public string GroupName { get; set; }
 
         public Dictionary<string, object> Params { get; private set; } = new Dictionary<string, object>();
