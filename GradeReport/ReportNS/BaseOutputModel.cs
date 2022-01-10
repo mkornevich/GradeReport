@@ -8,6 +8,6 @@ namespace GradeReport.ReportNS
 {
     public class BaseOutputModel
     {
-        public Dictionary<string, string> Params { get; } = new Dictionary<string, string>();
+        public Dictionary<string, object> Params { get; } = new Dictionary<string, object>();
     }
 }

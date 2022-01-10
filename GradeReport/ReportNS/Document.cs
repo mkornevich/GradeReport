@@ -12,7 +12,7 @@ namespace GradeReport.ReportNS
 {
     public class Document
     {
-        public IWorkbook Workbook { get; private set; }
+        public XSSFWorkbook Workbook { get; private set; }
 
         public void Load(string fileName)
         {
@@ -47,7 +47,8 @@ namespace GradeReport.ReportNS
         {
             var dialog = new SaveFileDialog()
             {
-                DefaultExt = "xlsx",
+                FileName = "report.xlsx",
+                OverwritePrompt = false,
             };
 
             if (dialog.ShowDialog() == DialogResult.OK)

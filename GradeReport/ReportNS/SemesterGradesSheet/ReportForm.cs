@@ -40,6 +40,8 @@ namespace GradeReport.ReportNS.SemesterGradesSheet
                 }
             };
 
+            
+
             semesterC.Enabled = false;
             semesterLF.Chooser = semesterC;
             semesterLF.SelectMode = SelectMode.Single;
@@ -61,12 +63,20 @@ namespace GradeReport.ReportNS.SemesterGradesSheet
             subjectC.Enabled = false;
             subjectLF.Chooser = subjectC;
             subjectLF.SelectMode = SelectMode.Single;
+
+
+            
         }
 
         protected override void SetStartData()
         {
             groupLF.Entities = Project.Groups.Cast<object>().ToList();
             groupLF.SelectedEntities = new List<object>();
+
+            // TODO
+            groupLF.SelectedEntities = new List<object>() { groupLF.Entities[0] };
+            semesterLF.SelectedEntities = new List<object>() { semesterLF.Entities[0] };
+            subjectLF.SelectedEntities = new List<object>() { subjectLF.Entities[0] };
         }
 
         protected override void CreateComponents()
