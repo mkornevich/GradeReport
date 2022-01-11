@@ -1,4 +1,5 @@
-﻿using GradeReport.ProjectNS.Entities;
+﻿using GradeReport.Common;
+using GradeReport.ProjectNS.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,7 +39,18 @@ namespace GradeReport.ReportNS.SemesterGradesSheet
                 row["SemesterGrade"] = GetSemesterGrade();
                 row["SemesterGradeText"] = GradeValue.GetByValue((int)row["SemesterGrade"]).Text;
                 _output.Table.Add(row);
-            } 
+            }
+
+            var course = _input.Semester.Course;
+
+            _output.Params["SemesterNumber"] = _input.Semester.CourseHalf;
+            _output.Params["CourseYears"] = course.StartYear + "/" + (course.StartYear + 1);
+            _output.Params["SubjectName"] = _input.Subject.Name;
+            _output.Params["CourseNumber"] = _input.Semester.Course.Number;
+            _output.Params["GroupNameForCourse"] = _input.Semester.Course.GroupNameForCourse;
+            _output.Params["SpecialtyName"] = course.Specialty.Code + " " + course.Specialty.Name;
+            _output.Params["CuratorName"] = PersonNameUtils.Format(Project.Config.CuratorName, PersonNameUtils.SurnameNP);
+            _output.Params["Date"] = _input.Date.ToString("d");
 
             return _output;
         }
