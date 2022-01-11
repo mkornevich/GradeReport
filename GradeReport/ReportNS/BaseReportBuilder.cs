@@ -11,12 +11,12 @@ namespace GradeReport.ReportNS
     {
         protected Project Project { get; private set; }
 
-        public BaseOutputModel Build(Project project, BaseInputModel input)
+        public BaseOutputModel Build(Project project, BaseInputModel baseInputModel)
         {
             Project = project;
-            return DoBuild(input);
+            return DoBuild(baseInputModel);
         }
 
-        protected abstract BaseOutputModel DoBuild(BaseInputModel input);
+        protected abstract BaseOutputModel DoBuild(BaseInputModel baseInputModel);
     }
 }

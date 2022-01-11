@@ -15,13 +15,13 @@ namespace GradeReport.ReportNS
 
         protected Project Project { get; private set; }
 
-        public bool Validate(Project project, BaseInputModel inputModel)
+        public bool Validate(Project project, BaseInputModel baseInputModel)
         {
             Project = project;
 
             Notes.Clear();
 
-            DoValidate(inputModel);
+            DoValidate(baseInputModel);
 
             if (Notes.ErrorCount > 0)
             {
@@ -37,6 +37,6 @@ namespace GradeReport.ReportNS
             return true;
         }
 
-        public abstract void DoValidate(BaseInputModel input);
+        public abstract void DoValidate(BaseInputModel baseInputModel);
     }
 }

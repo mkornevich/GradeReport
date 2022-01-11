@@ -31,22 +31,20 @@ namespace GradeReport.ReportNS
 
         protected virtual void ValidateAct(object sender, EventArgs e)
         {
-            if (TryBuildInputModel() && Validator.Validate(Project, InputModel))
+            InputModel = BuildInputModel();
+
+            if (InputModel != null && Validator.Validate(Project, InputModel))
             {
                 MessageBox.Show("Проверка успешно пройдена.");
             }
-            else
-            {
-                MessageBox.Show("Проверка не пройдена. Исправте ошибки.");
-            }
         }
 
-        protected virtual void CreateComponents()
+        public virtual void InitGUI()
         {
 
         }
 
-        protected virtual void SetStartData()
+        protected virtual void ResetGUI()
         {
 
         }
@@ -54,14 +52,15 @@ namespace GradeReport.ReportNS
         public void ShowReportForm(Project project)
         {
             Project = project;
-            CreateComponents();
-            SetStartData();
+            ResetGUI();
             ShowDialog();
         }
 
         protected virtual void BuildAct(object sender, EventArgs e)
         {
-            if (!TryBuildInputModel() || !Validator.Validate(Project, InputModel))
+            InputModel = BuildInputModel();
+
+            if (InputModel == null || !Validator.Validate(Project, InputModel))
             {
                 return;
             }
@@ -76,9 +75,9 @@ namespace GradeReport.ReportNS
             document.StoreWithDialog(true);
         }
 
-        protected virtual bool TryBuildInputModel()
+        protected virtual BaseInputModel BuildInputModel()
         {
-            return false;
+            return null;
         }
 
         private void InitializeComponent()

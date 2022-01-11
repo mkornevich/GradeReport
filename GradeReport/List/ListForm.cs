@@ -114,6 +114,18 @@ namespace GradeReport.List
             };
         }
 
+        public void SetParent(ListForm parentLF, Func<List<object>, List<object>> getEntities)
+        {
+            Chooser.Enabled = false;
+            parentLF.SelectionChanged += () =>
+            {
+                var parentSelectedCount = parentLF.SelectedEntities.Count;
+                Chooser.Enabled = parentSelectedCount > 0;
+                SelectedEntities = new List<object>();
+                Entities = (parentSelectedCount > 0) ? getEntities(parentLF.SelectedEntities) : new List<object>();
+            };
+        }
+
         private void ChooserClickAct(object sender, EventArgs e)
         {
             ShowDialog();

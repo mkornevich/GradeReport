@@ -9,6 +9,6 @@ namespace GradeReport.ReportNS.SemesterGradesSheet
 {
     public class OutputModel : BaseOutputModel
     {
-        public List<Dictionary<string, object>> Table { get; private set; } = new List<Dictionary<string, object>>();
+        public List<Dictionary<string, object>> TableRows { get; private set; } = new List<Dictionary<string, object>>();
     }
 }

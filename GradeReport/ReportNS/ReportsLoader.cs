@@ -23,6 +23,14 @@ namespace GradeReport.ReportNS
             new SummaryTrainingPeriodSheet.ReportForm(),
         };
 
+        public ReportsLoader()
+        {
+            foreach (var reportForm in _reports)
+            {
+                reportForm.InitGUI();
+            }
+        }
+
         public void LoadToMenuItem(ToolStripMenuItem item)
         {
             foreach (var report in _reports)

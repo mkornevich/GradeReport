@@ -48,7 +48,7 @@ namespace GradeReport.ReportNS
             var dialog = new SaveFileDialog()
             {
                 FileName = "report.xlsx",
-                OverwritePrompt = false,
+                // OverwritePrompt = false,
             };
 
             if (dialog.ShowDialog() == DialogResult.OK)

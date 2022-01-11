@@ -16,13 +16,15 @@ namespace GradeReport.ReportNS.SemesterGradesSheet
 
         private Student _student;
 
-        protected override BaseOutputModel DoBuild(BaseInputModel input)
+        protected override BaseOutputModel DoBuild(BaseInputModel baseInputModel)
         {
-            _input = (InputModel)input;
+            _input = (InputModel)baseInputModel;
 
             var students = Project.SemesterStudentRefs
                 .FindAll(ssr => ssr.Student.GroupGuid == _input.Group.Guid)
-                .Select(ssr => ssr.Student).ToList();
+                .Select(ssr => ssr.Student)
+                .OrderBy(s => s.Name)
+                .ToList();
 
             var studentIndex = 1;
 
@@ -38,7 +40,7 @@ namespace GradeReport.ReportNS.SemesterGradesSheet
                 row["CourseGrade"] = GetCourseGrade();
                 row["SemesterGrade"] = GetSemesterGrade();
                 row["SemesterGradeText"] = GradeValue.GetByValue((int)row["SemesterGrade"]).Text;
-                _output.Table.Add(row);
+                _output.TableRows.Add(row);
             }
 
             var course = _input.Semester.Course;
@@ -46,8 +48,8 @@ namespace GradeReport.ReportNS.SemesterGradesSheet
             _output.Params["SemesterNumber"] = _input.Semester.CourseHalf;
             _output.Params["CourseYears"] = course.StartYear + "/" + (course.StartYear + 1);
             _output.Params["SubjectName"] = _input.Subject.Name;
-            _output.Params["CourseNumber"] = _input.Semester.Course.Number;
-            _output.Params["GroupNameForCourse"] = _input.Semester.Course.GroupNameForCourse;
+            _output.Params["CourseNumber"] = course.Number;
+            _output.Params["GroupNameForCourse"] = course.GroupNameForCourse;
             _output.Params["SpecialtyName"] = course.Specialty.Code + " " + course.Specialty.Name;
             _output.Params["CuratorName"] = PersonNameUtils.Format(Project.Config.CuratorName, PersonNameUtils.SurnameNP);
             _output.Params["Date"] = _input.Date.ToString("d");
@@ -58,7 +60,8 @@ namespace GradeReport.ReportNS.SemesterGradesSheet
         private object GetCourseGrade()
         {
             return Project.Grades
-                .FindAll(g => g.Semester.Guid == _input.Semester.Guid && g.Student.Guid == _student.Guid && g.SubjectGuid == _input.Subject.Guid && g.GradeTypeName == GradeType.Course)
+                .FindAll(g => g.Semester.Guid == _input.Semester.Guid && g.Student.Guid == _student.Guid 
+                && g.SubjectGuid == _input.Subject.Guid && g.GradeTypeName == GradeType.Course)
                 .Select(g => g.Value)
                 .FirstOrDefault();
         }
@@ -66,7 +69,8 @@ namespace GradeReport.ReportNS.SemesterGradesSheet
         private object GetSemesterGrade()
         {
             return Project.Grades
-                .FindAll(g => g.Semester.Guid == _input.Semester.Guid && g.Student.Guid == _student.Guid && g.SubjectGuid == _input.Subject.Guid && g.GradeTypeName == GradeType.Semester)
+                .FindAll(g => g.Semester.Guid == _input.Semester.Guid && g.Student.Guid == _student.Guid 
+                && g.SubjectGuid == _input.Subject.Guid && g.GradeTypeName == GradeType.Semester)
                 .Select(g => g.Value)
                 .FirstOrDefault();
         }
@@ -74,7 +78,8 @@ namespace GradeReport.ReportNS.SemesterGradesSheet
         private object GetOKRAvg()
         {
             return Project.Grades
-                .FindAll(g => g.Semester.Guid == _input.Semester.Guid && g.Student.Guid == _student.Guid && g.SubjectGuid == _input.Subject.Guid && g.GradeTypeName == GradeType.OKR)
+                .FindAll(g => g.Semester.Guid == _input.Semester.Guid && g.Student.Guid == _student.Guid 
+                && g.SubjectGuid == _input.Subject.Guid && g.GradeTypeName == GradeType.OKR)
                 .Average(g => g.Value);
         }
     }

@@ -15,7 +15,7 @@ SummaryTrainingPeriodSheet
 
 ===
 
-Рефакторинг и нормализация SemesterGradesSheet и базового для отчетов
+-+ Рефакторинг и нормализация SemesterGradesSheet и базового для отчетов
 
 === 11
 

@@ -12,18 +12,17 @@ namespace GradeReport.ReportNS.SemesterGradesSheet
     public class ReportIntegrator : BaseReportIntegrator
     {
         private const int FirstRow = 10;
-        protected override void DoIntegrate(BaseOutputModel model, Document document)
+        protected override void DoIntegrate(BaseOutputModel baseOutputModel, Document document)
         {
-            var output = (OutputModel)model;
-            var rows = output.Table;
-
+            var outputModel = (OutputModel)baseOutputModel;
+            var rows = outputModel.TableRows;
             var sheet = (XSSFSheet)document.Workbook.GetSheetAt(0);
 
-            sheet.ShiftRows(11, sheet.LastRowNum, output.Table.Count - 1, true, false);
+            sheet.ShiftRows(FirstRow + 1, sheet.LastRowNum, rows.Count - 1, true, false);
 
-            for (int i = 0; i < output.Table.Count - 1; i++)
+            for (int i = 0; i < rows.Count - 1; i++)
             {
-                sheet.CopyRow(10, 11 + i);
+                sheet.CopyRow(FirstRow, FirstRow + 1 + i);
             }
 
             for (int i = 0; i < rows.Count; i++)
@@ -34,7 +33,7 @@ namespace GradeReport.ReportNS.SemesterGradesSheet
                 Parametrize(row, rowParams);
             }
 
-            Parametrize(sheet, output.Params);
+            Parametrize(sheet, outputModel.Params);
         }
     }
 }

@@ -9,9 +9,9 @@ namespace GradeReport.ReportNS.SemesterGradesSheet
 {
     public class Validator : BaseValidator
     {
-        public override void DoValidate(BaseInputModel inputModel)
+        public override void DoValidate(BaseInputModel baseInputModel)
         {
-            var input = (InputModel)inputModel;
+            var input = (InputModel)baseInputModel;
 
             Notes.ErrorIf(input.Group == null, "Не выбрана группа");
             Notes.ErrorIf(input.Semester == null, "Не выбран семестр");
