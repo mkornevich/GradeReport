@@ -1,5 +1,6 @@
 ﻿using GradeReport.Common;
 using GradeReport.ProjectNS.Entities;
+using GradeReport.ProjectNS.Queries;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,19 +28,24 @@ namespace GradeReport.ReportNS.SemesterGradesSheet
                 .OrderBy(s => s.Name)
                 .ToList();
 
-            var studentIndex = 1;
+            var query = new GradeQuery(Project)
+                .SetInSemester(_input.Semester)
+                .SetInSubject(_input.Subject)
+                .NewQueryFromCurrentGrades();
 
-            foreach (var student in students)
+            for (int i = 0; i < students.Count; i++)
             {
-                _student = student;
+                _student = students[i];
+                query.SetInStudent(_student);
+
                 var row = new Dictionary<string, object>();
-                row["Student"] = student;
-                row["StudentIndex"] = studentIndex++;
-                row["StudentName"] = student.Name;
-                row["OKRAvg"] = GetOKRAvg();
+                row["Student"] = _student;
+                row["StudentIndex"] = i + 1;
+                row["StudentName"] = _student.Name;
+                row["OKRAvg"] = query.SetInGradeType(GradeType.OKR).GetJoined();
                 row["LPR"] = "зачтено";
-                row["CourseGrade"] = GetCourseGrade();
-                row["SemesterGrade"] = GetSemesterGrade();
+                row["CourseGrade"] = query.SetInGradeType(GradeType.Course).GetOne();
+                row["SemesterGrade"] = query.SetInGradeType(GradeType.Semester).GetOne();
                 row["SemesterGradeText"] = GradeValue.GetByValue((int)row["SemesterGrade"]).Text;
                 _output.TableRows.Add(row);
             }
@@ -56,32 +62,6 @@ namespace GradeReport.ReportNS.SemesterGradesSheet
             _output.Params["Date"] = _input.Date.ToString("d");
 
             return _output;
-        }
-
-        private object GetCourseGrade()
-        {
-            return Project.Grades
-                .FindAll(g => g.Semester.Guid == _input.Semester.Guid && g.Student.Guid == _student.Guid 
-                && g.SubjectGuid == _input.Subject.Guid && g.GradeTypeName == GradeType.Course)
-                .Select(g => g.Value)
-                .FirstOrDefault();
-        }
-
-        private object GetSemesterGrade()
-        {
-            return Project.Grades
-                .FindAll(g => g.Semester.Guid == _input.Semester.Guid && g.Student.Guid == _student.Guid 
-                && g.SubjectGuid == _input.Subject.Guid && g.GradeTypeName == GradeType.Semester)
-                .Select(g => g.Value)
-                .FirstOrDefault();
-        }
-
-        private object GetOKRAvg()
-        {
-            return Project.Grades
-                .FindAll(g => g.Semester.Guid == _input.Semester.Guid && g.Student.Guid == _student.Guid 
-                && g.SubjectGuid == _input.Subject.Guid && g.GradeTypeName == GradeType.OKR)
-                .Average(g => g.Value);
         }
     }
 }
