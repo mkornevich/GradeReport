@@ -10,7 +10,7 @@ namespace GradeReport.ReportNS.SemesterGradesSheet
 {
     public class ReportBuilder : BaseReportBuilder
     {
-        private OutputModel _output = new OutputModel();
+        private OutputModel _output;
 
         private InputModel _input;
 
@@ -19,6 +19,7 @@ namespace GradeReport.ReportNS.SemesterGradesSheet
         protected override BaseOutputModel DoBuild(BaseInputModel baseInputModel)
         {
             _input = (InputModel)baseInputModel;
+            _output = new OutputModel();
 
             var students = Project.SemesterStudentRefs
                 .FindAll(ssr => ssr.Student.GroupGuid == _input.Group.Guid)

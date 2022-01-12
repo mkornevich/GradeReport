@@ -16,8 +16,6 @@ namespace GradeReport.ReportNS
 
         protected BaseValidator Validator { get; set; }
 
-        protected BaseInputModel InputModel { get; set; }
-
         protected BaseReportBuilder ReportBuilder { get; set; }
 
         protected BaseReportIntegrator ReportIntegrator { get; set; }
@@ -31,9 +29,9 @@ namespace GradeReport.ReportNS
 
         protected virtual void ValidateAct(object sender, EventArgs e)
         {
-            InputModel = BuildInputModel();
+            var inputModel = BuildInputModel();
 
-            if (InputModel != null && Validator.Validate(Project, InputModel))
+            if (inputModel != null && Validator.Validate(Project, inputModel))
             {
                 MessageBox.Show("Проверка успешно пройдена.");
             }
@@ -58,14 +56,14 @@ namespace GradeReport.ReportNS
 
         protected virtual void BuildAct(object sender, EventArgs e)
         {
-            InputModel = BuildInputModel();
+            var inputModel = BuildInputModel();
 
-            if (InputModel == null || !Validator.Validate(Project, InputModel))
+            if (inputModel == null || !Validator.Validate(Project, inputModel))
             {
                 return;
             }
 
-            var outputModel = ReportBuilder.Build(Project, InputModel);
+            var outputModel = ReportBuilder.Build(Project, inputModel);
 
             var document = new Document();
             document.Load(App.AppDataPath + "\\Reports\\" + Tag + "\\Template.xlsx");
