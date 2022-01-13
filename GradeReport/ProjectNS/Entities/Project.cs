@@ -42,14 +42,5 @@ namespace GradeReport.ProjectNS.Entities
         {
             Changed?.Invoke();
         }
-
-        public Project()
-        {
-            new List<IProjectProperty> {
-                Config, Groups, GroupSubjectRefs, Courses, Specialties, Qualifications,
-                Students, SemesterStudentRefs, Semesters, SemesterSubjectRefs,
-                Subjects, Grades, MyStudentRefs
-            }.ForEach(e => e.Project = this);
-        }
     }
 }

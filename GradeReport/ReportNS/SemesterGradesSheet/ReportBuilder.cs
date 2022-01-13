@@ -23,7 +23,7 @@ namespace GradeReport.ReportNS.SemesterGradesSheet
             _output = new OutputModel();
 
             var students = Project.SemesterStudentRefs
-                .FindAll(ssr => ssr.Student.GroupGuid == _input.Group.Guid)
+                .FindAll(ssr => ssr.SemesterGuid == _input.Semester.Guid)
                 .Select(ssr => ssr.Student)
                 .OrderBy(s => s.Name)
                 .ToList();
