@@ -32,6 +32,8 @@ namespace GradeReport.ProjectExplorer.Nodes
         {
             var config = (Config)Entity;
             return 
+                $"Название вышестоящей организации: {config.ParentOrganizationName}\n" +
+                $"Название учебного заведения: {config.OrganizationName}\n" +
                 $"ФИО Куратора: {config.CuratorName}\n" +
                 $"ФИО Преподавателя: {config.TeacherName}\n" +
                 $"Курируемая группа: {(config.CuratorGroupGuid != Guid.Empty ? config.CuratorGroup.Name : "Не указана")}";

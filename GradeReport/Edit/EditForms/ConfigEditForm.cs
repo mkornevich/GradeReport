@@ -27,6 +27,8 @@ namespace GradeReport.Edit.EditForms
         protected override void EntityToForm(object entity, ChangeMode mode)
         {
             var config = (Config)entity;
+            parentOrganisationNameTB.Text = config.ParentOrganizationName;
+            organizationNameTB.Text = config.OrganizationName;
             curatorNameTB.Text = config.CuratorName;
             teacherNameTB.Text = config.TeacherName;
 
@@ -37,8 +39,11 @@ namespace GradeReport.Edit.EditForms
         protected override void FormToEntity(object entity, ChangeMode mode)
         {
             var config = (Config)entity;
+            config.ParentOrganizationName = parentOrganisationNameTB.Text;
+            config.OrganizationName = organizationNameTB.Text;
             config.CuratorName = curatorNameTB.Text;
             config.TeacherName = teacherNameTB.Text;
+
             config.CuratorGroupGuid = curatorGroupLF.SelectedEntities.Cast<Group>().FirstOrDefault()?.Guid ?? Guid.Empty;
         }
     }

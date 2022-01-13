@@ -29,7 +29,7 @@ namespace GradeReport.ProjectExplorer
             };
         }
 
-        public static EventHandler BuildCreateAct<TEntity>(PENode node, Dao<TEntity> entityDao, EditForm editForm, Validator validator) where TEntity : Entity
+        public static EventHandler BuildCreateAct<TEntity>(PENode node, EntityCollection<TEntity> entityDao, EditForm editForm, Validator validator) where TEntity : Entity
         {
             return BuildCreateAct(node, () => entityDao.Create(), (e) => entityDao.Add((TEntity)e), editForm, validator);
         }
@@ -53,7 +53,7 @@ namespace GradeReport.ProjectExplorer
             };
         }
 
-        public static EventHandler BuildRemoveAct<TEntity>(PENode node, Dao<TEntity> dao, Validator validator) where TEntity : Entity
+        public static EventHandler BuildRemoveAct<TEntity>(PENode node, EntityCollection<TEntity> dao, Validator validator) where TEntity : Entity
         {
             return (s, e) =>
             {

@@ -1,5 +1,4 @@
-﻿using GradeReport.ProjectNS.Daos;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,35 +9,52 @@ namespace GradeReport.ProjectNS.Entities
 {
     public class Project
     {
-        public Config Config { get; } = new Config();
+        [JsonProperty]
+        public Config Config { get; private set; }
 
-        public GroupDao Groups { get; } = new GroupDao();
+        public EntityCollection<Group> Groups { get; }
 
-        public GroupSubjectRefDao GroupSubjectRefs { get; } = new GroupSubjectRefDao();
+        public EntityCollection<GroupSubjectRef> GroupSubjectRefs { get; }
 
-        public CourseDao Courses { get; } = new CourseDao();
+        public EntityCollection<Course> Courses { get; }
 
-        public SpecialtyDao Specialties { get; } = new SpecialtyDao();
+        public EntityCollection<Specialty> Specialties { get; }
 
-        public QualificationDao Qualifications { get; } = new QualificationDao();
+        public EntityCollection<Qualification> Qualifications { get; }
 
-        public StudentDao Students { get; } = new StudentDao();
+        public EntityCollection<Student> Students { get; }
 
-        public SemesterStudentRefDao SemesterStudentRefs { get; } = new SemesterStudentRefDao();
+        public EntityCollection<SemesterStudentRef> SemesterStudentRefs { get; }
 
-        public SemesterDao Semesters { get; } = new SemesterDao();
+        public EntityCollection<Semester> Semesters { get; }
 
-        public SemesterSubjectRefDao SemesterSubjectRefs { get; } = new SemesterSubjectRefDao();
+        public EntityCollection<SemesterSubjectRef> SemesterSubjectRefs { get; }
 
-        public SubjectDao Subjects { get; } = new SubjectDao();
+        public EntityCollection<Subject> Subjects { get; }
 
-        public GradeDao Grades { get; } = new GradeDao();
+        public EntityCollection<Grade> Grades { get; }
 
-        public MyStudentRefDao MyStudentRefs { get; } = new MyStudentRefDao();
+        public EntityCollection<MyStudentRef> MyStudentRefs { get; }
 
         public event Action Changed;
 
-        public void OnChanged() 
+        public Project()
+        {
+            Groups = new EntityCollection<Group>(this);
+            GroupSubjectRefs = new EntityCollection<GroupSubjectRef>(this);
+            Courses = new EntityCollection<Course>(this);
+            Specialties = new EntityCollection<Specialty>(this);
+            Qualifications = new EntityCollection<Qualification>(this);
+            Students = new EntityCollection<Student>(this);
+            SemesterStudentRefs = new EntityCollection<SemesterStudentRef>(this);
+            Semesters = new EntityCollection<Semester>(this);
+            SemesterSubjectRefs = new EntityCollection<SemesterSubjectRef>(this);
+            Subjects = new EntityCollection<Subject>(this);
+            Grades = new EntityCollection<Grade>(this);
+            MyStudentRefs = new EntityCollection<MyStudentRef>(this);
+        }
+
+        public void OnChanged()
         {
             Changed?.Invoke();
         }

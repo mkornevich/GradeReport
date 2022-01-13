@@ -10,6 +10,12 @@ namespace GradeReport.ProjectNS.Entities
     public class Config : Entity
     {
         [EntityField]
+        public string ParentOrganizationName { get; set; }
+
+        [EntityField]
+        public string OrganizationName { get; set; }
+
+        [EntityField]
         public string CuratorName { get; set; }
 
         [EntityField]

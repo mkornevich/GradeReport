@@ -25,7 +25,7 @@ namespace GradeReport.ProjectNS
 
         public static bool Compare(Entity eA, Entity eB)
         {
-            if (ReferenceEquals(eA, eB)) 
+            if (ReferenceEquals(eA, eB))
                 return true;
 
             if (eA == null || eB == null || eA.GetType() != eB.GetType()) 

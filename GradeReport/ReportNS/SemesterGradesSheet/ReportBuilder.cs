@@ -52,6 +52,8 @@ namespace GradeReport.ReportNS.SemesterGradesSheet
 
             var course = _input.Semester.Course;
 
+            _output.Params["ParentOrganizationName"] = Project.Config.ParentOrganizationName.ToUpper();
+            _output.Params["OrganizationName"] = Project.Config.OrganizationName;
             _output.Params["SemesterNumber"] = _input.Semester.CourseHalf;
             _output.Params["CourseYears"] = course.StartYear + "/" + (course.StartYear + 1);
             _output.Params["SubjectName"] = _input.Subject.Name;

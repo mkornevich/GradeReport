@@ -39,12 +39,16 @@ namespace GradeReport.Edit.EditForms
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.helpLabel3 = new GradeReport.Common.HelpLabel();
+            this.organizationNameTB = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.parentOrganisationNameTB = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(12, 157);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 15);
             this.label1.TabIndex = 1;
@@ -54,7 +58,7 @@ namespace GradeReport.Edit.EditForms
             // 
             this.curatorNameTB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.curatorNameTB.Location = new System.Drawing.Point(12, 27);
+            this.curatorNameTB.Location = new System.Drawing.Point(12, 175);
             this.curatorNameTB.Name = "curatorNameTB";
             this.curatorNameTB.Size = new System.Drawing.Size(395, 23);
             this.curatorNameTB.TabIndex = 2;
@@ -65,7 +69,7 @@ namespace GradeReport.Edit.EditForms
             this.helpLabel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel1.BackgroundImage")));
             this.helpLabel1.HelpText = "В данном поле необходимо указать полное ФИО куратора.\r\n\r\nДанная информация исполь" +
     "зуется при построении отчетов.";
-            this.helpLabel1.Location = new System.Drawing.Point(391, 9);
+            this.helpLabel1.Location = new System.Drawing.Point(391, 157);
             this.helpLabel1.Name = "helpLabel1";
             this.helpLabel1.Size = new System.Drawing.Size(16, 16);
             this.helpLabel1.TabIndex = 3;
@@ -77,7 +81,7 @@ namespace GradeReport.Edit.EditForms
             this.curatorGroupCH.BackColor = System.Drawing.SystemColors.Window;
             this.curatorGroupCH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.curatorGroupCH.ChooseText = "";
-            this.curatorGroupCH.Location = new System.Drawing.Point(12, 115);
+            this.curatorGroupCH.Location = new System.Drawing.Point(12, 263);
             this.curatorGroupCH.Name = "curatorGroupCH";
             this.curatorGroupCH.Size = new System.Drawing.Size(395, 23);
             this.curatorGroupCH.TabIndex = 4;
@@ -88,7 +92,7 @@ namespace GradeReport.Edit.EditForms
             this.helpLabel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel2.BackgroundImage")));
             this.helpLabel2.HelpText = "В данном поле необходимо указать полное ФИО преподавателя.\r\n\r\nДанная информация и" +
     "спользуется при построении отчетов.";
-            this.helpLabel2.Location = new System.Drawing.Point(391, 53);
+            this.helpLabel2.Location = new System.Drawing.Point(391, 201);
             this.helpLabel2.Name = "helpLabel2";
             this.helpLabel2.Size = new System.Drawing.Size(16, 16);
             this.helpLabel2.TabIndex = 7;
@@ -97,7 +101,7 @@ namespace GradeReport.Edit.EditForms
             // 
             this.teacherNameTB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.teacherNameTB.Location = new System.Drawing.Point(12, 71);
+            this.teacherNameTB.Location = new System.Drawing.Point(12, 219);
             this.teacherNameTB.Name = "teacherNameTB";
             this.teacherNameTB.Size = new System.Drawing.Size(395, 23);
             this.teacherNameTB.TabIndex = 6;
@@ -105,7 +109,7 @@ namespace GradeReport.Edit.EditForms
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 53);
+            this.label2.Location = new System.Drawing.Point(12, 201);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(119, 15);
             this.label2.TabIndex = 5;
@@ -114,7 +118,7 @@ namespace GradeReport.Edit.EditForms
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 97);
+            this.label3.Location = new System.Drawing.Point(12, 245);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 15);
             this.label3.TabIndex = 8;
@@ -125,16 +129,59 @@ namespace GradeReport.Edit.EditForms
             this.helpLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.helpLabel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel3.BackgroundImage")));
             this.helpLabel3.HelpText = "В данном поле необходимо выбрать ту группу которую ведет куратор.";
-            this.helpLabel3.Location = new System.Drawing.Point(391, 97);
+            this.helpLabel3.Location = new System.Drawing.Point(391, 245);
             this.helpLabel3.Name = "helpLabel3";
             this.helpLabel3.Size = new System.Drawing.Size(16, 16);
             this.helpLabel3.TabIndex = 8;
+            // 
+            // organizationNameTB
+            // 
+            this.organizationNameTB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.organizationNameTB.Location = new System.Drawing.Point(12, 101);
+            this.organizationNameTB.Multiline = true;
+            this.organizationNameTB.Name = "organizationNameTB";
+            this.organizationNameTB.Size = new System.Drawing.Size(395, 53);
+            this.organizationNameTB.TabIndex = 13;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 83);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(172, 15);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Название учебного заведения";
+            // 
+            // parentOrganisationNameTB
+            // 
+            this.parentOrganisationNameTB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.parentOrganisationNameTB.Location = new System.Drawing.Point(12, 27);
+            this.parentOrganisationNameTB.Multiline = true;
+            this.parentOrganisationNameTB.Name = "parentOrganisationNameTB";
+            this.parentOrganisationNameTB.Size = new System.Drawing.Size(395, 53);
+            this.parentOrganisationNameTB.TabIndex = 10;
+            this.parentOrganisationNameTB.Text = "\r\n";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(216, 15);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Название вышестоящей организации";
             // 
             // ConfigEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(419, 188);
+            this.ClientSize = new System.Drawing.Size(419, 340);
+            this.Controls.Add(this.organizationNameTB);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.parentOrganisationNameTB);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.helpLabel3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.helpLabel2);
@@ -162,5 +209,9 @@ namespace GradeReport.Edit.EditForms
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private Common.HelpLabel helpLabel3;
+        private System.Windows.Forms.TextBox organizationNameTB;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox parentOrganisationNameTB;
+        private System.Windows.Forms.Label label5;
     }
 }
