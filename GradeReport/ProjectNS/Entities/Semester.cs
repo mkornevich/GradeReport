@@ -26,6 +26,13 @@ namespace GradeReport.ProjectNS.Entities
         public string FullName => $"группа {Course.Group.Name} > курс {Course.Number} > семестр {CourseHalf}";
 
         [JsonIgnore]
-        public int AbsolutePosition => Course.Number + CourseHalf - 1;
+        public int AbsolutePosition
+        {
+            get
+            {
+                var courseNumber = Course.Number;
+                return courseNumber + courseNumber - 2 + CourseHalf;
+            }
+        }
     }
 }
