@@ -14,8 +14,8 @@ namespace GradeReport.ReportNS.SemesterGradesSheet
         private const int FirstRow = 10;
         protected override void DoIntegrate(BaseOutputModel baseOutputModel, Document document)
         {
-            var outputModel = (OutputModel)baseOutputModel;
-            var rows = outputModel.TableRows;
+            var model = (OutputModel)baseOutputModel;
+            var rows = model.TableRows;
             var sheet = (XSSFSheet)document.Workbook.GetSheetAt(0);
 
             sheet.ShiftRows(FirstRow + 1, sheet.LastRowNum, rows.Count - 1, true, false);
@@ -33,7 +33,7 @@ namespace GradeReport.ReportNS.SemesterGradesSheet
                 Parametrize(row, rowParams);
             }
 
-            Parametrize(sheet, outputModel.Params);
+            Parametrize(sheet, model.Params);
         }
     }
 }

@@ -12,12 +12,12 @@ namespace GradeReport.ReportNS
 {
     public abstract class BaseReportIntegrator
     {
-        public void Integrate(BaseOutputModel model, Document document)
+        public void Integrate(BaseOutputModel baseOutputModel, Document document)
         {
-            DoIntegrate(model, document);
+            DoIntegrate(baseOutputModel, document);
         }
 
-        protected abstract void DoIntegrate(BaseOutputModel model, Document document);
+        protected abstract void DoIntegrate(BaseOutputModel baseOutputModel, Document document);
 
         protected void Parametrize(ICell cell, Dictionary<string, object> _params)
         {
