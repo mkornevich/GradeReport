@@ -11,6 +11,9 @@ SummaryTrainingPeriodSheet
 - Сводная ведомость успеваемости учащихся группы
 GroupProgressSheet
 
+=== 12
+
+Добавлены ParentOrganizationName OrganizationName
 
 === 11
 

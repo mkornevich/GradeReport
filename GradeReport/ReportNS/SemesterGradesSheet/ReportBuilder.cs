@@ -22,16 +22,9 @@ namespace GradeReport.ReportNS.SemesterGradesSheet
             _input = (InputModel)baseInputModel;
             _output = new OutputModel();
 
-            var students = Project.SemesterStudentRefs
-                .FindAll(ssr => ssr.SemesterGuid == _input.Semester.Guid)
-                .Select(ssr => ssr.Student)
-                .OrderBy(s => s.Name)
-                .ToList();
+            List<Student> students = GetStudents();
 
-            var query = new GradeQuery(Project)
-                .SetInSemester(_input.Semester)
-                .SetInSubject(_input.Subject)
-                .NewQueryFromCurrentGrades();
+            var query = CreateQuery();
 
             for (int i = 0; i < students.Count; i++)
             {
@@ -54,7 +47,7 @@ namespace GradeReport.ReportNS.SemesterGradesSheet
 
             _output.Params["ParentOrganizationName"] = Project.Config.ParentOrganizationName.ToUpper();
             _output.Params["OrganizationName"] = Project.Config.OrganizationName;
-            _output.Params["SemesterNumber"] = _input.Semester.CourseHalf;
+            _output.Params["SemesterNumber"] = _input.Semester.AbsolutePosition;
             _output.Params["CourseYears"] = course.StartYear + "/" + (course.StartYear + 1);
             _output.Params["SubjectName"] = _input.Subject.Name;
             _output.Params["CourseNumber"] = course.Number;
@@ -64,6 +57,34 @@ namespace GradeReport.ReportNS.SemesterGradesSheet
             _output.Params["Date"] = _input.Date.ToString("d");
 
             return _output;
+        }
+
+        private GradeQuery CreateQuery()
+        {
+            return new GradeQuery(Project)
+                .SetInSemester(_input.Semester)
+                .SetInSubject(_input.Subject)
+                .NewQueryFromCurrentGrades();
+        }
+
+        private List<Student> GetStudents()
+        {
+            IEnumerable<Student> students;
+
+            if (_input.IsOnlyMyStudents)
+            {
+                students = Project.MyStudentRefs
+                    .FindAll(msr => msr.SubjectGuid == _input.Subject.Guid && msr.Semester.Guid == _input.Semester.Guid)
+                    .Select(msr => msr.Student);
+            }
+            else
+            {
+                students = Project.SemesterStudentRefs
+                    .FindAll(ssr => ssr.SemesterGuid == _input.Semester.Guid)
+                    .Select(ssr => ssr.Student);
+            }
+
+            return students.OrderBy(s => s.Name).ToList();
         }
     }
 }

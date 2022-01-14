@@ -37,6 +37,7 @@ namespace GradeReport.ReportNS.SemesterGradesSheet
             this.subjectC = new GradeReport.Common.Chooser();
             this.label4 = new System.Windows.Forms.Label();
             this.dateDTP = new System.Windows.Forms.DateTimePicker();
+            this.isOnlyMyStudentsCB = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // groupC
@@ -112,11 +113,22 @@ namespace GradeReport.ReportNS.SemesterGradesSheet
             this.dateDTP.Size = new System.Drawing.Size(400, 23);
             this.dateDTP.TabIndex = 6;
             // 
+            // isOnlyMyStudentsCB
+            // 
+            this.isOnlyMyStudentsCB.AutoSize = true;
+            this.isOnlyMyStudentsCB.Location = new System.Drawing.Point(12, 204);
+            this.isOnlyMyStudentsCB.Name = "isOnlyMyStudentsCB";
+            this.isOnlyMyStudentsCB.Size = new System.Drawing.Size(176, 19);
+            this.isOnlyMyStudentsCB.TabIndex = 7;
+            this.isOnlyMyStudentsCB.Text = "Только для моих студентов";
+            this.isOnlyMyStudentsCB.UseVisualStyleBackColor = true;
+            // 
             // ReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(424, 214);
+            this.ClientSize = new System.Drawing.Size(424, 232);
+            this.Controls.Add(this.isOnlyMyStudentsCB);
             this.Controls.Add(this.dateDTP);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.subjectC);
@@ -136,6 +148,7 @@ namespace GradeReport.ReportNS.SemesterGradesSheet
             this.Controls.SetChildIndex(this.subjectC, 0);
             this.Controls.SetChildIndex(this.label4, 0);
             this.Controls.SetChildIndex(this.dateDTP, 0);
+            this.Controls.SetChildIndex(this.isOnlyMyStudentsCB, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,5 +164,6 @@ namespace GradeReport.ReportNS.SemesterGradesSheet
         private Common.Chooser subjectC;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dateDTP;
+        private System.Windows.Forms.CheckBox isOnlyMyStudentsCB;
     }
 }

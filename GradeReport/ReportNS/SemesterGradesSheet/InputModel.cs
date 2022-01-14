@@ -16,5 +16,7 @@ namespace GradeReport.ReportNS.SemesterGradesSheet
         public Subject Subject { get; set; }
 
         public DateTime Date { get; set; }
+
+        public bool IsOnlyMyStudents { get; set; }
     }
 }

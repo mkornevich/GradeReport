@@ -75,6 +75,7 @@ namespace GradeReport.ReportNS.SemesterGradesSheet
             model.Semester = (Semester)semesterLF.SelectedEntities.FirstOrDefault();
             model.Subject = (Subject)subjectLF.SelectedEntities.FirstOrDefault();
             model.Date = dateDTP.Value;
+            model.IsOnlyMyStudents = isOnlyMyStudentsCB.Checked;
 
             return model;
         }
