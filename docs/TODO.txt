@@ -11,6 +11,11 @@ SummaryTrainingPeriodSheet
 - Сводная ведомость успеваемости учащихся группы
 GroupProgressSheet
 
+=== 14
+
+-+ Разработка формы и моделей а так же базовое создание всех компонентов
+-+ fix semester absolute position
+
 === 12
 
 Добавлены ParentOrganizationName OrganizationName

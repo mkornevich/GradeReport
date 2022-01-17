@@ -1,5 +1,5 @@
 ﻿using GradeReport.GradeEditor;
-using GradeReport.ProjectNS.Entities;
+using GradeReport.ProjectModel.Entities;
 using GradeReport.Properties;
 using GradeReport.Validation.Validators;
 using System;

@@ -1,5 +1,5 @@
 ﻿using GradeReport.Common.NotificationNS;
-using GradeReport.ProjectNS.Entities;
+using GradeReport.ProjectModel.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

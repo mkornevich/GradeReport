@@ -1,7 +1,7 @@
 ﻿using GradeReport.List;
 using GradeReport.List.Adapters;
-using GradeReport.ProjectNS;
-using GradeReport.ProjectNS.Entities;
+using GradeReport.ProjectModel;
+using GradeReport.ProjectModel.Entities;
 using GradeReport.Properties;
 using GradeReport.Validation.Validators;
 using System;

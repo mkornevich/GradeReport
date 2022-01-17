@@ -1,7 +1,7 @@
 ﻿using GradeReport.GradeEditor;
-using GradeReport.ProjectNS;
-using GradeReport.ProjectNS.Entities;
-using GradeReport.ReportNS;
+using GradeReport.ProjectModel;
+using GradeReport.ProjectModel.Entities;
+using GradeReport.Reporting;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

@@ -1,6 +1,6 @@
 ﻿using GradeReport.List;
 using GradeReport.List.Adapters;
-using GradeReport.ProjectNS.Entities;
+using GradeReport.ProjectModel.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

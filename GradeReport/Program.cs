@@ -1,7 +1,7 @@
 using GradeReport.GradeEditor;
 using GradeReport.Main;
-using GradeReport.ProjectNS;
-using GradeReport.ProjectNS.Entities;
+using GradeReport.ProjectModel;
+using GradeReport.ProjectModel.Entities;
 using System;
 using System.Windows.Forms;
 

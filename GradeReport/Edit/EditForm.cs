@@ -1,7 +1,7 @@
 ﻿using GradeReport.Common.ActionNS;
 using GradeReport.Common.NotificationNS;
-using GradeReport.ProjectNS;
-using GradeReport.ProjectNS.Entities;
+using GradeReport.ProjectModel;
+using GradeReport.ProjectModel.Entities;
 using GradeReport.Validation;
 using System;
 using System.Collections.Generic;

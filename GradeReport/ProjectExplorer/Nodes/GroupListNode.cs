@@ -1,7 +1,7 @@
 ﻿using GradeReport.Edit;
 using GradeReport.Edit.EditForms;
 using GradeReport.Master;
-using GradeReport.ProjectNS.Entities;
+using GradeReport.ProjectModel.Entities;
 using GradeReport.Properties;
 using GradeReport.Validation.Validators;
 using System;
