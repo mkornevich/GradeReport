@@ -215,6 +215,8 @@ namespace GradeReport.ProjectModel.Queries
 
         public double GetAvg() => Get().Average(g => g.Value);
 
+        public bool Exists() => Get().Count > 0;
+
         public object Clone()
         {
             return new GradeQuery(_project)

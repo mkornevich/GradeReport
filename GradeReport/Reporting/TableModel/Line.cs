@@ -12,7 +12,7 @@ namespace GradeReport.Reporting.TableModel
 
         public abstract int Index { get; }
 
-        public string GroupName { get; set; }
+        public string Group { get; set; }
 
         public string Name { get; set; }
 

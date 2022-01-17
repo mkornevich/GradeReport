@@ -8,9 +8,9 @@ namespace GradeReport.Reporting.TableModel
 {
     public class Table
     {
-        public List<Column> Columns { get; private set; } = new List<Column>();
+        public ColumnCollection Columns { get; private set; } = new ColumnCollection();
 
-        public List<Row> Rows { get; private set; } = new List<Row>();
+        public RowCollection Rows { get; private set; } = new RowCollection();
 
         public List<Cell> Cells { get; private set; } = new List<Cell>();
 

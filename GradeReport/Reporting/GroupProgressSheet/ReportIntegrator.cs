@@ -13,12 +13,14 @@ namespace GradeReport.Reporting.GroupProgressSheet
         {
             var model = (OutputModel)baseOutputModel;
 
-            var sheet = (XSSFSheet)document.Workbook.GetSheetAt(0);
+            var tableSheet = (XSSFSheet)document.Workbook.GetSheetAt(0);
+            var paramsSheet = (XSSFSheet)document.Workbook.GetSheetAt(1);
 
 
+            
 
-
-            Parametrize(sheet, model.Params);
+            Parametrize(tableSheet, model.Params);
+            Parametrize(paramsSheet, model.Params);
         }
     }
 }
