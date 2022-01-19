@@ -31,8 +31,25 @@ namespace GradeReport.Reporting.GroupProgressSheet
             CalcSemesterGrades();
 
             CalcStudentSubjectsAvg();
+            CalcTotalAvg();
+
+            _output.Params["SemesterNumber"] = _input.Semester.AbsolutePosition;
 
             return _output;
+        }
+
+        private void CalcTotalAvg()
+        {
+            double sum = 0;
+            double count = 0;
+
+            foreach (var cell in _table.Columns.FindByName("SubjectsAvg").Cells)
+            {
+                count++;
+                sum += (double)cell.Value;
+            }
+
+            _output.Params["TotalAvg"] = Math.Round(sum / count, 2);
         }
 
         private void CalcStudentSubjectsAvg()

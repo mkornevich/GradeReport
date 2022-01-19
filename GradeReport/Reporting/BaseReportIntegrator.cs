@@ -21,6 +21,9 @@ namespace GradeReport.Reporting
 
         protected void Parametrize(ICell cell, Dictionary<string, object> _params)
         {
+            if (cell.CellType != CellType.String)
+                return;
+            
             var cellStr = cell.StringCellValue;
 
             if (!cellStr.Contains("{") || !cellStr.Contains("}"))

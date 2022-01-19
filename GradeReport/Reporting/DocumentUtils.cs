@@ -10,16 +10,26 @@ namespace GradeReport.Reporting
 {
     static class DocumentUtils
     {
-        public static void InsertColumns(XSSFSheet sheet, int columnIndex, int count = 1, Direction insertDirection = Direction.Left)
+        public static void InsertColumns(XSSFSheet sheet, int columnIndex, int count = 1, Direction insertDirection = Direction.Start)
         {
             RightShiftColumns(sheet, columnIndex, count, insertDirection);
-            LeftShiftMergedRanges(sheet, columnIndex, count, true);
+            RightShiftMergedRanges(sheet, columnIndex, count, true);
+        }
+
+        public static void InsertRows(XSSFSheet sheet, int rowIndex, int count = 1)
+        {
+            sheet.ShiftRows(rowIndex + 1, sheet.LastRowNum, count, true, false);
+
+            for (int i = 0; i < count; i++)
+            {
+                sheet.CopyRow(rowIndex, rowIndex + 1 + i);
+            }
         }
 
 
-        public static void RightShiftColumns(XSSFSheet sheet, int columnIndex, int count = 1, Direction direction = Direction.Left)
+        public static void RightShiftColumns(XSSFSheet sheet, int columnIndex, int count = 1, Direction direction = Direction.Start)
         {
-            var startColumn = direction == Direction.Right ? columnIndex + 1 : columnIndex;
+            var startColumn = direction == Direction.End ? columnIndex + 1 : columnIndex;
 
             foreach (XSSFRow row in sheet)
             {
@@ -31,15 +41,15 @@ namespace GradeReport.Reporting
                     if (index < startColumn) continue;
 
                     cell.CopyCellTo(newIndex);
-                    row.RemoveCell(cell);
+                    // row.RemoveCell(cell);
                     sheet.SetColumnWidth(newIndex, sheet.GetColumnWidth(index));
                 }
             }
         }
 
-        public static void LeftShiftColumns(XSSFSheet sheet, int columnIndex, int count = 1, Direction direction = Direction.Left)
+        private static void LeftShiftColumns(XSSFSheet sheet, int columnIndex, int count = 1, Direction direction = Direction.Start)
         {
-            var startColumn = direction == Direction.Right ? columnIndex + 1 : columnIndex;
+            var startColumn = direction == Direction.End ? columnIndex + 1 : columnIndex;
 
             int index = -1;
             int toLeftIndex = -1;
@@ -65,7 +75,7 @@ namespace GradeReport.Reporting
             }
         }
 
-        public static void LeftShiftMergedRanges(XSSFSheet sheet, int columnIndex, int count, bool stickRangeToStart)
+        public static void RightShiftMergedRanges(XSSFSheet sheet, int columnIndex, int count, bool stickRangeToStart)
         {
             List<int> removes = new List<int>();
             List<CellRangeAddress> adds = new List<CellRangeAddress>();
@@ -91,11 +101,49 @@ namespace GradeReport.Reporting
             sheet.RemoveMergedRegions(removes);
             adds.ForEach(reg => sheet.AddMergedRegion(reg));
         }
+
+        private static void LeftShiftMergedRanges(XSSFSheet sheet, int columnIndex, int count)
+        {
+            List<int> removes = new List<int>();
+            List<CellRangeAddress> adds = new List<CellRangeAddress>();
+
+            for (int regionIndex = 0; regionIndex < sheet.NumMergedRegions; regionIndex++)
+            {
+                var oldRegion = sheet.GetMergedRegion(regionIndex);
+                var newRegion = oldRegion.Copy();
+
+                if (oldRegion.LastColumn < columnIndex)
+                {
+                    continue;
+                }
+
+                newRegion.FirstColumn = newRegion.FirstColumn >= count ? newRegion.FirstColumn - count : 0;
+                newRegion.LastColumn = newRegion.LastColumn >= count ? newRegion.LastColumn - count : 0;
+
+                if ((oldRegion.FirstColumn >= columnIndex && newRegion.FirstColumn < columnIndex) || oldRegion.FirstColumn < columnIndex)
+                {
+                    newRegion.FirstColumn = oldRegion.FirstColumn;
+                    newRegion.LastColumn = newRegion.LastColumn < newRegion.FirstColumn ? newRegion.FirstColumn : newRegion.LastColumn;
+                }
+
+                removes.Add(regionIndex);
+
+                if (newRegion.LastColumn - newRegion.FirstColumn < 2 - 1)
+                {
+                    continue;
+                }
+
+                adds.Add(newRegion);
+            }
+
+            sheet.RemoveMergedRegions(removes);
+            adds.ForEach(reg => sheet.AddMergedRegion(reg));
+        }
     }
 
     public enum Direction
     {
-        Right,
-        Left,
+        End,
+        Start,
     }
 }

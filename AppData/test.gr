@@ -1361,7 +1361,7 @@
       "SubjectGuid": "50b88c48-2c00-4e7d-97ff-a2c650ecf04a",
       "GradeTypeName": "Semester",
       "Number": 1,
-      "Value": 9
+      "Value": 3
     },
     {
       "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
@@ -1561,7 +1561,7 @@
       "SubjectGuid": "0f15fcfa-d756-40ca-96fa-3bc2b3f10d3a",
       "GradeTypeName": "Semester",
       "Number": 1,
-      "Value": 8
+      "Value": 4
     },
     {
       "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
@@ -1761,7 +1761,7 @@
       "SubjectGuid": "3db0083b-1dce-4b9b-8f98-9ff07bfab60c",
       "GradeTypeName": "Semester",
       "Number": 1,
-      "Value": 8
+      "Value": 5
     },
     {
       "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
@@ -1961,7 +1961,7 @@
       "SubjectGuid": "f21e1016-62fc-4e25-852d-9f3f68ecabc6",
       "GradeTypeName": "Semester",
       "Number": 1,
-      "Value": 8
+      "Value": 6
     },
     {
       "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
@@ -2361,7 +2361,7 @@
       "SubjectGuid": "802e83ba-6992-421c-ba7a-2f0fa6f93eb8",
       "GradeTypeName": "Semester",
       "Number": 1,
-      "Value": 5
+      "Value": 7
     },
     {
       "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
@@ -2561,7 +2561,7 @@
       "SubjectGuid": "f0c5e76d-5d72-4bc9-be8c-25bc2c8e9b77",
       "GradeTypeName": "Exam",
       "Number": 1,
-      "Value": 7
+      "Value": 1
     },
     {
       "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
@@ -2761,7 +2761,7 @@
       "SubjectGuid": "30e76770-85fd-4fee-a388-d05497272168",
       "GradeTypeName": "Exam",
       "Number": 1,
-      "Value": 8
+      "Value": 2
     },
     {
       "SemesterGuid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5",
