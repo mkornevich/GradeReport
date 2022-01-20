@@ -44,6 +44,12 @@ namespace GradeReport.Reporting
             newRst.t = (rst.t == null) ? null : Parametrize(rst.t, _params);
 
             cell.SetCellValue(new XSSFRichTextString(newRst));
+
+            double numValue;
+            if (double.TryParse(cell.StringCellValue, out numValue))
+            {
+                cell.SetCellValue(numValue);
+            }
         }
 
         protected string Parametrize(string template, Dictionary<string, object> _params)
