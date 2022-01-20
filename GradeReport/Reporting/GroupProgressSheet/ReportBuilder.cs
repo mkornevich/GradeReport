@@ -1,4 +1,5 @@
-﻿using GradeReport.ProjectModel.Entities;
+﻿using GradeReport.Common;
+using GradeReport.ProjectModel.Entities;
 using GradeReport.ProjectModel.Queries;
 using GradeReport.Reporting.TableModel;
 using System;
@@ -33,9 +34,53 @@ namespace GradeReport.Reporting.GroupProgressSheet
             CalcStudentSubjectsAvg();
             CalcTotalAvg();
 
-            _output.Params["SemesterNumber"] = _input.Semester.AbsolutePosition;
+            var semester = _input.Semester;
+            var course = semester.Course;
+            _output.Params["SemesterNumber"] = semester.AbsolutePosition;
+            _output.Params["CourseNumber"] = course.Number;
+            _output.Params["CourseYears"] = course.StartYear + "/" + (course.StartYear + 1);
+            _output.Params["GroupName"] = course.GroupNameForCourse;
+            _output.Params["StudentsCount"] = _table.Rows.Count;
+            _output.Params["CuratorName"] = PersonNameUtils.Format(semester.Project.Config.CuratorName, PersonNameUtils.SurnameNP);
+
+            CalcTotalGradesCounts();
 
             return _output;
+        }
+
+        private void CalcTotalGradesCounts()
+        {
+            int eightNineCount = 0;
+            int sixSevenCount = 0;
+            int badOneTwoSubjectsCount = 0;
+            int badThreeAndMoreSubjectsCount = 0;
+
+            foreach (var row in _table.Rows)
+            {
+                var grades = row.Cells
+                    .FindAll(cell => cell.Column.Group == "Subject" && (int)cell.Value >= 0)
+                    .Select(cell => (int)cell.Value)
+                    .ToList();
+
+                var badGrades = grades.Count(grade => grade <= 3);
+
+                var isEightNine = grades.All(grade => grade >= 8);
+                var isSixSeven = grades.All(grade => grade >= 6);
+                var isBadOneTwoSubjects = badGrades >= 1 && badGrades <= 2;
+                var isBadThreeAndMoreSubjects = badGrades >= 3;
+
+                if (isEightNine) eightNineCount++;
+                if (!isEightNine && isSixSeven) sixSevenCount++;
+                if (isBadOneTwoSubjects) badOneTwoSubjectsCount++;
+                if (isBadThreeAndMoreSubjects) badThreeAndMoreSubjectsCount++;
+            }
+
+            var p = _output.Params;
+            Func<int, string> fmt = (count) => count == 0 ? "-" : count.ToString();
+            p["EightNineCount"] = fmt(eightNineCount);
+            p["SixSevenCount"] = fmt(sixSevenCount);
+            p["BadOneTwoSubjectsCount"] = fmt(badOneTwoSubjectsCount);
+            p["BadThreeAndMoreSubjectsCount"] = fmt(badThreeAndMoreSubjectsCount);
         }
 
         private void CalcTotalAvg()

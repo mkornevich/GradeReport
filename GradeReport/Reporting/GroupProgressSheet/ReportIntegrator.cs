@@ -46,6 +46,7 @@ namespace GradeReport.Reporting.GroupProgressSheet
             FillHeader();
 
             Parametrize(_tableSheet, baseOutputModel.Params);
+            Parametrize(_paramsSheet, baseOutputModel.Params);
         }
 
         private void FillHeader()
@@ -97,24 +98,6 @@ namespace GradeReport.Reporting.GroupProgressSheet
 
         private void FillSemesterGrades()
         {
-            foreach (var row in _studentRows)
-            {
-                foreach (var col in _subjectCols)
-                {
-                    var gradeValue = (int)_table[row, col].Value;
-                    var cell = _tableSheet.GetRow(2 + row.Index).GetCell(2 + col.Index);
-
-                    if (gradeValue < 0)
-                    {
-                        cell.SetCellValue(GradeValue.GetByValue(gradeValue).DisplayAs);
-                    }
-                    else
-                    {
-                        cell.SetCellValue(gradeValue);
-                    }
-                }
-            }
-
             for (int rowIndex = 0; rowIndex < _studentRows.Count; rowIndex++)
             {
                 for (int colIndex = 0; colIndex < _subjectCols.Count; colIndex++)
