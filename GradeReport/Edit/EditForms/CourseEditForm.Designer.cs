@@ -32,7 +32,6 @@ namespace GradeReport.Edit.EditForms
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CourseEditForm));
             this.label1 = new System.Windows.Forms.Label();
             this.groupNameForCourseTB = new System.Windows.Forms.TextBox();
-            this.numberNUD = new System.Windows.Forms.NumericUpDown();
             this.helpLabel1 = new GradeReport.Common.HelpLabel();
             this.startYearNUD = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,7 +41,7 @@ namespace GradeReport.Edit.EditForms
             this.label4 = new System.Windows.Forms.Label();
             this.helpLabel3 = new GradeReport.Common.HelpLabel();
             this.helpLabel4 = new GradeReport.Common.HelpLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.numberNUD)).BeginInit();
+            this.numberLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.startYearNUD)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,32 +63,11 @@ namespace GradeReport.Edit.EditForms
             this.groupNameForCourseTB.Size = new System.Drawing.Size(296, 23);
             this.groupNameForCourseTB.TabIndex = 2;
             // 
-            // numberNUD
-            // 
-            this.numberNUD.Location = new System.Drawing.Point(12, 27);
-            this.numberNUD.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.numberNUD.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numberNUD.Name = "numberNUD";
-            this.numberNUD.Size = new System.Drawing.Size(92, 23);
-            this.numberNUD.TabIndex = 3;
-            this.numberNUD.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
             // helpLabel1
             // 
             this.helpLabel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel1.BackgroundImage")));
-            this.helpLabel1.HelpText = "В данном поле необходимо указать порядковый номер учебного курса.";
+            this.helpLabel1.HelpText = "В данном поле отображается порядковый номер учебного курса.\r\nСоздается автоматиче" +
+    "ски.";
             this.helpLabel1.Location = new System.Drawing.Point(88, 9);
             this.helpLabel1.Name = "helpLabel1";
             this.helpLabel1.Size = new System.Drawing.Size(16, 16);
@@ -176,11 +154,21 @@ namespace GradeReport.Edit.EditForms
             this.helpLabel4.Size = new System.Drawing.Size(16, 16);
             this.helpLabel4.TabIndex = 6;
             // 
+            // numberLbl
+            // 
+            this.numberLbl.AutoSize = true;
+            this.numberLbl.Location = new System.Drawing.Point(12, 30);
+            this.numberLbl.Name = "numberLbl";
+            this.numberLbl.Size = new System.Drawing.Size(13, 15);
+            this.numberLbl.TabIndex = 10;
+            this.numberLbl.Text = "1";
+            // 
             // CourseEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(517, 146);
+            this.Controls.Add(this.numberLbl);
             this.Controls.Add(this.helpLabel4);
             this.Controls.Add(this.helpLabel3);
             this.Controls.Add(this.label4);
@@ -190,12 +178,10 @@ namespace GradeReport.Edit.EditForms
             this.Controls.Add(this.label2);
             this.Controls.Add(this.startYearNUD);
             this.Controls.Add(this.helpLabel1);
-            this.Controls.Add(this.numberNUD);
             this.Controls.Add(this.groupNameForCourseTB);
             this.Controls.Add(this.label1);
             this.Name = "CourseEditForm";
             this.Text = "CourseEditForm";
-            ((System.ComponentModel.ISupportInitialize)(this.numberNUD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.startYearNUD)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -206,7 +192,6 @@ namespace GradeReport.Edit.EditForms
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox groupNameForCourseTB;
-        private System.Windows.Forms.NumericUpDown numberNUD;
         private Common.HelpLabel helpLabel1;
         private System.Windows.Forms.NumericUpDown startYearNUD;
         private System.Windows.Forms.Label label2;
@@ -216,5 +201,6 @@ namespace GradeReport.Edit.EditForms
         private System.Windows.Forms.Label label4;
         private Common.HelpLabel helpLabel3;
         private Common.HelpLabel helpLabel4;
+        private System.Windows.Forms.Label numberLbl;
     }
 }

@@ -29,7 +29,7 @@ namespace GradeReport.Edit.EditForms
         {
             var course = (Course)entity;
             groupNameForCourseTB.Text = course.GroupNameForCourse;
-            numberNUD.Value = course.Number;
+            numberLbl.Text = course.Number.ToString();
             startYearNUD.Value = course.StartYear;
 
             specialtyLF.Entities = Project.Specialties.Cast<object>().ToList();
@@ -40,7 +40,7 @@ namespace GradeReport.Edit.EditForms
         {
             var course = (Course)entity;
             course.GroupNameForCourse = groupNameForCourseTB.Text;
-            course.Number = (int)numberNUD.Value;
+            course.Number = int.Parse(numberLbl.Text);
             course.StartYear = (int)startYearNUD.Value;
 
             course.SpecialtyGuid = specialtyLF.SelectedEntities.Cast<Specialty>().FirstOrDefault()?.Guid ?? Guid.Empty;

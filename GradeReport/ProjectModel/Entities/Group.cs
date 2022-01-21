@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,5 +11,10 @@ namespace GradeReport.ProjectModel.Entities
     {
         [EntityField]
         public string Name { get; set; }
+
+        [JsonIgnore]
+        public List<Course> Courses => Project.Courses
+            .FindAll(c => c.GroupGuid == Guid)
+            .OrderBy(c => c.Number).ToList();
     }
 }

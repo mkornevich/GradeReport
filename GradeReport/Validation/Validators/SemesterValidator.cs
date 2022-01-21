@@ -32,6 +32,17 @@ namespace GradeReport.Validation.Validators
                 "2) Для семестра не все оценки удалены.\n" +
                 "3) Для семестра не все студенты удалены.\n" +
                 "4) По пути: семестр > предметы > предмет x > мои студенты - не все удалено.");
+
+            var semesterCourse = semester.Course;
+            var lastCourse = semester.Course.Group.Courses.LastOrDefault();
+
+            builder.ErrorIf(
+                semesterCourse.Number < lastCourse.Number,
+                "Невозможно удалить семестр так как необходимо удалить курс с номером выше чем у курса данного семестра.");
+
+            builder.ErrorIf(
+                semester.CourseHalf == 1 && semesterCourse.Semesters.Count == 2,
+                "Невозможно удалить 1 семестр пока не удален 2");
         }
     }
 }
