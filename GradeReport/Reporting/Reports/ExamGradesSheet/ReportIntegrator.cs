@@ -16,12 +16,7 @@ namespace GradeReport.Reporting.Reports.ExamGradesSheet
             var rows = model.TableRows;
             var sheet = (XSSFSheet)document.Workbook.GetSheetAt(0);
 
-            sheet.ShiftRows(FirstRow + 1, sheet.LastRowNum, rows.Count - 1, true, false);
-
-            for (int i = 0; i < rows.Count - 1; i++)
-            {
-                sheet.CopyRow(FirstRow, FirstRow + 1 + i);
-            }
+            DocumentUtils.InsertRows(sheet, FirstRow, rows.Count - 1);
 
             for (int i = 0; i < rows.Count; i++)
             {

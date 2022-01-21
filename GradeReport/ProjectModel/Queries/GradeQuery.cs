@@ -206,7 +206,7 @@ namespace GradeReport.ProjectModel.Queries
             });
         }
 
-        public string GetJoined(string separator = ", ")
+        public string GetJoined(string separator = " ")
         {
             return string.Join(separator, Get().Select(g => g.Value.ToString()));
         }

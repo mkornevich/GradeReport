@@ -46,7 +46,8 @@ namespace GradeReport.Reporting
             cell.SetCellValue(new XSSFRichTextString(newRst));
 
             double numValue;
-            if (double.TryParse(cell.StringCellValue, out numValue))
+            var strValue = cell.StringCellValue;
+            if (!strValue.Contains(' ') && double.TryParse(strValue, out numValue))
             {
                 cell.SetCellValue(numValue);
             }

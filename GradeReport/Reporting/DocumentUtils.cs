@@ -16,13 +16,13 @@ namespace GradeReport.Reporting
             RightShiftMergedRanges(sheet, columnIndex, count, true);
         }
 
-        public static void InsertRows(XSSFSheet sheet, int rowIndex, int count = 1)
+        public static void InsertRows(XSSFSheet sheet, int baseRowIndex, int insertCount = 1)
         {
-            sheet.ShiftRows(rowIndex + 1, sheet.LastRowNum, count, true, false);
+            sheet.ShiftRows(baseRowIndex + 1, sheet.LastRowNum, insertCount, true, false);
 
-            for (int i = 0; i < count; i++)
+            for (int i = 0; i < insertCount; i++)
             {
-                sheet.CopyRow(rowIndex, rowIndex + 1 + i);
+                sheet.CopyRow(baseRowIndex, baseRowIndex + 1 + i);
             }
         }
 
