@@ -41,7 +41,7 @@ namespace GradeReport.Validation.Validators
                 "Невозможно удалить семестр так как необходимо удалить курс с номером выше чем у курса данного семестра.");
 
             builder.ErrorIf(
-                semester.CourseHalf == 1 && semesterCourse.Semesters.Count == 2,
+                semester.LocalNumber == 1 && semesterCourse.Semesters.Count == 2,
                 "Невозможно удалить 1 семестр пока не удален 2");
         }
     }

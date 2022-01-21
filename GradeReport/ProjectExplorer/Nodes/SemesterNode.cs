@@ -20,7 +20,7 @@ namespace GradeReport.ProjectExplorer.Nodes
         protected override void Visualize()
         {
             var semester = (Semester)Entity;
-            Text = semester.CourseHalf.ToString() + " семестр";
+            Text = semester.LocalNumber.ToString() + " семестр";
         }
 
         protected override void CreateMenuItems(List<ToolStripMenuItem> items)
@@ -45,7 +45,7 @@ namespace GradeReport.ProjectExplorer.Nodes
         {
             var semester = (Semester)Entity;
             return
-                $"Половина курса: " + (semester.CourseHalf == 1 ? "первая" : "вторая");
+                $"Половина курса: " + (semester.LocalNumber == 1 ? "первая" : "вторая");
         }
     }
 }

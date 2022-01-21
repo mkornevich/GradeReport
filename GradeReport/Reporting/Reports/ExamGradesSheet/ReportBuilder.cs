@@ -55,7 +55,7 @@ namespace GradeReport.Reporting.Reports.ExamGradesSheet
 
             _output.Params["ParentOrganizationName"] = Project.Config.ParentOrganizationName;
             _output.Params["OrganizationName"] = Project.Config.OrganizationName;
-            _output.Params["SemesterNumber"] = _input.Semester.AbsolutePosition;
+            _output.Params["SemesterNumber"] = _input.Semester.AbsoluteNumber;
             _output.Params["SubjectName"] = _input.Subject.Name;
             _output.Params["CourseNumber"] = _course.Number;
             _output.Params["GroupName"] = _course.GroupNameForCourse;

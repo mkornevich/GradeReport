@@ -36,7 +36,7 @@ namespace GradeReport.Reporting.Reports.GroupProgressSheet
 
             var semester = _input.Semester;
             var course = semester.Course;
-            _output.Params["SemesterNumber"] = semester.AbsolutePosition;
+            _output.Params["SemesterNumber"] = semester.AbsoluteNumber;
             _output.Params["CourseNumber"] = course.Number;
             _output.Params["CourseYears"] = course.StartYear + "/" + (course.StartYear + 1);
             _output.Params["GroupName"] = course.GroupNameForCourse;

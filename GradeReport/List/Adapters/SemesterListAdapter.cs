@@ -27,7 +27,7 @@ namespace GradeReport.List.Adapters
                 semester.Guid,
                 group.Name,
                 course.Number,
-                semester.CourseHalf,
+                semester.LocalNumber,
             };
         }
 
@@ -36,7 +36,7 @@ namespace GradeReport.List.Adapters
             var semester = (Semester)entity;
             var course = semester.Course;
             var group = course.Group;
-            return $"группа {group.Name} > курс {course.Number} > семестр {semester.CourseHalf}";
+            return $"группа {group.Name} > курс {course.Number} > семестр {semester.LocalNumber}";
         }
 
         public override bool IsRowBelongEntity(DataGridViewRow row, object entity)

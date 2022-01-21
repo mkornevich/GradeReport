@@ -20,18 +20,18 @@ namespace GradeReport.ProjectModel.Entities
         }
 
         [EntityField]
-        public int CourseHalf { get; set; }
+        public int LocalNumber { get; set; }
 
         [JsonIgnore]
-        public string FullName => $"группа {Course.Group.Name} > курс {Course.Number} > семестр {CourseHalf}";
+        public string FullName => $"группа {Course.Group.Name} > курс {Course.Number} > семестр {LocalNumber}";
 
         [JsonIgnore]
-        public int AbsolutePosition
+        public int AbsoluteNumber
         {
             get
             {
                 var courseNumber = Course.Number;
-                return courseNumber + courseNumber - 2 + CourseHalf;
+                return courseNumber + courseNumber - 2 + LocalNumber;
             }
         }
     }

@@ -42,7 +42,7 @@ namespace GradeReport.ProjectExplorer.Nodes
             var course = (Course)Entity;
             var newSemester = Project.Semesters.Create();
             newSemester.Course = course;
-            newSemester.CourseHalf = Project.Semesters.Exists(s => s.CourseGuid == course.Guid && s.CourseHalf == 1) ? 2 : 1;
+            newSemester.LocalNumber = Project.Semesters.Exists(s => s.CourseGuid == course.Guid && s.LocalNumber == 1) ? 2 : 1;
 
             var validator = new SemesterValidator();
             if (validator.CanCreate(Project, course))
@@ -57,7 +57,7 @@ namespace GradeReport.ProjectExplorer.Nodes
             var course = (Course)Entity;
             Project.Semesters
                 .FindAll(s => s.CourseGuid == course.Guid)
-                .OrderBy(s => s.CourseHalf)
+                .OrderBy(s => s.LocalNumber)
                 .ToList().ForEach(s => nodes.Add(new SemesterNode() { Entity = s }));
         }
 

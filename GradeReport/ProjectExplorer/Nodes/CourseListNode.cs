@@ -56,7 +56,7 @@ namespace GradeReport.ProjectExplorer.Nodes
             {
                 var semester = Project.Semesters.Create();
                 semester.CourseGuid = newCourse.Guid;
-                semester.CourseHalf = i + 1;
+                semester.LocalNumber = i + 1;
                 Project.Semesters.Add(semester);
             }
 
