@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GradeReport.Reporting.GroupProgressSheet
+namespace GradeReport.Reporting.Reports.SemesterGradesSheet
 {
     public class OutputModel : BaseOutputModel
     {
-        public Table Table { get; private set; } = new Table();
+        public List<Dictionary<string, object>> TableRows { get; private set; } = new List<Dictionary<string, object>>();
     }
 }

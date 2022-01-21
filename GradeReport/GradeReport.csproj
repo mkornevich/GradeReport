@@ -40,8 +40,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Update="Reporting\ControlWorksAnalyzer\ReportForm.cs" />
-    <Compile Update="Reporting\ControlWorksAnalyzer\ReportForm.Designer.cs">
+    <Compile Update="Reporting\Reports\ControlWorksAnalyzer\ReportForm.cs" />
+    <Compile Update="Reporting\Reports\ControlWorksAnalyzer\ReportForm.Designer.cs">
       <DependentUpon>ReportForm.cs</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -54,7 +54,7 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="Reporting\ControlWorksAnalyzer\ReportForm.resx">
+    <EmbeddedResource Update="Reporting\Reports\ControlWorksAnalyzer\ReportForm.resx">
       <DependentUpon>ReportForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>

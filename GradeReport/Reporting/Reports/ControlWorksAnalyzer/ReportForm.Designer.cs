@@ -1,5 +1,5 @@
 ﻿
-namespace GradeReport.Reporting.ControlWorksAnalyzer
+namespace GradeReport.Reporting.Reports.ControlWorksAnalyzer
 {
     partial class ReportForm
     {

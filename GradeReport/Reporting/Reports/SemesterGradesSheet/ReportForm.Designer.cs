@@ -1,5 +1,5 @@
 ﻿
-namespace GradeReport.Reporting.SemesterGradesSheet
+namespace GradeReport.Reporting.Reports.SemesterGradesSheet
 {
     partial class ReportForm
     {

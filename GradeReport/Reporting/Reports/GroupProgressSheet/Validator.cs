@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GradeReport.Reporting.GroupProgressSheet
+namespace GradeReport.Reporting.Reports.GroupProgressSheet
 {
     public class Validator : BaseValidator
     {

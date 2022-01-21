@@ -5,6 +5,7 @@ SummaryTrainingPeriodSheet
 	- Подсветка тех кто идет на красный диполм
 
 
+=== 
 
 - Экзаменационная ведомость
 ExamGradesSheet
@@ -12,7 +13,7 @@ ExamGradesSheet
 
 
 
-===
+=== 20
 
 -+ Сводная ведомость успеваемости учащихся группы
 GroupProgressSheet

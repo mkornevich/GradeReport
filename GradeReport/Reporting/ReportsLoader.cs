@@ -1,9 +1,4 @@
 ﻿using GradeReport.Properties;
-using GradeReport.Reporting.ControlWorksAnalyzer;
-using GradeReport.Reporting.ExamGradesSheet;
-using GradeReport.Reporting.GroupProgressSheet;
-using GradeReport.Reporting.SemesterGradesSheet;
-using GradeReport.Reporting.SummaryTrainingPeriodSheet;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,11 +11,11 @@ namespace GradeReport.Reporting
     public class ReportsLoader
     {
         private readonly BaseReportForm[] _reports = {
-            new ControlWorksAnalyzer.ReportForm(),
-            new SemesterGradesSheet.ReportForm(),
-            new ExamGradesSheet.ReportForm(),
-            new GroupProgressSheet.ReportForm(),
-            new SummaryTrainingPeriodSheet.ReportForm(),
+            new Reports.ControlWorksAnalyzer.ReportForm(),
+            new Reports.SemesterGradesSheet.ReportForm(),
+            new Reports.ExamGradesSheet.ReportForm(),
+            new Reports.GroupProgressSheet.ReportForm(),
+            new Reports.SummaryTrainingPeriodSheet.ReportForm(),
         };
 
         public ReportsLoader()

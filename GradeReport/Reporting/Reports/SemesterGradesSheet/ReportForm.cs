@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GradeReport.Reporting.ExamGradesSheet
+namespace GradeReport.Reporting.Reports.SemesterGradesSheet
 {
     public partial class ReportForm : BaseReportForm
     {
@@ -74,6 +74,8 @@ namespace GradeReport.Reporting.ExamGradesSheet
             model.Group = (Group)groupLF.SelectedEntities.FirstOrDefault();
             model.Semester = (Semester)semesterLF.SelectedEntities.FirstOrDefault();
             model.Subject = (Subject)subjectLF.SelectedEntities.FirstOrDefault();
+            model.Date = dateDTP.Value;
+            model.IsOnlyMyStudents = isOnlyMyStudentsCB.Checked;
 
             return model;
         }

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GradeReport.Reporting.SummaryTrainingPeriodSheet
+namespace GradeReport.Reporting.Reports.SummaryTrainingPeriodSheet
 {
     public partial class ReportForm : BaseReportForm
     {

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GradeReport.Reporting.SemesterGradesSheet
+namespace GradeReport.Reporting.Reports.SemesterGradesSheet
 {
     public class Validator : BaseValidator
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GradeReport.Reporting.ExamGradesSheet
+namespace GradeReport.Reporting.Reports.ExamGradesSheet
 {
     public class OutputModel : BaseOutputModel
     {

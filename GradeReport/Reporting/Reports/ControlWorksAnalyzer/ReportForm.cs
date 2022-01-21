@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GradeReport.Reporting.ControlWorksAnalyzer
+namespace GradeReport.Reporting.Reports.ControlWorksAnalyzer
 {
     public partial class ReportForm : BaseReportForm
     {

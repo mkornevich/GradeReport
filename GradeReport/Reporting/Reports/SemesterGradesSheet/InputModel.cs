@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GradeReport.Reporting.ExamGradesSheet
+namespace GradeReport.Reporting.Reports.SemesterGradesSheet
 {
     public class InputModel : BaseInputModel
     {
@@ -14,5 +14,9 @@ namespace GradeReport.Reporting.ExamGradesSheet
         public Semester Semester { get; set; }
 
         public Subject Subject { get; set; }
+
+        public DateTime Date { get; set; }
+
+        public bool IsOnlyMyStudents { get; set; }
     }
 }

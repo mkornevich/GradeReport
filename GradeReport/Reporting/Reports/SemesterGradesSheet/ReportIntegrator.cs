@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GradeReport.Reporting.SemesterGradesSheet
+namespace GradeReport.Reporting.Reports.SemesterGradesSheet
 {
     public class ReportIntegrator : BaseReportIntegrator
     {
@@ -28,7 +28,6 @@ namespace GradeReport.Reporting.SemesterGradesSheet
             for (int i = 0; i < rows.Count; i++)
             {
                 var rowParams = rows[i];
-                rowParams["SemesterGrade"] = rowParams["SemesterGrade"] + " (" + rowParams["SemesterGradeText"] + ")";
                 var row = sheet.GetRow(FirstRow + i);
                 Parametrize(row, rowParams);
             }

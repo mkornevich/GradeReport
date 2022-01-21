@@ -11,13 +11,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GradeReport.Reporting.SemesterGradesSheet
+namespace GradeReport.Reporting.Reports.GroupProgressSheet
 {
     public partial class ReportForm : BaseReportForm
     {
         private ListForm groupLF = new ListForm(new GroupListAdapter());
         private ListForm semesterLF = new ListForm(new SemesterListAdapter());
-        private ListForm subjectLF = new ListForm(new SubjectListAdapter());
 
         public ReportForm()
         {
@@ -43,17 +42,6 @@ namespace GradeReport.Reporting.SemesterGradesSheet
                     .FindAll(s => courses.Exists(c => c.Guid == s.CourseGuid))
                     .Cast<object>().ToList();
             });
-
-            subjectLF.Chooser = subjectC;
-            subjectLF.SelectMode = SelectMode.Single;
-            subjectLF.SetParent(semesterLF, selected =>
-            {
-                var semester = (Semester)selected[0];
-                return Project.SemesterSubjectRefs
-                    .FindAll(ssr => ssr.SemesterGuid == semester.Guid)
-                    .Select(ssr => ssr.Subject)
-                    .Cast<object>().ToList();
-            });
         }
 
         protected override void ResetGUI()
@@ -64,7 +52,6 @@ namespace GradeReport.Reporting.SemesterGradesSheet
             // TODO
             groupLF.SelectedEntities = new List<object>() { groupLF.Entities[0] };
             semesterLF.SelectedEntities = new List<object>() { semesterLF.Entities[0] };
-            subjectLF.SelectedEntities = new List<object>() { subjectLF.Entities[0] };
         }
 
         protected override BaseInputModel BuildInputModel()
@@ -73,9 +60,6 @@ namespace GradeReport.Reporting.SemesterGradesSheet
 
             model.Group = (Group)groupLF.SelectedEntities.FirstOrDefault();
             model.Semester = (Semester)semesterLF.SelectedEntities.FirstOrDefault();
-            model.Subject = (Subject)subjectLF.SelectedEntities.FirstOrDefault();
-            model.Date = dateDTP.Value;
-            model.IsOnlyMyStudents = isOnlyMyStudentsCB.Checked;
 
             return model;
         }
