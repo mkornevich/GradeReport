@@ -37,8 +37,8 @@ namespace GradeReport.Reporting.Reports.SemesterGradesSheet
                 row["StudentName"] = _student.Name;
                 row["OKRAvg"] = query.SetInGradeType(GradeType.OKR).GetJoined();
                 row["LPR"] = "зачтено";
-                row["CourseGrade"] = query.SetInGradeType(GradeType.Course).GetOne();
-                row["SemesterGrade"] = query.SetInGradeType(GradeType.Semester).GetOne();
+                row["CourseGrade"] = query.SetInGradeType(GradeType.Course).GetFirst();
+                row["SemesterGrade"] = query.SetInGradeType(GradeType.Semester).GetFirst();
                 row["SemesterGradeText"] = GradeValue.GetByValue((int)row["SemesterGrade"]).Text;
                 _output.TableRows.Add(row);
             }

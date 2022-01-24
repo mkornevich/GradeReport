@@ -11,7 +11,8 @@ SummaryTrainingPeriodSheet
 ExamGradesSheet
 
 
-
+- Уточнить какой куда семестр идет
+- Запрограммировать
 
 === 20
 

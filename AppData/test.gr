@@ -480,12 +480,12 @@
   "Semesters": [
     {
       "CourseGuid": "3f4389e6-b61f-452b-853b-098b80f8374c",
-      "CourseHalf": 1,
+      "LocalNumber": 1,
       "Guid": "539bbaaf-b99b-4771-b81b-83036fc6b5e5"
     },
     {
       "CourseGuid": "3f4389e6-b61f-452b-853b-098b80f8374c",
-      "CourseHalf": 2,
+      "LocalNumber": 2,
       "Guid": "0469db7d-e99d-407b-b415-ef19fe80bb04"
     }
   ],

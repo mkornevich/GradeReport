@@ -42,14 +42,22 @@ namespace GradeReport.Reporting.Reports.ExamGradesSheet
                 row["StudentIndex"] = i + 1;
                 row["StudentName"] = _student.Name;
                 row["LPR"] = "зачтено";
-                row["CourseGrade"] = query.SetInGradeType(GradeType.Course).GetOne();
-                row["SemesterGrade"] = query.SetInGradeType(GradeType.Semester).GetOne();
-                row["ExamGrade"] = query.SetInGradeType(GradeType.Exam).GetOne();
+                row["SemesterGrade"] = query.SetInGradeType(GradeType.Semester).GetFirst();
+                row["ExamGrade"] = query.SetInGradeType(GradeType.Exam).GetFirst();
                 row["ExamGradeText"] = GradeValue.GetByValue((int)row["ExamGrade"]).Text;
 
-                query.SetInSemesters(_courseSemesters);
+                if (_input.Semester.LocalNumber == 2)
+                {
+                    query.SetInSemesters(_courseSemesters);
+                }
+                
                 row["OKRs"] = query.SetInGradeType(GradeType.OKR).GetJoined();
 
+                query.SetInSemesters(_courseSemesters);
+
+                query.SetInGradeType(GradeType.Course);
+                row["CourseGrade"] = query.Exists() ? query.GetFirst() : "";
+                
                 _output.TableRows.Add(row);
             }
 
