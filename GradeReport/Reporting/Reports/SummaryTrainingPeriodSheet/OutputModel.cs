@@ -9,6 +9,7 @@ namespace GradeReport.Reporting.Reports.SummaryTrainingPeriodSheet
 {
     public class OutputModel : BaseOutputModel
     {
-        public Table Table { get; private set; } = new Table();
+        public Table SummaryTable { get; private set; } = new Table();
+        public Table CoursesTable { get; private set; } = new Table();
     }
 }

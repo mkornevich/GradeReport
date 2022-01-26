@@ -14,11 +14,12 @@ namespace GradeReport.Reporting
         {
             RightShiftColumns(sheet, columnIndex, count, insertDirection);
             RightShiftMergedRanges(sheet, columnIndex, count, true);
+            DublicateColumns(sheet, columnIndex, columnIndex + 1, columnIndex + count);
         }
 
         public static void InsertRows(XSSFSheet sheet, int baseRowIndex, int insertCount = 1)
         {
-            sheet.ShiftRows(baseRowIndex + 1, sheet.LastRowNum, insertCount, true, false);
+            sheet.ShiftRows(baseRowIndex + 1, sheet.LastRowNum + 1, insertCount, true, false);
 
             for (int i = 0; i < insertCount; i++)
             {
@@ -26,6 +27,19 @@ namespace GradeReport.Reporting
             }
         }
 
+        public static void DublicateColumns(XSSFSheet sheet, int baseColumn, int start, int end)
+        {
+            foreach (XSSFRow row in sheet)
+            {
+                var baseCell = row.GetCell(baseColumn);
+                if (baseCell == null) continue;
+                for (int toCellIndex = start; toCellIndex <= end; toCellIndex++)
+                {
+                    baseCell.CopyCellTo(toCellIndex);
+                    sheet.SetColumnWidth(toCellIndex, sheet.GetColumnWidth(baseCell.ColumnIndex));
+                }
+            }
+        }
 
         public static void RightShiftColumns(XSSFSheet sheet, int columnIndex, int count = 1, Direction direction = Direction.Start)
         {
