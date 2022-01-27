@@ -29,16 +29,16 @@ namespace GradeReport.Reporting.Reports.SemesterGradesSheet
             for (int i = 0; i < students.Count; i++)
             {
                 _student = students[i];
-                query.SetInStudent(_student);
+                query.SetInStudents(_student);
 
                 var row = new Dictionary<string, object>();
                 row["Student"] = _student;
                 row["StudentIndex"] = i + 1;
                 row["StudentName"] = _student.Name;
-                row["OKRAvg"] = query.SetInGradeType(GradeType.OKR).GetJoined();
+                row["OKRAvg"] = query.SetInGradeTypes(GradeType.OKR).GetJoined();
                 row["LPR"] = "зачтено";
-                row["CourseGrade"] = query.SetInGradeType(GradeType.Course).GetFirst();
-                row["SemesterGrade"] = query.SetInGradeType(GradeType.Semester).GetFirst();
+                row["CourseGrade"] = query.SetInGradeTypes(GradeType.Course).GetFirst();
+                row["SemesterGrade"] = query.SetInGradeTypes(GradeType.Semester).GetFirst();
                 row["SemesterGradeText"] = GradeValue.GetByValue((int)row["SemesterGrade"]).Text;
                 _output.TableRows.Add(row);
             }
@@ -62,8 +62,8 @@ namespace GradeReport.Reporting.Reports.SemesterGradesSheet
         private GradeQuery CreateQuery()
         {
             return new GradeQuery(Project)
-                .SetInSemester(_input.Semester)
-                .SetInSubject(_input.Subject)
+                .SetInSemesters(_input.Semester)
+                .SetInSubjects(_input.Subject)
                 .NewQueryFromCurrentGrades();
         }
 

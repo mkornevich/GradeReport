@@ -15,6 +15,13 @@ namespace GradeReport.ProjectModel.Entities
         [JsonIgnore]
         public List<Course> Courses => Project.Courses
             .FindAll(c => c.GroupGuid == Guid)
-            .OrderBy(c => c.Number).ToList();
+            .OrderBy(c => c.Number)
+            .ToList();
+
+        [JsonIgnore]
+        public List<Subject> Subjects => Project.GroupSubjectRefs
+            .FindAll(gsr => gsr.GroupGuid == Guid)
+            .Select(gsr => gsr.Subject)
+            .ToList();
     }
 }

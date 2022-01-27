@@ -35,15 +35,15 @@ namespace GradeReport.Reporting.Reports.ExamGradesSheet
             for (int i = 0; i < students.Count; i++)
             {
                 _student = students[i];
-                query.SetInStudent(_student).SetInSemester(_input.Semester);
+                query.SetInStudents(_student).SetInSemesters(_input.Semester);
 
                 var row = new Dictionary<string, object>();
                 row["Student"] = _student;
                 row["StudentIndex"] = i + 1;
                 row["StudentName"] = _student.Name;
                 row["LPR"] = "зачтено";
-                row["SemesterGrade"] = query.SetInGradeType(GradeType.Semester).GetFirst();
-                row["ExamGrade"] = query.SetInGradeType(GradeType.Exam).GetFirst();
+                row["SemesterGrade"] = query.SetInGradeTypes(GradeType.Semester).GetFirst();
+                row["ExamGrade"] = query.SetInGradeTypes(GradeType.Exam).GetFirst();
                 row["ExamGradeText"] = GradeValue.GetByValue((int)row["ExamGrade"]).Text;
 
                 if (_input.Semester.LocalNumber == 2)
@@ -51,11 +51,11 @@ namespace GradeReport.Reporting.Reports.ExamGradesSheet
                     query.SetInSemesters(_courseSemesters);
                 }
                 
-                row["OKRs"] = query.SetInGradeType(GradeType.OKR).GetJoined();
+                row["OKRs"] = query.SetInGradeTypes(GradeType.OKR).GetJoined();
 
                 query.SetInSemesters(_courseSemesters);
 
-                query.SetInGradeType(GradeType.Course);
+                query.SetInGradeTypes(GradeType.Course);
                 row["CourseGrade"] = query.Exists() ? query.GetFirst() : "";
                 
                 _output.TableRows.Add(row);
@@ -77,7 +77,7 @@ namespace GradeReport.Reporting.Reports.ExamGradesSheet
         {
             return new GradeQuery(Project)
                 .SetInSemesters(_courseSemesters)
-                .SetInSubject(_input.Subject)
+                .SetInSubjects(_input.Subject)
                 .NewQueryFromCurrentGrades();
         }
 

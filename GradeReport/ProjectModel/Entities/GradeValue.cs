@@ -9,6 +9,9 @@ namespace GradeReport.ProjectModel.Entities
 {
     public class GradeValue
     {
+        // оценка
+        public const int Grade = 0;
+
         // пусто
         public const int Empty = -1;
 

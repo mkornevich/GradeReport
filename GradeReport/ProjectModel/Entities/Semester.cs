@@ -34,5 +34,12 @@ namespace GradeReport.ProjectModel.Entities
                 return courseNumber + courseNumber - 2 + LocalNumber;
             }
         }
+
+        [JsonIgnore]
+        public List<Student> Students => Project.SemesterStudentRefs
+            .FindAll(ssr => ssr.SemesterGuid == Guid)
+            .Select(gsr => gsr.Student)
+            .OrderBy(s => s.Name)
+            .ToList();
     }
 }

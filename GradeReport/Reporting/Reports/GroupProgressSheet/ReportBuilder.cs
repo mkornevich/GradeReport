@@ -123,7 +123,7 @@ namespace GradeReport.Reporting.Reports.GroupProgressSheet
         private GradeQuery CreateQuery()
         {
             return new GradeQuery(Project)
-                .SetInSemester(_input.Semester)
+                .SetInSemesters(_input.Semester)
                 .SetInGradeTypes(new List<string> { GradeType.Semester, GradeType.Exam })
                 .NewQueryFromCurrentGrades();
         }
@@ -134,8 +134,8 @@ namespace GradeReport.Reporting.Reports.GroupProgressSheet
             {
                 var subject = (Subject)column.Entity;
                 var isExam = _query
-                    .SetInSubject(subject)
-                    .SetInGradeType(GradeType.Exam)
+                    .SetInSubjects(subject)
+                    .SetInGradeTypes(GradeType.Exam)
                     .Exists();
 
                 column.Params["IsExam"] = isExam;
@@ -144,9 +144,9 @@ namespace GradeReport.Reporting.Reports.GroupProgressSheet
                 {
                     var cell = _table[row, column];
                     cell.Value = _query
-                        .SetInStudent((Student)row.Entity)
-                        .SetInSubject(subject)
-                        .SetInGradeType(isExam ? GradeType.Exam : GradeType.Semester)
+                        .SetInStudents((Student)row.Entity)
+                        .SetInSubjects(subject)
+                        .SetInGradeTypes(isExam ? GradeType.Exam : GradeType.Semester)
                         .GetFirst();
                 }
             }

@@ -10,8 +10,8 @@ namespace GradeReport.ProjectModel.Queries
     public class GradeQuery : ICloneable
     {
         private Project _project;
-
         private List<Grade> _grades;
+        private List<Grade> _cachedGrades = null;
 
         private List<Semester> _inSemesters;
         private List<Semester> _notInSemesters;
@@ -25,15 +25,33 @@ namespace GradeReport.ProjectModel.Queries
         private List<string> _inGradeTypeNames;
         private List<string> _notInGradeTypeNames;
 
-        private List<int> _inNumbers;
-        private List<int> _notInNumbers;
+        private List<int?> _inNumbers;
+        private List<int?> _notInNumbers;
 
-        private List<int> _inValues;
-        private List<int> _notInValues;
+        private List<int?> _inValues;
+        private List<int?> _notInValues;
 
         public GradeQuery(Project project) : this(project, project.Grades)
         {
 
+        }
+
+        private GradeQuery(GradeQuery query)
+        {
+            _project = query._project;
+            _grades = query._grades;
+            _inSemesters = query._inSemesters;
+            _notInSemesters = query._notInSemesters;
+            _inStudents = query._inStudents;
+            _notInStudents = query._notInStudents;
+            _inSubjects = query._inSubjects;
+            _notInSubjects = query._notInSubjects;
+            _inGradeTypeNames = query._inGradeTypeNames;
+            _notInGradeTypeNames = query._notInGradeTypeNames;
+            _inNumbers = query._inNumbers;
+            _notInNumbers = query._notInNumbers;
+            _inValues = query._inValues;
+            _notInValues = query._notInValues;
         }
 
         public GradeQuery(Project project, List<Grade> grades)
@@ -42,146 +60,151 @@ namespace GradeReport.ProjectModel.Queries
             _grades = grades;
         }
 
+        private List<TItem> Normalize<TItem>(List<TItem> list)
+        {
+            if (list == null) return null;
+            var clearList = list.ToList();
+            clearList.RemoveAll(item => item == null);
+            return list.Count == 0 ? null : clearList;
+        }
+
+        private List<TItem> Normalize<TItem>(TItem[] array)
+        {
+            return array.Length == 0 ? null : array.ToList();
+        }
+
         public GradeQuery SetGrades(List<Grade> grades)
         {
-            _grades = grades;
-            return this;
+            return new GradeQuery(this) { _grades = grades };
         }
 
         public GradeQuery SetInSemesters(List<Semester> inSemesters)
         {
-            _inSemesters = (inSemesters.Count == 0) ? null : inSemesters;
-            return this;
+            return new GradeQuery(this) { _inSemesters = Normalize(inSemesters) };
         }
 
-        public GradeQuery SetInSemester(Semester inSemester)
+        public GradeQuery SetInSemesters(params Semester[] inSemesters)
         {
-            return SetInSemesters((inSemester == null) ? null : new List<Semester>() { inSemester });
+            return SetInSemesters(Normalize(inSemesters));
         }
 
         public GradeQuery SetNotInSemesters(List<Semester> notInSemesters)
         {
-            _notInSemesters = (notInSemesters.Count == 0) ? null : notInSemesters;
-            return this;
+            return new GradeQuery(this) { _notInSemesters = Normalize(notInSemesters) };
         }
 
-        public GradeQuery SetNotInSemester(Semester notInSemester)
+        public GradeQuery SetNotInSemesters(params Semester[] notInSemesters)
         {
-            return SetNotInSemesters((notInSemester == null) ? null : new List<Semester>() { notInSemester });
+            return SetNotInSemesters(Normalize(notInSemesters));
         }
 
         public GradeQuery SetInStudents(List<Student> inStudents)
         {
-            _inStudents = (inStudents.Count == 0) ? null : inStudents;
-            return this;
+            return new GradeQuery(this) { _inStudents = Normalize(inStudents) };
         }
 
-        public GradeQuery SetInStudent(Student inStudent)
+        public GradeQuery SetInStudents(params Student[] inStudents)
         {
-            return SetInStudents((inStudent == null) ? null : new List<Student>() { inStudent });
+            return SetInStudents(Normalize(inStudents));
         }
 
         public GradeQuery SetNotInStudents(List<Student> notInStudents)
         {
-            _notInStudents = (notInStudents.Count == 0) ? null : notInStudents;
-            return this;
+            return new GradeQuery(this) { _notInStudents = Normalize(notInStudents) };
         }
 
-        public GradeQuery SetNotInStudent(Student notInStudent)
+        public GradeQuery SetNotInStudents(params Student[] notInStudents)
         {
-            return SetNotInStudents((notInStudent == null) ? null : new List<Student>() { notInStudent });
+            return SetNotInStudents(Normalize(notInStudents));
         }
 
         public GradeQuery SetInSubjects(List<Subject> inSubjects)
         {
-            _inSubjects = (inSubjects.Count == 0) ? null : inSubjects;
-            return this;
+            return new GradeQuery(this) { _inSubjects = Normalize(inSubjects) };
         }
 
-        public GradeQuery SetInSubject(Subject inSubject)
+        public GradeQuery SetInSubjects(params Subject[] inSubjects)
         {
-            return SetInSubjects((inSubject == null) ? null : new List<Subject>() { inSubject });
+            return SetInSubjects(Normalize(inSubjects));
         }
 
         public GradeQuery SetNotInSubjects(List<Subject> notInSubjects)
         {
-            _notInSubjects = (notInSubjects.Count == 0) ? null : notInSubjects;
-            return this;
+            return new GradeQuery(this) { _notInSubjects = Normalize(notInSubjects) };
         }
 
-        public GradeQuery SetNotInSubject(Subject notInSubject)
+        public GradeQuery SetNotInSubjects(params Subject[] notInSubjects)
         {
-            return SetNotInSubjects((notInSubject == null) ? null : new List<Subject>() { notInSubject });
+            return SetNotInSubjects(Normalize(notInSubjects));
         }
 
         public GradeQuery SetInGradeTypes(List<string> inGradeTypeNames)
         {
-            _inGradeTypeNames = (inGradeTypeNames.Count == 0) ? null : inGradeTypeNames;
-            return this;
+            return new GradeQuery(this) { _inGradeTypeNames = Normalize(inGradeTypeNames) };
         }
 
-        public GradeQuery SetInGradeType(string inGradeTypeName)
+        public GradeQuery SetInGradeTypes(params string[] inGradeTypeNames)
         {
-            return SetInGradeTypes((inGradeTypeName == null) ? null : new List<string>() { inGradeTypeName });
+            return SetInGradeTypes(Normalize(inGradeTypeNames));
         }
 
         public GradeQuery SetNotInGradeTypes(List<string> notInGradeTypeNames)
         {
-            _notInGradeTypeNames = (notInGradeTypeNames.Count == 0) ? null : notInGradeTypeNames;
-            return this;
+            return new GradeQuery(this) { _notInGradeTypeNames = Normalize(notInGradeTypeNames) };
         }
 
-        public GradeQuery SetNotInGradeType(string notInGradeTypeName)
+        public GradeQuery SetNotInGradeTypes(params string[] notInGradeTypeNames)
         {
-            return SetNotInGradeTypes((notInGradeTypeName == null) ? null : new List<string>() { notInGradeTypeName });
+            return SetNotInGradeTypes(Normalize(notInGradeTypeNames));
         }
 
-        public GradeQuery SetInNumbers(List<int> inNumbers)
+        public GradeQuery SetInNumbers(List<int?> inNumbers)
         {
-            _inNumbers = (inNumbers.Count == 0) ? null : inNumbers;
-            return this;
+            return new GradeQuery(this) { _inNumbers = Normalize(inNumbers) };
         }
 
-        public GradeQuery SetInNumber(int? inNumber)
+        public GradeQuery SetInNumbers(params int?[] inNumbers)
         {
-            return SetInNumbers((inNumber == null) ? null : new List<int>() { inNumber.Value });
+            return SetInNumbers(Normalize(inNumbers));
         }
 
-        public GradeQuery SetNotInNumbers(List<int> notInNumbers)
+        public GradeQuery SetNotInNumbers(List<int?> notInNumbers)
         {
-            _notInNumbers = (notInNumbers.Count == 0) ? null : notInNumbers;
-            return this;
+            return new GradeQuery(this) { _notInNumbers = Normalize(notInNumbers) };
         }
 
-        public GradeQuery SetNotInNumber(int? notInNumber)
+        public GradeQuery SetNotInNumbers(params int?[] notInNumbers)
         {
-            return SetNotInNumbers((notInNumber == null) ? null : new List<int>() { notInNumber.Value });
+            return SetNotInNumbers(Normalize(notInNumbers));
         }
 
-        public GradeQuery SetInValues(List<int> inValues)
+        public GradeQuery SetInValues(List<int?> inValues)
         {
-            _inValues = (inValues.Count == 0) ? null : inValues;
-            return this;
+            return new GradeQuery(this) { _inValues = Normalize(inValues) };
         }
 
-        public GradeQuery SetInValue(int? inValue)
+        public GradeQuery SetInValues(params int?[] inValues)
         {
-            return SetInValues((inValue == null) ? null : new List<int>() { inValue.Value });
+            return SetInValues(Normalize(inValues));
         }
 
-        public GradeQuery SetNotInValues(List<int> notInValues)
+        public GradeQuery SetNotInValues(List<int?> notInValues)
         {
-            _notInValues = (notInValues.Count == 0) ? null : notInValues;
-            return this;
+            return new GradeQuery(this) { _notInValues = Normalize(notInValues) };
         }
 
-        public GradeQuery SetNotInValue(int? notInValue)
+        public GradeQuery SetNotInValues(params int?[] notInValues)
         {
-            return SetNotInValues((notInValue == null) ? null : new List<int>() { notInValue.Value });
+            return SetNotInValues(Normalize(notInValues));
         }
 
         public List<Grade> Get()
         {
+            if (_cachedGrades != null)
+            {
+                return _cachedGrades;
+            }
+
             return _grades.FindAll(grade =>
             {
                 return (
@@ -215,30 +238,13 @@ namespace GradeReport.ProjectModel.Queries
 
         public double GetAvg() => Get().Average(g => g.Value);
 
+        public int GetAvgRounded(MidpointRounding midpoint = MidpointRounding.AwayFromZero) => (int)Math.Round(GetAvg(), midpoint);
+
         public bool Exists() => Get().Count > 0;
 
         public object Clone()
         {
-            return new GradeQuery(_project)
-            {
-                _inSemesters = (_inSemesters != null) ? new List<Semester>(_inSemesters) : null,
-                _notInSemesters = (_notInSemesters != null) ? new List<Semester>(_notInSemesters) : null,
-
-                _inStudents = (_inStudents != null) ? new List<Student>(_inStudents) : null,
-                _notInStudents = (_notInStudents != null) ? new List<Student>(_notInStudents) : null,
-
-                _inSubjects = (_inSubjects != null) ? new List<Subject>(_inSubjects) : null,
-                _notInSubjects = (_notInSubjects != null) ? new List<Subject>(_notInSubjects) : null,
-
-                _inGradeTypeNames = (_inGradeTypeNames != null) ? new List<string>(_inGradeTypeNames) : null,
-                _notInGradeTypeNames = (_notInGradeTypeNames != null) ? new List<string>(_notInGradeTypeNames) : null,
-
-                _inNumbers = (_inNumbers != null) ? new List<int>(_inNumbers) : null,
-                _notInNumbers = (_notInNumbers != null) ? new List<int>(_notInNumbers) : null,
-
-                _inValues = (_inValues != null) ? new List<int>(_inValues) : null,
-                _notInValues = (_notInValues != null) ? new List<int>(_notInValues) : null,
-            };
+            return new GradeQuery(this);
         }
 
         public GradeQuery NewQueryFromCurrentGrades()

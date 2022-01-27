@@ -42,6 +42,9 @@ namespace GradeReport.ProjectModel.Entities
         public string FullName => $"группа {Group.Name} > курс {Number}";
 
         [JsonIgnore]
-        public List<Semester> Semesters => Project.Semesters.FindAll(s => s.CourseGuid == Guid);
+        public List<Semester> Semesters => Project.Semesters
+            .FindAll(s => s.CourseGuid == Guid)
+            .OrderBy(s => s.LocalNumber)
+            .ToList();
     }
 }
