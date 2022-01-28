@@ -236,9 +236,19 @@ namespace GradeReport.ProjectModel.Queries
 
         public int GetFirst() => Get().OrderBy(g => g.Number).First().Value;
 
-        public double GetAvg() => Get().Average(g => g.Value);
+        public double GetAvg()
+        {
+            var grades = Get();
+            if (grades.Count == 0) return -1;
+            return Get().Average(g => g.Value);
+        }
 
-        public int GetAvgRounded(MidpointRounding midpoint = MidpointRounding.AwayFromZero) => (int)Math.Round(GetAvg(), midpoint);
+        public double GetAvgRounded(MidpointRounding midpoint = MidpointRounding.AwayFromZero)
+        {
+            var avg = GetAvg();
+            if (avg == -1) return -1;
+            return Math.Round(GetAvg(), midpoint);
+        }
 
         public bool Exists() => Get().Count > 0;
 
