@@ -39,24 +39,64 @@ namespace GradeReport.ProjectModel.Entities
             new GradeValue("Осв", Released, "Осв", new Keys[] {Keys.J}),
         };
 
-        public readonly string DisplayAs;
+        public readonly string StringValue;
 
         public readonly int Value;
 
         public readonly Keys[] KeyCodes;
 
-        public readonly string Text;
+        public readonly string Description;
 
-        private GradeValue(string displayAs, int value, string text, Keys[] keyCodes)
+        private GradeValue(string stringValue, int value, string description, Keys[] keyCodes)
         {
-            DisplayAs = displayAs;
+            StringValue = stringValue;
             Value = value;
-            Text = text;
+            Description = description;
             KeyCodes = keyCodes;
         }
 
         public static GradeValue GetByValue(int value) => GradeValues.ToList().Find(gv => gv.Value == value);
 
         public static GradeValue GetByKeyCode(Keys keyCode) => GradeValues.ToList().Find(gv => gv.KeyCodes.Contains(keyCode));
+
+        public static string ToString(object grade, string format = "v", string emptyFormat = "", string errorFormat = "ev")
+        {
+            var error = "";
+            var value = "";
+            var description = "";
+
+            var currFormat = errorFormat;
+
+            if (grade != null)
+            {
+                int gradeValue;
+                var gradeValueStr = grade.ToString();
+                value = gradeValueStr;
+                if (int.TryParse(gradeValueStr, out gradeValue))
+                {
+                    var gradeValueObj = GradeValues.ToList().Find(gv => gv.Value == gradeValue);
+                    if (gradeValueObj != null)
+                    {
+                        value = gradeValueObj.StringValue;
+                        description = gradeValueObj.Description;
+                        currFormat = gradeValue == Empty ? emptyFormat : format;
+                    }
+                    else
+                    {
+                        error = "nf";
+                    }
+                }
+                else
+                {
+                    error = "ni";
+                }
+            }
+            else
+            {
+                error = "nu";
+            }
+
+            return currFormat.Replace("v", value).Replace("d", description).Replace("e", error);
+        }
     }
 }

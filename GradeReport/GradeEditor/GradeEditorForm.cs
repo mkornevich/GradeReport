@@ -162,7 +162,7 @@ namespace GradeReport.GradeEditor
             if (e.ColumnIndex == editorDGV.Columns["GradeValueColumn"].Index)
             {
                 var value = (int)editorDGV.Rows[e.RowIndex].Cells["GradeValueColumn"].Value;
-                e.Value = GradeValue.GetByValue(value).DisplayAs;
+                e.Value = GradeValue.GetByValue(value).StringValue;
                 e.FormattingApplied = true;
             }
         }

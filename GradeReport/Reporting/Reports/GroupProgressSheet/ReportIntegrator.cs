@@ -107,7 +107,7 @@ namespace GradeReport.Reporting.Reports.GroupProgressSheet
 
                     if (gradeValue < 0)
                     {
-                        cell.SetCellValue(GradeValue.GetByValue(gradeValue).DisplayAs);
+                        cell.SetCellValue(GradeValue.GetByValue(gradeValue).StringValue);
                     }
                     else
                     {

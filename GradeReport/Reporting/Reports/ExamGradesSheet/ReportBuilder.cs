@@ -42,9 +42,9 @@ namespace GradeReport.Reporting.Reports.ExamGradesSheet
                 row["StudentIndex"] = i + 1;
                 row["StudentName"] = _student.Name;
                 row["LPR"] = "зачтено";
-                row["SemesterGrade"] = query.SetInGradeTypes(GradeType.Semester).GetFirst();
-                row["ExamGrade"] = query.SetInGradeTypes(GradeType.Exam).GetFirst();
-                row["ExamGradeText"] = GradeValue.GetByValue((int)row["ExamGrade"]).Text;
+                row["SemesterGrade"] = query.SetInGradeTypes(GradeType.Semester).GetFirstOrEmpty();
+                row["ExamGrade"] = query.SetInGradeTypes(GradeType.Exam).GetFirstOrEmpty();
+                row["ExamGradeText"] = GradeValue.GetByValue((int)row["ExamGrade"]).Description;
 
                 if (_input.Semester.LocalNumber == 2)
                 {
@@ -56,7 +56,7 @@ namespace GradeReport.Reporting.Reports.ExamGradesSheet
                 query.SetInSemesters(_courseSemesters);
 
                 query.SetInGradeTypes(GradeType.Course);
-                row["CourseGrade"] = query.Exists() ? query.GetFirst() : "";
+                row["CourseGrade"] = query.Exists() ? query.GetFirstOrEmpty() : "";
                 
                 _output.TableRows.Add(row);
             }

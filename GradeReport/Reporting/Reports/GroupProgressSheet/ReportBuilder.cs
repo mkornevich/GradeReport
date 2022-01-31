@@ -147,7 +147,7 @@ namespace GradeReport.Reporting.Reports.GroupProgressSheet
                         .SetInStudents((Student)row.Entity)
                         .SetInSubjects(subject)
                         .SetInGradeTypes(isExam ? GradeType.Exam : GradeType.Semester)
-                        .GetFirst();
+                        .GetFirstOrEmpty();
                 }
             }
         }

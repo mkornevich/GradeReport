@@ -74,7 +74,7 @@ namespace GradeReport.Reporting.Reports.SummaryTrainingPeriodSheet
             if (grade == null) return "err";
             int _grade = Convert.ToInt32(grade);
             if (_grade > 10) return "!" + _grade;
-            return GradeValue.GetByValue(_grade).DisplayAs;
+            return GradeValue.GetByValue(_grade).StringValue;
         }
 
         private void FillSummaryStudents()

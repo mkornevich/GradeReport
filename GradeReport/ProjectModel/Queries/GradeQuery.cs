@@ -234,7 +234,7 @@ namespace GradeReport.ProjectModel.Queries
             return string.Join(separator, Get().Select(g => g.Value.ToString()));
         }
 
-        public int GetFirst() => Get().OrderBy(g => g.Number).First().Value;
+        public int GetFirstOrEmpty() => Exists() ? Get().OrderBy(g => g.Number).First().Value : GradeValue.Empty;
 
         public double GetAvg()
         {

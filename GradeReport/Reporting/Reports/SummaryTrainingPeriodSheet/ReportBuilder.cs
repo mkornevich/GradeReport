@@ -93,7 +93,7 @@ namespace GradeReport.Reporting.Reports.SummaryTrainingPeriodSheet
                     cell.Value = GradeValue.Empty;
                     if (ssQuery.Get().Count == 1)
                     {
-                        cell.Value = ssQuery.GetFirst();
+                        cell.Value = ssQuery.GetFirstOrEmpty();
                     }
                 }
             }
@@ -199,105 +199,41 @@ namespace GradeReport.Reporting.Reports.SummaryTrainingPeriodSheet
 
                     if (t[i, Count] > t[j, Count] + t[k, Count])
                     {
-                        gradeValueType = t[i, Type];
+                        return t[i, Type];
                     }
 
                     if (t[i, Count] > 0 && t[j, Count] > 0 && t[k, Count] > 0 &&
                         t[i, Count] >= t[j, Count] + t[k, Count])
                     {
-                        gradeValueType = t[i, Type];
+                        return t[i, Type];
                     }
 
                     if (t[i, Count] > 0 && t[j, Count] > 0 && t[k, Count] == 0)
                     {
                         if (t[i, Count] > t[j, Count])
                         {
-                            gradeValueType = t[i, Type];
+                            return t[i, Type];
                         }
 
                         if (t[i, Count] < t[j, Count])
                         {
-                            gradeValueType = t[j, Type];
+                            return t[j, Type];
                         }
 
                         if (t[i, Count] == t[j, Count])
                         {
-                            gradeValueType = lastGradeValueType;
+                            return lastGradeValueType;
                         }
                     }
 
                     if (t[i, Count] > 0 && t[j, Count] == 0 && t[k, Count] == 0)
                     {
-                        gradeValueType = t[i, Type];
+                        return t[i, Type];
                     }
                 }
             }
 
             return gradeValueType;
-        }
-
-        private void FillTestData()
-        {
-            for (int i = 0; i < 20; i++)
-            {
-                var column = _summaryTable.CreateColumn();
-                column.Group = "Subject";
-                column.Name = "Very very subject " + i;
-            }
-
-            for (int i = 0; i < 15; i++)
-            {
-                var row = _summaryTable.CreateRow();
-                row.Group = "Student";
-                row.Params["Number"] = i + 1;
-                row.Params["HasRedDiploma"] = i % 2 == 0;
-                row.Name = "Student " + i;
-            }
-
-            foreach (var row in _summaryTable.Rows)
-            {
-                foreach (var cell in row.Cells)
-                {
-                    cell.Value = cell.Column.Index;
-                    if (row.Index == 5)
-                    {
-                        cell.Value = -1;
-                    }
-                    if (row.Index == 6)
-                    {
-                        cell.Value = -2;
-                    }
-                    if (row.Index == 7)
-                    {
-                        cell.Value = -3;
-                    }
-                }
-            }
-
-            // ---
-
-            for (int i = 0; i < 6; i++)
-            {
-                var column = _coursesTable.CreateColumn();
-                column.Group = "Subject";
-                column.Name = "Very very subject " + i;
-            }
-
-            for (int i = 0; i < 20; i++)
-            {
-                var row = _coursesTable.CreateRow();
-                row.Group = "Student";
-                row.Params["Number"] = i + 1;
-                row.Name = "Student " + i;
-            }
-
-            foreach (var row in _coursesTable.Rows)
-            {
-                foreach (var cell in row.Cells)
-                {
-                    cell.Value = cell.Column.Index;
-                }
-            }
         }
     }
 }

@@ -16,6 +16,30 @@ namespace GradeReport.Reporting.Reports.SemesterGradesSheet
             Notes.ErrorIf(input.Group == null, "Не выбрана группа");
             Notes.ErrorIf(input.Semester == null, "Не выбран семестр");
             Notes.ErrorIf(input.Subject == null, "Не выбран предмет");
+            Notes.ErrorIf(
+                !HasStudents(input), 
+                "Кол-во студентов должно быть больше нуля", 
+                "Возможно вам стоит указать ваших студентов.");
+        }
+
+        private bool HasStudents(InputModel input)
+        {
+            IEnumerable<Student> students;
+
+            if (input.IsOnlyMyStudents)
+            {
+                students = Project.MyStudentRefs
+                    .FindAll(msr => msr.SubjectGuid == input.Subject.Guid && msr.Semester.Guid == input.Semester.Guid)
+                    .Select(msr => msr.Student);
+            }
+            else
+            {
+                students = Project.SemesterStudentRefs
+                    .FindAll(ssr => ssr.SemesterGuid == input.Semester.Guid)
+                    .Select(ssr => ssr.Student);
+            }
+
+            return students.Count() > 0;
         }
     }
 }

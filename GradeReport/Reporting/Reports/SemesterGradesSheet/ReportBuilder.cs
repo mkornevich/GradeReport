@@ -24,22 +24,24 @@ namespace GradeReport.Reporting.Reports.SemesterGradesSheet
 
             List<Student> students = GetStudents();
 
-            var query = CreateQuery();
+            var query = new GradeQuery(Project)
+                .SetInSemesters(_input.Semester)
+                .SetInSubjects(_input.Subject)
+                .NewQueryFromCurrentGrades();
 
             for (int i = 0; i < students.Count; i++)
             {
                 _student = students[i];
-                query.SetInStudents(_student);
+                query = query.SetInStudents(_student);
 
                 var row = new Dictionary<string, object>();
                 row["Student"] = _student;
                 row["StudentIndex"] = i + 1;
                 row["StudentName"] = _student.Name;
-                row["OKRAvg"] = query.SetInGradeTypes(GradeType.OKR).GetJoined();
+                row["OKRs"] = query.SetInGradeTypes(GradeType.OKR).GetJoined();
                 row["LPR"] = "зачтено";
-                row["CourseGrade"] = query.SetInGradeTypes(GradeType.Course).GetFirst();
-                row["SemesterGrade"] = query.SetInGradeTypes(GradeType.Semester).GetFirst();
-                row["SemesterGradeText"] = GradeValue.GetByValue((int)row["SemesterGrade"]).Text;
+                row["CourseGrade"] = query.SetInGradeTypes(GradeType.Course).GetFirstOrEmpty();
+                row["SemesterGrade"] = query.SetInGradeTypes(GradeType.Semester).GetFirstOrEmpty();
                 _output.TableRows.Add(row);
             }
 
@@ -57,14 +59,6 @@ namespace GradeReport.Reporting.Reports.SemesterGradesSheet
             _output.Params["Date"] = _input.Date.ToString("d");
 
             return _output;
-        }
-
-        private GradeQuery CreateQuery()
-        {
-            return new GradeQuery(Project)
-                .SetInSemesters(_input.Semester)
-                .SetInSubjects(_input.Subject)
-                .NewQueryFromCurrentGrades();
         }
 
         private List<Student> GetStudents()
