@@ -239,15 +239,14 @@ namespace GradeReport.ProjectModel.Queries
         public double GetAvg()
         {
             var grades = Get();
-            if (grades.Count == 0) return -1;
+            if (grades.Count == 0) return GradeValue.Empty;
             return Get().Average(g => g.Value);
         }
 
         public double GetAvgRounded(MidpointRounding midpoint = MidpointRounding.AwayFromZero)
         {
             var avg = GetAvg();
-            if (avg == -1) return -1;
-            return Math.Round(GetAvg(), midpoint);
+            return avg == GradeValue.Empty ? GradeValue.Empty : Math.Round(avg, midpoint);
         }
 
         public bool Exists() => Get().Count > 0;

@@ -37,19 +37,38 @@ namespace GradeReport.Reporting.Reports.SummaryTrainingPeriodSheet
             _summaryTable = _output.SummaryTable;
             _coursesTable = _output.CoursesTable;
 
-            List<Semester> _groupSemesters = new List<Semester>();
+            _groupSemesters = new List<Semester>();
             _input.Group.Courses.ForEach(course => _groupSemesters.AddRange(course.Semesters));
 
             _students = _input.Group.Courses.Last().Semesters.Last().Students;
 
             BuildSummaryTable();
             BuildCoursesTable();
+            CalcRedDiploma();
 
             _output.Params["ParentOrganizationName"] = Project.Config.ParentOrganizationName;
             _output.Params["OrganizationName"] = Project.Config.OrganizationName;
             _output.Params["GroupName"] = _input.Group.Courses.Last().GroupNameForCourse;
 
             return _output;
+        }
+
+        private void CalcRedDiploma()
+        {
+            for (int i = 0; i < _students.Count; i++)
+            {
+                var stSummaryRow = _summaryTable.Rows[i];
+                var grades = stSummaryRow.Cells
+                    .Concat(_coursesTable.Rows[i].Cells)
+                    .Select(cell => Convert.ToInt32(cell.Value))
+                    .ToList().FindAll(g => g >= 0);
+
+                double cntAll = grades.Count;
+                double cnt9_10 = grades.Count(g => g >= 9);
+                double cnt0_6 = grades.Count(g => g >= 0 && g <= 6);
+
+                stSummaryRow.Params["HasRedDiploma"] = (cnt9_10 * 100 / cntAll >= 75 && cnt0_6 == 0);
+            }
         }
 
         private void BuildCoursesTable()
