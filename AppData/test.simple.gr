@@ -1,0 +1,1634 @@
+{
+  "Config": {
+    "ParentOrganizationName": "Вышестоящая организация",
+    "OrganizationName": "Организация",
+    "CuratorName": "Куратор Имя Отчество",
+    "TeacherName": "Преподаватель Имя Отчество",
+    "CuratorGroupGuid": "00000000-0000-0000-0000-000000000000"
+  },
+  "Groups": [
+    {
+      "Name": "ГР1",
+      "Guid": "3b72ddc0-9079-4937-a03f-c4ed2eeb97c7"
+    }
+  ],
+  "GroupSubjectRefs": [
+    {
+      "GroupGuid": "3b72ddc0-9079-4937-a03f-c4ed2eeb97c7",
+      "SubjectGuid": "c0ea49bd-ab70-4bef-bb3e-24e497bd25a6"
+    },
+    {
+      "GroupGuid": "3b72ddc0-9079-4937-a03f-c4ed2eeb97c7",
+      "SubjectGuid": "43613d49-7dd0-4fa1-82cd-ded81858b67b"
+    },
+    {
+      "GroupGuid": "3b72ddc0-9079-4937-a03f-c4ed2eeb97c7",
+      "SubjectGuid": "8b9842d1-f934-407b-b57f-a50a27b3c050"
+    },
+    {
+      "GroupGuid": "3b72ddc0-9079-4937-a03f-c4ed2eeb97c7",
+      "SubjectGuid": "02b69b81-0c31-4c18-a991-11685a0a2a45"
+    },
+    {
+      "GroupGuid": "3b72ddc0-9079-4937-a03f-c4ed2eeb97c7",
+      "SubjectGuid": "321fd4e0-4927-4c65-9658-483fd8058cc9"
+    },
+    {
+      "GroupGuid": "3b72ddc0-9079-4937-a03f-c4ed2eeb97c7",
+      "SubjectGuid": "921fe721-9830-4c2c-b699-e62af29e9384"
+    },
+    {
+      "GroupGuid": "3b72ddc0-9079-4937-a03f-c4ed2eeb97c7",
+      "SubjectGuid": "379bb926-dd05-47c4-979a-19249b93fa2c"
+    }
+  ],
+  "Courses": [
+    {
+      "GroupGuid": "3b72ddc0-9079-4937-a03f-c4ed2eeb97c7",
+      "SpecialtyGuid": "2ca06661-bf2c-4f82-a77d-6d0e35c30ac0",
+      "GroupNameForCourse": "ГР11",
+      "Number": 1,
+      "StartYear": 2021,
+      "Guid": "dde46c9e-4b9b-4013-9e5d-fde27872b11e"
+    },
+    {
+      "GroupGuid": "3b72ddc0-9079-4937-a03f-c4ed2eeb97c7",
+      "SpecialtyGuid": "2ca06661-bf2c-4f82-a77d-6d0e35c30ac0",
+      "GroupNameForCourse": "ГР21",
+      "Number": 2,
+      "StartYear": 2022,
+      "Guid": "0ae98ca0-4751-4c3d-aec9-eb2cc9dd1dd6"
+    }
+  ],
+  "Specialties": [
+    {
+      "QualificationGuid": "e3e403bb-4187-41e6-b33b-8eb14d1297df",
+      "Code": "12-34-567",
+      "Name": "Специальность 1",
+      "Guid": "2ca06661-bf2c-4f82-a77d-6d0e35c30ac0"
+    }
+  ],
+  "Qualifications": [
+    {
+      "Name": "Квалификация 1",
+      "Guid": "e3e403bb-4187-41e6-b33b-8eb14d1297df"
+    }
+  ],
+  "Students": [
+    {
+      "GroupGuid": "3b72ddc0-9079-4937-a03f-c4ed2eeb97c7",
+      "Name": "Студент1 Имя Отчество",
+      "Guid": "d38c70f3-ac59-40ea-8df3-93554ffab0bd"
+    },
+    {
+      "GroupGuid": "3b72ddc0-9079-4937-a03f-c4ed2eeb97c7",
+      "Name": "Студент2 Имя Отчество",
+      "Guid": "6c941155-c08c-4c79-a268-b5c01e110961"
+    },
+    {
+      "GroupGuid": "3b72ddc0-9079-4937-a03f-c4ed2eeb97c7",
+      "Name": "Студент3 Имя Отчество",
+      "Guid": "e7eb23b2-b64d-497f-b3d9-7064026aa00b"
+    },
+    {
+      "GroupGuid": "3b72ddc0-9079-4937-a03f-c4ed2eeb97c7",
+      "Name": "Студент4 Имя Отчество",
+      "Guid": "cfce5550-7eac-4041-8d7c-06925f09ed7b"
+    },
+    {
+      "GroupGuid": "3b72ddc0-9079-4937-a03f-c4ed2eeb97c7",
+      "Name": "Студент5 Имя Отчество",
+      "Guid": "32e3bec3-87ee-4b71-8753-ee9fec6f4a8f"
+    },
+    {
+      "GroupGuid": "3b72ddc0-9079-4937-a03f-c4ed2eeb97c7",
+      "Name": "Студент6 Имя Отчество",
+      "Guid": "1c633a66-82d6-4bbd-95c8-a99e85a71f76"
+    },
+    {
+      "GroupGuid": "3b72ddc0-9079-4937-a03f-c4ed2eeb97c7",
+      "Name": "Студент7 Имя Отчество",
+      "Guid": "800af5c7-5999-4fd6-a4d9-670c2e9e2c1b"
+    },
+    {
+      "GroupGuid": "3b72ddc0-9079-4937-a03f-c4ed2eeb97c7",
+      "Name": "Студент8Пр Имя Отчество",
+      "Guid": "1458e4c3-60af-473f-a741-fa7fafabf946"
+    },
+    {
+      "GroupGuid": "3b72ddc0-9079-4937-a03f-c4ed2eeb97c7",
+      "Name": "Студент9Уш Имя Отчество",
+      "Guid": "b0d34b37-47d2-4f3d-840d-e54e1fc64813"
+    }
+  ],
+  "SemesterStudentRefs": [
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "d38c70f3-ac59-40ea-8df3-93554ffab0bd"
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "6c941155-c08c-4c79-a268-b5c01e110961"
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "e7eb23b2-b64d-497f-b3d9-7064026aa00b"
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "cfce5550-7eac-4041-8d7c-06925f09ed7b"
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "32e3bec3-87ee-4b71-8753-ee9fec6f4a8f"
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "1c633a66-82d6-4bbd-95c8-a99e85a71f76"
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "800af5c7-5999-4fd6-a4d9-670c2e9e2c1b"
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "b0d34b37-47d2-4f3d-840d-e54e1fc64813"
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "d38c70f3-ac59-40ea-8df3-93554ffab0bd"
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "6c941155-c08c-4c79-a268-b5c01e110961"
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "e7eb23b2-b64d-497f-b3d9-7064026aa00b"
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "cfce5550-7eac-4041-8d7c-06925f09ed7b"
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "32e3bec3-87ee-4b71-8753-ee9fec6f4a8f"
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "1c633a66-82d6-4bbd-95c8-a99e85a71f76"
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "800af5c7-5999-4fd6-a4d9-670c2e9e2c1b"
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "1458e4c3-60af-473f-a741-fa7fafabf946"
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "b0d34b37-47d2-4f3d-840d-e54e1fc64813"
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "d38c70f3-ac59-40ea-8df3-93554ffab0bd"
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "6c941155-c08c-4c79-a268-b5c01e110961"
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "e7eb23b2-b64d-497f-b3d9-7064026aa00b"
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "cfce5550-7eac-4041-8d7c-06925f09ed7b"
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "32e3bec3-87ee-4b71-8753-ee9fec6f4a8f"
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "1c633a66-82d6-4bbd-95c8-a99e85a71f76"
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "800af5c7-5999-4fd6-a4d9-670c2e9e2c1b"
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "1458e4c3-60af-473f-a741-fa7fafabf946"
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "d38c70f3-ac59-40ea-8df3-93554ffab0bd"
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "6c941155-c08c-4c79-a268-b5c01e110961"
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "e7eb23b2-b64d-497f-b3d9-7064026aa00b"
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "cfce5550-7eac-4041-8d7c-06925f09ed7b"
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "32e3bec3-87ee-4b71-8753-ee9fec6f4a8f"
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "1c633a66-82d6-4bbd-95c8-a99e85a71f76"
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "800af5c7-5999-4fd6-a4d9-670c2e9e2c1b"
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "1458e4c3-60af-473f-a741-fa7fafabf946"
+    }
+  ],
+  "Semesters": [
+    {
+      "CourseGuid": "dde46c9e-4b9b-4013-9e5d-fde27872b11e",
+      "LocalNumber": 1,
+      "Guid": "eb488179-f36e-4dcc-a952-b7064d231694"
+    },
+    {
+      "CourseGuid": "dde46c9e-4b9b-4013-9e5d-fde27872b11e",
+      "LocalNumber": 2,
+      "Guid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736"
+    },
+    {
+      "CourseGuid": "0ae98ca0-4751-4c3d-aec9-eb2cc9dd1dd6",
+      "LocalNumber": 1,
+      "Guid": "360665f2-a28f-4f2c-b813-947a4bfe857d"
+    },
+    {
+      "CourseGuid": "0ae98ca0-4751-4c3d-aec9-eb2cc9dd1dd6",
+      "LocalNumber": 2,
+      "Guid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6"
+    }
+  ],
+  "SemesterSubjectRefs": [
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "SubjectGuid": "c0ea49bd-ab70-4bef-bb3e-24e497bd25a6"
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "SubjectGuid": "43613d49-7dd0-4fa1-82cd-ded81858b67b"
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "SubjectGuid": "8b9842d1-f934-407b-b57f-a50a27b3c050"
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "SubjectGuid": "c0ea49bd-ab70-4bef-bb3e-24e497bd25a6"
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "SubjectGuid": "43613d49-7dd0-4fa1-82cd-ded81858b67b"
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "SubjectGuid": "02b69b81-0c31-4c18-a991-11685a0a2a45"
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "SubjectGuid": "c0ea49bd-ab70-4bef-bb3e-24e497bd25a6"
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "SubjectGuid": "02b69b81-0c31-4c18-a991-11685a0a2a45"
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "SubjectGuid": "321fd4e0-4927-4c65-9658-483fd8058cc9"
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "SubjectGuid": "921fe721-9830-4c2c-b699-e62af29e9384"
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "SubjectGuid": "c0ea49bd-ab70-4bef-bb3e-24e497bd25a6"
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "SubjectGuid": "321fd4e0-4927-4c65-9658-483fd8058cc9"
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "SubjectGuid": "921fe721-9830-4c2c-b699-e62af29e9384"
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "SubjectGuid": "379bb926-dd05-47c4-979a-19249b93fa2c"
+    }
+  ],
+  "Subjects": [
+    {
+      "Name": "Предмет 1 ЗачОсв",
+      "ShortName": "Пр1ЗО",
+      "Guid": "c0ea49bd-ab70-4bef-bb3e-24e497bd25a6"
+    },
+    {
+      "Name": "Предмет 2 Экз",
+      "ShortName": "Пр2Экз",
+      "Guid": "43613d49-7dd0-4fa1-82cd-ded81858b67b"
+    },
+    {
+      "Name": "Предмет 3 Курсовая",
+      "ShortName": "Пр3К",
+      "Guid": "8b9842d1-f934-407b-b57f-a50a27b3c050"
+    },
+    {
+      "Name": "Предмет 4",
+      "ShortName": "Пр4",
+      "Guid": "02b69b81-0c31-4c18-a991-11685a0a2a45"
+    },
+    {
+      "Name": "Предмет 5 Курсовая",
+      "ShortName": "Пр5К",
+      "Guid": "321fd4e0-4927-4c65-9658-483fd8058cc9"
+    },
+    {
+      "Name": "Предмет 6 Экз",
+      "ShortName": "Пр6Экз",
+      "Guid": "921fe721-9830-4c2c-b699-e62af29e9384"
+    },
+    {
+      "Name": "Предмет 7 Курсовая",
+      "ShortName": "Пр7К",
+      "Guid": "379bb926-dd05-47c4-979a-19249b93fa2c"
+    }
+  ],
+  "Grades": [
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "d38c70f3-ac59-40ea-8df3-93554ffab0bd",
+      "SubjectGuid": "c0ea49bd-ab70-4bef-bb3e-24e497bd25a6",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "6c941155-c08c-4c79-a268-b5c01e110961",
+      "SubjectGuid": "c0ea49bd-ab70-4bef-bb3e-24e497bd25a6",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "e7eb23b2-b64d-497f-b3d9-7064026aa00b",
+      "SubjectGuid": "c0ea49bd-ab70-4bef-bb3e-24e497bd25a6",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": -2
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "cfce5550-7eac-4041-8d7c-06925f09ed7b",
+      "SubjectGuid": "c0ea49bd-ab70-4bef-bb3e-24e497bd25a6",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "32e3bec3-87ee-4b71-8753-ee9fec6f4a8f",
+      "SubjectGuid": "c0ea49bd-ab70-4bef-bb3e-24e497bd25a6",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 8
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "1c633a66-82d6-4bbd-95c8-a99e85a71f76",
+      "SubjectGuid": "c0ea49bd-ab70-4bef-bb3e-24e497bd25a6",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": -3
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "800af5c7-5999-4fd6-a4d9-670c2e9e2c1b",
+      "SubjectGuid": "c0ea49bd-ab70-4bef-bb3e-24e497bd25a6",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "b0d34b37-47d2-4f3d-840d-e54e1fc64813",
+      "SubjectGuid": "c0ea49bd-ab70-4bef-bb3e-24e497bd25a6",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 8
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "d38c70f3-ac59-40ea-8df3-93554ffab0bd",
+      "SubjectGuid": "43613d49-7dd0-4fa1-82cd-ded81858b67b",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "6c941155-c08c-4c79-a268-b5c01e110961",
+      "SubjectGuid": "43613d49-7dd0-4fa1-82cd-ded81858b67b",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "e7eb23b2-b64d-497f-b3d9-7064026aa00b",
+      "SubjectGuid": "43613d49-7dd0-4fa1-82cd-ded81858b67b",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 5
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "cfce5550-7eac-4041-8d7c-06925f09ed7b",
+      "SubjectGuid": "43613d49-7dd0-4fa1-82cd-ded81858b67b",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 4
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "32e3bec3-87ee-4b71-8753-ee9fec6f4a8f",
+      "SubjectGuid": "43613d49-7dd0-4fa1-82cd-ded81858b67b",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "1c633a66-82d6-4bbd-95c8-a99e85a71f76",
+      "SubjectGuid": "43613d49-7dd0-4fa1-82cd-ded81858b67b",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 7
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "800af5c7-5999-4fd6-a4d9-670c2e9e2c1b",
+      "SubjectGuid": "43613d49-7dd0-4fa1-82cd-ded81858b67b",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "b0d34b37-47d2-4f3d-840d-e54e1fc64813",
+      "SubjectGuid": "43613d49-7dd0-4fa1-82cd-ded81858b67b",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 3
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "d38c70f3-ac59-40ea-8df3-93554ffab0bd",
+      "SubjectGuid": "8b9842d1-f934-407b-b57f-a50a27b3c050",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "6c941155-c08c-4c79-a268-b5c01e110961",
+      "SubjectGuid": "8b9842d1-f934-407b-b57f-a50a27b3c050",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "e7eb23b2-b64d-497f-b3d9-7064026aa00b",
+      "SubjectGuid": "8b9842d1-f934-407b-b57f-a50a27b3c050",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 7
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "cfce5550-7eac-4041-8d7c-06925f09ed7b",
+      "SubjectGuid": "8b9842d1-f934-407b-b57f-a50a27b3c050",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 6
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "32e3bec3-87ee-4b71-8753-ee9fec6f4a8f",
+      "SubjectGuid": "8b9842d1-f934-407b-b57f-a50a27b3c050",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 6
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "1c633a66-82d6-4bbd-95c8-a99e85a71f76",
+      "SubjectGuid": "8b9842d1-f934-407b-b57f-a50a27b3c050",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "800af5c7-5999-4fd6-a4d9-670c2e9e2c1b",
+      "SubjectGuid": "8b9842d1-f934-407b-b57f-a50a27b3c050",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 8
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "b0d34b37-47d2-4f3d-840d-e54e1fc64813",
+      "SubjectGuid": "8b9842d1-f934-407b-b57f-a50a27b3c050",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 7
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "d38c70f3-ac59-40ea-8df3-93554ffab0bd",
+      "SubjectGuid": "8b9842d1-f934-407b-b57f-a50a27b3c050",
+      "GradeTypeName": "Course",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "6c941155-c08c-4c79-a268-b5c01e110961",
+      "SubjectGuid": "8b9842d1-f934-407b-b57f-a50a27b3c050",
+      "GradeTypeName": "Course",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "e7eb23b2-b64d-497f-b3d9-7064026aa00b",
+      "SubjectGuid": "8b9842d1-f934-407b-b57f-a50a27b3c050",
+      "GradeTypeName": "Course",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "cfce5550-7eac-4041-8d7c-06925f09ed7b",
+      "SubjectGuid": "8b9842d1-f934-407b-b57f-a50a27b3c050",
+      "GradeTypeName": "Course",
+      "Number": 1,
+      "Value": 8
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "32e3bec3-87ee-4b71-8753-ee9fec6f4a8f",
+      "SubjectGuid": "8b9842d1-f934-407b-b57f-a50a27b3c050",
+      "GradeTypeName": "Course",
+      "Number": 1,
+      "Value": 8
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "1c633a66-82d6-4bbd-95c8-a99e85a71f76",
+      "SubjectGuid": "8b9842d1-f934-407b-b57f-a50a27b3c050",
+      "GradeTypeName": "Course",
+      "Number": 1,
+      "Value": 7
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "800af5c7-5999-4fd6-a4d9-670c2e9e2c1b",
+      "SubjectGuid": "8b9842d1-f934-407b-b57f-a50a27b3c050",
+      "GradeTypeName": "Course",
+      "Number": 1,
+      "Value": 7
+    },
+    {
+      "SemesterGuid": "eb488179-f36e-4dcc-a952-b7064d231694",
+      "StudentGuid": "b0d34b37-47d2-4f3d-840d-e54e1fc64813",
+      "SubjectGuid": "8b9842d1-f934-407b-b57f-a50a27b3c050",
+      "GradeTypeName": "Course",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "d38c70f3-ac59-40ea-8df3-93554ffab0bd",
+      "SubjectGuid": "c0ea49bd-ab70-4bef-bb3e-24e497bd25a6",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "6c941155-c08c-4c79-a268-b5c01e110961",
+      "SubjectGuid": "c0ea49bd-ab70-4bef-bb3e-24e497bd25a6",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "e7eb23b2-b64d-497f-b3d9-7064026aa00b",
+      "SubjectGuid": "c0ea49bd-ab70-4bef-bb3e-24e497bd25a6",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": -2
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "cfce5550-7eac-4041-8d7c-06925f09ed7b",
+      "SubjectGuid": "c0ea49bd-ab70-4bef-bb3e-24e497bd25a6",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 7
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "32e3bec3-87ee-4b71-8753-ee9fec6f4a8f",
+      "SubjectGuid": "c0ea49bd-ab70-4bef-bb3e-24e497bd25a6",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": -3
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "1c633a66-82d6-4bbd-95c8-a99e85a71f76",
+      "SubjectGuid": "c0ea49bd-ab70-4bef-bb3e-24e497bd25a6",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "800af5c7-5999-4fd6-a4d9-670c2e9e2c1b",
+      "SubjectGuid": "c0ea49bd-ab70-4bef-bb3e-24e497bd25a6",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 8
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "1458e4c3-60af-473f-a741-fa7fafabf946",
+      "SubjectGuid": "c0ea49bd-ab70-4bef-bb3e-24e497bd25a6",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 6
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "b0d34b37-47d2-4f3d-840d-e54e1fc64813",
+      "SubjectGuid": "c0ea49bd-ab70-4bef-bb3e-24e497bd25a6",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 4
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "d38c70f3-ac59-40ea-8df3-93554ffab0bd",
+      "SubjectGuid": "43613d49-7dd0-4fa1-82cd-ded81858b67b",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "6c941155-c08c-4c79-a268-b5c01e110961",
+      "SubjectGuid": "43613d49-7dd0-4fa1-82cd-ded81858b67b",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "e7eb23b2-b64d-497f-b3d9-7064026aa00b",
+      "SubjectGuid": "43613d49-7dd0-4fa1-82cd-ded81858b67b",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 6
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "cfce5550-7eac-4041-8d7c-06925f09ed7b",
+      "SubjectGuid": "43613d49-7dd0-4fa1-82cd-ded81858b67b",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 5
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "32e3bec3-87ee-4b71-8753-ee9fec6f4a8f",
+      "SubjectGuid": "43613d49-7dd0-4fa1-82cd-ded81858b67b",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "1c633a66-82d6-4bbd-95c8-a99e85a71f76",
+      "SubjectGuid": "43613d49-7dd0-4fa1-82cd-ded81858b67b",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 8
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "800af5c7-5999-4fd6-a4d9-670c2e9e2c1b",
+      "SubjectGuid": "43613d49-7dd0-4fa1-82cd-ded81858b67b",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 7
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "1458e4c3-60af-473f-a741-fa7fafabf946",
+      "SubjectGuid": "43613d49-7dd0-4fa1-82cd-ded81858b67b",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 8
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "b0d34b37-47d2-4f3d-840d-e54e1fc64813",
+      "SubjectGuid": "43613d49-7dd0-4fa1-82cd-ded81858b67b",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "d38c70f3-ac59-40ea-8df3-93554ffab0bd",
+      "SubjectGuid": "02b69b81-0c31-4c18-a991-11685a0a2a45",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "6c941155-c08c-4c79-a268-b5c01e110961",
+      "SubjectGuid": "02b69b81-0c31-4c18-a991-11685a0a2a45",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "e7eb23b2-b64d-497f-b3d9-7064026aa00b",
+      "SubjectGuid": "02b69b81-0c31-4c18-a991-11685a0a2a45",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 7
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "cfce5550-7eac-4041-8d7c-06925f09ed7b",
+      "SubjectGuid": "02b69b81-0c31-4c18-a991-11685a0a2a45",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 5
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "32e3bec3-87ee-4b71-8753-ee9fec6f4a8f",
+      "SubjectGuid": "02b69b81-0c31-4c18-a991-11685a0a2a45",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "1c633a66-82d6-4bbd-95c8-a99e85a71f76",
+      "SubjectGuid": "02b69b81-0c31-4c18-a991-11685a0a2a45",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 8
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "800af5c7-5999-4fd6-a4d9-670c2e9e2c1b",
+      "SubjectGuid": "02b69b81-0c31-4c18-a991-11685a0a2a45",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 7
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "1458e4c3-60af-473f-a741-fa7fafabf946",
+      "SubjectGuid": "02b69b81-0c31-4c18-a991-11685a0a2a45",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 6
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "b0d34b37-47d2-4f3d-840d-e54e1fc64813",
+      "SubjectGuid": "02b69b81-0c31-4c18-a991-11685a0a2a45",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 8
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "d38c70f3-ac59-40ea-8df3-93554ffab0bd",
+      "SubjectGuid": "43613d49-7dd0-4fa1-82cd-ded81858b67b",
+      "GradeTypeName": "Exam",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "6c941155-c08c-4c79-a268-b5c01e110961",
+      "SubjectGuid": "43613d49-7dd0-4fa1-82cd-ded81858b67b",
+      "GradeTypeName": "Exam",
+      "Number": 1,
+      "Value": 8
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "e7eb23b2-b64d-497f-b3d9-7064026aa00b",
+      "SubjectGuid": "43613d49-7dd0-4fa1-82cd-ded81858b67b",
+      "GradeTypeName": "Exam",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "cfce5550-7eac-4041-8d7c-06925f09ed7b",
+      "SubjectGuid": "43613d49-7dd0-4fa1-82cd-ded81858b67b",
+      "GradeTypeName": "Exam",
+      "Number": 1,
+      "Value": 7
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "32e3bec3-87ee-4b71-8753-ee9fec6f4a8f",
+      "SubjectGuid": "43613d49-7dd0-4fa1-82cd-ded81858b67b",
+      "GradeTypeName": "Exam",
+      "Number": 1,
+      "Value": 4
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "1c633a66-82d6-4bbd-95c8-a99e85a71f76",
+      "SubjectGuid": "43613d49-7dd0-4fa1-82cd-ded81858b67b",
+      "GradeTypeName": "Exam",
+      "Number": 1,
+      "Value": 5
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "800af5c7-5999-4fd6-a4d9-670c2e9e2c1b",
+      "SubjectGuid": "43613d49-7dd0-4fa1-82cd-ded81858b67b",
+      "GradeTypeName": "Exam",
+      "Number": 1,
+      "Value": 8
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "1458e4c3-60af-473f-a741-fa7fafabf946",
+      "SubjectGuid": "43613d49-7dd0-4fa1-82cd-ded81858b67b",
+      "GradeTypeName": "Exam",
+      "Number": 1,
+      "Value": 7
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "b0d34b37-47d2-4f3d-840d-e54e1fc64813",
+      "SubjectGuid": "43613d49-7dd0-4fa1-82cd-ded81858b67b",
+      "GradeTypeName": "Exam",
+      "Number": 1,
+      "Value": 7
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "d38c70f3-ac59-40ea-8df3-93554ffab0bd",
+      "SubjectGuid": "43613d49-7dd0-4fa1-82cd-ded81858b67b",
+      "GradeTypeName": "Course",
+      "Number": 1,
+      "Value": 7
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "6c941155-c08c-4c79-a268-b5c01e110961",
+      "SubjectGuid": "43613d49-7dd0-4fa1-82cd-ded81858b67b",
+      "GradeTypeName": "Course",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "e7eb23b2-b64d-497f-b3d9-7064026aa00b",
+      "SubjectGuid": "43613d49-7dd0-4fa1-82cd-ded81858b67b",
+      "GradeTypeName": "Course",
+      "Number": 1,
+      "Value": 8
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "cfce5550-7eac-4041-8d7c-06925f09ed7b",
+      "SubjectGuid": "43613d49-7dd0-4fa1-82cd-ded81858b67b",
+      "GradeTypeName": "Course",
+      "Number": 1,
+      "Value": 7
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "32e3bec3-87ee-4b71-8753-ee9fec6f4a8f",
+      "SubjectGuid": "43613d49-7dd0-4fa1-82cd-ded81858b67b",
+      "GradeTypeName": "Course",
+      "Number": 1,
+      "Value": 7
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "1c633a66-82d6-4bbd-95c8-a99e85a71f76",
+      "SubjectGuid": "43613d49-7dd0-4fa1-82cd-ded81858b67b",
+      "GradeTypeName": "Course",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "800af5c7-5999-4fd6-a4d9-670c2e9e2c1b",
+      "SubjectGuid": "43613d49-7dd0-4fa1-82cd-ded81858b67b",
+      "GradeTypeName": "Course",
+      "Number": 1,
+      "Value": 8
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "1458e4c3-60af-473f-a741-fa7fafabf946",
+      "SubjectGuid": "43613d49-7dd0-4fa1-82cd-ded81858b67b",
+      "GradeTypeName": "Course",
+      "Number": 1,
+      "Value": 7
+    },
+    {
+      "SemesterGuid": "13ea7ddd-3346-4e67-8fc7-c12731ce1736",
+      "StudentGuid": "b0d34b37-47d2-4f3d-840d-e54e1fc64813",
+      "SubjectGuid": "43613d49-7dd0-4fa1-82cd-ded81858b67b",
+      "GradeTypeName": "Course",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "d38c70f3-ac59-40ea-8df3-93554ffab0bd",
+      "SubjectGuid": "c0ea49bd-ab70-4bef-bb3e-24e497bd25a6",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "6c941155-c08c-4c79-a268-b5c01e110961",
+      "SubjectGuid": "c0ea49bd-ab70-4bef-bb3e-24e497bd25a6",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "e7eb23b2-b64d-497f-b3d9-7064026aa00b",
+      "SubjectGuid": "c0ea49bd-ab70-4bef-bb3e-24e497bd25a6",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": -2
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "cfce5550-7eac-4041-8d7c-06925f09ed7b",
+      "SubjectGuid": "c0ea49bd-ab70-4bef-bb3e-24e497bd25a6",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "32e3bec3-87ee-4b71-8753-ee9fec6f4a8f",
+      "SubjectGuid": "c0ea49bd-ab70-4bef-bb3e-24e497bd25a6",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": -2
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "1c633a66-82d6-4bbd-95c8-a99e85a71f76",
+      "SubjectGuid": "c0ea49bd-ab70-4bef-bb3e-24e497bd25a6",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 7
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "800af5c7-5999-4fd6-a4d9-670c2e9e2c1b",
+      "SubjectGuid": "c0ea49bd-ab70-4bef-bb3e-24e497bd25a6",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "1458e4c3-60af-473f-a741-fa7fafabf946",
+      "SubjectGuid": "c0ea49bd-ab70-4bef-bb3e-24e497bd25a6",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 7
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "d38c70f3-ac59-40ea-8df3-93554ffab0bd",
+      "SubjectGuid": "02b69b81-0c31-4c18-a991-11685a0a2a45",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "6c941155-c08c-4c79-a268-b5c01e110961",
+      "SubjectGuid": "02b69b81-0c31-4c18-a991-11685a0a2a45",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "e7eb23b2-b64d-497f-b3d9-7064026aa00b",
+      "SubjectGuid": "02b69b81-0c31-4c18-a991-11685a0a2a45",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 7
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "cfce5550-7eac-4041-8d7c-06925f09ed7b",
+      "SubjectGuid": "02b69b81-0c31-4c18-a991-11685a0a2a45",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 5
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "32e3bec3-87ee-4b71-8753-ee9fec6f4a8f",
+      "SubjectGuid": "02b69b81-0c31-4c18-a991-11685a0a2a45",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "1c633a66-82d6-4bbd-95c8-a99e85a71f76",
+      "SubjectGuid": "02b69b81-0c31-4c18-a991-11685a0a2a45",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 8
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "800af5c7-5999-4fd6-a4d9-670c2e9e2c1b",
+      "SubjectGuid": "02b69b81-0c31-4c18-a991-11685a0a2a45",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 7
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "1458e4c3-60af-473f-a741-fa7fafabf946",
+      "SubjectGuid": "02b69b81-0c31-4c18-a991-11685a0a2a45",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 8
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "d38c70f3-ac59-40ea-8df3-93554ffab0bd",
+      "SubjectGuid": "321fd4e0-4927-4c65-9658-483fd8058cc9",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "6c941155-c08c-4c79-a268-b5c01e110961",
+      "SubjectGuid": "321fd4e0-4927-4c65-9658-483fd8058cc9",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "e7eb23b2-b64d-497f-b3d9-7064026aa00b",
+      "SubjectGuid": "321fd4e0-4927-4c65-9658-483fd8058cc9",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 7
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "cfce5550-7eac-4041-8d7c-06925f09ed7b",
+      "SubjectGuid": "321fd4e0-4927-4c65-9658-483fd8058cc9",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "32e3bec3-87ee-4b71-8753-ee9fec6f4a8f",
+      "SubjectGuid": "321fd4e0-4927-4c65-9658-483fd8058cc9",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 8
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "1c633a66-82d6-4bbd-95c8-a99e85a71f76",
+      "SubjectGuid": "321fd4e0-4927-4c65-9658-483fd8058cc9",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 7
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "800af5c7-5999-4fd6-a4d9-670c2e9e2c1b",
+      "SubjectGuid": "321fd4e0-4927-4c65-9658-483fd8058cc9",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 8
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "1458e4c3-60af-473f-a741-fa7fafabf946",
+      "SubjectGuid": "321fd4e0-4927-4c65-9658-483fd8058cc9",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 7
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "d38c70f3-ac59-40ea-8df3-93554ffab0bd",
+      "SubjectGuid": "921fe721-9830-4c2c-b699-e62af29e9384",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "6c941155-c08c-4c79-a268-b5c01e110961",
+      "SubjectGuid": "921fe721-9830-4c2c-b699-e62af29e9384",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "e7eb23b2-b64d-497f-b3d9-7064026aa00b",
+      "SubjectGuid": "921fe721-9830-4c2c-b699-e62af29e9384",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 7
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "cfce5550-7eac-4041-8d7c-06925f09ed7b",
+      "SubjectGuid": "921fe721-9830-4c2c-b699-e62af29e9384",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 6
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "32e3bec3-87ee-4b71-8753-ee9fec6f4a8f",
+      "SubjectGuid": "921fe721-9830-4c2c-b699-e62af29e9384",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 4
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "1c633a66-82d6-4bbd-95c8-a99e85a71f76",
+      "SubjectGuid": "921fe721-9830-4c2c-b699-e62af29e9384",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 5
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "800af5c7-5999-4fd6-a4d9-670c2e9e2c1b",
+      "SubjectGuid": "921fe721-9830-4c2c-b699-e62af29e9384",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "360665f2-a28f-4f2c-b813-947a4bfe857d",
+      "StudentGuid": "1458e4c3-60af-473f-a741-fa7fafabf946",
+      "SubjectGuid": "921fe721-9830-4c2c-b699-e62af29e9384",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 7
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "d38c70f3-ac59-40ea-8df3-93554ffab0bd",
+      "SubjectGuid": "c0ea49bd-ab70-4bef-bb3e-24e497bd25a6",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "6c941155-c08c-4c79-a268-b5c01e110961",
+      "SubjectGuid": "c0ea49bd-ab70-4bef-bb3e-24e497bd25a6",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "e7eb23b2-b64d-497f-b3d9-7064026aa00b",
+      "SubjectGuid": "c0ea49bd-ab70-4bef-bb3e-24e497bd25a6",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "cfce5550-7eac-4041-8d7c-06925f09ed7b",
+      "SubjectGuid": "c0ea49bd-ab70-4bef-bb3e-24e497bd25a6",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 8
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "32e3bec3-87ee-4b71-8753-ee9fec6f4a8f",
+      "SubjectGuid": "c0ea49bd-ab70-4bef-bb3e-24e497bd25a6",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 7
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "1c633a66-82d6-4bbd-95c8-a99e85a71f76",
+      "SubjectGuid": "c0ea49bd-ab70-4bef-bb3e-24e497bd25a6",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 8
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "800af5c7-5999-4fd6-a4d9-670c2e9e2c1b",
+      "SubjectGuid": "c0ea49bd-ab70-4bef-bb3e-24e497bd25a6",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "1458e4c3-60af-473f-a741-fa7fafabf946",
+      "SubjectGuid": "c0ea49bd-ab70-4bef-bb3e-24e497bd25a6",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 7
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "d38c70f3-ac59-40ea-8df3-93554ffab0bd",
+      "SubjectGuid": "321fd4e0-4927-4c65-9658-483fd8058cc9",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "6c941155-c08c-4c79-a268-b5c01e110961",
+      "SubjectGuid": "321fd4e0-4927-4c65-9658-483fd8058cc9",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "e7eb23b2-b64d-497f-b3d9-7064026aa00b",
+      "SubjectGuid": "321fd4e0-4927-4c65-9658-483fd8058cc9",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "cfce5550-7eac-4041-8d7c-06925f09ed7b",
+      "SubjectGuid": "321fd4e0-4927-4c65-9658-483fd8058cc9",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 6
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "32e3bec3-87ee-4b71-8753-ee9fec6f4a8f",
+      "SubjectGuid": "321fd4e0-4927-4c65-9658-483fd8058cc9",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 5
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "1c633a66-82d6-4bbd-95c8-a99e85a71f76",
+      "SubjectGuid": "321fd4e0-4927-4c65-9658-483fd8058cc9",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "800af5c7-5999-4fd6-a4d9-670c2e9e2c1b",
+      "SubjectGuid": "321fd4e0-4927-4c65-9658-483fd8058cc9",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 8
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "1458e4c3-60af-473f-a741-fa7fafabf946",
+      "SubjectGuid": "321fd4e0-4927-4c65-9658-483fd8058cc9",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "d38c70f3-ac59-40ea-8df3-93554ffab0bd",
+      "SubjectGuid": "921fe721-9830-4c2c-b699-e62af29e9384",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "6c941155-c08c-4c79-a268-b5c01e110961",
+      "SubjectGuid": "921fe721-9830-4c2c-b699-e62af29e9384",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "e7eb23b2-b64d-497f-b3d9-7064026aa00b",
+      "SubjectGuid": "921fe721-9830-4c2c-b699-e62af29e9384",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 5
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "cfce5550-7eac-4041-8d7c-06925f09ed7b",
+      "SubjectGuid": "921fe721-9830-4c2c-b699-e62af29e9384",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 4
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "32e3bec3-87ee-4b71-8753-ee9fec6f4a8f",
+      "SubjectGuid": "921fe721-9830-4c2c-b699-e62af29e9384",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 6
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "1c633a66-82d6-4bbd-95c8-a99e85a71f76",
+      "SubjectGuid": "921fe721-9830-4c2c-b699-e62af29e9384",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 5
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "800af5c7-5999-4fd6-a4d9-670c2e9e2c1b",
+      "SubjectGuid": "921fe721-9830-4c2c-b699-e62af29e9384",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 7
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "1458e4c3-60af-473f-a741-fa7fafabf946",
+      "SubjectGuid": "921fe721-9830-4c2c-b699-e62af29e9384",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 8
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "d38c70f3-ac59-40ea-8df3-93554ffab0bd",
+      "SubjectGuid": "379bb926-dd05-47c4-979a-19249b93fa2c",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "6c941155-c08c-4c79-a268-b5c01e110961",
+      "SubjectGuid": "379bb926-dd05-47c4-979a-19249b93fa2c",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "e7eb23b2-b64d-497f-b3d9-7064026aa00b",
+      "SubjectGuid": "379bb926-dd05-47c4-979a-19249b93fa2c",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 4
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "cfce5550-7eac-4041-8d7c-06925f09ed7b",
+      "SubjectGuid": "379bb926-dd05-47c4-979a-19249b93fa2c",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 6
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "32e3bec3-87ee-4b71-8753-ee9fec6f4a8f",
+      "SubjectGuid": "379bb926-dd05-47c4-979a-19249b93fa2c",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "1c633a66-82d6-4bbd-95c8-a99e85a71f76",
+      "SubjectGuid": "379bb926-dd05-47c4-979a-19249b93fa2c",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 8
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "800af5c7-5999-4fd6-a4d9-670c2e9e2c1b",
+      "SubjectGuid": "379bb926-dd05-47c4-979a-19249b93fa2c",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 7
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "1458e4c3-60af-473f-a741-fa7fafabf946",
+      "SubjectGuid": "379bb926-dd05-47c4-979a-19249b93fa2c",
+      "GradeTypeName": "Semester",
+      "Number": 1,
+      "Value": 8
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "d38c70f3-ac59-40ea-8df3-93554ffab0bd",
+      "SubjectGuid": "921fe721-9830-4c2c-b699-e62af29e9384",
+      "GradeTypeName": "Exam",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "6c941155-c08c-4c79-a268-b5c01e110961",
+      "SubjectGuid": "921fe721-9830-4c2c-b699-e62af29e9384",
+      "GradeTypeName": "Exam",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "e7eb23b2-b64d-497f-b3d9-7064026aa00b",
+      "SubjectGuid": "921fe721-9830-4c2c-b699-e62af29e9384",
+      "GradeTypeName": "Exam",
+      "Number": 1,
+      "Value": 7
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "cfce5550-7eac-4041-8d7c-06925f09ed7b",
+      "SubjectGuid": "921fe721-9830-4c2c-b699-e62af29e9384",
+      "GradeTypeName": "Exam",
+      "Number": 1,
+      "Value": 4
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "32e3bec3-87ee-4b71-8753-ee9fec6f4a8f",
+      "SubjectGuid": "921fe721-9830-4c2c-b699-e62af29e9384",
+      "GradeTypeName": "Exam",
+      "Number": 1,
+      "Value": 5
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "1c633a66-82d6-4bbd-95c8-a99e85a71f76",
+      "SubjectGuid": "921fe721-9830-4c2c-b699-e62af29e9384",
+      "GradeTypeName": "Exam",
+      "Number": 1,
+      "Value": 7
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "800af5c7-5999-4fd6-a4d9-670c2e9e2c1b",
+      "SubjectGuid": "921fe721-9830-4c2c-b699-e62af29e9384",
+      "GradeTypeName": "Exam",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "1458e4c3-60af-473f-a741-fa7fafabf946",
+      "SubjectGuid": "921fe721-9830-4c2c-b699-e62af29e9384",
+      "GradeTypeName": "Exam",
+      "Number": 1,
+      "Value": 8
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "d38c70f3-ac59-40ea-8df3-93554ffab0bd",
+      "SubjectGuid": "321fd4e0-4927-4c65-9658-483fd8058cc9",
+      "GradeTypeName": "Course",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "6c941155-c08c-4c79-a268-b5c01e110961",
+      "SubjectGuid": "321fd4e0-4927-4c65-9658-483fd8058cc9",
+      "GradeTypeName": "Course",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "e7eb23b2-b64d-497f-b3d9-7064026aa00b",
+      "SubjectGuid": "321fd4e0-4927-4c65-9658-483fd8058cc9",
+      "GradeTypeName": "Course",
+      "Number": 1,
+      "Value": 7
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "cfce5550-7eac-4041-8d7c-06925f09ed7b",
+      "SubjectGuid": "321fd4e0-4927-4c65-9658-483fd8058cc9",
+      "GradeTypeName": "Course",
+      "Number": 1,
+      "Value": 8
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "32e3bec3-87ee-4b71-8753-ee9fec6f4a8f",
+      "SubjectGuid": "321fd4e0-4927-4c65-9658-483fd8058cc9",
+      "GradeTypeName": "Course",
+      "Number": 1,
+      "Value": 8
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "1c633a66-82d6-4bbd-95c8-a99e85a71f76",
+      "SubjectGuid": "321fd4e0-4927-4c65-9658-483fd8058cc9",
+      "GradeTypeName": "Course",
+      "Number": 1,
+      "Value": 9
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "800af5c7-5999-4fd6-a4d9-670c2e9e2c1b",
+      "SubjectGuid": "321fd4e0-4927-4c65-9658-483fd8058cc9",
+      "GradeTypeName": "Course",
+      "Number": 1,
+      "Value": 8
+    },
+    {
+      "SemesterGuid": "433bcb27-978f-497a-a0e3-b5af9ca4e9f6",
+      "StudentGuid": "1458e4c3-60af-473f-a741-fa7fafabf946",
+      "SubjectGuid": "321fd4e0-4927-4c65-9658-483fd8058cc9",
+      "GradeTypeName": "Course",
+      "Number": 1,
+      "Value": 9
+    }
+  ],
+  "MyStudentRefs": []
+}
