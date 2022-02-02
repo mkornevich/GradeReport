@@ -25,7 +25,7 @@ namespace GradeReport.ProjectExplorer.Nodes
         protected override void CreateMenuItems(List<ToolStripMenuItem> items)
         {
             items.Add(new ToolStripMenuItem("Редактировать", Resources.edit_16,
-                PENodeActBuilder.BuildEditAct(this, new Config(), new ConfigEditForm(), new ConfigValidator())));
+                PENodeActBuilder.BuildEditAct(this, new Config(Project), new ConfigEditForm(), new ConfigValidator())));
         }
 
         public override string GetEntityParams()

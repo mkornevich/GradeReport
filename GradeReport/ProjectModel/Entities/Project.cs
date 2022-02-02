@@ -40,7 +40,7 @@ namespace GradeReport.ProjectModel.Entities
 
         public Project()
         {
-            Config = new Config();
+            Config = new Config(this);
             Groups = new EntityCollection<Group>(this);
             GroupSubjectRefs = new EntityCollection<GroupSubjectRef>(this);
             Courses = new EntityCollection<Course>(this);

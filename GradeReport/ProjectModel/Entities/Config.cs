@@ -30,5 +30,10 @@ namespace GradeReport.ProjectModel.Entities
             get => Project.Groups.Find(g => g.Guid == CuratorGroupGuid);
             set => CuratorGroupGuid = value.Guid;
         }
+
+        public Config(Project project)
+        {
+            Project = project;
+        }
     }
 }
