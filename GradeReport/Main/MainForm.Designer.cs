@@ -48,6 +48,7 @@ namespace GradeReport.Main
             this.infoPanel = new System.Windows.Forms.Panel();
             this.infoTB = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.guideMI = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -126,6 +127,7 @@ namespace GradeReport.Main
             // 
             this.оПрограммеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutMI,
+            this.guideMI,
             this.debugMI});
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
             this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
@@ -134,14 +136,14 @@ namespace GradeReport.Main
             // aboutMI
             // 
             this.aboutMI.Name = "aboutMI";
-            this.aboutMI.Size = new System.Drawing.Size(180, 22);
+            this.aboutMI.Size = new System.Drawing.Size(221, 22);
             this.aboutMI.Text = "О программе";
             this.aboutMI.Click += new System.EventHandler(this.aboutMI_Click);
             // 
             // debugMI
             // 
             this.debugMI.Name = "debugMI";
-            this.debugMI.Size = new System.Drawing.Size(180, 22);
+            this.debugMI.Size = new System.Drawing.Size(221, 22);
             this.debugMI.Text = "Отладка";
             this.debugMI.Click += new System.EventHandler(this.ShowTestFormAct);
             // 
@@ -237,6 +239,12 @@ namespace GradeReport.Main
             this.label2.TabIndex = 0;
             this.label2.Text = "Описание выделенного элемента";
             // 
+            // guideMI
+            // 
+            this.guideMI.Name = "guideMI";
+            this.guideMI.Size = new System.Drawing.Size(221, 22);
+            this.guideMI.Text = "Руководство пользователя";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -283,6 +291,7 @@ namespace GradeReport.Main
         private System.Windows.Forms.ToolStripMenuItem aboutMI;
         private System.Windows.Forms.ToolStripMenuItem debugMI;
         private System.Windows.Forms.TextBox infoTB;
+        private System.Windows.Forms.ToolStripMenuItem guideMI;
     }
 }
 

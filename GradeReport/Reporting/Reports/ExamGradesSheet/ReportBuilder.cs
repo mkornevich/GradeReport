@@ -30,12 +30,16 @@ namespace GradeReport.Reporting.Reports.ExamGradesSheet
             _courseSemesters = _course.Semesters;
 
             var students = GetStudents();
-            var query = CreateQuery();
+
+            var query = new GradeQuery(Project)
+                .SetInSemesters(_courseSemesters)
+                .SetInSubjects(_input.Subject)
+                .NewQueryFromCurrentGrades();
 
             for (int i = 0; i < students.Count; i++)
             {
                 _student = students[i];
-                query.SetInStudents(_student).SetInSemesters(_input.Semester);
+                query = query.SetInStudents(_student).SetInSemesters(_input.Semester);
 
                 var row = new Dictionary<string, object>();
                 row["Student"] = _student;
@@ -48,14 +52,14 @@ namespace GradeReport.Reporting.Reports.ExamGradesSheet
 
                 if (_input.Semester.LocalNumber == 2)
                 {
-                    query.SetInSemesters(_courseSemesters);
+                    query = query.SetInSemesters(_courseSemesters);
                 }
                 
                 row["OKRs"] = query.SetInGradeTypes(GradeType.OKR).GetJoined();
 
-                query.SetInSemesters(_courseSemesters);
+                query = query.SetInSemesters(_courseSemesters);
 
-                query.SetInGradeTypes(GradeType.Course);
+                query = query.SetInGradeTypes(GradeType.Course);
                 row["CourseGrade"] = query.Exists() ? query.GetFirstOrEmpty() : "";
                 
                 _output.TableRows.Add(row);
@@ -71,14 +75,6 @@ namespace GradeReport.Reporting.Reports.ExamGradesSheet
             _output.Params["FullCuratorName"] = Project.Config.CuratorName;
 
             return _output;
-        }
-
-        private GradeQuery CreateQuery()
-        {
-            return new GradeQuery(Project)
-                .SetInSemesters(_courseSemesters)
-                .SetInSubjects(_input.Subject)
-                .NewQueryFromCurrentGrades();
         }
 
         private List<Student> GetStudents()
