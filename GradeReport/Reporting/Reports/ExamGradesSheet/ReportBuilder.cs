@@ -48,7 +48,6 @@ namespace GradeReport.Reporting.Reports.ExamGradesSheet
                 row["LPR"] = "зачтено";
                 row["SemesterGrade"] = query.SetInGradeTypes(GradeType.Semester).GetFirstOrEmpty();
                 row["ExamGrade"] = query.SetInGradeTypes(GradeType.Exam).GetFirstOrEmpty();
-                row["ExamGradeText"] = GradeValue.GetByValue((int)row["ExamGrade"]).Description;
 
                 if (_input.Semester.LocalNumber == 2)
                 {

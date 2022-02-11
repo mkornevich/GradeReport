@@ -1,4 +1,5 @@
-﻿using NPOI.XSSF.UserModel;
+﻿using GradeReport.ProjectModel.Entities;
+using NPOI.XSSF.UserModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,9 +21,11 @@ namespace GradeReport.Reporting.Reports.ExamGradesSheet
 
             for (int i = 0; i < rows.Count; i++)
             {
-                var rowParams = rows[i];
+                var srcRow = rows[i];
+                srcRow["SemesterGrade"] = GradeValue.ToString(srcRow["SemesterGrade"]);
+                srcRow["ExamGrade"] = GradeValue.ToString(srcRow["ExamGrade"], "v (d)");
                 var row = sheet.GetRow(FirstRow + i);
-                Parametrize(row, rowParams);
+                Parametrize(row, srcRow);
             }
 
             Parametrize(sheet, model.Params);

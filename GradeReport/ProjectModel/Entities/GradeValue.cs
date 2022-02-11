@@ -59,7 +59,7 @@ namespace GradeReport.ProjectModel.Entities
 
         public static GradeValue GetByKeyCode(Keys keyCode) => GradeValues.ToList().Find(gv => gv.KeyCodes.Contains(keyCode));
 
-        public static string ToString(object grade, string format = "v", string emptyFormat = "", string errorFormat = "ev")
+        public static string ToString(object grade, string format = "v", string extraFormat = "v", string emptyFormat = "", string errorFormat = "ev")
         {
             var error = "";
             var value = "";
@@ -79,7 +79,10 @@ namespace GradeReport.ProjectModel.Entities
                     {
                         value = gradeValueObj.StringValue;
                         description = gradeValueObj.Description;
-                        currFormat = gradeValue == Empty ? emptyFormat : format;
+
+                        currFormat = emptyFormat;
+                        if (gradeValue >= 0) currFormat = format;
+                        if (gradeValue < Empty) currFormat = extraFormat;
                     }
                     else
                     {

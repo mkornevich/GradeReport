@@ -24,7 +24,7 @@ namespace GradeReport.Reporting.Reports.SemesterGradesSheet
             for (int i = 0; i < rows.Count; i++)
             {
                 var srcRow = rows[i];
-                srcRow["SemesterGrade"] = GradeValue.ToString(srcRow["SemesterGrade"], "  v (d)");
+                srcRow["SemesterGrade"] = GradeValue.ToString(srcRow["SemesterGrade"], "  v (d)", "  v");
                 srcRow["CourseGrade"] = GradeValue.ToString(srcRow["CourseGrade"]);
                 var row = sheet.GetRow(FirstRow + i);
                 Parametrize(row, srcRow);
