@@ -1,4 +1,5 @@
-﻿using GradeReport.ProjectModel.Entities;
+﻿using GradeReport.Common;
+using GradeReport.ProjectModel.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,12 +30,20 @@ namespace GradeReport.Reporting
 
         protected virtual void ValidateAct(object sender, EventArgs e)
         {
-            var inputModel = BuildInputModel();
-
-            if (inputModel != null && Validator.Validate(Project, inputModel))
+            try
             {
-                MessageBox.Show("Проверка успешно пройдена.");
+                var inputModel = BuildInputModel();
+
+                if (inputModel != null && Validator.Validate(Project, inputModel))
+                {
+                    MessageBox.Show("Проверка успешно пройдена.");
+                }
             }
+            catch(Exception ex)
+            {
+                ExceptionUtils.Show(ex, "Произошла ошибка при проверке входных данных.");
+            }
+            
         }
 
         public virtual void InitGUI()
@@ -56,21 +65,27 @@ namespace GradeReport.Reporting
 
         protected virtual void BuildAct(object sender, EventArgs e)
         {
-            var inputModel = BuildInputModel();
-
-            if (inputModel == null || !Validator.Validate(Project, inputModel))
+            try
             {
-                return;
+                var inputModel = BuildInputModel();
+
+                if (inputModel == null || !Validator.Validate(Project, inputModel))
+                {
+                    return;
+                }
+
+                var outputModel = ReportBuilder.Build(Project, inputModel);
+                var document = new Document();
+                document.Load(App.AppDataPath + "\\Reports\\" + Tag + "\\Template.xlsx");
+
+                ReportIntegrator.Integrate(outputModel, document);
+
+                document.StoreWithDialog(true);
             }
-
-            var outputModel = ReportBuilder.Build(Project, inputModel);
-
-            var document = new Document();
-            document.Load(App.AppDataPath + "\\Reports\\" + Tag + "\\Template.xlsx");
-
-            ReportIntegrator.Integrate(outputModel, document);
-
-            document.StoreWithDialog(true);
+            catch (Exception ex)
+            {
+                ExceptionUtils.Show(ex, "Произошла ошибка при построении отчета.");
+            }
         }
 
         protected virtual BaseInputModel BuildInputModel()

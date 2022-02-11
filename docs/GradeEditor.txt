@@ -3,3 +3,13 @@
 
 Выбор
 	Предмета
+	
+	
+	
+Subjects
+	SubjectGuid: GradeTypes
+		GradeTypeName: Positions
+			Pos: StudentsGrades
+				StudentGuid
+				StudentName
+				Grade
