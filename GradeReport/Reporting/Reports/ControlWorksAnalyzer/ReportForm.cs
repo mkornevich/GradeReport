@@ -70,5 +70,11 @@ namespace GradeReport.Reporting.Reports.ControlWorksAnalyzer
         {
             MessageBox.Show("Данная функция не поддерживается");
         }
+
+        private void GradesChangedAct(object sender, EventArgs e)
+        {
+            gradesControlWorkCountLbl.Text = gradesControlWorkTB.Text.Length.ToString();
+            gradesPivotSemesterCountLbl.Text = gradesPivotSemesterTB.Text.Length.ToString();
+        }
     }
 }

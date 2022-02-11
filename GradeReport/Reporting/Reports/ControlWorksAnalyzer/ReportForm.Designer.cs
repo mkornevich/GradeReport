@@ -58,6 +58,8 @@ namespace GradeReport.Reporting.Reports.ControlWorksAnalyzer
             this.gradesControlWorkTB = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.gradesControlWorkCountLbl = new System.Windows.Forms.Label();
+            this.gradesPivotSemesterCountLbl = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numberPivotSemesterNUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numberControlWorkNUD)).BeginInit();
@@ -278,6 +280,8 @@ namespace GradeReport.Reporting.Reports.ControlWorksAnalyzer
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.gradesPivotSemesterCountLbl);
+            this.groupBox2.Controls.Add(this.gradesControlWorkCountLbl);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.gradesPivotSemesterTB);
@@ -322,6 +326,7 @@ namespace GradeReport.Reporting.Reports.ControlWorksAnalyzer
             this.gradesPivotSemesterTB.Name = "gradesPivotSemesterTB";
             this.gradesPivotSemesterTB.Size = new System.Drawing.Size(383, 23);
             this.gradesPivotSemesterTB.TabIndex = 11;
+            this.gradesPivotSemesterTB.TextChanged += new System.EventHandler(this.GradesChangedAct);
             // 
             // label12
             // 
@@ -340,6 +345,7 @@ namespace GradeReport.Reporting.Reports.ControlWorksAnalyzer
             this.gradesControlWorkTB.Name = "gradesControlWorkTB";
             this.gradesControlWorkTB.Size = new System.Drawing.Size(383, 23);
             this.gradesControlWorkTB.TabIndex = 10;
+            this.gradesControlWorkTB.TextChanged += new System.EventHandler(this.GradesChangedAct);
             // 
             // label11
             // 
@@ -357,6 +363,26 @@ namespace GradeReport.Reporting.Reports.ControlWorksAnalyzer
             this.saveFileDialog.FileName = "отчет.xlsx";
             this.saveFileDialog.Filter = "Excel файл (*.xlsx)|*.xlsx";
             this.saveFileDialog.FilterIndex = 0;
+            // 
+            // gradesControlWorkCountLbl
+            // 
+            this.gradesControlWorkCountLbl.Location = new System.Drawing.Point(344, 18);
+            this.gradesControlWorkCountLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.gradesControlWorkCountLbl.Name = "gradesControlWorkCountLbl";
+            this.gradesControlWorkCountLbl.Size = new System.Drawing.Size(46, 15);
+            this.gradesControlWorkCountLbl.TabIndex = 14;
+            this.gradesControlWorkCountLbl.Text = "0";
+            this.gradesControlWorkCountLbl.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // gradesPivotSemesterCountLbl
+            // 
+            this.gradesPivotSemesterCountLbl.Location = new System.Drawing.Point(344, 63);
+            this.gradesPivotSemesterCountLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.gradesPivotSemesterCountLbl.Name = "gradesPivotSemesterCountLbl";
+            this.gradesPivotSemesterCountLbl.Size = new System.Drawing.Size(46, 15);
+            this.gradesPivotSemesterCountLbl.TabIndex = 15;
+            this.gradesPivotSemesterCountLbl.Text = "0";
+            this.gradesPivotSemesterCountLbl.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // ReportForm
             // 
@@ -414,6 +440,8 @@ namespace GradeReport.Reporting.Reports.ControlWorksAnalyzer
         internal System.Windows.Forms.TextBox educationalTB;
         internal System.Windows.Forms.TextBox gradesPivotSemesterTB;
         internal System.Windows.Forms.TextBox gradesControlWorkTB;
+        private System.Windows.Forms.Label gradesPivotSemesterCountLbl;
+        private System.Windows.Forms.Label gradesControlWorkCountLbl;
     }
 }
 
