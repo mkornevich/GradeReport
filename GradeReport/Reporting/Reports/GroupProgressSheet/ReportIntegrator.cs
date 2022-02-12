@@ -54,19 +54,26 @@ namespace GradeReport.Reporting.Reports.GroupProgressSheet
             var examCount = _examSubjectCols.Count;
             var fullCount = _subjectCols.Count > 15 ? _subjectCols.Count : 15;
 
-            var examRange = new CellRangeAddress(0, 0, 2, 2 + examCount - 1);
+            if (examCount > 0)
+            {
+                var examRange = new CellRangeAddress(0, 0, 2, 2 + examCount - 1);
+                var examCell = (XSSFCell)_tableSheet.GetRow(0).GetCell(examRange.FirstColumn);
+                examCell.SetCellValue("Экзамен");
+                examCell.CellStyle.Alignment = NPOI.SS.UserModel.HorizontalAlignment.Center;
+                examCell.CellStyle.VerticalAlignment = NPOI.SS.UserModel.VerticalAlignment.Center;
+
+                if (examCount > 1)
+                {
+                    _tableSheet.AddMergedRegion(examRange);
+                }
+            }
+
             var titleRange = new CellRangeAddress(0, 0, 2 + examCount, 2 + fullCount - 1);
-
-            var examCell = (XSSFCell)_tableSheet.GetRow(0).GetCell(examRange.FirstColumn);
             var titleCell = (XSSFCell)_tableSheet.GetRow(0).GetCell(titleRange.FirstColumn);
-
-            examCell.SetCellValue("Экзамен");
-            examCell.CellStyle.Alignment = NPOI.SS.UserModel.HorizontalAlignment.Center;
-            examCell.CellStyle.VerticalAlignment = NPOI.SS.UserModel.VerticalAlignment.Center;
-
             titleCell.SetCellValue(Parametrize(Title, _model.Params));
             titleCell.CellStyle.Alignment = NPOI.SS.UserModel.HorizontalAlignment.Center;
             titleCell.CellStyle.VerticalAlignment = NPOI.SS.UserModel.VerticalAlignment.Center;
+
             var font = titleCell.CellStyle.GetFont(_tableSheet.Workbook);
             var newFont = _tableSheet.Workbook.CreateFont();
             newFont.IsBold = true;
@@ -75,11 +82,6 @@ namespace GradeReport.Reporting.Reports.GroupProgressSheet
 
             titleCell.CellStyle.SetFont(newFont);
 
-            if (examCount > 1)
-            {
-                _tableSheet.AddMergedRegion(examRange);
-            }
-            
             _tableSheet.AddMergedRegion(titleRange);
         }
 
