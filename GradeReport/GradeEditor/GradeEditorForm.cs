@@ -33,6 +33,8 @@ namespace GradeReport.GradeEditor
             }
         }
 
+        private bool IsAllowExtra => _controller.GradeType.Name == GradeType.Semester;
+
         public GradeEditorForm(Semester semester)
         {
             InitializeComponent();
@@ -93,6 +95,8 @@ namespace GradeReport.GradeEditor
             gradeTypesLB.DataSource = GradeType.gradeTypes;
             gradeTypesLB.SelectedIndex = selected;
 
+            isAllowExtraLbl.Text = IsAllowExtra ? "Да" : "Нет";
+
             _isSyncGuiEvent = false;
         }
 
@@ -146,8 +150,7 @@ namespace GradeReport.GradeEditor
 
             if (gradeValue == null || editorDGV.SelectedRows.Count <= 0) return;
 
-            if (_controller.GradeType.Name != GradeType.Semester &&
-                (gradeValue.Value == GradeValue.Passed || gradeValue.Value == GradeValue.Released)) return;
+            if (!IsAllowExtra && (gradeValue.Value == GradeValue.Passed || gradeValue.Value == GradeValue.Released)) return;
 
             int selectedRowIndex = editorDGV.SelectedRows[0].Index;
             editorDGV.Rows[selectedRowIndex].Cells["GradeValueColumn"].Value = gradeValue.Value;

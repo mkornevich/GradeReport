@@ -80,7 +80,10 @@ namespace GradeReport.Reporting
 
                 ReportIntegrator.Integrate(outputModel, document);
 
-                document.StoreWithDialog(true);
+                document.StoreWithDialog(
+                    DateTime.Now.ToString("dd-MM-yy_HH-mm-ss") + "_" +
+                    Text.ToLower().Replace(' ', '-')
+                    , true);
             }
             catch (Exception ex)
             {

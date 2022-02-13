@@ -10,13 +10,10 @@ namespace GradeReport
 {
     public static class App
     {
+        public const bool IsDebug = false;
+
         public static ProjectContainer ProjectContainer { get; private set; } = new ProjectContainer();
 
         public static string AppDataPath => AppDomain.CurrentDomain.BaseDirectory + "\\AppData";
-
-        public static void Init()
-        {
-
-        }
     }
 }

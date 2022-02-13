@@ -38,6 +38,7 @@ namespace GradeReport.Main
             this.reports = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.guideMI = new System.Windows.Forms.ToolStripMenuItem();
             this.debugMI = new System.Windows.Forms.ToolStripMenuItem();
             this.peTreeView = new GradeReport.ProjectExplorer.PETreeView();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
@@ -48,7 +49,6 @@ namespace GradeReport.Main
             this.infoPanel = new System.Windows.Forms.Panel();
             this.infoTB = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.guideMI = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -140,6 +140,12 @@ namespace GradeReport.Main
             this.aboutMI.Text = "О программе";
             this.aboutMI.Click += new System.EventHandler(this.aboutMI_Click);
             // 
+            // guideMI
+            // 
+            this.guideMI.Name = "guideMI";
+            this.guideMI.Size = new System.Drawing.Size(221, 22);
+            this.guideMI.Text = "Руководство пользователя";
+            // 
             // debugMI
             // 
             this.debugMI.Name = "debugMI";
@@ -159,7 +165,13 @@ namespace GradeReport.Main
             // 
             // openFileDialog
             // 
-            this.openFileDialog.FileName = "openFileDialog";
+            this.openFileDialog.DefaultExt = "gr";
+            this.openFileDialog.Filter = "GradeReport Project File (*.gr)|*.gr";
+            // 
+            // saveFileDialog
+            // 
+            this.saveFileDialog.DefaultExt = "gr";
+            this.saveFileDialog.Filter = "GradeReport Project File (*.gr)|*.gr";
             // 
             // splitContainer1
             // 
@@ -238,12 +250,6 @@ namespace GradeReport.Main
             this.label2.Size = new System.Drawing.Size(508, 15);
             this.label2.TabIndex = 0;
             this.label2.Text = "Описание выделенного элемента";
-            // 
-            // guideMI
-            // 
-            this.guideMI.Name = "guideMI";
-            this.guideMI.Size = new System.Drawing.Size(221, 22);
-            this.guideMI.Text = "Руководство пользователя";
             // 
             // MainForm
             // 

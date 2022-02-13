@@ -51,6 +51,8 @@ namespace GradeReport.Reporting.Reports.ControlWorksAnalyzer
             this.label1 = new System.Windows.Forms.Label();
             this.educationalTB = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gradesPivotSemesterCountLbl = new System.Windows.Forms.Label();
+            this.gradesControlWorkCountLbl = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.gradesPivotSemesterTB = new System.Windows.Forms.TextBox();
@@ -58,8 +60,6 @@ namespace GradeReport.Reporting.Reports.ControlWorksAnalyzer
             this.gradesControlWorkTB = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this.gradesControlWorkCountLbl = new System.Windows.Forms.Label();
-            this.gradesPivotSemesterCountLbl = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numberPivotSemesterNUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numberControlWorkNUD)).BeginInit();
@@ -297,6 +297,26 @@ namespace GradeReport.Reporting.Reports.ControlWorksAnalyzer
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Оценки";
             // 
+            // gradesPivotSemesterCountLbl
+            // 
+            this.gradesPivotSemesterCountLbl.Location = new System.Drawing.Point(344, 63);
+            this.gradesPivotSemesterCountLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.gradesPivotSemesterCountLbl.Name = "gradesPivotSemesterCountLbl";
+            this.gradesPivotSemesterCountLbl.Size = new System.Drawing.Size(46, 15);
+            this.gradesPivotSemesterCountLbl.TabIndex = 15;
+            this.gradesPivotSemesterCountLbl.Text = "0";
+            this.gradesPivotSemesterCountLbl.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // gradesControlWorkCountLbl
+            // 
+            this.gradesControlWorkCountLbl.Location = new System.Drawing.Point(344, 18);
+            this.gradesControlWorkCountLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.gradesControlWorkCountLbl.Name = "gradesControlWorkCountLbl";
+            this.gradesControlWorkCountLbl.Size = new System.Drawing.Size(46, 15);
+            this.gradesControlWorkCountLbl.TabIndex = 14;
+            this.gradesControlWorkCountLbl.Text = "0";
+            this.gradesControlWorkCountLbl.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -360,29 +380,7 @@ namespace GradeReport.Reporting.Reports.ControlWorksAnalyzer
             // saveFileDialog
             // 
             this.saveFileDialog.DefaultExt = "xlsx";
-            this.saveFileDialog.FileName = "отчет.xlsx";
-            this.saveFileDialog.Filter = "Excel файл (*.xlsx)|*.xlsx";
-            this.saveFileDialog.FilterIndex = 0;
-            // 
-            // gradesControlWorkCountLbl
-            // 
-            this.gradesControlWorkCountLbl.Location = new System.Drawing.Point(344, 18);
-            this.gradesControlWorkCountLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.gradesControlWorkCountLbl.Name = "gradesControlWorkCountLbl";
-            this.gradesControlWorkCountLbl.Size = new System.Drawing.Size(46, 15);
-            this.gradesControlWorkCountLbl.TabIndex = 14;
-            this.gradesControlWorkCountLbl.Text = "0";
-            this.gradesControlWorkCountLbl.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // gradesPivotSemesterCountLbl
-            // 
-            this.gradesPivotSemesterCountLbl.Location = new System.Drawing.Point(344, 63);
-            this.gradesPivotSemesterCountLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.gradesPivotSemesterCountLbl.Name = "gradesPivotSemesterCountLbl";
-            this.gradesPivotSemesterCountLbl.Size = new System.Drawing.Size(46, 15);
-            this.gradesPivotSemesterCountLbl.TabIndex = 15;
-            this.gradesPivotSemesterCountLbl.Text = "0";
-            this.gradesPivotSemesterCountLbl.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.saveFileDialog.Filter = "Excel (*.xlsx)|*.xlsx";
             // 
             // ReportForm
             // 
@@ -394,7 +392,7 @@ namespace GradeReport.Reporting.Reports.ControlWorksAnalyzer
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "ReportForm";
             this.Tag = "ControlWorksAnalyzer";
-            this.Text = "Анализ контрольных работ (ОКР / ДКР)";
+            this.Text = "Анализ контрольных работ ОКР ДКР";
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.groupBox2, 0);
             this.groupBox1.ResumeLayout(false);

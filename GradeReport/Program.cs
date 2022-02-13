@@ -18,7 +18,6 @@ namespace GradeReport
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            App.Init();
             Application.Run(new MainForm());
         }
     }

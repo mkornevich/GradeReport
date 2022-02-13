@@ -29,6 +29,9 @@ namespace GradeReport.Reporting.Reports.ControlWorksAnalyzer
 
         protected override void BuildAct(object sender, EventArgs e)
         {
+            saveFileDialog.FileName = DateTime.Now.ToString("dd-MM-yy_HH-mm-ss") + "_" +
+                Text.ToLower().Replace(' ', '-');
+
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 _sheet.GetRow(2).GetCell(3).SetCellValue(educationalTB.Text);
@@ -54,10 +57,10 @@ namespace GradeReport.Reporting.Reports.ControlWorksAnalyzer
                         _workbook.Write(stream);
                     }
 
-                    var proc = new System.Diagnostics.Process();
-                    proc.StartInfo.FileName = saveFileDialog.FileName;
-                    proc.StartInfo.UseShellExecute = true;
-                    proc.Start();
+                    var process = new System.Diagnostics.Process();
+                    process.StartInfo.FileName = saveFileDialog.FileName;
+                    process.StartInfo.UseShellExecute = true;
+                    process.Start();
                 }
                 catch(Exception ex)
                 {

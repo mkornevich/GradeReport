@@ -64,7 +64,7 @@ namespace GradeReport.Common.NotificationNS
             this.notificationDGV.RowTemplate.Height = 25;
             this.notificationDGV.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.notificationDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.notificationDGV.Size = new System.Drawing.Size(450, 348);
+            this.notificationDGV.Size = new System.Drawing.Size(450, 409);
             this.notificationDGV.TabIndex = 0;
             this.notificationDGV.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.notificationDGV_CellFormatting);
             this.notificationDGV.SelectionChanged += new System.EventHandler(this.notificationDGV_SelectionChanged);
@@ -96,7 +96,8 @@ namespace GradeReport.Common.NotificationNS
             this.descriptionTB.Multiline = true;
             this.descriptionTB.Name = "descriptionTB";
             this.descriptionTB.ReadOnly = true;
-            this.descriptionTB.Size = new System.Drawing.Size(450, 123);
+            this.descriptionTB.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.descriptionTB.Size = new System.Drawing.Size(450, 166);
             this.descriptionTB.TabIndex = 1;
             // 
             // splitContainer1
@@ -115,15 +116,15 @@ namespace GradeReport.Common.NotificationNS
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.descriptionTB);
-            this.splitContainer1.Size = new System.Drawing.Size(450, 475);
-            this.splitContainer1.SplitterDistance = 348;
+            this.splitContainer1.Size = new System.Drawing.Size(450, 579);
+            this.splitContainer1.SplitterDistance = 409;
             this.splitContainer1.TabIndex = 2;
             // 
             // NotificationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(450, 515);
+            this.ClientSize = new System.Drawing.Size(450, 579);
             this.Controls.Add(this.splitContainer1);
             this.Name = "NotificationForm";
             this.ShowIcon = false;

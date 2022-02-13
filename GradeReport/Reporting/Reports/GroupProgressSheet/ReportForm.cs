@@ -49,9 +49,11 @@ namespace GradeReport.Reporting.Reports.GroupProgressSheet
             groupLF.Entities = Project.Groups.Cast<object>().ToList();
             groupLF.SelectedEntities = new List<object>();
 
-            // TODO
-            groupLF.SelectedEntities = new List<object>() { groupLF.Entities[0] };
-            semesterLF.SelectedEntities = new List<object>() { semesterLF.Entities[0] };
+            if (App.IsDebug)
+            {
+                groupLF.SelectedEntities = new List<object>() { groupLF.Entities[0] };
+                semesterLF.SelectedEntities = new List<object>() { semesterLF.Entities[0] };
+            }
         }
 
         protected override BaseInputModel BuildInputModel()

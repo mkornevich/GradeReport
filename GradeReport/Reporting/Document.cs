@@ -43,12 +43,13 @@ namespace GradeReport.Reporting
             }
         }
 
-        public void StoreWithDialog(bool needOpen = false)
+        public void StoreWithDialog(string fileName = "document", bool needOpen = false)
         {
             var dialog = new SaveFileDialog()
             {
-                FileName = "report.xlsx",
-                // OverwritePrompt = false,
+                FileName = fileName,
+                Filter = "Excel (*.xlsx)|*.xlsx",
+                DefaultExt = ".xlsx"
             };
 
             if (dialog.ShowDialog() == DialogResult.OK)
