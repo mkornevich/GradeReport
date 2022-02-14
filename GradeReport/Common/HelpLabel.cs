@@ -55,8 +55,11 @@ namespace GradeReport.Common
             form.Deactivate += (s, e) => form.Close();
             form.Controls.Add(helpText);
             form.Show();
-            form.Top = ParentForm.Top + Top + 30;
-            form.Left = ParentForm.Left + Left + 30;
+
+            Point location = ParentForm.PointToClient(Parent.PointToScreen(Location));
+
+            form.Top = ParentForm.Top + location.Y + 30;
+            form.Left = ParentForm.Left + location.X + 30;
         }
     }
 }

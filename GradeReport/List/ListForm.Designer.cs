@@ -33,10 +33,10 @@ namespace GradeReport.List
         {
             this.Table = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.selectionInfoTB = new System.Windows.Forms.ToolStripTextBox();
             this.selectAll = new System.Windows.Forms.ToolStripButton();
             this.unselectAll = new System.Windows.Forms.ToolStripButton();
             this.inverseAll = new System.Windows.Forms.ToolStripButton();
+            this.selectionInfoLbl = new System.Windows.Forms.ToolStripLabel();
             ((System.ComponentModel.ISupportInitialize)(this.Table)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -65,22 +65,15 @@ namespace GradeReport.List
             // 
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.selectionInfoTB,
             this.selectAll,
             this.unselectAll,
-            this.inverseAll});
+            this.inverseAll,
+            this.selectionInfoLbl});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(566, 25);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // selectionInfoTB
-            // 
-            this.selectionInfoTB.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.selectionInfoTB.Name = "selectionInfoTB";
-            this.selectionInfoTB.Size = new System.Drawing.Size(100, 25);
-            this.selectionInfoTB.Text = "Выделено 6 из 25";
             // 
             // selectAll
             // 
@@ -90,6 +83,7 @@ namespace GradeReport.List
             this.selectAll.Name = "selectAll";
             this.selectAll.Size = new System.Drawing.Size(23, 22);
             this.selectAll.Text = "toolStripButton1";
+            this.selectAll.ToolTipText = "Выделить все";
             this.selectAll.Click += new System.EventHandler(this.SelectAllAct);
             // 
             // unselectAll
@@ -100,6 +94,7 @@ namespace GradeReport.List
             this.unselectAll.Name = "unselectAll";
             this.unselectAll.Size = new System.Drawing.Size(23, 22);
             this.unselectAll.Text = "toolStripButton2";
+            this.unselectAll.ToolTipText = "Снять выделение со всего";
             this.unselectAll.Click += new System.EventHandler(this.UnselectAllAct);
             // 
             // inverseAll
@@ -110,7 +105,15 @@ namespace GradeReport.List
             this.inverseAll.Name = "inverseAll";
             this.inverseAll.Size = new System.Drawing.Size(23, 22);
             this.inverseAll.Text = "toolStripButton3";
+            this.inverseAll.ToolTipText = "Инвертировать";
             this.inverseAll.Click += new System.EventHandler(this.InverseAllAct);
+            // 
+            // selectionInfoTB
+            // 
+            this.selectionInfoLbl.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.selectionInfoLbl.Name = "selectionInfoTB";
+            this.selectionInfoLbl.Size = new System.Drawing.Size(101, 22);
+            this.selectionInfoLbl.Text = "Выделено 6 из 25";
             // 
             // ListForm
             // 
@@ -120,6 +123,7 @@ namespace GradeReport.List
             this.Controls.Add(this.Table);
             this.Controls.Add(this.toolStrip1);
             this.Name = "ListForm";
+            this.ShowIcon = false;
             this.Text = "Список";
             ((System.ComponentModel.ISupportInitialize)(this.Table)).EndInit();
             this.toolStrip1.ResumeLayout(false);
@@ -132,9 +136,9 @@ namespace GradeReport.List
         #endregion
         private System.Windows.Forms.ToolStrip toolStrip1;
         public System.Windows.Forms.DataGridView Table;
-        private System.Windows.Forms.ToolStripTextBox selectionInfoTB;
         private System.Windows.Forms.ToolStripButton selectAll;
         private System.Windows.Forms.ToolStripButton unselectAll;
         private System.Windows.Forms.ToolStripButton inverseAll;
+        private System.Windows.Forms.ToolStripLabel selectionInfoLbl;
     }
 }

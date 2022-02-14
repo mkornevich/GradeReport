@@ -29,6 +29,7 @@ namespace GradeReport.Main
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.новыйToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -135,6 +136,7 @@ namespace GradeReport.Main
             // 
             // aboutMI
             // 
+            this.aboutMI.Image = global::GradeReport.Properties.Resources.info_16;
             this.aboutMI.Name = "aboutMI";
             this.aboutMI.Size = new System.Drawing.Size(221, 22);
             this.aboutMI.Text = "О программе";
@@ -142,12 +144,15 @@ namespace GradeReport.Main
             // 
             // guideMI
             // 
+            this.guideMI.Image = global::GradeReport.Properties.Resources.question_16;
             this.guideMI.Name = "guideMI";
             this.guideMI.Size = new System.Drawing.Size(221, 22);
             this.guideMI.Text = "Руководство пользователя";
+            this.guideMI.Click += new System.EventHandler(this.guideMI_Click);
             // 
             // debugMI
             // 
+            this.debugMI.Image = global::GradeReport.Properties.Resources.debug_16;
             this.debugMI.Name = "debugMI";
             this.debugMI.Size = new System.Drawing.Size(221, 22);
             this.debugMI.Text = "Отладка";
@@ -258,6 +263,7 @@ namespace GradeReport.Main
             this.ClientSize = new System.Drawing.Size(518, 793);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.menuStrip);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "MainForm";

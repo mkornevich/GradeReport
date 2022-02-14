@@ -5,8 +5,8 @@
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <StartupObject>GradeReport.Program</StartupObject>
-    <Platforms>AnyCPU;x64</Platforms>
-    <ApplicationIcon />
+    <Platforms>AnyCPU;x64;x86</Platforms>
+    <ApplicationIcon>GradeReport.ico</ApplicationIcon>
     <Authors>Корневич М. А.</Authors>
     <Company>Корневич М. А.</Company>
     <Copyright>Корневич М. А.</Copyright>

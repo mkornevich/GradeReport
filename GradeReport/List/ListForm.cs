@@ -177,7 +177,7 @@ namespace GradeReport.List
             }
         }
 
-        private void UpdateSelectionTextInfo() => selectionInfoTB.Text = "Выделено " + SelectedEntities.Count + " из " + Entities.Count;
+        private void UpdateSelectionTextInfo() => selectionInfoLbl.Text = "Выделено " + SelectedEntities.Count + " из " + Entities.Count;
 
         private void SelectAllAct(object sender, EventArgs e)
         {

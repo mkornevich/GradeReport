@@ -83,6 +83,16 @@ namespace GradeReport.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap debug_16 {
+            get {
+                object obj = ResourceManager.GetObject("debug_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap edit_16 {
             get {
                 object obj = ResourceManager.GetObject("edit_16", resourceCulture);

@@ -110,5 +110,10 @@ namespace GradeReport.Main
         {
             new AboutForm().ShowDialog();
         }
+
+        private void guideMI_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, App.AppDataPath + "\\Guide.chm");
+        }
     }
 }

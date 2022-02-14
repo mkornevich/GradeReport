@@ -29,6 +29,7 @@ namespace GradeReport.GradeEditor
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GradeEditorForm));
             this.subjectsLB = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.semesterTB = new System.Windows.Forms.TextBox();
@@ -39,8 +40,12 @@ namespace GradeReport.GradeEditor
             this.StudentNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GradeValueColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.isAllowExtraLbl = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.helpLabel2 = new GradeReport.Common.HelpLabel();
+            this.helpLabel1 = new GradeReport.Common.HelpLabel();
             this.saveBtn = new System.Windows.Forms.Button();
             this.numberLeftBtn = new System.Windows.Forms.Button();
             this.numberRightBtn = new System.Windows.Forms.Button();
@@ -50,8 +55,6 @@ namespace GradeReport.GradeEditor
             this.label3 = new System.Windows.Forms.Label();
             this.gradeTypesLB = new System.Windows.Forms.ListBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.isAllowExtraLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.editorDGV)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -74,7 +77,7 @@ namespace GradeReport.GradeEditor
             "ЛР"});
             this.subjectsLB.Location = new System.Drawing.Point(3, 19);
             this.subjectsLB.Name = "subjectsLB";
-            this.subjectsLB.Size = new System.Drawing.Size(265, 668);
+            this.subjectsLB.Size = new System.Drawing.Size(265, 544);
             this.subjectsLB.TabIndex = 3;
             // 
             // label1
@@ -137,7 +140,7 @@ namespace GradeReport.GradeEditor
             this.editorDGV.RowTemplate.Height = 25;
             this.editorDGV.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.editorDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.editorDGV.Size = new System.Drawing.Size(414, 668);
+            this.editorDGV.Size = new System.Drawing.Size(331, 656);
             this.editorDGV.TabIndex = 23;
             this.editorDGV.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.editorDGV_CellFormatting);
             this.editorDGV.KeyUp += new System.Windows.Forms.KeyEventHandler(this.editorDGV_KeyUp);
@@ -173,12 +176,30 @@ namespace GradeReport.GradeEditor
             this.groupBox2.Controls.Add(this.isAllowExtraLbl);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.infoLbl);
-            this.groupBox2.Location = new System.Drawing.Point(289, 699);
+            this.groupBox2.Location = new System.Drawing.Point(289, 687);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(420, 225);
+            this.groupBox2.Size = new System.Drawing.Size(337, 113);
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Информация";
+            // 
+            // isAllowExtraLbl
+            // 
+            this.isAllowExtraLbl.AutoSize = true;
+            this.isAllowExtraLbl.Location = new System.Drawing.Point(281, 89);
+            this.isAllowExtraLbl.Name = "isAllowExtraLbl";
+            this.isAllowExtraLbl.Size = new System.Drawing.Size(12, 15);
+            this.isAllowExtraLbl.TabIndex = 2;
+            this.isAllowExtraLbl.Text = "-";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 89);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(269, 15);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Поддержка дополнительных оценок (Зач/Осв):";
             // 
             // groupBox3
             // 
@@ -188,13 +209,15 @@ namespace GradeReport.GradeEditor
             this.groupBox3.Controls.Add(this.editorDGV);
             this.groupBox3.Location = new System.Drawing.Point(289, 3);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(420, 690);
+            this.groupBox3.Size = new System.Drawing.Size(337, 678);
             this.groupBox3.TabIndex = 26;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Редактор оценок";
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.helpLabel2);
+            this.groupBox4.Controls.Add(this.helpLabel1);
             this.groupBox4.Controls.Add(this.saveBtn);
             this.groupBox4.Controls.Add(this.numberLeftBtn);
             this.groupBox4.Controls.Add(this.numberRightBtn);
@@ -212,6 +235,25 @@ namespace GradeReport.GradeEditor
             this.groupBox4.TabIndex = 27;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Управление";
+            // 
+            // helpLabel2
+            // 
+            this.helpLabel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel2.BackgroundImage")));
+            this.helpLabel2.HelpText = "Типы оценок представляют список в котором слева указано название типа, а справа к" +
+    "оличество партий для выделленного предмета.";
+            this.helpLabel2.Location = new System.Drawing.Point(249, 61);
+            this.helpLabel2.Name = "helpLabel2";
+            this.helpLabel2.Size = new System.Drawing.Size(16, 16);
+            this.helpLabel2.TabIndex = 16;
+            // 
+            // helpLabel1
+            // 
+            this.helpLabel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel1.BackgroundImage")));
+            this.helpLabel1.HelpText = resources.GetString("helpLabel1.HelpText");
+            this.helpLabel1.Location = new System.Drawing.Point(107, 168);
+            this.helpLabel1.Name = "helpLabel1";
+            this.helpLabel1.Size = new System.Drawing.Size(16, 16);
+            this.helpLabel1.TabIndex = 15;
             // 
             // saveBtn
             // 
@@ -305,39 +347,22 @@ namespace GradeReport.GradeEditor
             this.groupBox5.Controls.Add(this.subjectsLB);
             this.groupBox5.Location = new System.Drawing.Point(12, 234);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(271, 690);
+            this.groupBox5.Size = new System.Drawing.Size(271, 566);
             this.groupBox5.TabIndex = 28;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Предметы";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 89);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(269, 15);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Поддержка дополнительных оценок (Зач/Осв):";
-            // 
-            // allowExtraLbl
-            // 
-            this.isAllowExtraLbl.AutoSize = true;
-            this.isAllowExtraLbl.Location = new System.Drawing.Point(281, 89);
-            this.isAllowExtraLbl.Name = "allowExtraLbl";
-            this.isAllowExtraLbl.Size = new System.Drawing.Size(12, 15);
-            this.isAllowExtraLbl.TabIndex = 2;
-            this.isAllowExtraLbl.Text = "-";
             // 
             // GradeEditorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(721, 936);
+            this.ClientSize = new System.Drawing.Size(638, 812);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Name = "GradeEditorForm";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Редактирование оценок";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GradeEditorForm_FormClosing);
@@ -377,5 +402,7 @@ namespace GradeReport.GradeEditor
         private System.Windows.Forms.DataGridViewTextBoxColumn GradeValueColumn;
         private System.Windows.Forms.Label isAllowExtraLbl;
         private System.Windows.Forms.Label label4;
+        private Common.HelpLabel helpLabel1;
+        private Common.HelpLabel helpLabel2;
     }
 }

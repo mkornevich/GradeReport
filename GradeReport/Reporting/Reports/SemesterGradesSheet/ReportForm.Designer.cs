@@ -29,6 +29,7 @@ namespace GradeReport.Reporting.Reports.SemesterGradesSheet
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportForm));
             this.groupC = new GradeReport.Common.Chooser();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,6 +39,8 @@ namespace GradeReport.Reporting.Reports.SemesterGradesSheet
             this.label4 = new System.Windows.Forms.Label();
             this.dateDTP = new System.Windows.Forms.DateTimePicker();
             this.isOnlyMyStudentsCB = new System.Windows.Forms.CheckBox();
+            this.helpLabel1 = new GradeReport.Common.HelpLabel();
+            this.helpLabel2 = new GradeReport.Common.HelpLabel();
             this.SuspendLayout();
             // 
             // groupC
@@ -123,11 +126,32 @@ namespace GradeReport.Reporting.Reports.SemesterGradesSheet
             this.isOnlyMyStudentsCB.Text = "Только для моих студентов";
             this.isOnlyMyStudentsCB.UseVisualStyleBackColor = true;
             // 
+            // helpLabel1
+            // 
+            this.helpLabel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel1.BackgroundImage")));
+            this.helpLabel1.HelpText = "Здесь необходимо указать дату создания сводной ведомости за семестр.";
+            this.helpLabel1.Location = new System.Drawing.Point(396, 157);
+            this.helpLabel1.Name = "helpLabel1";
+            this.helpLabel1.Size = new System.Drawing.Size(16, 16);
+            this.helpLabel1.TabIndex = 8;
+            // 
+            // helpLabel2
+            // 
+            this.helpLabel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel2.BackgroundImage")));
+            this.helpLabel2.HelpText = "Если данный параметр активен, то в таком случае при построении отчета будут учиты" +
+    "ваться только ваши студенты (из вашей подгруппы).";
+            this.helpLabel2.Location = new System.Drawing.Point(194, 204);
+            this.helpLabel2.Name = "helpLabel2";
+            this.helpLabel2.Size = new System.Drawing.Size(16, 16);
+            this.helpLabel2.TabIndex = 9;
+            // 
             // ReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(424, 232);
+            this.Controls.Add(this.helpLabel2);
+            this.Controls.Add(this.helpLabel1);
             this.Controls.Add(this.isOnlyMyStudentsCB);
             this.Controls.Add(this.dateDTP);
             this.Controls.Add(this.label4);
@@ -149,6 +173,8 @@ namespace GradeReport.Reporting.Reports.SemesterGradesSheet
             this.Controls.SetChildIndex(this.label4, 0);
             this.Controls.SetChildIndex(this.dateDTP, 0);
             this.Controls.SetChildIndex(this.isOnlyMyStudentsCB, 0);
+            this.Controls.SetChildIndex(this.helpLabel1, 0);
+            this.Controls.SetChildIndex(this.helpLabel2, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,5 +191,7 @@ namespace GradeReport.Reporting.Reports.SemesterGradesSheet
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dateDTP;
         private System.Windows.Forms.CheckBox isOnlyMyStudentsCB;
+        private Common.HelpLabel helpLabel1;
+        private Common.HelpLabel helpLabel2;
     }
 }

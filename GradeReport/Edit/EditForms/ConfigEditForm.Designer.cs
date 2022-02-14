@@ -43,6 +43,8 @@ namespace GradeReport.Edit.EditForms
             this.label4 = new System.Windows.Forms.Label();
             this.parentOrganisationNameTB = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.helpLabel4 = new GradeReport.Common.HelpLabel();
+            this.helpLabel5 = new GradeReport.Common.HelpLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -173,11 +175,33 @@ namespace GradeReport.Edit.EditForms
             this.label5.TabIndex = 9;
             this.label5.Text = "Название вышестоящей организации";
             // 
+            // helpLabel4
+            // 
+            this.helpLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.helpLabel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel4.BackgroundImage")));
+            this.helpLabel4.HelpText = "Здесь необходимо указать название учебного заведения.";
+            this.helpLabel4.Location = new System.Drawing.Point(391, 83);
+            this.helpLabel4.Name = "helpLabel4";
+            this.helpLabel4.Size = new System.Drawing.Size(16, 16);
+            this.helpLabel4.TabIndex = 4;
+            // 
+            // helpLabel5
+            // 
+            this.helpLabel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.helpLabel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel5.BackgroundImage")));
+            this.helpLabel5.HelpText = "Здесь необходимо указать название вышестоящей организации.";
+            this.helpLabel5.Location = new System.Drawing.Point(391, 9);
+            this.helpLabel5.Name = "helpLabel5";
+            this.helpLabel5.Size = new System.Drawing.Size(16, 16);
+            this.helpLabel5.TabIndex = 5;
+            // 
             // ConfigEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(419, 340);
+            this.Controls.Add(this.helpLabel5);
+            this.Controls.Add(this.helpLabel4);
             this.Controls.Add(this.organizationNameTB);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.parentOrganisationNameTB);
@@ -213,5 +237,7 @@ namespace GradeReport.Edit.EditForms
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox parentOrganisationNameTB;
         private System.Windows.Forms.Label label5;
+        private Common.HelpLabel helpLabel4;
+        private Common.HelpLabel helpLabel5;
     }
 }
