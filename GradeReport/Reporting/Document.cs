@@ -16,7 +16,7 @@ namespace GradeReport.Reporting
 
         public void Load(string fileName)
         {
-            Workbook = new XSSFWorkbook(new FileStream(fileName, FileMode.Open));
+            Workbook = new XSSFWorkbook(new FileStream(fileName, FileMode.Open, FileAccess.Read));
         }
 
         public void Store(string fileName, bool needOpen = false)

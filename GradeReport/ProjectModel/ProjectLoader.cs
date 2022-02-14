@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace GradeReport.ProjectModel
 {
@@ -23,7 +24,15 @@ namespace GradeReport.ProjectModel
         public void Store(string path, Project project)
         {
             var jsonProject = JsonConvert.SerializeObject(project, Formatting.Indented);
-            File.WriteAllText(path, jsonProject);
+            try
+            {
+                File.WriteAllText(path, jsonProject);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Не удается сохранить проект. Ошибка: " + e.Message);
+            }
+            
         }
     }
 }

@@ -8,6 +8,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -43,13 +44,20 @@ namespace GradeReport.Main
 
             new ReportsLoader().LoadToMenuItem(reports);
 
+            var args = Environment.GetCommandLineArgs();
+            if (args.Length == 2 && File.Exists(args[1]))
+            {
+                _projectContainer.Project = _projectLoader.Load(args[1]);
+                _projectContainer.Path = args[1];
+                UpdateFormText(true);
+            }
+
             if (App.IsDebug)
             {
-                // auto load project for debug
                 _projectContainer.Project = _projectLoader.Load(App.AppDataPath + "\\test.gr");
                 _projectContainer.Path = App.AppDataPath + "\\test.gr";
+                UpdateFormText(true);
             }
-            
         }
 
         private void UpdateInfoPanel() => infoTB.Text = peTreeView.Info;

@@ -23,7 +23,7 @@ namespace GradeReport.Reporting.Reports.ControlWorksAnalyzer
         {
             InitializeComponent();
             var template = App.AppDataPath + "\\Reports\\ControlWorksAnalyzer\\Template.xlsx";
-            _workbook = new XSSFWorkbook(new FileStream(template, FileMode.Open));
+            _workbook = new XSSFWorkbook(new FileStream(template, FileMode.Open, FileAccess.Read));
             _sheet = _workbook.GetSheetAt(0);
         }
 
