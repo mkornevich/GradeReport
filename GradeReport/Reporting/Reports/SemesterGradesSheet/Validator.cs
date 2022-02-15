@@ -16,6 +16,9 @@ namespace GradeReport.Reporting.Reports.SemesterGradesSheet
             Notes.ErrorIf(input.Group == null, "Не выбрана группа");
             Notes.ErrorIf(input.Semester == null, "Не выбран семестр");
             Notes.ErrorIf(input.Subject == null, "Не выбран предмет");
+
+            if (Notes.ErrorCount > 0) return;
+
             Notes.ErrorIf(
                 !HasStudents(input), 
                 "Кол-во студентов должно быть больше нуля", 
