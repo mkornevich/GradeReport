@@ -31,6 +31,16 @@ namespace GradeReport.Reporting.Reports.ControlWorksAnalyzer
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.helpLabel10 = new GradeReport.Common.HelpLabel();
+            this.helpLabel9 = new GradeReport.Common.HelpLabel();
+            this.helpLabel8 = new GradeReport.Common.HelpLabel();
+            this.helpLabel7 = new GradeReport.Common.HelpLabel();
+            this.helpLabel6 = new GradeReport.Common.HelpLabel();
+            this.helpLabel5 = new GradeReport.Common.HelpLabel();
+            this.helpLabel4 = new GradeReport.Common.HelpLabel();
+            this.helpLabel3 = new GradeReport.Common.HelpLabel();
+            this.helpLabel2 = new GradeReport.Common.HelpLabel();
+            this.helpLabel1 = new GradeReport.Common.HelpLabel();
             this.label10 = new System.Windows.Forms.Label();
             this.numberPivotSemesterNUD = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
@@ -52,6 +62,8 @@ namespace GradeReport.Reporting.Reports.ControlWorksAnalyzer
             this.label1 = new System.Windows.Forms.Label();
             this.educationalTB = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.helpLabel12 = new GradeReport.Common.HelpLabel();
+            this.helpLabel11 = new GradeReport.Common.HelpLabel();
             this.gradesPivotSemesterCountLbl = new System.Windows.Forms.Label();
             this.gradesControlWorkCountLbl = new System.Windows.Forms.Label();
             this.gradesPivotSemesterTB = new System.Windows.Forms.TextBox();
@@ -59,18 +71,6 @@ namespace GradeReport.Reporting.Reports.ControlWorksAnalyzer
             this.gradesControlWorkTB = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this.helpLabel1 = new GradeReport.Common.HelpLabel();
-            this.helpLabel2 = new GradeReport.Common.HelpLabel();
-            this.helpLabel3 = new GradeReport.Common.HelpLabel();
-            this.helpLabel4 = new GradeReport.Common.HelpLabel();
-            this.helpLabel5 = new GradeReport.Common.HelpLabel();
-            this.helpLabel6 = new GradeReport.Common.HelpLabel();
-            this.helpLabel7 = new GradeReport.Common.HelpLabel();
-            this.helpLabel8 = new GradeReport.Common.HelpLabel();
-            this.helpLabel9 = new GradeReport.Common.HelpLabel();
-            this.helpLabel10 = new GradeReport.Common.HelpLabel();
-            this.helpLabel11 = new GradeReport.Common.HelpLabel();
-            this.helpLabel12 = new GradeReport.Common.HelpLabel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numberPivotSemesterNUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numberControlWorkNUD)).BeginInit();
@@ -118,6 +118,101 @@ namespace GradeReport.Reporting.Reports.ControlWorksAnalyzer
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Параметры";
+            // 
+            // helpLabel10
+            // 
+            this.helpLabel10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel10.BackgroundImage")));
+            this.helpLabel10.HelpText = "Здесь необходимо указать дату проведения контрольной работы.";
+            this.helpLabel10.Location = new System.Drawing.Point(374, 423);
+            this.helpLabel10.Name = "helpLabel10";
+            this.helpLabel10.Size = new System.Drawing.Size(16, 16);
+            this.helpLabel10.TabIndex = 29;
+            // 
+            // helpLabel9
+            // 
+            this.helpLabel9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel9.BackgroundImage")));
+            this.helpLabel9.HelpText = "Здесь необходимо указать номер контрольной работы. Это необходимо только для анал" +
+    "иза ОКР так как их может быть несколько.";
+            this.helpLabel9.Location = new System.Drawing.Point(374, 378);
+            this.helpLabel9.Name = "helpLabel9";
+            this.helpLabel9.Size = new System.Drawing.Size(16, 16);
+            this.helpLabel9.TabIndex = 28;
+            // 
+            // helpLabel8
+            // 
+            this.helpLabel8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel8.BackgroundImage")));
+            this.helpLabel8.HelpText = "Здесь необходимо указать номер опорного семестра. Опорный семестр -  семестр с ко" +
+    "торым выполняется сравнение.";
+            this.helpLabel8.Location = new System.Drawing.Point(374, 333);
+            this.helpLabel8.Name = "helpLabel8";
+            this.helpLabel8.Size = new System.Drawing.Size(16, 16);
+            this.helpLabel8.TabIndex = 27;
+            // 
+            // helpLabel7
+            // 
+            this.helpLabel7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel7.BackgroundImage")));
+            this.helpLabel7.HelpText = "Здесь необходимо указать количество учащихся по списку. Данный параметр используе" +
+    "тся в расчетах.";
+            this.helpLabel7.Location = new System.Drawing.Point(374, 288);
+            this.helpLabel7.Name = "helpLabel7";
+            this.helpLabel7.Size = new System.Drawing.Size(16, 16);
+            this.helpLabel7.TabIndex = 26;
+            // 
+            // helpLabel6
+            // 
+            this.helpLabel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel6.BackgroundImage")));
+            this.helpLabel6.HelpText = "Здесь необходимо указать полное название профессии.";
+            this.helpLabel6.Location = new System.Drawing.Point(374, 243);
+            this.helpLabel6.Name = "helpLabel6";
+            this.helpLabel6.Size = new System.Drawing.Size(16, 16);
+            this.helpLabel6.TabIndex = 25;
+            // 
+            // helpLabel5
+            // 
+            this.helpLabel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel5.BackgroundImage")));
+            this.helpLabel5.HelpText = "Здесь необходимо ввести название предмета.";
+            this.helpLabel5.Location = new System.Drawing.Point(374, 198);
+            this.helpLabel5.Name = "helpLabel5";
+            this.helpLabel5.Size = new System.Drawing.Size(16, 16);
+            this.helpLabel5.TabIndex = 24;
+            // 
+            // helpLabel4
+            // 
+            this.helpLabel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel4.BackgroundImage")));
+            this.helpLabel4.HelpText = "Данный параметр вводится только если необходимо выполнить анализ ДКР. Все аналоги" +
+    "чно вводу параметра Преподаватель.";
+            this.helpLabel4.Location = new System.Drawing.Point(374, 153);
+            this.helpLabel4.Name = "helpLabel4";
+            this.helpLabel4.Size = new System.Drawing.Size(16, 16);
+            this.helpLabel4.TabIndex = 23;
+            // 
+            // helpLabel3
+            // 
+            this.helpLabel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel3.BackgroundImage")));
+            this.helpLabel3.HelpText = "Здесь необходимо указать ФИО преподавателя. Если нужно чтоб в отчете было сокраще" +
+    "но то введите в данном поле сокращенное нужным образом ФИО.";
+            this.helpLabel3.Location = new System.Drawing.Point(374, 108);
+            this.helpLabel3.Name = "helpLabel3";
+            this.helpLabel3.Size = new System.Drawing.Size(16, 16);
+            this.helpLabel3.TabIndex = 22;
+            // 
+            // helpLabel2
+            // 
+            this.helpLabel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel2.BackgroundImage")));
+            this.helpLabel2.HelpText = "Здесь необходимо ввести название группы.";
+            this.helpLabel2.Location = new System.Drawing.Point(374, 63);
+            this.helpLabel2.Name = "helpLabel2";
+            this.helpLabel2.Size = new System.Drawing.Size(16, 16);
+            this.helpLabel2.TabIndex = 21;
+            // 
+            // helpLabel1
+            // 
+            this.helpLabel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel1.BackgroundImage")));
+            this.helpLabel1.HelpText = "Здесь необходимо указать название учреждения образования.\r\n\r\n";
+            this.helpLabel1.Location = new System.Drawing.Point(374, 18);
+            this.helpLabel1.Name = "helpLabel1";
+            this.helpLabel1.Size = new System.Drawing.Size(16, 16);
+            this.helpLabel1.TabIndex = 20;
             // 
             // label10
             // 
@@ -318,6 +413,27 @@ namespace GradeReport.Reporting.Reports.ControlWorksAnalyzer
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Оценки";
             // 
+            // helpLabel12
+            // 
+            this.helpLabel12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel12.BackgroundImage")));
+            this.helpLabel12.HelpText = "Все по аналогии с параметром Оценки по контрольной работе только выполняется с оц" +
+    "енками по оторному семестру.";
+            this.helpLabel12.Location = new System.Drawing.Point(194, 63);
+            this.helpLabel12.Name = "helpLabel12";
+            this.helpLabel12.Size = new System.Drawing.Size(16, 16);
+            this.helpLabel12.TabIndex = 31;
+            // 
+            // helpLabel11
+            // 
+            this.helpLabel11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel11.BackgroundImage")));
+            this.helpLabel11.HelpText = "Здесь необходимо вводить оценки по контрольной работе.\r\nПробелы ставить не нужно." +
+    "\r\nВместо 10 необходимо ставить *.\r\nСправа отображается количество введенных оцен" +
+    "ок.\r\n\r\nПример: 458787**98996969*68";
+            this.helpLabel11.Location = new System.Drawing.Point(204, 18);
+            this.helpLabel11.Name = "helpLabel11";
+            this.helpLabel11.Size = new System.Drawing.Size(16, 16);
+            this.helpLabel11.TabIndex = 30;
+            // 
             // gradesPivotSemesterCountLbl
             // 
             this.gradesPivotSemesterCountLbl.Location = new System.Drawing.Point(344, 63);
@@ -372,130 +488,14 @@ namespace GradeReport.Reporting.Reports.ControlWorksAnalyzer
             this.label11.Location = new System.Drawing.Point(7, 18);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(190, 15);
+            this.label11.Size = new System.Drawing.Size(183, 15);
             this.label11.TabIndex = 0;
-            this.label11.Text = "Оценики по контрольной работе";
+            this.label11.Text = "Оценки по контрольной работе";
             // 
             // saveFileDialog
             // 
             this.saveFileDialog.DefaultExt = "xlsx";
             this.saveFileDialog.Filter = "Excel (*.xlsx)|*.xlsx";
-            // 
-            // helpLabel1
-            // 
-            this.helpLabel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel1.BackgroundImage")));
-            this.helpLabel1.HelpText = "Здесь необходимо указать название учреждения образования.\r\n\r\n";
-            this.helpLabel1.Location = new System.Drawing.Point(374, 18);
-            this.helpLabel1.Name = "helpLabel1";
-            this.helpLabel1.Size = new System.Drawing.Size(16, 16);
-            this.helpLabel1.TabIndex = 20;
-            // 
-            // helpLabel2
-            // 
-            this.helpLabel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel2.BackgroundImage")));
-            this.helpLabel2.HelpText = "Здесь необходимо ввести название группы.";
-            this.helpLabel2.Location = new System.Drawing.Point(374, 63);
-            this.helpLabel2.Name = "helpLabel2";
-            this.helpLabel2.Size = new System.Drawing.Size(16, 16);
-            this.helpLabel2.TabIndex = 21;
-            // 
-            // helpLabel3
-            // 
-            this.helpLabel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel3.BackgroundImage")));
-            this.helpLabel3.HelpText = "Здесь необходимо указать ФИО преподавателя. Если нужно чтоб в отчете было сокраще" +
-    "но то введите в данном поле сокращенное нужным образом ФИО.";
-            this.helpLabel3.Location = new System.Drawing.Point(374, 108);
-            this.helpLabel3.Name = "helpLabel3";
-            this.helpLabel3.Size = new System.Drawing.Size(16, 16);
-            this.helpLabel3.TabIndex = 22;
-            // 
-            // helpLabel4
-            // 
-            this.helpLabel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel4.BackgroundImage")));
-            this.helpLabel4.HelpText = "Данный параметр вводится только если необходимо выполнить анализ ДКР. Все аналоги" +
-    "чно вводу параметра Преподаватель.";
-            this.helpLabel4.Location = new System.Drawing.Point(374, 153);
-            this.helpLabel4.Name = "helpLabel4";
-            this.helpLabel4.Size = new System.Drawing.Size(16, 16);
-            this.helpLabel4.TabIndex = 23;
-            // 
-            // helpLabel5
-            // 
-            this.helpLabel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel5.BackgroundImage")));
-            this.helpLabel5.HelpText = "Здесь необходимо ввести название предмета.";
-            this.helpLabel5.Location = new System.Drawing.Point(374, 198);
-            this.helpLabel5.Name = "helpLabel5";
-            this.helpLabel5.Size = new System.Drawing.Size(16, 16);
-            this.helpLabel5.TabIndex = 24;
-            // 
-            // helpLabel6
-            // 
-            this.helpLabel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel6.BackgroundImage")));
-            this.helpLabel6.HelpText = "Здесь необходимо указать полное название профессии.";
-            this.helpLabel6.Location = new System.Drawing.Point(374, 243);
-            this.helpLabel6.Name = "helpLabel6";
-            this.helpLabel6.Size = new System.Drawing.Size(16, 16);
-            this.helpLabel6.TabIndex = 25;
-            // 
-            // helpLabel7
-            // 
-            this.helpLabel7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel7.BackgroundImage")));
-            this.helpLabel7.HelpText = "Здесь необходимо указать количество учащихся по списку. Данный параметр используе" +
-    "тся в расчетах.";
-            this.helpLabel7.Location = new System.Drawing.Point(374, 288);
-            this.helpLabel7.Name = "helpLabel7";
-            this.helpLabel7.Size = new System.Drawing.Size(16, 16);
-            this.helpLabel7.TabIndex = 26;
-            // 
-            // helpLabel8
-            // 
-            this.helpLabel8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel8.BackgroundImage")));
-            this.helpLabel8.HelpText = "Здесь необходимо указать номер опорного семестра. Опорный семестр -  семестр с ко" +
-    "торым выполняется сравнение.";
-            this.helpLabel8.Location = new System.Drawing.Point(374, 333);
-            this.helpLabel8.Name = "helpLabel8";
-            this.helpLabel8.Size = new System.Drawing.Size(16, 16);
-            this.helpLabel8.TabIndex = 27;
-            // 
-            // helpLabel9
-            // 
-            this.helpLabel9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel9.BackgroundImage")));
-            this.helpLabel9.HelpText = "Здесь необходимо указать номер контрольной работы. Это необходимо только для анал" +
-    "иза ОКР так как их может быть несколько.";
-            this.helpLabel9.Location = new System.Drawing.Point(374, 378);
-            this.helpLabel9.Name = "helpLabel9";
-            this.helpLabel9.Size = new System.Drawing.Size(16, 16);
-            this.helpLabel9.TabIndex = 28;
-            // 
-            // helpLabel10
-            // 
-            this.helpLabel10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel10.BackgroundImage")));
-            this.helpLabel10.HelpText = "Здесь необходимо указать дату проведения контрольной работы.";
-            this.helpLabel10.Location = new System.Drawing.Point(374, 423);
-            this.helpLabel10.Name = "helpLabel10";
-            this.helpLabel10.Size = new System.Drawing.Size(16, 16);
-            this.helpLabel10.TabIndex = 29;
-            // 
-            // helpLabel11
-            // 
-            this.helpLabel11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel11.BackgroundImage")));
-            this.helpLabel11.HelpText = "Здесь необходимо вводить оценки по контрольной работе.\r\nПробелы ставить не нужно." +
-    "\r\nВместо 10 необходимо ставить *.\r\nСправа отображается количество введенных оцен" +
-    "ок.\r\n\r\nПример: 458787**98996969*68";
-            this.helpLabel11.Location = new System.Drawing.Point(204, 18);
-            this.helpLabel11.Name = "helpLabel11";
-            this.helpLabel11.Size = new System.Drawing.Size(16, 16);
-            this.helpLabel11.TabIndex = 30;
-            // 
-            // helpLabel12
-            // 
-            this.helpLabel12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpLabel12.BackgroundImage")));
-            this.helpLabel12.HelpText = "Все по аналогии с параметром Оценки по контрольной работе только выполняется с оц" +
-    "енками по оторному семестру.";
-            this.helpLabel12.Location = new System.Drawing.Point(194, 63);
-            this.helpLabel12.Name = "helpLabel12";
-            this.helpLabel12.Size = new System.Drawing.Size(16, 16);
-            this.helpLabel12.TabIndex = 31;
             // 
             // ReportForm
             // 
