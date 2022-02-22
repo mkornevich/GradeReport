@@ -15,7 +15,7 @@ namespace GradeReport.ProjectExplorer.Nodes
 {
     public class CourseListNode : PENode
     {
-        public override string Description => "Данный узел содержит курсы которые пренадлежат группе из узла выше.";
+        public override string Description => "Данный узел содержит курсы которые принадлежат группе из узла выше.";
 
         public override bool IsChildNodesStatic => false;
 

@@ -16,7 +16,7 @@ namespace GradeReport.ProjectExplorer.Nodes
 {
     public class StudentListNode : PENode
     {
-        public override string Description => "Данный узел содержет в себе список студентов которые пренадлежат круппе из узла выше.";
+        public override string Description => "Данный узел содержит в себе список студентов которые принадлежат группе из узла выше.";
 
         public override bool IsChildNodesStatic => false;
 
@@ -30,7 +30,7 @@ namespace GradeReport.ProjectExplorer.Nodes
             items.Add(new ToolStripMenuItem("Добавить", Resources.add_16,
                 PENodeActBuilder.BuildCreateAct(this, CreateStudent, (s) => Project.Students.Add((Student)s), new StudentEditForm(), new StudentValidator())));
 
-            items.Add(new ToolStripMenuItem("Мастер множественно ввода", Resources.new_16, (s, e) =>
+            items.Add(new ToolStripMenuItem("Мастер множественного ввода", Resources.new_16, (s, e) =>
             {
                 var master = new AddStudentsMasterForm((Group)GetNodeEntity<GroupNode>());
                 master.ShowDialog();

@@ -15,7 +15,7 @@ namespace GradeReport.ProjectExplorer.Nodes
 {
     public class MyStudentRefListNode : PENode
     {
-        public override string Description => "В данном узле располагаются студетны у которых ведет текущий преподаватель в текущем семестре.";
+        public override string Description => "В данном узле располагаются студентны у которых ведет текущий преподаватель в текущем семестре.";
 
         public override bool IsChildNodesStatic => false;
 

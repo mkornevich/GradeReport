@@ -13,7 +13,7 @@ namespace GradeReport.ProjectExplorer.Nodes
 {
     public class SemesterNode : PENode
     {
-        public override string Description => "Данный узел представляет один семестр который пренадлежит курсу из узла выше.";
+        public override string Description => "Данный узел представляет один семестр который принадлежит курсу из узла выше.";
 
         public override bool IsChildNodesStatic => true;
 

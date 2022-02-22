@@ -14,7 +14,7 @@ namespace GradeReport.ProjectExplorer.Nodes
 {
     public class StudentNode : PENode
     {
-        public override string Description => "Данный узел представляет одного студента который пренадлежит группе из узла выше.";
+        public override string Description => "Данный узел представляет одного студента который принадлежит группе из узла выше.";
 
         public override bool IsChildNodesStatic => true;
 
