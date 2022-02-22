@@ -57,6 +57,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="infoLbl.Text" xml:space="preserve">
+    <value>Правила ввода оценок:
+- от 0 до 9 - для того чтоб поставить оценку от 0 до 9.
+- * или Д - для того чтоб поставить 10.
+- З - для того чтоб поставить зачтено.
+- О - Для того чтоб поставить освобожден.
+- Backspace или Delete - для того чтоб удалить оценку.</value>
+  </data>
   <metadata name="StudentIndexColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
