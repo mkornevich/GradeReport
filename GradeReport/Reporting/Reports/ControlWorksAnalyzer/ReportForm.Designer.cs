@@ -393,6 +393,7 @@ namespace GradeReport.Reporting.Reports.ControlWorksAnalyzer
             this.educationalTB.Name = "educationalTB";
             this.educationalTB.Size = new System.Drawing.Size(383, 23);
             this.educationalTB.TabIndex = 0;
+            this.educationalTB.TabStop = false;
             // 
             // groupBox2
             // 

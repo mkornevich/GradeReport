@@ -1,4 +1,5 @@
-﻿using NPOI.SS.UserModel;
+﻿using GradeReport.Common;
+using NPOI.SS.UserModel;
 using NPOI.XSSF.UserModel;
 using System;
 using System.Collections.Generic;
@@ -27,8 +28,24 @@ namespace GradeReport.Reporting.Reports.ControlWorksAnalyzer
             _sheet = _workbook.GetSheetAt(0);
         }
 
+        protected override void ResetGUI()
+        {
+            var config = App.ProjectContainer.Project.Config;
+            educationalTB.Text = config.OrganizationName;
+            teacherTB.Text = PersonNameUtils.Format(config.TeacherName, PersonNameUtils.SurnameNP);
+        }
+
         protected override void BuildAct(object sender, EventArgs e)
         {
+            if(allStudentCountNUD.Value != gradesControlWorkTB.Text.Length)
+            {
+                var result = MessageBox.Show(
+                    "Скорее всего поле \"Кол-во учащихся всего (по списку)\" должно быть равно количеству оценок из поля \"Оценки по контрольной работе\". Хотите продолжить построение?",
+                    "Предупреждение", MessageBoxButtons.YesNo);
+
+                if (result == DialogResult.No) return;
+            }
+
             saveFileDialog.FileName = DateTime.Now.ToString("dd-MM-yy_HH-mm-ss") + "_" +
                 Text.ToLower().Replace(' ', '-');
 
@@ -71,7 +88,7 @@ namespace GradeReport.Reporting.Reports.ControlWorksAnalyzer
 
         protected override void ValidateAct(object sender, EventArgs e)
         {
-            MessageBox.Show("Данная функция не поддерживается");
+            MessageBox.Show("Данный построитель производит проверку только при запуске построения отчета.");
         }
 
         private void GradesChangedAct(object sender, EventArgs e)

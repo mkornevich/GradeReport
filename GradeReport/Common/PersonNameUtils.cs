@@ -14,6 +14,9 @@ namespace GradeReport.Common
         {
             var fmt = format;
             var parts = fullName.Split(" ");
+
+            if (parts.Length != 3) return fullName;
+
             string[] snp = { "s", "n", "p" };
 
             for (int i = 0; i < snp.Length; i++)
