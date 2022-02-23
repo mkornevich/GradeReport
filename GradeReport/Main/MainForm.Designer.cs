@@ -268,6 +268,7 @@ namespace GradeReport.Main
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "MainForm";
             this.Text = "GradeReport";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormClosingAct);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);

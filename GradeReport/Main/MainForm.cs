@@ -23,17 +23,30 @@ namespace GradeReport.Main
 
         private ProjectContainer _projectContainer;
 
+        private bool _isSaved = true;
+
+        private bool IsSaved
+        {
+            get => _isSaved;
+            set
+            {
+                _isSaved = value;
+                UpdateFormText();
+            }
+        }
+
         public MainForm()
         {
             InitializeComponent();
 
             _projectContainer = App.ProjectContainer;
 
-            _projectContainer.PathChanged += () => UpdateFormText(false);
+            _projectContainer.PathChanged += () => IsSaved = false;
             _projectContainer.NewProjectLoaded += () => peTreeView.LoadProject(_projectContainer.Project);
 
-            _projectContainer.ProjectChanged += () => {
-                UpdateFormText(false);
+            _projectContainer.ProjectChanged += () =>
+            {
+                IsSaved = false;
                 peTreeView.Fresh();
                 UpdateInfoPanel();
             };
@@ -49,24 +62,24 @@ namespace GradeReport.Main
             {
                 _projectContainer.Project = _projectLoader.Load(args[1]);
                 _projectContainer.Path = args[1];
-                UpdateFormText(true);
+                IsSaved = true;
             }
 
             if (App.IsDebug)
             {
                 _projectContainer.Project = _projectLoader.Load(App.AppDataPath + "\\test.gr");
                 _projectContainer.Path = App.AppDataPath + "\\test.gr";
-                UpdateFormText(true);
+                IsSaved = true;
             }
         }
 
         private void UpdateInfoPanel() => infoTB.Text = peTreeView.Info;
 
-        private void UpdateFormText(bool isSaved)
+        private void UpdateFormText()
         {
             Text = "GradeReport - "
                 + _projectContainer.Name
-                + (isSaved ? "" : "*")
+                + (_isSaved ? "" : "*")
                 + (_projectContainer.Path == null ? "" : " - " + _projectContainer.Path);
         }
 
@@ -74,6 +87,7 @@ namespace GradeReport.Main
         {
             _projectContainer.Project = new Project();
             _projectContainer.Path = null;
+            IsSaved = true;
         }
 
         private void OpenAct(object sender, EventArgs e)
@@ -82,7 +96,7 @@ namespace GradeReport.Main
             {
                 _projectContainer.Project = _projectLoader.Load(openFileDialog.FileName);
                 _projectContainer.Path = openFileDialog.FileName;
-                UpdateFormText(true);
+                IsSaved = true;
             }
         }
 
@@ -95,7 +109,7 @@ namespace GradeReport.Main
             else
             {
                 _projectLoader.Store(App.ProjectContainer.Path, App.ProjectContainer.Project);
-                UpdateFormText(true);
+                IsSaved = true;
             }
         }
 
@@ -105,7 +119,7 @@ namespace GradeReport.Main
             {
                 _projectLoader.Store(saveFileDialog.FileName, _projectContainer.Project);
                 _projectContainer.Path = saveFileDialog.FileName;
-                UpdateFormText(true);
+                IsSaved = true;
             }
         }
 
@@ -122,6 +136,24 @@ namespace GradeReport.Main
         private void guideMI_Click(object sender, EventArgs e)
         {
             Help.ShowHelp(this, App.AppDataPath + "\\Guide.chm");
+        }
+
+        private void FormClosingAct(object sender, FormClosingEventArgs e)
+        {
+            if (IsSaved) return;
+
+            var result = MessageBox.Show("Хотите сохранить изменения?", "Выход", MessageBoxButtons.YesNoCancel);
+
+            if (result == DialogResult.Cancel)
+            {
+                e.Cancel = true;
+                return;
+            }
+
+            if (result == DialogResult.Yes)
+            {
+                SaveAct(sender, e);
+            }
         }
     }
 }

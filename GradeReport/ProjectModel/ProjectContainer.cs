@@ -14,7 +14,7 @@ namespace GradeReport.ProjectModel
 
         public string Path
         {
-            get => _path; 
+            get => _path;
             set
             {
                 _path = value;
