@@ -163,7 +163,7 @@ namespace GradeReport.Reporting.Reports.SemesterGradesSheet
             this.Controls.Add(this.groupC);
             this.Name = "ReportForm";
             this.Tag = "SemesterGradesSheet";
-            this.Text = "Сводная ведомость за семестр";
+            this.Text = "Семестровая ведомость по предмету";
             this.Controls.SetChildIndex(this.groupC, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
