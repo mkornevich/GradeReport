@@ -22,7 +22,7 @@ namespace GradeReport.Common.ActionNS
             ActionStrip.PositiveAction.Click += (s, e) => ReturnOk();
             ActionStrip.NegativeAction.Click += (s, e) => ReturnCancel();
 
-            Controls.Add(ActionStrip);
+            Shown += (s, e) => Controls.Add(ActionStrip);
             StartPosition = FormStartPosition.CenterParent;
         }
 
